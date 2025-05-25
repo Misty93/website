@@ -1,0 +1,44 @@
+name: Daily IOC Fetch
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # every day at 22:00 UTC
+  workflow_dispatch:
+
+jobs:
+  fetch-and-generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p ${{ secrets.HONEYPOT_PORT_SSH }} -H ${{ secrets.HONEYPOT_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install paramiko
+
+      - name: Run IOC script
+        env:
+          HONEYPOT_HOST: ${{ secrets.HONEYPOT_HOST }}
+          HONEYPOT_USER: ${{ secrets.HONEYPOT_USER }}
+          HONEYPOT_PORT_SSH: ${{ secrets.HONEYPOT_PORT_SSH }}
+        run: python fetch_iocs.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add docs/daily-ioc/
+          git commit -m "Add daily IOC $(date +%F)" || echo "No changes"
+          git push
