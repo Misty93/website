@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt || true
 
       - name: Generate IOC HTML
-        run: python3 generate_ioc_html.py
+        run: python3 fetch_iocs.py
 
       - name: Commit and push changes
         run: |
