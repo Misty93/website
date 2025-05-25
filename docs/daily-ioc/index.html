@@ -10,15 +10,53 @@
       font-family: sans-serif;
       padding: 2rem;
     }
+
+    h1, h2 {
+      color: #ff4500;
+    }
+
     a {
       color: #ff4500;
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      margin-top: 2rem;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <h1>Daily IOC</h1>
-  <p>Collectables - Your daily dose of IOC feed.</p>
-  <p><a href="/">← Natrag</a></p>
+  <p>Collectables – your daily dose of IOC feed.</p>
+
+  <h2>📌 Latest Post</h2>
+  <ul>
+    <li><a href="/daily-ioc/ioc-2025-05-25/">2025-05-25 – Malicious IPs</a></li>
+  </ul>
+
+  <h2>📚 Archive</h2>
+  <ul>
+    <li><a href="/daily-ioc/ioc-2025-05-25/">2025-05-25</a></li>
+    <!-- Future entries:
+    <li><a href="/daily-ioc/ioc-2025-05-26/">2025-05-26</a></li>
+    <li><a href="/daily-ioc/ioc-2025-05-27/">2025-05-27</a></li>
+    -->
+  </ul>
+
+  <p class="back-link"><a href="/">← Natrag</a></p>
 </body>
 </html>
