@@ -1,44 +1,34 @@
-name: Daily IOC Fetch
+name: Daily IOC Generator
 
 on:
   schedule:
-    - cron: '* * * * *'  # every day at all times
-  workflow_dispatch:
+    - cron: '* * * * *'  # svaki dan u 04:00 UTC (05:00 CET)
+  workflow_dispatch:      # omogućuje ručno pokretanje
 
 jobs:
-  fetch-and-generate:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p ${{ secrets.HONEYPOT_PORT_SSH }} -H ${{ secrets.HONEYPOT_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install paramiko
+        run: |
+          pip install -r requirements.txt || true
 
-      - name: Run IOC script
-        env:
-          HONEYPOT_HOST: ${{ secrets.HONEYPOT_HOST }}
-          HONEYPOT_USER: ${{ secrets.HONEYPOT_USER }}
-          HONEYPOT_PORT_SSH: ${{ secrets.HONEYPOT_PORT_SSH }}
-        run: python fetch_iocs.py
+      - name: Generate IOC HTML
+        run: python3 generate_ioc_html.py
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions@users.noreply.github.com"
+          git config user.name "leonorabot"
+          git config user.email "actions@github.com"
           git add docs/daily-ioc/
-          git commit -m "Add daily IOC $(date +%F)" || echo "No changes"
+          git commit -m "🔄 Daily IOC update - $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
