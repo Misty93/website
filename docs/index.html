@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leonora</title>
+    <title>Securing your world, so you don’t have to.</title>
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Securing your world, so you don’t have to." />
+    <meta property="og:description" content="Knock knock. Who’s there? Everyone. You left your ports open." />
+    <meta property="og:url" content="https://leonoramilisa.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://leonoramilisa.com/og-image.png" />
+
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Securing your world, so you don’t have to.">
+    <meta name="twitter:description" content="Knock knock. Who’s there? Everyone. You left your ports open.">
+
     <style>
       body {
         margin: 0;
@@ -66,12 +79,10 @@
         text-align: center;
       }
 
-      h1 {
-        font-size: 3rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+      h2 {
+        font-size: 2rem;
         color: #ff4500;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
 
       p {
@@ -100,17 +111,36 @@
       .flame {
         position: fixed;
         bottom: 20px;
+        font-size: 6rem;
+        opacity: 0.1;
+        animation: flicker 3s infinite, float 6s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .flame-left {
+        left: 10%;
+        transform: translateX(-50%);
+      }
+
+      .flame-center {
         left: 50%;
         transform: translateX(-50%);
-        opacity: 0.1;
-        font-size: 8rem;
-        animation: flicker 3s infinite;
-        pointer-events: none;
+      }
+
+      .flame-right {
+        left: 90%;
+        transform: translateX(-50%);
       }
 
       @keyframes flicker {
         0%, 100% { opacity: 0.1; }
-        50% { opacity: 0.2; }
+        50% { opacity: 0.25; }
+      }
+
+      @keyframes float {
+        0%   { transform: translateY(0) translateX(-50%); }
+        50%  { transform: translateY(-10px) translateX(-50%); }
+        100% { transform: translateY(0) translateX(-50%); }
       }
     </style>
   </head>
@@ -133,6 +163,8 @@
       <p>Knock knock. Who’s there? Everyone. You left your ports open.</p>
     </main>
 
-    <div class="flame">🔥</div>
+    <div class="flame flame-left">🔥</div>
+    <div class="flame flame-center">🔥</div>
+    <div class="flame flame-right">🔥</div>
   </body>
 </html>
