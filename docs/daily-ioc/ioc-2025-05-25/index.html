@@ -49,8 +49,12 @@
   <h1>IOC Report</h1>
   <p class="date">Date: <span id="date"></span></p>
 
+  <!-- Automatski generirane sekcije -->
   <h2>🔴 Malicious IPs</h2>
   <ul>
+    <li>93[.]123[.]109[.]229</li>
+    <li>27[.]254[.]206[.]246</li>
+    <li>108[.]181[.]62[.]97</li>
     <li>93[.]123[.]109[.]229</li>
     <li>27[.]254[.]206[.]246</li>
     <li>108[.]181[.]62[.]97</li>
@@ -75,29 +79,13 @@
     <li>103[.]203[.]59[.]5</li>
     <li>20[.]168[.]125[.]91</li>
     <li>37[.]245[.]13[.]165</li>
+    ...
   </ul>
 
-  <h3>🧬 Malicious Hashes</h3>
-  <p>None submitted for today.</p>
-
-  <h3>🌐 Malicious Domains</h3>
-  <p>None submitted for today.</p>
-
-  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
-
-  <script>
-    // Dynamically set today's date in YYYY-MM-DD format
-    const dateEl = document.getElementById('date');
-    const today = new Date().toISOString().slice(0, 10);
-    dateEl.textContent = today;
-  </script>
-
-<h2>🔴 Malicious IPs</h2><ul>
-<li>"first_seen_utc"</li>
-<li>"2022-06-04 21:24:53"</li>
-</ul>
-<h2>🧬 File Hashes</h2><ul>
-<li>fc3f73647a48ceb5c3569a3fa01c666c8358a4c712bdc9817b046f1701be0383</li>
+  <h2>🧬 File Hashes</h2>
+  <ul>
+    <li>fc3f73647a48ceb5c3569a3fa01c666c8358a4c712bdc9817b046f1701be0383</li>
+    <li>fc3f73647a48ceb5c3569a3fa01c666c8358a4c712bdc9817b046f1701be0383</li>
 <li>fa4f445f3318902ac9621709f0a64386567f17aaceee3c2feb818c34099c7f5f</li>
 <li>c73eaa30f8c4690487b1aea47f40cc750d1759a5288afe3025652e77c5a994aa</li>
 <li>bc366746ac6cd4ed72afdf3b33f7b78954b77d87536aff79958d0ed1032c7b11</li>
@@ -663,6 +651,22 @@
 <li>29f0356686962f1d53d0a110164e2d236fe69e339a3569d5a7de325c1a9ee3ae</li>
 <li>c0f3fb89a31d74cd00ad6ffcd6576fefcc02701cc3a621f4f015a42fe1390ef3</li>
 <li>cc510630402a9d788db922a1fbaa2cdeaeb797ab14844f7d2c0fdbb3268c38d3</li>
-</ul>
+    ...
+  </ul>
+
+  <h2>🌐 Domains</h2>
+  <ul>
+    <li>malicious[.]site</li>
+    ...
+  </ul>
+
+  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
+
+  <script>
+    // Dynamically set today's date in YYYY-MM-DD format
+    const dateEl = document.getElementById('date');
+    const today = new Date().toISOString().slice(0, 10);
+    dateEl.textContent = today;
+  </script>
 </body>
 </html>
