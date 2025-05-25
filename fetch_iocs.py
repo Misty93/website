@@ -38,7 +38,7 @@ def fetch_threatfox_domains():
         print("Error parsing ThreatFox:", e)
     return domains
 
-# === APPEND funkcija za HTML ===
+# === Append section to HTML if items are new ===
 def append_section_if_missing(section_title, new_items, html_path):
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
@@ -63,25 +63,25 @@ def append_section_if_missing(section_title, new_items, html_path):
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(content)
 
-# === Glavna logika ===
+# === Setup paths and date ===
 today = datetime.now().strftime("%Y-%m-%d")
 folder = f"docs/daily-ioc/ioc-{today}"
 os.makedirs(folder, exist_ok=True)
 output_file = os.path.join(folder, "index.html")
 
-# === Dohvati IOC-e ===
+# === Fetch all IOC data ===
 all_ips = fetch_feodo_ips()
 all_hashes = fetch_malware_hashes()
 all_domains = fetch_threatfox_domains()
-all_emails = []  # opcionalno kasnije
+all_emails = []  # opcionalno za kasnije
 
-# === Upis u HTML (append) ===
+# === Append data to HTML report ===
 append_section_if_missing("🔴 Malicious IPs", all_ips, output_file)
 append_section_if_missing("🧬 File Hashes", all_hashes, output_file)
 append_section_if_missing("🌐 Domains", all_domains, output_file)
 append_section_if_missing("✉️ Emails", all_emails, output_file)
 
-# === Upis u JSON ===
+# === Save to JSON ===
 json_output_file = os.path.join(folder, "index.json")
 ioc_data = {
     "date": today,
@@ -93,20 +93,41 @@ ioc_data = {
 with open(json_output_file, "w", encoding="utf-8") as f:
     json.dump(ioc_data, f, indent=2)
 
-# === Update index.html (arhiva linkova) ===
+# === Rebuild main index.html with all folders ===
 index_path = "docs/daily-ioc/index.html"
-entry = f'<li><a href="/daily-ioc/ioc-{today}/">{today}</a></li>'
+base_folder = "docs/daily-ioc"
+entries = []
 
-# === Ako index.html ne postoji, napravi bazni ===
-if not os.path.exists(index_path):
-    with open(index_path, "w", encoding="utf-8") as f:
-        f.write("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>IOC Archive</title></head><body>\n")
-        f.write("<h1>Daily IOC Archive</h1>\n<ul>\n</ul>\n</body></html>")
+for name in os.listdir(base_folder):
+    full_path = os.path.join(base_folder, name)
+    if name.startswith("ioc-") and os.path.isdir(full_path):
+        date = name.replace("ioc-", "")
+        entries.append(date)
 
-# === Upiši novi dan ako još nije tamo ===
-with open(index_path, "r", encoding="utf-8") as f:
-    content = f.read()
-if entry not in content:
-    content = content.replace("<ul>", f"<ul>\n    {entry}", 1)
-    with open(index_path, "w", encoding="utf-8") as f:
-        f.write(content)
+entries.sort(reverse=True)
+
+with open(index_path, "w", encoding="utf-8") as f:
+    f.write("""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IOC Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; }
+    h1 { color: #ff4500; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 0.3rem 0; }
+    a { color: #ff4500; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>IOC Archive</h1>
+  <ul>
+""")
+    for date in entries:
+        f.write(f'    <li><a href="/daily-ioc/ioc-{date}/">{date}</a></li>\n')
+    f.write("""  </ul>
+</body>
+</html>""")
