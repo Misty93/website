@@ -1,5 +1,6 @@
 import os
 import requests
+import json
 from datetime import datetime
 
 # === Fetch IPs from Feodo Tracker ===
@@ -37,43 +38,63 @@ def fetch_threatfox_domains():
         print("Error parsing ThreatFox:", e)
     return domains
 
-# === HTML helper ===
-def html_list(title, items):
-    if not items:
-        return ""
-    lis = "\n".join(f"<li>{i}</li>" for i in items)
-    return f"<h2>{title}</h2><ul>{lis}</ul>"
+# === APPEND funkcija za HTML ===
+def append_section_if_missing(section_title, new_items, html_path):
+    if not os.path.exists(html_path):
+        # ako ne postoji, napravi osnovni dokument
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(f"<html><head><meta charset='UTF-8'><title>IOC {today}</title>\n")
+            f.write("<style>body{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}h1,h2,h3{color:#ff4500}ul{list-style:none;padding:0}li{padding:0.2rem 0}</style>\n")
+            f.write("</head><body>\n")
+            f.write(f"<h1>Daily IOC Report – {today}</h1>\n")
+            f.write("<p><a href=\"/daily-ioc/\">← Back to archive</a></p>\n")
+            f.write("</body></html>")
 
-# === Generate output ===
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    new_lines = []
+    for item in new_items:
+        if item not in content:
+            new_lines.append(f"<li>{item}</li>")
+
+    if new_lines:
+        insertion = f"<h2>{section_title}</h2><ul>\n" + "\n".join(new_lines) + "\n</ul>"
+        content = content.replace("</body>", insertion + "\n</body>")
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(content)
+
+# === Glavna logika ===
 today = datetime.now().strftime("%Y-%m-%d")
 folder = f"docs/daily-ioc/ioc-{today}"
 os.makedirs(folder, exist_ok=True)
 output_file = os.path.join(folder, "index.html")
 
-# === Fetch all IOCs ===
+# === Dohvati IOC-e ===
 all_ips = fetch_feodo_ips()
 all_hashes = fetch_malware_hashes()
 all_domains = fetch_threatfox_domains()
-all_emails = []  # empty for now, can be added later
+all_emails = []  # opcionalno kasnije
 
-# === Generate HTML ===
-html = f"""<html><head><meta charset='UTF-8'><title>IOC {today}</title>
-<style>body{{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}}
-h1,h2,h3{{color:#ff4500}}ul{{list-style:none;padding:0}}li{{padding:0.2rem 0}}</style>
-</head><body>
-<h1>Daily IOC Report – {today}</h1>
-{html_list("🔴 Malicious IPs", all_ips)}
-{html_list("🧬 File Hashes", all_hashes)}
-{html_list("🌐 Domains", all_domains)}
-{html_list("✉️ Emails", all_emails)}
-<p><a href="/daily-ioc/">← Back to archive</a></p>
-</body></html>
-"""
+# === Upis u HTML (append) ===
+append_section_if_missing("🔴 Malicious IPs", all_ips, output_file)
+append_section_if_missing("🧬 File Hashes", all_hashes, output_file)
+append_section_if_missing("🌐 Domains", all_domains, output_file)
+append_section_if_missing("✉️ Emails", all_emails, output_file)
 
-with open(output_file, "w", encoding="utf-8") as f:
-    f.write(html)
+# === Upis u JSON ===
+json_output_file = os.path.join(folder, "index.json")
+ioc_data = {
+    "date": today,
+    "ips": all_ips,
+    "hashes": all_hashes,
+    "domains": all_domains,
+    "emails": all_emails
+}
+with open(json_output_file, "w", encoding="utf-8") as f:
+    json.dump(ioc_data, f, indent=2)
 
-# === Update archive index ===
+# === Update index.html (arhiva linkova) ===
 index_path = "docs/daily-ioc/index.html"
 entry = f'<li><a href="/daily-ioc/ioc-{today}/">{today}</a></li>'
 
