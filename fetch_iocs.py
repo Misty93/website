@@ -3,6 +3,7 @@ import os
 import json
 import re
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 # === SSH credentials from environment ===
 host = os.getenv("HONEYPOT_HOST")
@@ -67,9 +68,34 @@ ssh.close()
 today = datetime.now().strftime("%Y-%m-%d")
 ioc_dir = f"docs/daily-ioc/ioc-{today}"
 os.makedirs(ioc_dir, exist_ok=True)
+output_file = f"{ioc_dir}/index.html"
+
+# === If file exists, parse existing IOCs ===
+existing_ips, existing_hashes, existing_domains, existing_emails = set(), set(), set(), set()
+
+if os.path.exists(output_file):
+    from bs4 import BeautifulSoup
+    with open(output_file, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f, "html.parser")
+        for li in soup.find_all("li"):
+            text = li.text.strip()
+            if "[.]" in text:
+                existing_ips.add(text)
+            elif "[at]" in text:
+                existing_emails.add(text)
+            elif "." in text:
+                existing_domains.add(text)
+            elif len(text) == 64:
+                existing_hashes.add(text)
+
+# === Merge with new IOCs ===
+all_ips = existing_ips.union(defang(ip) for ip in ips)
+all_hashes = existing_hashes.union(defang(h) for h in hashes)
+all_domains = existing_domains.union(defang(d) for d in domains)
+all_emails = existing_emails.union(defang(e) for e in emails)
 
 def html_list(title, items):
-    items = sorted(defang(i) for i in items)
+    items = sorted(items)
     if not items:
         return f"<h3>{title}</h3><p>No data found.</p>"
     return f"<h3>{title}</h3><ul>" + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
@@ -80,15 +106,15 @@ html = f"""<!DOCTYPE html>
 h1,h2,h3{{color:#ff4500}}ul{{list-style:none;padding:0}}li{{padding:0.2rem 0}}</style>
 </head><body>
 <h1>Daily IOC Report – {today}</h1>
-{html_list("🔴 Malicious IPs", ips)}
-{html_list("🧬 File Hashes", hashes)}
-{html_list("🌐 Domains", domains)}
-{html_list("✉️ Emails", emails)}
+{html_list("🔴 Malicious IPs", all_ips)}
+{html_list("🧬 File Hashes", all_hashes)}
+{html_list("🌐 Domains", all_domains)}
+{html_list("✉️ Emails", all_emails)}
 <p><a href="/daily-ioc/">← Back to archive</a></p>
 </body></html>
 """
 
-with open(f"{ioc_dir}/index.html", "w", encoding="utf-8") as f:
+with open(output_file, "w", encoding="utf-8") as f:
     f.write(html)
 
 # === Update archive index ===
