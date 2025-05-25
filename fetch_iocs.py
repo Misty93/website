@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import re
 from datetime import datetime
 
 # === Fetch IPs from Feodo Tracker ===
@@ -38,12 +39,12 @@ def fetch_threatfox_domains():
         print("Error parsing ThreatFox:", e)
     return domains
 
-# === Append section to HTML if items are new ===
-def append_section_if_missing(section_title, new_items, html_path):
+# === Zamjena sekcije u HTML-u ===
+def update_section(section_title, new_items, html_path):
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(f"<html><head><meta charset='UTF-8'><title>IOC {today}</title>\n")
-            f.write("<style>body{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}h1,h2,h3{color:#ff4500}ul{list-style:none;padding:0}li{padding:0.2rem 0}</style>\n")
+            f.write("<style>body{{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}}h1,h2,h3{{color:#ff4500}}ul{{list-style:none;padding:0}}li{{padding:0.2rem 0}}</style>\n")
             f.write("</head><body>\n")
             f.write(f"<h1>Daily IOC Report – {today}</h1>\n")
             f.write("<p><a href=\"/daily-ioc/\">← Back to archive</a></p>\n")
@@ -52,16 +53,18 @@ def append_section_if_missing(section_title, new_items, html_path):
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    new_lines = []
-    for item in new_items:
-        if item not in content:
-            new_lines.append(f"<li>{item}</li>")
+    deduped_items = sorted(set(new_items))
+    section_html = f"<h2>{section_title}</h2>\n<ul>\n" + "\n".join(f"<li>{item}</li>" for item in deduped_items) + "\n</ul>"
 
-    if new_lines:
-        insertion = f"<h2>{section_title}</h2><ul>\n" + "\n".join(new_lines) + "\n</ul>"
-        content = content.replace("</body>", insertion + "\n</body>")
-        with open(html_path, "w", encoding="utf-8") as f:
-            f.write(content)
+    pattern = re.compile(rf"<h2>{re.escape(section_title)}</h2>\s*<ul>.*?</ul>", re.DOTALL)
+
+    if pattern.search(content):
+        content = pattern.sub(section_html, content)
+    else:
+        content = content.replace("</body>", section_html + "\n</body>")
+
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(content)
 
 # === Setup paths and date ===
 today = datetime.now().strftime("%Y-%m-%d")
@@ -75,11 +78,11 @@ all_hashes = fetch_malware_hashes()
 all_domains = fetch_threatfox_domains()
 all_emails = []  # opcionalno za kasnije
 
-# === Append data to HTML report ===
-append_section_if_missing("🔴 Malicious IPs", all_ips, output_file)
-append_section_if_missing("🧬 File Hashes", all_hashes, output_file)
-append_section_if_missing("🌐 Domains", all_domains, output_file)
-append_section_if_missing("✉️ Emails", all_emails, output_file)
+# === Insert/update data to HTML report ===
+update_section("🔴 Malicious IPs", all_ips, output_file)
+update_section("🧬 File Hashes", all_hashes, output_file)
+update_section("🌐 Domains", all_domains, output_file)
+update_section("✉️ Emails", all_emails, output_file)
 
 # === Save to JSON ===
 json_output_file = os.path.join(folder, "index.json")
