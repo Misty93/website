@@ -41,7 +41,6 @@ def fetch_threatfox_domains():
 # === APPEND funkcija za HTML ===
 def append_section_if_missing(section_title, new_items, html_path):
     if not os.path.exists(html_path):
-        # ako ne postoji, napravi osnovni dokument
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(f"<html><head><meta charset='UTF-8'><title>IOC {today}</title>\n")
             f.write("<style>body{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}h1,h2,h3{color:#ff4500}ul{list-style:none;padding:0}li{padding:0.2rem 0}</style>\n")
@@ -98,10 +97,16 @@ with open(json_output_file, "w", encoding="utf-8") as f:
 index_path = "docs/daily-ioc/index.html"
 entry = f'<li><a href="/daily-ioc/ioc-{today}/">{today}</a></li>'
 
-if os.path.exists(index_path):
-    with open(index_path, "r", encoding="utf-8") as f:
-        content = f.read()
-    if entry not in content:
-        content = content.replace("<ul>", f"<ul>\n    {entry}", 1)
-        with open(index_path, "w", encoding="utf-8") as f:
-            f.write(content)
+# === Ako index.html ne postoji, napravi bazni ===
+if not os.path.exists(index_path):
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write("<!DOCTYPE html><html><head><meta charset='UTF-8'><title>IOC Archive</title></head><body>\n")
+        f.write("<h1>Daily IOC Archive</h1>\n<ul>\n</ul>\n</body></html>")
+
+# === Upiši novi dan ako još nije tamo ===
+with open(index_path, "r", encoding="utf-8") as f:
+    content = f.read()
+if entry not in content:
+    content = content.replace("<ul>", f"<ul>\n    {entry}", 1)
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write(content)
