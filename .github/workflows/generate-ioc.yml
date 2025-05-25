@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install -r requirements.txt || true
 
-      - name: Generate IOC HTML
+      - name: Generate IOC HTML + JSON
         run: python3 fetch_iocs.py
 
       - name: Commit and push changes
@@ -31,6 +31,4 @@ jobs:
           git config user.email "actions@github.com"
           git add docs/daily-ioc/
           git commit -m "🔄 Daily IOC update - $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          git push origin HEAD:${{ github.ref_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
