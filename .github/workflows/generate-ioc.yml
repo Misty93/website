@@ -2,7 +2,7 @@ name: Daily IOC Fetch
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # every day at 20:00 UTC
+    - cron: '* * * * *'  # every day at all times
   workflow_dispatch:
 
 jobs:
