@@ -1,24 +1,127 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bio</title>
+  <meta charset="UTF-8" />
+  <title>Bio – Leonora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       background-color: #121212;
-      color: #fff;
-      font-family: sans-serif;
-      padding: 2rem;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
+
+    .left {
+      flex: 1 1 40%;
+      padding: 3rem 2rem;
+      min-width: 280px;
+      background-color: #1a1a1a;
+      border-right: 1px solid #2a2a2a;
+    }
+
+    .right {
+      flex: 1 1 60%;
+      padding: 3rem 2rem;
+      min-width: 300px;
+    }
+
+    h1, h2 {
+      color: #ff4500;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .certificates li::before,
+    .skills li::before {
+      content: "✔️ ";
+      color: #ff4500;
+    }
+
     a {
       color: #ff4500;
       text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
   </style>
 </head>
 <body>
-  <h1>O meni</h1>
-  <p>Sample text</p>
-  <p><a href="/">← Natrag</a></p>
+
+  <div class="left">
+    <h1>Leonora Miliša</h1>
+    <p><strong>Security Technology Expert & Cybersecurity Consultant</strong></p>
+    <p>I help small companies strengthen their digital defense. I specialize in assessing security posture, hardening systems, and offering practical consulting tailored to their business needs.</p>
+    <p>Through hands-on work with email security, incident response, and security architecture, I simplify complex tech so others don’t have to worry.</p>
+    <p>I combine methodical analysis with creativity and curiosity — especially when it comes to weird logs and gardening metaphors 🌿.</p>
+    <p><a href="/">← Back to homepage</a></p>
+  </div>
+
+  <div class="right">
+    <div class="section">
+      <h2>Skills & Tools</h2>
+      <ul class="skills">
+        <li>Linux, Windows, macOS</li>
+        <li>PowerShell, Bash, Regex</li>
+        <li>SIEM (QRadar), SOAR</li>
+        <li>EDR: CrowdStrike, Defender, Trend Micro</li>
+        <li>Email Security: Cisco ESA, Fortimail, Trend Micro</li>
+        <li>Virtualization & Hardening</li>
+        <li>T-Pot honeypots & basic reverse engineering</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <ul class="certificates">
+        <li>Microsoft Azure Administrator Associate</li>
+        <li>Microsoft 365 Fundamentals</li>
+        <li>Dynamics 365 Fundamentals (CRM & ERP)</li>
+        <li>Azure Security, Compliance & Identity Fundamentals</li>
+        <li>Power Platform, AI, Data & Azure Fundamentals</li>
+        <li>Google IT Support Specialist</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects & Interests</h2>
+      <p>
+        Deploying honeypot systems, experimenting with virtualization, and studying reverse engineering.  
+        Outside of cybersecurity, I enjoy photography, cycling, reading, and yes — gardening.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Let’s Connect</h2>
+      <p>
+        <a href="mailto:leonoramilisa@gmail.com">Email</a> | 
+        <a href="https://www.linkedin.com/in/leonoramilisa" target="_blank">LinkedIn</a> | 
+        <a href="https://www.tiktok.com/@mistyice93" target="_blank">TikTok</a>
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
