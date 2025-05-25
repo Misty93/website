@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily IOC – 2025-05-25</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      color: #ff4500;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #1e1e1e;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem 0;
+      border-left: 3px solid #ff4500;
+      font-family: monospace;
+    }
+
+    a {
+      color: #ff4500;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .date {
+      font-style: italic;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>IOC Report</h1>
+  <p class="date">Date: <span id="date"></span></p>
+
+  <h2>🔴 Malicious IPs</h2>
+  <ul>
+    <li>93[.]123[.]109[.]229</li>
+    <li>27[.]254[.]206[.]246</li>
+    <li>108[.]181[.]62[.]97</li>
+    <li>5[.]188[.]230[.]157</li>
+    <li>167[.]94[.]138[.]206</li>
+    <li>103[.]69[.]96[.]163</li>
+    <li>173[.]231[.]185[.]164</li>
+    <li>194[.]50[.]16[.]151</li>
+    <li>146[.]70[.]116[.]138</li>
+    <li>172[.]236[.]228[.]218</li>
+    <li>204[.]76[.]203[.]219</li>
+    <li>176[.]65[.]148[.]193</li>
+    <li>222[.]180[.]46[.]198</li>
+    <li>198[.]235[.]24[.]161</li>
+    <li>213[.]209[.]143[.]206</li>
+    <li>205[.]210[.]31[.]67</li>
+    <li>154[.]212[.]141[.]215</li>
+    <li>196[.]189[.]14[.]84</li>
+    <li>172[.]202[.]117[.]217</li>
+    <li>85[.]100[.]41[.]138</li>
+    <li>5[.]135[.]192[.]62</li>
+    <li>103[.]203[.]59[.]5</li>
+    <li>20[.]168[.]125[.]91</li>
+    <li>37[.]245[.]13[.]165</li>
+  </ul>
+
+  <h3>🧬 Malicious Hashes</h3>
+  <p>None submitted for today.</p>
+
+  <h3>🌐 Malicious Domains</h3>
+  <p>None submitted for today.</p>
+
+  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
+
+  <script>
+    // Dynamically set today's date in YYYY-MM-DD format
+    const dateEl = document.getElementById('date');
+    const today = new Date().toISOString().slice(0, 10);
+    dateEl.textContent = today;
+  </script>
+
+</body>
+</html>
