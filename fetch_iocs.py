@@ -68,11 +68,11 @@ def fetch_threatfox_domains():
 # === HTML template i sekcijski update ===
 def update_section(section_title, new_items, html_path):
     deduped_items = sorted(set(new_items))
-    section_html = f"<h2>{section_title}</h2>\\n<ul>\\n" + "\\n".join(f"<li>{item}</li>" for item in deduped_items) + "\\n</ul>"
+    section_html = f"<h2>{section_title}</h2>\n<ul>\n" + "\n".join(f"<li>{item}</li>" for item in deduped_items) + "\n</ul>"
 
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
-            f.write(f\"\"\"<!DOCTYPE html>
+            f.write(f"""<!DOCTYPE html>
 <html><head><meta charset='UTF-8'><title>IOC {today}</title>
 <style>body{{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}}
 h1,h2,h3{{color:#ff4500}}ul{{list-style:none;padding:0}}li{{padding:0.2rem 0}}
@@ -80,16 +80,16 @@ a{{color:#ff4500;text-decoration:none}}a:hover{{text-decoration:underline}}</sty
 </head><body>
 <h1>Daily IOC Report – {today}</h1>
 <p><a href='/'>← Back to homepage</a> | <a href='/daily-ioc/'>IOC Archive</a></p>
-</body></html>\"\"\")
+</body></html>""")
 
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = re.compile(rf"<h2>{re.escape(section_title)}</h2>\\s*<ul>.*?</ul>", re.DOTALL)
+    pattern = re.compile(rf"<h2>{re.escape(section_title)}</h2>\s*<ul>.*?</ul>", re.DOTALL)
     if pattern.search(content):
         content = pattern.sub(section_html, content)
     else:
-        content = content.replace("</body>", section_html + "\\n</body>")
+        content = content.replace("</body>", section_html + "\n</body>")
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -129,7 +129,7 @@ for name in os.listdir(base_folder):
 entries.sort(reverse=True)
 
 with open(index_path, "w", encoding="utf-8") as f:
-    f.write(\"\"\"<!DOCTYPE html>
+    f.write("""<!DOCTYPE html>
 <html lang='en'>
 <head>
   <meta charset='UTF-8' />
@@ -148,10 +148,9 @@ with open(index_path, "w", encoding="utf-8") as f:
   <h1>IOC Archive</h1>
   <p><a href='/'>← Back to homepage</a></p>
   <ul>
-\"\"\")
+""")
     for date in entries:
-        f.write(f"    <li><a href='/daily-ioc/ioc-{date}/'>{date}</a></li>\\n")
-    f.write(\"\"\"  </ul>
+        f.write(f"    <li><a href='/daily-ioc/ioc-{date}/'>{date}</a></li>\n")
+    f.write("""  </ul>
 </body>
-</html>\"\"\")
-"""
+</html>""")
