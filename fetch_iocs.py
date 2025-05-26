@@ -27,7 +27,7 @@ def fetch_feodo_ips():
     except:
         return []
 
-# === Threat feed: AbuseIPDB (API key) ===
+# === Threat feed: AbuseIPDB ===
 def fetch_abuseipdb_ips():
     headers = {
         "Key": "9d65c5d41328705852b276fded1d7c15e23adf4e415752dcc0f895171e34e4c40e93554e4d0a84c1",
@@ -73,14 +73,54 @@ def update_section(section_title, new_items, html_path):
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(f"""<!DOCTYPE html>
-<html><head><meta charset='UTF-8'><title>IOC {today}</title>
-<style>body{{background:#121212;color:#fff;font-family:sans-serif;padding:2rem;}}
-h1,h2,h3{{color:#ff4500}}ul{{list-style:none;padding:0}}li{{padding:0.2rem 0}}
-a{{color:#ff4500;text-decoration:none}}a:hover{{text-decoration:underline}}</style>
-</head><body>
-<h1>Daily IOC Report – {today}</h1>
-<p><a href='/'>← Back to homepage</a> | <a href='/daily-ioc/'>IOC Archive</a></p>
-</body></html>""")
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily IOC – {today}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {{
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }}
+    h1, h2, h3 {{
+      color: #ff4500;
+    }}
+    ul {{
+      list-style: none;
+      padding: 0;
+    }}
+    li {{
+      background-color: #1e1e1e;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem 0;
+      border-left: 3px solid #ff4500;
+      font-family: monospace;
+    }}
+    a {{
+      color: #ff4500;
+      text-decoration: none;
+    }}
+    a:hover {{
+      text-decoration: underline;
+    }}
+    .date {{
+      font-style: italic;
+      color: #bbb;
+    }}
+  </style>
+</head>
+<body>
+
+  <h1>IOC Report</h1>
+  <p class="date">Date: <span id="date">{today}</span></p>
+
+  <!-- Automatski generirane sekcije -->
+  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
+</body>
+</html>""")
 
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -89,7 +129,7 @@ a{{color:#ff4500;text-decoration:none}}a:hover{{text-decoration:underline}}</sty
     if pattern.search(content):
         content = pattern.sub(section_html, content)
     else:
-        content = content.replace("</body>", section_html + "\n</body>")
+        content = content.replace("<!-- Automatski generirane sekcije -->", f"<!-- Automatski generirane sekcije -->\n{section_html}")
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -116,7 +156,7 @@ with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
         "emails": emails
     }, f, indent=2)
 
-# === Obnovi index.html ===
+# === Obnovi index.html (arhiva) ===
 index_path = "docs/daily-ioc/index.html"
 base_folder = "docs/daily-ioc"
 entries = []
