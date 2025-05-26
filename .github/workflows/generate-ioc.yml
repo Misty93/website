@@ -2,7 +2,7 @@ name: Daily IOC Generator
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # svaki minut (za test)
+    - cron: '0 */6 * * *'  # svako 6 sati
   workflow_dispatch:      # omogućuje ručno pokretanje
 
 jobs:
