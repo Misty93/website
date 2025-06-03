@@ -194,16 +194,49 @@
       <p>Knock knock. Who’s there? Everyone. You left your ports open.</p>
     </main>
 
-    <div class="ask-box">
-      <h3>Got a security concern?</h3>
-      <form>
-        <input type="text" placeholder="Your email" required>
-        <textarea rows="4" placeholder="Ask an expert..." required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+   <div class="ask-box">
+    <h3>Got a security concern?</h3>
+    <form id="ask-form" action="https://formspree.io/f/mzzgblqz" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="4" placeholder="Ask an expert..." required></textarea>
+      <button type="submit">Send</button>
+    <p id="form-status" style="margin-top: 0.5rem; font-size: 0.9rem;"></p>
+  </form>
+</div>
 
-    <div class="flame flame-center">🔥</div>  
+    <div class="flame flame-center">🔥</div>
+    <script>
+      const form = document.getElementById('ask-form');
+      const status = document.getElementById('form-status');
+    
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+    
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+    
+          if (response.ok) {
+            status.textContent = "✅ Thanks, we got your message!";
+            status.style.color = "#00ff99";
+            form.reset();
+          } else {
+            const resData = await response.json();
+            status.textContent = resData.errors ? resData.errors[0].message : "❌ Something went wrong.";
+            status.style.color = "#ff6666";
+          }
+        } catch (error) {
+          status.textContent = "❌ Error sending the message.";
+          status.style.color = "#ff6666";
+        }
+      });
+   </script>
   </body>
 </html>
 
