@@ -185,6 +185,7 @@ with open(index_path, "w", encoding="utf-8") as f:
   </style>
 </head>
 <body>
+  <p><a href='/'>← Back to homepage</a></p>
   <h1>IOC Archive</h1>
   <p><a href='/'>← Back to homepage</a></p>
   <ul>
