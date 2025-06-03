@@ -22,47 +22,36 @@
       color: #ff4500;
       text-decoration: none;
     }
+    .lang-switch {
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
   <h1>Security Shenanigans</h1>
-  <p><a href="/">← Back to homepage</a></p>
-  <div class="date">Tuesday, June 3, 2025</div>
-  <div class="content">
-    <h2>Irresponsible Security Tool Sales: Why More Isn't Always Better</h2>
-    <p>Security is not something you can buy in a box. And yet, many organizations act like it is.</p>
-    <p>In today’s cybersecurity landscape, there’s a growing trend of "tool hoarding" — an obsession with buying more and more security tools in the hope that quantity equals protection. Vendors push sleek dashboards and impressive-sounding acronyms, resellers promise seamless defense-in-depth, and decision-makers with little technical knowledge sign purchase orders like they’re collecting trading cards.</p>
-    <p>But here's the hard truth: without proper integration, management, and strategy, more tools often mean less security.</p>
-    <h3>When Tools Clash Instead of Collaborate</h3>
-    <p>Every new security tool brings its own agents, rules, logging mechanisms, and alerts. Multiply this by ten or twenty different systems, and you have chaos instead of control. Many tools overlap in functionality, conflict with one another, or operate in isolation without sharing context.</p>
-    <p>In some environments, tools quite literally fight each other. Firewalls block legitimate traffic flagged by another tool. DLP and backup systems clash over file access. One tool flags an alert, but the SIEM can't correlate it because the formats don't match.</p>
-    <p>The result? Security gaps. Missed alerts. Frustrated teams. Slower incident response. And in the worst cases, a full sense of false security.</p>
-    <h3>The Illusion of Security Through Spending</h3>
-    <p>Security vendors thrive on fear, uncertainty, and doubt (FUD). They showcase stats about breaches, offer expensive "silver bullet" products, and suggest that without their solution, your company will be tomorrow’s headline.</p>
-    <p>This sales model often works — not because the tools are bad (some are fantastic!) — but because decision-makers often lack technical guidance. Project owners or executives without a trusted technical advisor may approve tool purchases they don’t need, don’t understand, or can't integrate.</p>
-    <p>It’s not uncommon to find orgs spending hundreds of thousands on cybersecurity solutions, only to leave many of them unused or poorly configured. Shelfware is rampant. Budgets are burned. Security doesn’t improve.</p>
-    <h3>Tool Sprawl Weakens the Security Chain</h3>
-    <p>Cybersecurity is a chain. Every component in your stack needs to communicate, support, and reinforce the others. If even one part is misaligned — an out-of-sync directory, an unpatched endpoint, a poorly integrated IDS — the chain breaks.</p>
-    <p>Security tool sprawl increases attack surfaces. More tools mean more complexity, more patching, more integration work, and more chances to misconfigure something.</p>
-    <p>Instead of orchestrated defense, many companies end up with a noisy, fragmented mess. Security teams juggle multiple dashboards, alerts are lost in the clutter, and attackers find blind spots in the gaps between tools.</p>
-    <h3>Users Still Matter</h3>
-    <p>Another overlooked piece? The end user. Tools are designed to protect people, but many security strategies ignore the actual humans who use the systems.</p>
-    <p>Users aren't security experts. If a tool is too invasive, too confusing, or poorly explained, users will bypass it, disable it, or make mistakes. No matter how many vendors or resellers are involved, if the security stack isn’t designed with the user in mind, it fails.</p>
-    <h3>Responsibility vs. Profit</h3>
-    <p>Let’s be clear: security tools cost money, and rightfully so. Developing, maintaining, and supporting robust cybersecurity products is difficult and resource-intensive. Vendors deserve to earn.</p>
-    <p>But with great power comes great responsibility.</p>
-    <p>Security should never be about maximizing short-term profit through fear-based sales. It should be about helping customers understand their risks, assess their gaps, and apply the right combination of technology, processes, and people to reduce exposure.</p>
-    <p>Vendors who act as true partners — rather than opportunistic salespeople — will gain more long-term trust and business.</p>
-    <h3>Hygiene Before Hype</h3>
-    <p>Here’s a radical idea: before buying another shiny new tool, fix what you already have.</p>
-    <p>Patch your systems. Review configurations. Train your staff. Remove outdated accounts. Enforce multi-factor authentication. Monitor what you already own.</p>
-    <p>Most breaches don’t occur because someone didn’t buy the latest AI-driven zero-trust blockchain-enhanced cybersecurity product. They happen because an unpatched server was left exposed, a credential was stolen, or a misconfigured setting opened a door.</p>
-    <p>Security starts with hygiene, not hardware.</p>
-    <h3>Final Thought: Conscious Security Over Consumption</h3>
-    <p>Security isn’t about buying tools — it’s about making tools work together, guided by strategy, stewardship, and savviness.</p>
-    <p>It’s tempting to treat cybersecurity like a shopping list. But protection isn’t cumulative. More doesn’t always mean better. Sometimes, it just means more confusion, more cost, and more vulnerability.</p>
-    <p>Let’s shift the mindset: from consume-consume-consume to connect-integrate-harden. That’s where real security lives.</p>
+  <div class="lang-switch">
+    <a href="?lang=en">English</a> | <a href="?lang=hr">Hrvatski</a>
   </div>
-  <p><a href="/">← Back to homepage</a></p>
+  <div class="date" id="current-date"></div>
+  <div id="article-content" class="content">Loading...</div>
+
+  <script>
+    // Postavljanje datuma
+    const today = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = today.toLocaleDateString('en-GB', options);
+
+    // Jezik iz URL-a ili default EN
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') === 'hr' ? 'hr' : 'en';
+    const file = `article-${lang}.html`;
+
+    fetch(file)
+      .then(res => res.text())
+      .then(html => document.getElementById('article-content').innerHTML = html)
+      .catch(() => {
+        document.getElementById('article-content').innerHTML = '<p>Error loading article.</p>';
+      });
+  </script>
 </body>
 </html>
