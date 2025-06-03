@@ -22,26 +22,36 @@
       color: #ff4500;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
     .lang-switch {
       margin-bottom: 1rem;
+    }
+    .back-link {
+      margin: 1rem 0;
+      display: block;
     }
   </style>
 </head>
 <body>
   <h1>Security Shenanigans</h1>
+
   <div class="lang-switch">
+    <a class="back-link" href="/">← Back to homepage</a>
     <a href="?lang=en">English</a> | <a href="?lang=hr">Hrvatski</a>
   </div>
+
   <div class="date" id="current-date"></div>
   <div id="article-content" class="content">Loading...</div>
 
+  <a class="back-link" href="/">← Back to homepage</a>
+
   <script>
-    // Postavljanje datuma
     const today = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById('current-date').textContent = today.toLocaleDateString('en-GB', options);
 
-    // Jezik iz URL-a ili default EN
     const params = new URLSearchParams(window.location.search);
     const lang = params.get('lang') === 'hr' ? 'hr' : 'en';
     const file = `article-${lang}.html`;
