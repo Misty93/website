@@ -115,10 +115,10 @@ def update_section(section_title, new_items, html_path):
 <body>
   
   <h1>IOC Report</h1>
+  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
   <p class="date">Date: <span id="date">{today}</span></p>
 
   <!-- Automatski generirane sekcije -->
-  <p><a href='/'>← Back to IOC archive</a></p>
   <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
 </body>
 </html>""")
