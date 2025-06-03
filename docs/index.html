@@ -132,6 +132,47 @@
         50%  { transform: translateY(-10px) translateX(-50%); }
         100% { transform: translateY(0) translateX(-50%); }
       }
+
+      .ask-box {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        background-color: #1e1e1e;
+        border-left: 2px solid #ff4500;
+        padding: 1rem;
+        max-width: 300px;
+        color: #ffffff;
+        z-index: 999;
+      }
+
+      .ask-box h3 {
+        margin-top: 0;
+        color: #ff4500;
+      }
+
+      .ask-box input,
+      .ask-box textarea {
+        width: 100%;
+        background: #121212;
+        border: 1px solid #444;
+        color: #fff;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .ask-box button {
+        background-color: #ff4500;
+        border: none;
+        padding: 0.5rem;
+        width: 100%;
+        color: #121212;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .ask-box button:hover {
+        background-color: #ff5e1f;
+      }
     </style>
   </head>
   <body>
@@ -152,6 +193,16 @@
       <h2>Securing your world, so you don’t have to.</h2>
       <p>Knock knock. Who’s there? Everyone. You left your ports open.</p>
     </main>
+
+    <div class="ask-box">
+      <h3>Got a security concern?</h3>
+      <form>
+        <input type="text" placeholder="Your email" required>
+        <textarea rows="4" placeholder="Ask an expert..." required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
     <div class="flame flame-center">🔥</div>  
   </body>
 </html>
