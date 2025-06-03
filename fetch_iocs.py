@@ -113,11 +113,12 @@ def update_section(section_title, new_items, html_path):
   </style>
 </head>
 <body>
-
+  
   <h1>IOC Report</h1>
   <p class="date">Date: <span id="date">{today}</span></p>
 
   <!-- Automatski generirane sekcije -->
+  <p><a href='/'>← Back to IOC archive</a></p>
   <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
 </body>
 </html>""")
@@ -185,7 +186,6 @@ with open(index_path, "w", encoding="utf-8") as f:
   </style>
 </head>
 <body>
-  <p><a href='/'>← Back to homepage</a></p>
   <h1>IOC Archive</h1>
   <p><a href='/'>← Back to homepage</a></p>
   <ul>
