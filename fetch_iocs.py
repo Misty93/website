@@ -14,7 +14,7 @@ output_file = os.path.join(folder, "index.html")
 def fetch_feodo_ips():
     url = "https://feodotracker.abuse.ch/downloads/ipblocklist.csv"
     try:
-        r = requests.get(url)
+        r = requests.get(url, timeout=10)
         lines = r.text.splitlines()
         ips = []
         for line in lines:
@@ -24,7 +24,8 @@ def fetch_feodo_ips():
             if "." in ip:
                 ips.append(ip.replace(".", "[.]"))
         return ips
-    except:
+    except Exception as e:
+        print(f"[!] Error fetching Feodo IPs: {e}")
         return []
 
 # === Threat feed: AbuseIPDB ===
@@ -34,35 +35,38 @@ def fetch_abuseipdb_ips():
         "Accept": "application/json"
     }
     try:
-        r = requests.get("https://api.abuseipdb.com/api/v2/blacklist?confidenceMinimum=90", headers=headers)
+        r = requests.get("https://api.abuseipdb.com/api/v2/blacklist?confidenceMinimum=90", headers=headers, timeout=10)
         data = r.json().get("data", [])
         return [entry["ipAddress"].replace(".", "[.]") for entry in data]
-    except:
+    except Exception as e:
+        print(f"[!] Error fetching AbuseIPDB IPs: {e}")
         return []
 
 # === Threat feed: MalwareBazaar ===
 def fetch_malware_hashes():
     url = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
     try:
-        r = requests.get(url)
+        r = requests.get(url, timeout=10)
         lines = r.text.splitlines()
         return [line for line in lines if line and not line.startswith("#")]
-    except:
+    except Exception as e:
+        print(f"[!] Error fetching MalwareBazaar hashes: {e}")
         return []
 
 # === Threat feed: ThreatFox domains ===
 def fetch_threatfox_domains():
     url = "https://threatfox.abuse.ch/api/v1/"
     try:
-        r = requests.post(url, data={"query": "recent", "limit": 100})
-        domains = []
+        r = requests.post(url, data={"query": "recent", "limit": 100}, timeout=10)
         results = r.json().get("data", [])
+        domains = []
         for item in results:
             domain = item.get("ioc_value", "")
             if "." in domain and not domain.startswith("http"):
                 domains.append(domain.replace(".", "[.]"))
         return domains
-    except:
+    except Exception as e:
+        print(f"[!] Error fetching ThreatFox domains: {e}")
         return []
 
 # === HTML template i sekcijski update ===
@@ -73,53 +77,27 @@ def update_section(section_title, new_items, html_path):
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(f"""<!DOCTYPE html>
-<html lang="en">
+<html lang=\"en\">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset=\"UTF-8\" />
   <title>Daily IOC – {today}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
   <style>
-    body {{
-      background-color: #121212;
-      color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-    }}
-    h1, h2, h3 {{
-      color: #ff4500;
-    }}
-    ul {{
-      list-style: none;
-      padding: 0;
-    }}
-    li {{
-      background-color: #1e1e1e;
-      padding: 0.5rem 1rem;
-      margin: 0.3rem 0;
-      border-left: 3px solid #ff4500;
-      font-family: monospace;
-    }}
-    a {{
-      color: #ff4500;
-      text-decoration: none;
-    }}
-    a:hover {{
-      text-decoration: underline;
-    }}
-    .date {{
-      font-style: italic;
-      color: #bbb;
-    }}
+    body {{ background-color: #121212; color: #ffffff; font-family: 'Segoe UI', sans-serif; padding: 2rem; }}
+    h1, h2 {{ color: #ff4500; }}
+    ul {{ list-style: none; padding: 0; }}
+    li {{ background-color: #1e1e1e; padding: 0.5rem 1rem; margin: 0.3rem 0; border-left: 3px solid #ff4500; font-family: monospace; }}
+    a {{ color: #ff4500; text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    .date {{ font-style: italic; color: #bbb; }}
   </style>
 </head>
 <body>
-  
   <h1>IOC Report</h1>
-  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
-  <p class="date">Date: <span id="date">{today}</span></p>
-
+  <p><a href=\"/daily-ioc/\">← Back to IOC archive</a></p>
+  <p class=\"date\">Date: <span id=\"date\">{today}</span></p>
   <!-- Automatski generirane sekcije -->
-  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
+  <p><a href=\"/daily-ioc/\">← Back to IOC archive</a></p>
 </body>
 </html>""")
 
@@ -136,7 +114,7 @@ def update_section(section_title, new_items, html_path):
         f.write(content)
 
 # === Fetch IOC podaci ===
-ips = fetch_feodo_ips() + fetch_abuseipdb_ips()
+ips = list(set(fetch_feodo_ips() + fetch_abuseipdb_ips()))
 hashes = fetch_malware_hashes()
 domains = fetch_threatfox_domains()
 emails = []  # za kasnije
@@ -160,13 +138,7 @@ with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
 # === Obnovi index.html (arhiva) ===
 index_path = "docs/daily-ioc/index.html"
 base_folder = "docs/daily-ioc"
-entries = []
-
-for name in os.listdir(base_folder):
-    if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name)):
-        date = name.replace("ioc-", "")
-        entries.append(date)
-
+entries = [name.replace("ioc-", "") for name in os.listdir(base_folder) if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name))]
 entries.sort(reverse=True)
 
 with open(index_path, "w", encoding="utf-8") as f:
@@ -184,25 +156,11 @@ with open(index_path, "w", encoding="utf-8") as f:
     a { color: #ff4500; text-decoration: none; }
     a:hover { text-decoration: underline; }
     @media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  li {
-    font-size: 0.95rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .date {
-    text-align: center;
-    font-size: 0.9rem;
-  }
-}
+      body { padding: 1rem; }
+      li { font-size: 0.95rem; padding: 0.4rem 0.8rem; }
+      h1 { font-size: 1.5rem; text-align: center; }
+      .date { text-align: center; font-size: 0.9rem; }
+    }
   </style>
 </head>
 <body>
