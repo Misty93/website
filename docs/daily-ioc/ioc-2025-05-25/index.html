@@ -10,6 +10,7 @@
       color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
       padding: 2rem;
+      margin: 0;
     }
 
     h1, h2, h3 {
@@ -42,12 +43,35 @@
       font-style: italic;
       color: #bbb;
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .date {
+        font-size: 0.9rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      li {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <h1>IOC Report</h1>
-  <p class="date">Date: <span id="date"></span></p>
+  <p class="date">Date: <span id="date">2025-05-25</span></p>
 
   <!-- Automatski generirane sekcije -->
   <h2>🔴 Malicious IPs</h2>
