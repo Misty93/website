@@ -183,6 +183,26 @@ with open(index_path, "w", encoding="utf-8") as f:
     li { margin: 0.3rem 0; }
     a { color: #ff4500; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .date {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
   </style>
 </head>
 <body>
