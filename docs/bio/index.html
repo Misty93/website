@@ -66,6 +66,36 @@
     .section {
       margin-bottom: 2.5rem;
     }
+    @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 1 1 100%;
+    min-width: 100%;
+    padding: 2rem 1rem;
+    border-right: none;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .right {
+    border-bottom: none;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+}
+
   </style>
 </head>
 <body>
