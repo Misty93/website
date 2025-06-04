@@ -38,6 +38,7 @@ html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Security News</title>
   <style>
     body {{
@@ -45,9 +46,12 @@ html_content = f"""<!DOCTYPE html>
       color: #fff;
       font-family: sans-serif;
       padding: 2rem;
+      margin: 0;
     }}
     h1 {{
       color: #ff4500;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }}
     a {{
       color: #ff4500;
@@ -65,13 +69,27 @@ html_content = f"""<!DOCTYPE html>
       font-size: 0.9em;
       color: #aaa;
     }}
+    @media (max-width: 768px) {{
+      body {{
+        padding: 1rem;
+      }}
+      h1 {{
+        font-size: 1.5rem;
+        text-align: center;
+      }}
+      .news-item {{
+        font-size: 1rem;
+      }}
+      .source {{
+        font-size: 0.8rem;
+      }}
+    }}
   </style>
 </head>
 <body>
   <h1>Security News</h1>
   <p><a href="/">← Back to homepage</a></p>
 """
-
 for article in articles:
     html_content += f"""
     <div class="news-item">
