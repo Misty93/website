@@ -173,6 +173,291 @@
       .ask-box button:hover {
         background-color: #ff5e1f;
       }
+      <!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Securing your world, so you don’t have to.</title>
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Securing your world, so you don’t have to." />
+    <meta property="og:description" content="Knock knock. Who’s there? Everyone. You left your ports open." />
+    <meta property="og:url" content="https://leonoramilisa.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://leonoramilisa.com/og-image.png" />
+
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Securing your world, so you don’t have to.">
+    <meta name="twitter:description" content="Knock knock. Who’s there? Everyone. You left your ports open.">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        background-image: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #1a1a1a;
+        border-bottom: 1px solid #2a2a2a;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff4500;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+      }
+
+      nav a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #ff4500;
+        left: 0;
+        bottom: -4px;
+        transition: width 0.3s;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      main {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #ff4500;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #cccccc;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+
+      .btn {
+        background-color: transparent;
+        border: 2px solid #ff4500;
+        color: #ff4500;
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background-color: #ff4500;
+        color: #121212;
+      }
+
+      .flame {
+        position: fixed;
+        bottom: 20px;
+        font-size: 6rem;
+        opacity: 0.1;
+        animation: flicker 3s infinite, float 6s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .flame-center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @keyframes flicker {
+        0%, 100% { opacity: 0.1; }
+        50% { opacity: 0.25; }
+      }
+
+      @keyframes float {
+        0%   { transform: translateY(0) translateX(-50%); }
+        50%  { transform: translateY(-10px) translateX(-50%); }
+        100% { transform: translateY(0) translateX(-50%); }
+      }
+
+      .ask-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1e1e1e;
+        border-left: 2px solid #ff4500;
+        padding: 1rem;
+        max-width: 300px;
+        color: #ffffff;
+        z-index: 999;
+      }
+
+      .ask-box h3 {
+        margin-top: 0;
+        color: #ff4500;
+      }
+
+      .ask-box input,
+      .ask-box textarea {
+        width: 100%;
+        background: #121212;
+        border: 1px solid #444;
+        color: #fff;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .ask-box button {
+        background-color: #ff4500;
+        border: none;
+        padding: 0.5rem;
+        width: 100%;
+        color: #121212;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .ask-box button:hover {
+        background-color: #ff5e1f;
+      }
+    </style>
+    @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .ask-box {
+    position: fixed;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    max-width: none;
+    width: auto;
+    box-sizing: border-box;
+  }
+
+  .ask-box input,
+  .ask-box textarea {
+    font-size: 1rem;
+  }
+
+  .ask-box button {
+    font-size: 1rem;
+  }
+}
+  </head>
+  <body>
+    <header>
+      <div class="logo">LM</div>
+      <nav>
+        <ul>
+          <li><a href="/bio/">Bio</a></li>
+          <li><a href="/security-news/">Security News</a></li>
+          <li><a href="/security-shenanigans/">Security Shenanigans</a></li>
+          <li><a href="/daily-ioc/">Daily IOC</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Securing your world, so you don’t have to.</h2>
+      <p>Knock knock. Who’s there? Everyone. You left your ports open.</p>
+    </main>
+
+   <div class="ask-box">
+    <h3>Got a security concern?</h3>
+    <form id="ask-form" action="https://formspree.io/f/mzzgblqz" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" rows="4" placeholder="Ask an expert..." required></textarea>
+      <button type="submit">Send</button>
+    <p id="form-status" style="margin-top: 0.5rem; font-size: 0.9rem;"></p>
+  </form>
+</div>
+
+    <div class="flame flame-center">🔥</div>
+    <script>
+      const form = document.getElementById('ask-form');
+      const status = document.getElementById('form-status');
+    
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+    
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+    
+          if (response.ok) {
+            status.textContent = "✅ Thanks, we got your message!";
+            status.style.color = "#00ff99";
+            form.reset();
+          } else {
+            const resData = await response.json();
+            status.textContent = resData.errors ? resData.errors[0].message : "❌ Something went wrong.";
+            status.style.color = "#ff6666";
+          }
+        } catch (error) {
+          status.textContent = "❌ Error sending the message.";
+          status.style.color = "#ff6666";
+        }
+      });
+   </script>
+  </body>
+</html>
     </style>
   </head>
   <body>
