@@ -77,27 +77,70 @@ def update_section(section_title, new_items, html_path):
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(f"""<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"UTF-8\" />
+  <meta charset="UTF-8" />
   <title>Daily IOC – {today}</title>
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {{ background-color: #121212; color: #ffffff; font-family: 'Segoe UI', sans-serif; padding: 2rem; }}
-    h1, h2 {{ color: #ff4500; }}
-    ul {{ list-style: none; padding: 0; }}
-    li {{ background-color: #1e1e1e; padding: 0.5rem 1rem; margin: 0.3rem 0; border-left: 3px solid #ff4500; font-family: monospace; }}
-    a {{ color: #ff4500; text-decoration: none; }}
-    a:hover {{ text-decoration: underline; }}
-    .date {{ font-style: italic; color: #bbb; }}
+    body {{
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }}
+    h1, h2 {{
+      color: #ff4500;
+    }}
+    ul {{
+      list-style: none;
+      padding: 0;
+    }}
+    li {{
+      background-color: #1e1e1e;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem 0;
+      border-left: 3px solid #ff4500;
+      font-family: monospace;
+    }}
+    a {{
+      color: #ff4500;
+      text-decoration: none;
+    }}
+    a:hover {{
+      text-decoration: underline;
+    }}
+    .date {{
+      font-style: italic;
+      color: #bbb;
+    }}
+    @media (max-width: 768px) {{
+      body {{ padding: 1rem; }}
+      h1 {{ font-size: 1.5rem; text-align: center; }}
+      .date {{
+        font-size: 0.9rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 1rem;
+      }}
+      li {{
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        word-break: break-word;
+      }}
+      ul {{
+        padding-left: 0;
+      }}
+    }}
   </style>
 </head>
 <body>
   <h1>IOC Report</h1>
-  <p><a href=\"/daily-ioc/\">← Back to IOC archive</a></p>
-  <p class=\"date\">Date: <span id=\"date\">{today}</span></p>
+  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
+  <p class="date">Date: <span id="date">{today}</span></p>
+
   <!-- Automatski generirane sekcije -->
-  <p><a href=\"/daily-ioc/\">← Back to IOC archive</a></p>
+  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
 </body>
 </html>""")
 
@@ -117,7 +160,7 @@ def update_section(section_title, new_items, html_path):
 ips = list(set(fetch_feodo_ips() + fetch_abuseipdb_ips()))
 hashes = fetch_malware_hashes()
 domains = fetch_threatfox_domains()
-emails = []  # za kasnije
+emails = []  # Placeholder za buduće
 
 # === Piši IOC u HTML ===
 update_section("🔴 Malicious IPs", ips, output_file)
