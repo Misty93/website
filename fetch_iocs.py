@@ -10,6 +10,13 @@ folder = f"docs/daily-ioc/ioc-{today}"
 os.makedirs(folder, exist_ok=True)
 output_file = os.path.join(folder, "index.html")
 
+# === URLScan API Key ===
+URLSCAN_API_KEY = "01970bef-509f-76fe-9361-b08d21433140"
+urlscan_headers = {
+    "Content-Type": "application/json",
+    "API-Key": URLSCAN_API_KEY
+}
+
 # === Threat feed: Feodo Tracker ===
 def fetch_feodo_ips():
     url = "https://feodotracker.abuse.ch/downloads/ipblocklist.csv"
@@ -67,6 +74,22 @@ def fetch_threatfox_domains():
         return domains
     except Exception as e:
         print(f"[!] Error fetching ThreatFox domains: {e}")
+        return []
+
+# === URLScan: Fetch suspicious domains from recent public scans ===
+def fetch_urlscan_domains():
+    search_url = "https://urlscan.io/api/v1/search/?q=visibility:public"
+    try:
+        r = requests.get(search_url, headers=urlscan_headers, timeout=10)
+        data = r.json().get("results", [])
+        domains = []
+        for item in data:
+            domain = item.get("page", {}).get("domain")
+            if domain and "." in domain:
+                domains.append(domain.replace(".", "[.]"))
+        return domains
+    except Exception as e:
+        print(f"[!] Error fetching URLScan domains: {e}")
         return []
 
 # === HTML template i sekcijski update ===
@@ -159,8 +182,8 @@ def update_section(section_title, new_items, html_path):
 # === Fetch IOC podaci ===
 ips = list(set(fetch_feodo_ips() + fetch_abuseipdb_ips()))
 hashes = fetch_malware_hashes()
-domains = fetch_threatfox_domains()
-emails = []  # Placeholder za buduće
+domains = list(set(fetch_threatfox_domains() + fetch_urlscan_domains()))
+emails = []  # Placeholder za kasnije
 
 # === Piši IOC u HTML ===
 update_section("🔴 Malicious IPs", ips, output_file)
