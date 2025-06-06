@@ -5,6 +5,10 @@
   <title>Bio – Leonora</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #121212;
       color: #ffffff;
@@ -19,7 +23,6 @@
     .left {
       flex: 1 1 40%;
       padding: 3rem 2rem;
-      min-width: 280px;
       background-color: #1a1a1a;
       border-right: 1px solid #2a2a2a;
     }
@@ -27,7 +30,6 @@
     .right {
       flex: 1 1 60%;
       padding: 3rem 2rem;
-      min-width: 300px;
     }
 
     h1, h2 {
@@ -37,6 +39,7 @@
 
     p {
       line-height: 1.6;
+      text-align: justify;
     }
 
     ul {
@@ -46,6 +49,7 @@
 
     li {
       margin-bottom: 0.5rem;
+      text-align: justify;
     }
 
     .certificates li::before,
@@ -57,6 +61,7 @@
     a {
       color: #ff4500;
       text-decoration: none;
+      word-break: break-word;
     }
 
     a:hover {
@@ -66,36 +71,40 @@
     .section {
       margin-bottom: 2.5rem;
     }
+
     @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
+      body {
+        flex-direction: column;
+      }
 
-  .left, .right {
-    flex: 1 1 100%;
-    min-width: 100%;
-    padding: 2rem 1rem;
-    border-right: none;
-    border-bottom: 1px solid #2a2a2a;
-  }
+      .left, .right {
+        flex: 1 1 100%;
+        padding: 2rem 1rem;
+        border-right: none;
+        border-bottom: 1px solid #2a2a2a;
+      }
 
-  .right {
-    border-bottom: none;
-  }
+      .right {
+        border-bottom: none;
+      }
 
-  h1 {
-    font-size: 1.5rem;
-  }
+      h1 {
+        font-size: 1.5rem;
+      }
 
-  h2 {
-    font-size: 1.2rem;
-  }
+      h2 {
+        font-size: 1.2rem;
+      }
 
-  p, li {
-    font-size: 1rem;
-  }
-}
+      p, li {
+        font-size: 1rem;
+        text-align: justify;
+      }
 
+      .section {
+        margin-bottom: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -120,7 +129,7 @@
         <li>EDR: CrowdStrike, Defender, Trend Micro</li>
         <li>Email Security: Cisco ESA, Fortimail, Trend Micro</li>
         <li>Virtualization & Hardening</li>
-        <li>T-Pot honeypots & basic reverse engineering(studying for fun)</li>
+        <li>T-Pot honeypots & basic reverse engineering (studying for fun)</li>
       </ul>
     </div>
 
