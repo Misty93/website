@@ -2,7 +2,7 @@ name: Fetch Cybersecurity News
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # svakih 6 sati
+    - cron: '0 */12 * * *'  # svakih 12 sati
   workflow_dispatch:
 
 jobs:
