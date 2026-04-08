@@ -153,7 +153,7 @@ def update_section(section_title, new_items, html_path):
 ips = list(set(fetch_feodo_ips() + fetch_abuseipdb_ips()))
 hashes = fetch_malware_hashes()
 domains = list(set(fetch_threatfox_domains() + fetch_urlscan_domains()))
-emails = []  # Placeholder
+emails = []
 
 # === Piši IOC u HTML ===
 update_section("🔴 Malicious IPs", ips, output_file)
@@ -161,7 +161,7 @@ update_section("🧬 File Hashes", hashes, output_file)
 update_section("🌐 Domains", domains, output_file)
 update_section("✉️ Emails", emails, output_file)
 
-# === Snimi IOC i kao JSON ===
+# === Snimi IOC i kao JSON (po danu) ===
 with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
     json.dump({
         "date": today,
@@ -174,7 +174,12 @@ with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
 # === Obnovi index.html (arhiva) ===
 index_path = "docs/daily-ioc/index.html"
 base_folder = "docs/daily-ioc"
-entries = [name.replace("ioc-", "") for name in os.listdir(base_folder) if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name))]
+
+entries = [
+    name.replace("ioc-", "")
+    for name in os.listdir(base_folder)
+    if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name))
+]
 entries.sort(reverse=True)
 
 with open(index_path, "w", encoding="utf-8") as f:
@@ -204,15 +209,13 @@ with open(index_path, "w", encoding="utf-8") as f:
 </body>
 </html>""")
 
-# === Generate latest IOC JSON for homepage ===
-latest_folder = f"ioc-{today}"
-
+# === Generate latest IOC JSON for homepage (KLJUČNO) ===
 latest_json_path = "docs/daily-ioc/iocs.json"
+
 latest_json = {
-    "latest": {
-        "date": today,
-        "folder": latest_folder
-    }
+    "date": today,
+    "preview": f"Latest IOC report ({today})",
+    "url": f"/daily-ioc/ioc-{today}/"
 }
 
 with open(latest_json_path, "w", encoding="utf-8") as f:
