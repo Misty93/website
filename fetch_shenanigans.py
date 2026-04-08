@@ -5,51 +5,72 @@ from bs4 import BeautifulSoup
 BASE_DIR = "docs/security-shenanigans"
 OUTPUT_FILE = os.path.join(BASE_DIR, "posts.json")
 
-def extract_info(filepath):
+def extract_articles_from_file(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f.read(), "html.parser")
 
-    # Title extraction
-    title_tag = soup.find("h1") or soup.find("h2") or soup.find("title")
-    title = title_tag.get_text(strip=True) if title_tag else "Untitled"
+    articles = []
 
-    # Description extraction (first 150 chars of text)
-    text = soup.get_text(" ", strip=True)
-    description = text[:150] + "..." if len(text) > 150 else text
+    # Nađi sve datume
+    date_tags = soup.find_all("div", class_="article-date")
 
-    return title, description
+    for date_tag in date_tags:
+        date_text = date_tag.get_text(strip=True)
+
+        # Naslov je odmah nakon date taga
+        title_tag = date_tag.find_next("h2")
+        if not title_tag:
+            continue
+
+        title = title_tag.get_text(strip=True)
+
+        # Opis = prvi paragraf nakon naslova
+        p_tag = title_tag.find_next("p")
+        description = p_tag.get_text(strip=True) if p_tag else ""
+
+        # Link na članak (anchor)
+        # Ako nemaš anchor, možemo generirati anchor ID
+        anchor_id = title.lower().replace(" ", "-").replace(":", "").replace("’", "")
+        link = f"{os.path.basename(filepath)}#{anchor_id}"
+
+        articles.append({
+            "title": title,
+            "file": link,
+            "description": description,
+            "date": date_text
+        })
+
+    return articles
 
 def main():
-    posts = []
+    all_articles = []
 
+    # Parsiraj HR i EN datoteke
     for file in os.listdir(BASE_DIR):
-        if file.startswith("article-") and file.endswith(".html"):
+        if file.endswith(".html") and file not in ["posts.json", "index.html"]:
             path = os.path.join(BASE_DIR, file)
-            title, description = extract_info(path)
+            all_articles.extend(extract_articles_from_file(path))
 
-            posts.append({
-                "title": title,
-                "file": file,
-                "description": description
-            })
+    # Sortiraj po datumu (pretvaramo DD.MM.YYYY. → YYYY-MM-DD)
+    def normalize_date(d):
+        d = d.replace(".", "")
+        return "-".join(reversed(d.split("-"))) if "-" in d else d
 
-    # Sort by modification time (newest first)
-    posts.sort(
-        key=lambda x: os.path.getmtime(os.path.join(BASE_DIR, x["file"])),
-        reverse=True
-    )
+    all_articles.sort(key=lambda x: normalize_date(x["date"]), reverse=True)
 
-    # === Generate JSON for homepage (zadnja 3 članka) ===
-    latest_posts = posts[:3]  # uzmi 1, 2 ili 3 – koliko god postoji
+    # Uzmi zadnja 3 članka
+    latest_articles = all_articles[:3]
 
+    # JSON format identičan IOC i NEWS
     data = {
         "items": [
             {
-                "title": p["title"],
-                "file": p["file"],
-                "description": p["description"]
+                "title": a["title"],
+                "file": a["file"],
+                "description": a["description"],
+                "date": a["date"]
             }
-            for p in latest_posts
+            for a in latest_articles
         ]
     }
 
