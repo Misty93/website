@@ -5,25 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Securing your world, so you don’t have to.</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Securing your world, so you don’t have to." />
-  <meta property="og:description" content="Knock knock. Who’s there? Everyone. You left your ports open." />
-  <meta property="og:url" content="https://leonoramilisa.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://leonoramilisa.com/og-image.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Securing your world, so you don’t have to.">
-  <meta name="twitter:description" content="Knock knock. Who’s there? Everyone. You left your ports open.">
-
   <style>
 
-    /* 🔥 FIX ZA PHANTOM SCROLL NA DESKTOPU */
+    /* 🔥 FIX: desktop više ne skrola */
     html, body {
       height: 100%;
-      overflow-y: auto;
+      overflow-y: hidden;
       overflow-x: hidden;
+    }
+
+    /* 🔥 main skrola SAMO ako ima sadržaja */
+    main {
+      overflow-y: auto;
+      height: calc(100vh - 120px);
+      padding: 4rem 2rem;
+      text-align: center;
     }
 
     body {
@@ -83,11 +79,6 @@
       width: 100%;
     }
 
-    main {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
     h2 {
       font-size: 2rem;
       color: #ff4500;
@@ -99,27 +90,6 @@
       color: #cccccc;
       max-width: 600px;
       margin: 0 auto 2rem;
-    }
-
-    .flame {
-      position: fixed;
-      bottom: 20px;
-      font-size: 6rem;
-      opacity: 0.1;
-      animation: flicker 3s infinite, float 6s ease-in-out infinite;
-      pointer-events: none;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 0.1; }
-      50% { opacity: 0.25; }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) translateX(-50%); }
-      50% { transform: translateY(-10px) translateX(-50%); }
     }
 
     .ask-box {
@@ -134,50 +104,6 @@
       z-index: 999;
     }
 
-    .ask-box h3 {
-      margin-top: 0;
-      color: #ff4500;
-    }
-
-    .ask-box input,
-    .ask-box textarea {
-      width: 100%;
-      background: #121212;
-      border: 1px solid #444;
-      color: #fff;
-      padding: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .ask-box button {
-      background-color: #ff4500;
-      border: none;
-      padding: 0.5rem;
-      width: 100%;
-      color: #121212;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .ask-box button:hover {
-      background-color: #ff5e1f;
-    }
-
-    .list-item {
-      margin: 0.5rem 0;
-    }
-
-    .list-item a {
-      color: #ff4500;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    .list-item a:hover {
-      text-decoration: underline;
-    }
-
-    /* 📱 MOBITEL FIX — ORIGINAL + VT SEARCH */
     @media (max-width: 768px) {
 
       header {
@@ -208,22 +134,14 @@
       main {
         padding: 2rem 1rem;
         padding-bottom: 320px;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
+        height: auto; /* mobitel treba normalan flow */
+        overflow-y: visible;
       }
 
       .ask-box {
         right: 10px;
-        left: auto;
         width: 90vw;
         max-width: 90vw;
-        box-sizing: border-box;
       }
     }
 
@@ -234,18 +152,11 @@
   <header>
     <div class="logo">LM</div>
 
-    <!-- VIRUSTOTAL SEARCH BAR -->
     <form id="vt-search" style="display:flex; gap:0.5rem; margin-left:2rem;">
-      <input 
-        type="text" 
-        id="vt-query" 
-        placeholder="Scan with VirusTotal…" 
-        style="padding: 0.4rem 0.6rem; background:#121212; border:1px solid #444; color:#fff; border-radius:4px; width:180px;"
-      >
-      <button 
-        type="submit" 
-        style="padding: 0.4rem 0.8rem; background:#ff4500; border:none; color:#121212; font-weight:bold; border-radius:4px; cursor:pointer;"
-      >
+      <input type="text" id="vt-query" placeholder="Scan with VirusTotal…" 
+             style="padding: 0.4rem 0.6rem; background:#121212; border:1px solid #444; color:#fff; border-radius:4px; width:180px;">
+      <button type="submit"
+              style="padding: 0.4rem 0.8rem; background:#ff4500; border:none; color:#121212; font-weight:bold; border-radius:4px; cursor:pointer;">
         Go
       </button>
     </form>
@@ -291,88 +202,7 @@
     </form>
   </div>
 
-  <div class="flame flame-center">🔥</div>
-
   <script>
-    const form = document.getElementById('ask-form');
-    const status = document.getElementById('form-status');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          status.textContent = "✅ Thanks, we got your message!";
-          status.style.color = "#00ff99";
-          form.reset();
-        } else {
-          const resData = await response.json();
-          status.textContent = resData.errors ? resData.errors[0].message : "❌ Something went wrong.";
-          status.style.color = "#ff6666";
-        }
-      } catch (error) {
-        status.textContent = "❌ Error sending the message.";
-        status.style.color = "#ff6666";
-      }
-    });
-
-    async function loadLatest() {
-      try {
-        const news = await fetch('https://leonoramilisa.com/security-news/news.json').then(r => r.json());
-        let newsHtml = "";
-
-        if (news.items && news.items.length > 0) {
-          news.items.slice(0, 3).forEach(item => {
-            newsHtml += `<div class="list-item"><a href="${item.url}">${item.title}</a></div>`;
-          });
-        } else if (news.latest) {
-          newsHtml = `<div class="list-item"><a href="${news.latest.url}">${news.latest.title}</a></div>`;
-        } else {
-          newsHtml = "No news available.";
-        }
-
-        document.getElementById('news-item').innerHTML = newsHtml;
-
-        const blog = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json').then(r => r.json());
-        let blogHtml = "";
-        
-        if (blog.items && blog.items.length > 0) {
-          blog.items.slice(0, 3).forEach(post => {
-            blogHtml += `<div class="list-item"><a href="/security-shenanigans/${post.file}">${post.title}</a></div>`;
-          });
-        } else {
-          blogHtml = "No posts available.";
-        }
-        
-        document.getElementById('blog-item').innerHTML = blogHtml;
-
-        const ioc = await fetch('https://leonoramilisa.com/daily-ioc/iocs.json').then(r => r.json());
-        let iocHtml = "";
-
-        if (ioc.items && ioc.items.length > 0) {
-          ioc.items.slice(0, 3).forEach(entry => {
-            iocHtml += `<div class="list-item"><a href="/daily-ioc/${entry.folder}/">${entry.date}</a></div>`;
-          });
-        } else {
-          iocHtml = "No IOCs available.";
-        }
-
-        document.getElementById('ioc-item').innerHTML = iocHtml;
-
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-    loadLatest();
-
     document.getElementById("vt-search").addEventListener("submit", function(e) {
       e.preventDefault();
       const q = document.getElementById("vt-query").value.trim();
@@ -383,4 +213,3 @@
 
 </body>
 </html>
-
