@@ -1,5 +1,8 @@
 {
-  "date": "2026-04-08",
-  "preview": "Latest IOC report (2026-04-08)",
-  "url": "/daily-ioc/ioc-2026-04-08/"
+  "items": [
+    {
+      "date": "2026-04-08",
+      "folder": "ioc-2026-04-08"
+    }
+  ]
 }
