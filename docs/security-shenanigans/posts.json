@@ -1,19 +1,14 @@
 {
-  "latest": {
-    "title": "Kako konfigurirati kućni SIEM",
-    "file": "article-hr.html",
-    "description": "Security Shenanigans ← Back to Shenanigans Kako konfigurirati kućni SIEM Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano priku..."
-  },
-  "posts": [
-    {
-      "title": "Kako konfigurirati kućni SIEM",
-      "file": "article-hr.html",
-      "description": "Security Shenanigans ← Back to Shenanigans Kako konfigurirati kućni SIEM Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano priku..."
-    },
+  "items": [
     {
       "title": "How to Configure a Home SIEM",
       "file": "article-en.html",
-      "description": "Security Shenanigans ← Back to Shenanigans How to Configure a Home SIEM Wazuh is an open‑source SIEM and XDR platform that provides centralized collec..."
+      "description": "Security Shenanigans ← Back to Shenanigans 08.04.2026. How to Configure a Home SIEM Wazuh is an open‑source SIEM and XDR platform that provides centra..."
+    },
+    {
+      "title": "Kako konfigurirati kućni SIEM",
+      "file": "article-hr.html",
+      "description": "Security Shenanigans ← Back to Shenanigans 08.04.2026. Kako konfigurirati kućni SIEM Wazuh je open‑source SIEM i XDR platforma koja omogućuje centrali..."
     }
   ]
 }
