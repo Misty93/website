@@ -95,14 +95,21 @@ html_content += """
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-# === Generate JSON for homepage ===
-latest_article = articles[0] if articles else None
+# === Generate JSON for homepage (zadnje 3 vijesti) ===
+
+# Uzmi zadnje 3 vijesti
+latest_items = articles[:3]
 
 json_data = {
-    "latest": {
-        "title": latest_article["title"] if latest_article else "No news available",
-        "url": "/security-news/"
-    }
+    "items": [
+        {
+            "title": item["title"],
+            "url": item["link"],
+            "published": item["published"],
+            "source": item["source"]
+        }
+        for item in latest_items
+    ]
 }
 
 with open(os.path.join(folder, "news.json"), "w", encoding="utf-8") as jf:
