@@ -92,22 +92,6 @@
       margin: 0 auto 2rem;
     }
 
-    .btn {
-      background-color: transparent;
-      border: 2px solid #ff4500;
-      color: #ff4500;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #ff4500;
-      color: #121212;
-    }
-
     .flame {
       position: fixed;
       bottom: 20px;
@@ -223,6 +207,22 @@
   <main>
     <h2>Securing your world, so you don’t have to.</h2>
     <p>Knock knock. Who’s there? Everyone. You left your ports open.</p>
+
+    <!-- NEW SECTIONS -->
+    <section id="latest-news" style="margin-top: 4rem;">
+      <h2>Latest in Cybersec World</h2>
+      <p id="news-item">Loading...</p>
+    </section>
+
+    <section id="latest-ioc" style="margin-top: 4rem;">
+      <h2>Latest IOC</h2>
+      <p id="ioc-item">Loading...</p>
+    </section>
+
+    <section id="latest-blog" style="margin-top: 4rem;">
+      <h2>Latest Security Shenanigans</h2>
+      <p id="blog-item">Loading...</p>
+    </section>
   </main>
 
   <div class="ask-box">
@@ -268,6 +268,28 @@
         status.style.color = "#ff6666";
       }
     });
+
+    /* LOAD LATEST CONTENT */
+    async function loadLatest() {
+      try {
+        const news = await fetch('/security-news/news.json').then(r => r.json());
+        document.getElementById('news-item').innerHTML =
+          `<a href="${news.latest.url}" style="color:#ff4500;">${news.latest.title}</a>`;
+
+        const ioc = await fetch('/daily-ioc/iocs.json').then(r => r.json());
+        document.getElementById('ioc-item').innerHTML =
+          `<a href="/daily-ioc/${ioc.latest.folder}/" style="color:#ff4500;">${ioc.latest.date}</a>`;
+
+        const blog = await fetch('/security-shenanigans/posts.json').then(r => r.json());
+        document.getElementById('blog-item').innerHTML =
+          `<a href="/security-shenanigans/${blog.latest.file}" style="color:#ff4500;">${blog.latest.title}</a>`;
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    loadLatest();
   </script>
+
 </body>
 </html>
