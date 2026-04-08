@@ -272,15 +272,15 @@
     /* LOAD LATEST CONTENT */
     async function loadLatest() {
       try {
-        const news = await fetch('/security-news/news.json').then(r => r.json());
+        const news = await fetch('https://leonoramilisa.com/security-news/news.json').then(r => r.json());
         document.getElementById('news-item').innerHTML =
           `<a href="${news.latest.url}" style="color:#ff4500;">${news.latest.title}</a>`;
 
-        const ioc = await fetch('/daily-ioc/iocs.json').then(r => r.json());
+        const ioc = await fetch('https://leonoramilisa.com/daily-ioc/iocs.json').then(r => r.json());
         document.getElementById('ioc-item').innerHTML =
           `<a href="/daily-ioc/${ioc.latest.folder}/" style="color:#ff4500;">${ioc.latest.date}</a>`;
 
-        const blog = await fetch('/security-shenanigans/posts.json').then(r => r.json());
+        const blog = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json').then(r => r.json());
         document.getElementById('blog-item').innerHTML =
           `<a href="/security-shenanigans/${blog.latest.file}" style="color:#ff4500;">${blog.latest.title}</a>`;
       } catch (e) {
@@ -290,6 +290,9 @@
 
     loadLatest();
   </script>
+
+</body>
+</html>
 
 </body>
 </html>
