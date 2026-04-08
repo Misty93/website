@@ -3,97 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <title>Security Shenanigans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       background-color: #121212;
-      color: #fff;
-      font-family: sans-serif;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       padding: 2rem;
     }
-    .content {
-      text-align: justify;
+
+    h1 {
+      text-align: center;
+      color: #ff4500;
+      margin-bottom: 2rem;
     }
-    .date {
-      text-align: right;
-      font-size: 0.9em;
-      color: #ccc;
-    }
-    a {
+
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
       color: #ff4500;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
-    .lang-switch {
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ff4500;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #ff4500;
+    }
+
+    .card-desc {
+      color: #cccccc;
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
-    .back-link {
-      margin: 1rem 0;
-      display: block;
+
+    .card-link {
+      color: #ff4500;
+      text-decoration: none;
+      font-weight: bold;
     }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .content {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .date {
-    text-align: center;
-    font-size: 0.85em;
-  }
-
-  .lang-switch {
-    text-align: center;
-    font-size: 0.95rem;
-  }
-
-  .back-link {
-    text-align: center;
-    display: block;
-    margin: 1rem 0;
-    font-size: 1rem;
-  }
-}
+      body {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <h1>Security Shenanigans</h1>
-
-  <div class="lang-switch">
-    <a class="back-link" href="/">← Back to homepage</a>
-    <a href="?lang=en">English</a> | <a href="?lang=hr">Croatian</a>
-  </div>
-
-  <div class="date" id="current-date"></div>
-  <div id="article-content" class="content">Loading...</div>
 
   <a class="back-link" href="/">← Back to homepage</a>
+  <h1>Security Shenanigans</h1>
+
+  <div id="cards" class="cards">
+    <p>Loading...</p>
+  </div>
 
   <script>
-    const today = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('current-date').textContent = today.toLocaleDateString('en-GB', options);
+    async function loadPosts() {
+      try {
+        const data = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json')
+          .then(r => r.json());
 
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get('lang') === 'hr' ? 'hr' : 'en';
-    const file = `article-${lang}.html`;
+        const container = document.getElementById('cards');
+        container.innerHTML = '';
 
-    fetch(file)
-      .then(res => res.text())
-      .then(html => document.getElementById('article-content').innerHTML = html)
-      .catch(() => {
-        document.getElementById('article-content').innerHTML = '<p>Error loading article.</p>';
-      });
+        data.posts.forEach(post => {
+          const card = document.createElement('div');
+          card.className = 'card';
+
+          card.innerHTML = `
+            <div class="card-title">${post.title}</div>
+            <div class="card-desc">${post.description}</div>
+            <a class="card-link" href="/security-shenanigans/${post.file}">Read more →</a>
+          `;
+
+          container.appendChild(card);
+        });
+
+      } catch (e) {
+        console.error(e);
+        document.getElementById('cards').innerHTML = '<p>Error loading posts.</p>';
+      }
+    }
+
+    loadPosts();
   </script>
+
 </body>
 </html>
