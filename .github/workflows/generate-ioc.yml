@@ -3,7 +3,7 @@ name: Daily IOC Generator
 on:
   schedule:
     - cron: '0 */12 * * *'  # svako 12 sati
-  workflow_dispatch:      # omogućuje ručno pokretanje
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0   # 🔥 omogućuje pull + rebase
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -29,6 +31,11 @@ jobs:
         run: |
           git config user.name "leonorabot"
           git config user.email "actions@github.com"
+
+          # 🔥 rješava "cannot pull with rebase: unstaged changes"
+          git pull --rebase --autostash origin main
+
           git add docs/daily-ioc/
           git commit -m "🔄 Daily IOC update - $(date +'%Y-%m-%d')" || echo "No changes to commit"
+
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
