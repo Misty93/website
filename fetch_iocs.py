@@ -209,13 +209,26 @@ with open(index_path, "w", encoding="utf-8") as f:
 </body>
 </html>""")
 
-# === Generate latest IOC JSON for homepage (ISPRAVLJENO) ===
+# === Generate latest IOC JSON for homepage (ISPRAVLJENO + FALLBACK) ===
 latest_json_path = "docs/daily-ioc/iocs.json"
 
 # Ako JSON već postoji → učitaj ga
 if os.path.exists(latest_json_path):
-    with open(latest_json_path, "r", encoding="utf-8") as f:
-        existing = json.load(f)
+    try:
+        with open(latest_json_path, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+
+        # Ako JSON nije dict → reset
+        if not isinstance(existing, dict):
+            existing = {"items": []}
+
+        # Ako nema items → reset
+        if "items" not in existing or not isinstance(existing["items"], list):
+            existing = {"items": []}
+
+    except Exception:
+        # Ako je JSON korumpiran → reset
+        existing = {"items": []}
 else:
     existing = {"items": []}
 
@@ -224,6 +237,11 @@ existing["items"].insert(0, {
     "date": today,
     "folder": f"ioc-{today}"
 })
+
+# Spremi JSON
+with open(latest_json_path, "w", encoding="utf-8") as f:
+    json.dump(existing, f, indent=2)
+
 
 # Spremi JSON
 with open(latest_json_path, "w", encoding="utf-8") as f:
