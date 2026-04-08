@@ -303,15 +303,15 @@
         /* BLOG */
         const blog = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json').then(r => r.json());
         let blogHtml = "";
-
-        if (blog.posts && blog.posts.length > 0) {
-          blog.posts.slice(0, 3).forEach(post => {
+        
+        if (blog.items && blog.items.length > 0) {
+          blog.items.slice(0, 3).forEach(post => {
             blogHtml += `<div class="list-item"><a href="/security-shenanigans/${post.file}">${post.title}</a></div>`;
           });
         } else {
           blogHtml = "No posts available.";
         }
-
+        
         document.getElementById('blog-item').innerHTML = blogHtml;
 
         /* IOC */
