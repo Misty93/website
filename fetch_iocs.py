@@ -76,7 +76,7 @@ def fetch_threatfox_domains():
         print(f"[!] Error fetching ThreatFox domains: {e}")
         return []
 
-# === URLScan: Fetch suspicious domains from recent public scans ===
+# === URLScan: Fetch suspicious domains ===
 def fetch_urlscan_domains():
     search_url = "https://urlscan.io/api/v1/search/?q=visibility:public"
     try:
@@ -92,7 +92,7 @@ def fetch_urlscan_domains():
         print(f"[!] Error fetching URLScan domains: {e}")
         return []
 
-# === HTML template i sekcijski update ===
+# === HTML template update ===
 def update_section(section_title, new_items, html_path):
     deduped_items = sorted(set(new_items))
     section_html = f"<h2>{section_title}</h2>\n<ul>\n" + "\n".join(f"<li>{item}</li>" for item in deduped_items) + "\n</ul>"
@@ -126,35 +126,6 @@ def update_section(section_title, new_items, html_path):
       border-left: 3px solid #ff4500;
       font-family: monospace;
     }}
-    a {{
-      color: #ff4500;
-      text-decoration: none;
-    }}
-    a:hover {{
-      text-decoration: underline;
-    }}
-    .date {{
-      font-style: italic;
-      color: #bbb;
-    }}
-    @media (max-width: 768px) {{
-      body {{ padding: 1rem; }}
-      h1 {{ font-size: 1.5rem; text-align: center; }}
-      .date {{
-        font-size: 0.9rem;
-        text-align: center;
-        display: block;
-        margin-bottom: 1rem;
-      }}
-      li {{
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-        word-break: break-word;
-      }}
-      ul {{
-        padding-left: 0;
-      }}
-    }}
   </style>
 </head>
 <body>
@@ -163,7 +134,6 @@ def update_section(section_title, new_items, html_path):
   <p class="date">Date: <span id="date">{today}</span></p>
 
   <!-- Automatski generirane sekcije -->
-  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
 </body>
 </html>""")
 
@@ -183,7 +153,7 @@ def update_section(section_title, new_items, html_path):
 ips = list(set(fetch_feodo_ips() + fetch_abuseipdb_ips()))
 hashes = fetch_malware_hashes()
 domains = list(set(fetch_threatfox_domains() + fetch_urlscan_domains()))
-emails = []  # Placeholder za kasnije
+emails = []  # Placeholder
 
 # === Piši IOC u HTML ===
 update_section("🔴 Malicious IPs", ips, output_file)
@@ -221,12 +191,6 @@ with open(index_path, "w", encoding="utf-8") as f:
     li { margin: 0.3rem 0; }
     a { color: #ff4500; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    @media (max-width: 768px) {
-      body { padding: 1rem; }
-      li { font-size: 0.95rem; padding: 0.4rem 0.8rem; }
-      h1 { font-size: 1.5rem; text-align: center; }
-      .date { text-align: center; font-size: 0.9rem; }
-    }
   </style>
 </head>
 <body>
@@ -239,3 +203,17 @@ with open(index_path, "w", encoding="utf-8") as f:
     f.write("""  </ul>
 </body>
 </html>""")
+
+# === Generate latest IOC JSON for homepage ===
+latest_folder = f"ioc-{today}"
+
+latest_json_path = "docs/daily-ioc/iocs.json"
+latest_json = {
+    "latest": {
+        "date": today,
+        "folder": latest_folder
+    }
+}
+
+with open(latest_json_path, "w", encoding="utf-8") as f:
+    json.dump(latest_json, f, indent=2)
