@@ -222,7 +222,6 @@
     <h2>Securing your world, so you don’t have to.</h2>
     <p>Knock knock. Who’s there? Everyone. You left your ports open.</p>
 
-    <!-- NEW SECTIONS -->
     <section id="latest-news" style="margin-top: 4rem;">
       <h2>Latest in Cybersec World</h2>
       <div id="news-item">Loading...</div>
@@ -281,31 +280,51 @@
       }
     });
 
-    /* LOAD LATEST CONTENT */
+    /* LOAD LATEST CONTENT — FIXED VERSION */
     async function loadLatest() {
       try {
-        /* NEWS — 3 items */
+        /* NEWS */
         const news = await fetch('https://leonoramilisa.com/security-news/news.json').then(r => r.json());
         let newsHtml = "";
-        news.items.slice(0, 3).forEach(item => {
-          newsHtml += `<div class="list-item"><a href="${item.url}">${item.title}</a></div>`;
-        });
+
+        if (news.items && news.items.length > 0) {
+          news.items.slice(0, 3).forEach(item => {
+            newsHtml += `<div class="list-item"><a href="${item.url}">${item.title}</a></div>`;
+          });
+        } else if (news.latest) {
+          newsHtml = `<div class="list-item"><a href="${news.latest.url}">${news.latest.title}</a></div>`;
+        } else {
+          newsHtml = "No news available.";
+        }
+
         document.getElementById('news-item').innerHTML = newsHtml;
 
-        /* BLOG — 3 items */
+        /* BLOG */
         const blog = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json').then(r => r.json());
         let blogHtml = "";
-        blog.posts.slice(0, 3).forEach(post => {
-          blogHtml += `<div class="list-item"><a href="/security-shenanigans/${post.file}">${post.title}</a></div>`;
-        });
+
+        if (blog.posts && blog.posts.length > 0) {
+          blog.posts.slice(0, 3).forEach(post => {
+            blogHtml += `<div class="list-item"><a href="/security-shenanigans/${post.file}">${post.title}</a></div>`;
+          });
+        } else {
+          blogHtml = "No posts available.";
+        }
+
         document.getElementById('blog-item').innerHTML = blogHtml;
 
-        /* IOC — 3 items */
+        /* IOC */
         const ioc = await fetch('https://leonoramilisa.com/daily-ioc/iocs.json').then(r => r.json());
         let iocHtml = "";
-        ioc.items.slice(0, 3).forEach(entry => {
-          iocHtml += `<div class="list-item"><a href="/daily-ioc/${entry.folder}/">${entry.date}</a></div>`;
-        });
+
+        if (ioc.items && ioc.items.length > 0) {
+          ioc.items.slice(0, 3).forEach(entry => {
+            iocHtml += `<div class="list-item"><a href="/daily-ioc/${entry.folder}/">${entry.date}</a></div>`;
+          });
+        } else {
+          iocHtml = "No IOCs available.";
+        }
+
         document.getElementById('ioc-item').innerHTML = iocHtml;
 
       } catch (e) {
