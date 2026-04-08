@@ -154,6 +154,20 @@
       background-color: #ff5e1f;
     }
 
+    .list-item {
+      margin: 0.5rem 0;
+    }
+
+    .list-item a {
+      color: #ff4500;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .list-item a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -211,15 +225,17 @@
     <!-- NEW SECTIONS -->
     <section id="latest-news" style="margin-top: 4rem;">
       <h2>Latest in Cybersec World</h2>
-      <p id="news-item">Loading...</p>
+      <div id="news-item">Loading...</div>
     </section>
+
     <section id="latest-blog" style="margin-top: 4rem;">
       <h2>Latest Security Shenanigans</h2>
-      <p id="blog-item">Loading...</p>
+      <div id="blog-item">Loading...</div>
     </section>
+
     <section id="latest-ioc" style="margin-top: 4rem;">
       <h2>Latest IOC</h2>
-      <p id="ioc-item">Loading...</p>
+      <div id="ioc-item">Loading...</div>
     </section>
   </main>
 
@@ -247,9 +263,7 @@
         const response = await fetch(form.action, {
           method: form.method,
           body: data,
-          headers: {
-            'Accept': 'application/json'
-          }
+          headers: { 'Accept': 'application/json' }
         });
 
         if (response.ok) {
@@ -270,17 +284,30 @@
     /* LOAD LATEST CONTENT */
     async function loadLatest() {
       try {
+        /* NEWS — 3 items */
         const news = await fetch('https://leonoramilisa.com/security-news/news.json').then(r => r.json());
-        document.getElementById('news-item').innerHTML =
-          `<a href="${news.latest.url}" style="color:#ff4500;">${news.latest.title}</a>`;
+        let newsHtml = "";
+        news.items.slice(0, 3).forEach(item => {
+          newsHtml += `<div class="list-item"><a href="${item.url}">${item.title}</a></div>`;
+        });
+        document.getElementById('news-item').innerHTML = newsHtml;
 
-        const ioc = await fetch('https://leonoramilisa.com/daily-ioc/iocs.json').then(r => r.json());
-        document.getElementById('ioc-item').innerHTML =
-          `<a href="/daily-ioc/${ioc.latest.folder}/" style="color:#ff4500;">${ioc.latest.date}</a>`;
-
+        /* BLOG — 3 items */
         const blog = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json').then(r => r.json());
-        document.getElementById('blog-item').innerHTML =
-          `<a href="/security-shenanigans/${blog.latest.file}" style="color:#ff4500;">${blog.latest.title}</a>`;
+        let blogHtml = "";
+        blog.posts.slice(0, 3).forEach(post => {
+          blogHtml += `<div class="list-item"><a href="/security-shenanigans/${post.file}">${post.title}</a></div>`;
+        });
+        document.getElementById('blog-item').innerHTML = blogHtml;
+
+        /* IOC — 3 items */
+        const ioc = await fetch('https://leonoramilisa.com/daily-ioc/iocs.json').then(r => r.json());
+        let iocHtml = "";
+        ioc.items.slice(0, 3).forEach(entry => {
+          iocHtml += `<div class="list-item"><a href="/daily-ioc/${entry.folder}/">${entry.date}</a></div>`;
+        });
+        document.getElementById('ioc-item').innerHTML = iocHtml;
+
       } catch (e) {
         console.error(e);
       }
@@ -288,9 +315,6 @@
 
     loadLatest();
   </script>
-
-</body>
-</html>
 
 </body>
 </html>
