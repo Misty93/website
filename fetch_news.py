@@ -3,6 +3,7 @@ import requests
 import feedparser
 from datetime import datetime
 from html import escape
+import json
 
 # === Datum i direktorij ===
 today = datetime.now().strftime("%Y-%m-%d")
@@ -69,27 +70,13 @@ html_content = f"""<!DOCTYPE html>
       font-size: 0.9em;
       color: #aaa;
     }}
-    @media (max-width: 768px) {{
-      body {{
-        padding: 1rem;
-      }}
-      h1 {{
-        font-size: 1.5rem;
-        text-align: center;
-      }}
-      .news-item {{
-        font-size: 1rem;
-      }}
-      .source {{
-        font-size: 0.8rem;
-      }}
-    }}
   </style>
 </head>
 <body>
   <h1>Security News</h1>
   <p><a href="/">← Back to homepage</a></p>
 """
+
 for article in articles:
     html_content += f"""
     <div class="news-item">
@@ -107,3 +94,16 @@ html_content += """
 # === Snimi HTML ===
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(html_content)
+
+# === Generate JSON for homepage ===
+latest_article = articles[0] if articles else None
+
+json_data = {
+    "latest": {
+        "title": latest_article["title"] if latest_article else "No news available",
+        "url": "/security-news/"
+    }
+}
+
+with open(os.path.join(folder, "news.json"), "w", encoding="utf-8") as jf:
+    json.dump(json_data, jf, indent=2)
