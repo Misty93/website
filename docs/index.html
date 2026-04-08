@@ -28,8 +28,9 @@
 
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
+      gap: 2rem;
       padding: 1rem 2rem;
       background-color: #1a1a1a;
       border-bottom: 1px solid #2a2a2a;
@@ -172,6 +173,7 @@
       header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 1rem;
       }
 
       nav ul {
@@ -180,27 +182,6 @@
         width: 100%;
         margin-top: 1rem;
       }
-
-      main {
-        padding: 2rem 1rem;
-        padding-bottom: 320px;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .ask-box {
-        right: 10px;
-        left: auto;
-        width: 90vw;
-        max-width: 90vw;
-        box-sizing: border-box;
-      }
     }
   </style>
 </head>
@@ -208,18 +189,9 @@
 
   <header>
     <div class="logo">LM</div>
-    <nav>
-      <ul>
-        <li><a href="/bio/">Bio</a></li>
-        <li><a href="/security-news/">Security News</a></li>
-        <li><a href="/security-shenanigans/">Security Shenanigans</a></li>
-        <li><a href="/daily-ioc/">Daily IOC</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-    </nav>
 
-    <!-- VIRUSTOTAL SEARCH BAR -->
-    <form id="vt-search" style="margin-left: 2rem; display:flex; gap:0.5rem;">
+    <!-- VIRUSTOTAL SEARCH BAR (NOW BETWEEN LM AND BIO) -->
+    <form id="vt-search" style="display:flex; gap:0.5rem;">
       <input 
         type="text" 
         id="vt-query" 
@@ -233,6 +205,16 @@
         Go
       </button>
     </form>
+
+    <nav>
+      <ul>
+        <li><a href="/bio/">Bio</a></li>
+        <li><a href="/security-news/">Security News</a></li>
+        <li><a href="/security-shenanigans/">Security Shenanigans</a></li>
+        <li><a href="/daily-ioc/">Daily IOC</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -362,3 +344,4 @@
 
 </body>
 </html>
+
