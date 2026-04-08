@@ -209,14 +209,22 @@ with open(index_path, "w", encoding="utf-8") as f:
 </body>
 </html>""")
 
-# === Generate latest IOC JSON for homepage (KLJUČNO) ===
+# === Generate latest IOC JSON for homepage (ISPRAVLJENO) ===
 latest_json_path = "docs/daily-ioc/iocs.json"
 
-latest_json = {
-    "date": today,
-    "preview": f"Latest IOC report ({today})",
-    "url": f"/daily-ioc/ioc-{today}/"
-}
+# Ako JSON već postoji → učitaj ga
+if os.path.exists(latest_json_path):
+    with open(latest_json_path, "r", encoding="utf-8") as f:
+        existing = json.load(f)
+else:
+    existing = {"items": []}
 
+# Dodaj novi IOC entry na početak liste
+existing["items"].insert(0, {
+    "date": today,
+    "folder": f"ioc-{today}"
+})
+
+# Spremi JSON
 with open(latest_json_path, "w", encoding="utf-8") as f:
-    json.dump(latest_json, f, indent=2)
+    json.dump(existing, f, indent=2)
