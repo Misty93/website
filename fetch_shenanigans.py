@@ -10,7 +10,7 @@ def extract_info(filepath):
         soup = BeautifulSoup(f.read(), "html.parser")
 
     # Title extraction
-    title_tag = soup.find("h1") or soup.find("title")
+    title_tag = soup.find("h1") or soup.find("h2") or soup.find("title")
     title = title_tag.get_text(strip=True) if title_tag else "Untitled"
 
     # Description extraction (first 150 chars of text)
