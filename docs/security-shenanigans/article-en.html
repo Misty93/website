@@ -1,40 +1,120 @@
-<h2>Irresponsible Sale of Security Tools: More Isn’t Always Better</h2>
-<p>Security can’t be bought in a box. Yet many organizations behave as if it can. Slickly packaged security software is often sold as an instant solution — but without expert handling, it becomes just “shelfware.”</p>
-<p>In today’s cybersecurity landscape, the phenomenon of “tool sprawl” is increasingly common — an obsessive race to buy more and more security solutions, hoping that quantity equals protection. Vendors pitch shiny dashboards and catchy acronyms, resellers promise perfect layered defenses, and executives with little technical insight sign purchase orders like they’re collecting stickers.</p>
-<p>But the truth is simple: without proper integration, dedicated experts, management, and strategy, more tools often means less security.</p>
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Shenanigans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h3>Tool Sprawl = Problem Sprawl</h3>
-<p>Every security tool brings its own agents, rules, logs, and alerts. Multiply that by ten or twenty systems, and you get chaos instead of control. Many tools overlap in functionality, clash with each other, or operate in isolation without sharing context.</p>
-<p>In some environments, tools literally fight each other. Firewalls block legitimate traffic flagged by another tool. DLP and backup systems clash over file access. One tool raises an alert, but the SIEM can’t correlate it due to incompatible formats. In other words, excessive complexity undermines visibility and the effectiveness of defenses. It’s not uncommon for a third of newly purchased security tools to go unused or only partially implemented.</p>
-<p>The result? Security gaps. Missed alerts. Frustrated teams. Slower incident response. And in the worst-case scenario — a false sense of security.</p>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.7;
+    }
 
-<h3>The Illusion of Security Through Spending</h3>
-<p>Security vendors feed on fear, uncertainty, and doubt. They show grim breach statistics, offer expensive “silver bullets,” and suggest your company will be the next victim without their solution.</p>
-<p>This sales model often works — not because the tools are bad (some are excellent!) — but because decision-makers often lack technical leadership. Executives without trusted advisors may approve tool purchases they don’t understand, don’t need, or can’t integrate.</p>
-<p>It’s not unusual for organizations to spend hundreds of thousands of euros on security tools, only for many to remain unused or poorly configured. Shelfware is everywhere. Budgets are spent. Security hasn’t improved.</p>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-<h3>Tool Fragmentation Weakens the Security Chain</h3>
-<p>Cybersecurity is a chain. Every component must communicate, support, and strengthen the others. If any part is out of sync — a directory that doesn’t synchronize, an unprotected endpoint, a misconfigured IDS — the chain breaks.</p>
-<p>Fragmented tooling increases attack surface. More tools mean greater complexity, more patching, more integration effort, and more chances for misconfiguration.</p>
-<p>Instead of orchestrated defense, many companies end up with a noisy, fragmented system. Security teams juggle consoles, alerts get lost in the noise, and attackers exploit the gaps between tools.</p>
+    h2, h3 {
+      color: #ff4500;
+      margin-top: 2rem;
+    }
 
-<h3>Users Still Play a Key Role</h3>
-<p>Another overlooked element? The end user. Tools protect people, yet many security strategies ignore the real users of the system.</p>
-<p>Users aren’t security experts. If a tool is overly invasive, confusing, or poorly explained, users will bypass it, disable it, or make mistakes. It doesn’t matter how many vendors are involved — if the system isn’t designed with the user in mind, it won’t work.</p>
+    p {
+      color: #cccccc;
+      margin-bottom: 1rem;
+    }
 
-<h3>Responsibility vs. Profit</h3>
-<p>Security tools cost money — for good reason. Development, maintenance, and support are demanding. Vendors deserve to make a profit.</p>
-<p>But with power comes responsibility.</p>
-<p>Security shouldn’t be driven by short-term profit and fear tactics. Instead, the goal must be to educate users, assess risk, and align technology, processes, and people to truly reduce risk.</p>
-<p>Vendors who act as partners, not just sellers, will earn more trust and business in the long run. Competent technical advisors play a critical role. Whether internal (your CISO, security architect) or external consultants, it’s crucial to have someone who sees the big picture and isn’t blinded by sales targets. These advisors can assess the full chain, identify real weak links, and propose solutions — procedural or technological — that strengthen those links without weakening others. Their job is to be the voice of reason that says “no” when a tool is unnecessary, or “yes, but under these integration conditions” when a solution is being considered. Sadly, that voice is sometimes drowned out by marketing noise. But organizations that listen and act on it will build far more resilient defenses.</p>
+    a {
+      color: #ff4500;
+      text-decoration: none;
+    }
 
-<h3>Hygiene Before Hype</h3>
-<p>Before you buy the next “silver bullet,” fix what you already have.</p>
-<p>Patch your systems. Review configurations. Train your people. Remove legacy accounts. Implement MFA. Monitor the tools already in place.</p>
-<p>Most breaches don’t happen because the latest tool wasn’t purchased — they happen because a server was left exposed, a password was stolen, or a setting was misconfigured.</p>
-<p>Security starts with hygiene, not hardware.</p>
+    a:hover {
+      text-decoration: underline;
+    }
 
-<h3>Final Thought: Conscious Security Over Consumption</h3>
-<p>Security isn’t about buying tools — it’s about making them work together, through strategy and expertise.</p>
-<p>Cyber defense isn’t a shopping list. More doesn’t mean better. Sometimes it means more confusion, cost, and vulnerability.</p>
-<p>Let’s shift the mindset: from spend-spend-spend to connect-integrate-harden. That’s where true security lives.</p>
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
+      color: #ff4500;
+      font-weight: bold;
+    }
+
+    .lang-switch {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .lang-switch a {
+      color: #ff4500;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
+
+    <div class="lang-switch">
+      <a href="?lang=en">English</a> | <a href="?lang=hr">Croatian</a>
+    </div>
+
+    <h2>Irresponsible Sale of Security Tools: More Isn’t Always Better</h2>
+    <p>Security can’t be bought in a box. Yet many organizations behave as if it can. Slickly packaged security software is often sold as an instant solution — but without expert handling, it becomes just “shelfware.”</p>
+    <p>In today’s cybersecurity landscape, the phenomenon of “tool sprawl” is increasingly common — an obsessive race to buy more and more security solutions, hoping that quantity equals protection. Vendors pitch shiny dashboards and catchy acronyms, resellers promise perfect layered defenses, and executives with little technical insight sign purchase orders like they’re collecting stickers.</p>
+    <p>But the truth is simple: without proper integration, dedicated experts, management, and strategy, more tools often means less security.</p>
+    
+    <h3>Tool Sprawl = Problem Sprawl</h3>
+    <p>Every security tool brings its own agents, rules, logs, and alerts. Multiply that by ten or twenty systems, and you get chaos instead of control. Many tools overlap in functionality, clash with each other, or operate in isolation without sharing context.</p>
+    <p>In some environments, tools literally fight each other. Firewalls block legitimate traffic flagged by another tool. DLP and backup systems clash over file access. One tool raises an alert, but the SIEM can’t correlate it due to incompatible formats. In other words, excessive complexity undermines visibility and the effectiveness of defenses. It’s not uncommon for a third of newly purchased security tools to go unused or only partially implemented.</p>
+    <p>The result? Security gaps. Missed alerts. Frustrated teams. Slower incident response. And in the worst-case scenario — a false sense of security.</p>
+    
+    <h3>The Illusion of Security Through Spending</h3>
+    <p>Security vendors feed on fear, uncertainty, and doubt. They show grim breach statistics, offer expensive “silver bullets,” and suggest your company will be the next victim without their solution.</p>
+    <p>This sales model often works — not because the tools are bad (some are excellent!) — but because decision-makers often lack technical leadership. Executives without trusted advisors may approve tool purchases they don’t understand, don’t need, or can’t integrate.</p>
+    <p>It’s not unusual for organizations to spend hundreds of thousands of euros on security tools, only for many to remain unused or poorly configured. Shelfware is everywhere. Budgets are spent. Security hasn’t improved.</p>
+    
+    <h3>Tool Fragmentation Weakens the Security Chain</h3>
+    <p>Cybersecurity is a chain. Every component must communicate, support, and strengthen the others. If any part is out of sync — a directory that doesn’t synchronize, an unprotected endpoint, a misconfigured IDS — the chain breaks.</p>
+    <p>Fragmented tooling increases attack surface. More tools mean greater complexity, more patching, more integration effort, and more chances for misconfiguration.</p>
+    <p>Instead of orchestrated defense, many companies end up with a noisy, fragmented system. Security teams juggle consoles, alerts get lost in the noise, and attackers exploit the gaps between tools.</p>
+    
+    <h3>Users Still Play a Key Role</h3>
+    <p>Another overlooked element? The end user. Tools protect people, yet many security strategies ignore the real users of the system.</p>
+    <p>Users aren’t security experts. If a tool is overly invasive, confusing, or poorly explained, users will bypass it, disable it, or make mistakes. It doesn’t matter how many vendors are involved — if the system isn’t designed with the user in mind, it won’t work.</p>
+    
+    <h3>Responsibility vs. Profit</h3>
+    <p>Security tools cost money — for good reason. Development, maintenance, and support are demanding. Vendors deserve to make a profit.</p>
+    <p>But with power comes responsibility.</p>
+    <p>Security shouldn’t be driven by short-term profit and fear tactics. Instead, the goal must be to educate users, assess risk, and align technology, processes, and people to truly reduce risk.</p>
+    <p>Vendors who act as partners, not just sellers, will earn more trust and business in the long run. Competent technical advisors play a critical role. Whether internal (your CISO, security architect) or external consultants, it’s crucial to have someone who sees the big picture and isn’t blinded by sales targets. These advisors can assess the full chain, identify real weak links, and propose solutions — procedural or technological — that strengthen those links without weakening others. Their job is to be the voice of reason that says “no” when a tool is unnecessary, or “yes, but under these integration conditions” when a solution is being considered. Sadly, that voice is sometimes drowned out by marketing noise. But organizations that listen and act on it will build far more resilient defenses.</p>
+    
+    <h3>Hygiene Before Hype</h3>
+    <p>Before you buy the next “silver bullet,” fix what you already have.</p>
+    <p>Patch your systems. Review configurations. Train your people. Remove legacy accounts. Implement MFA. Monitor the tools already in place.</p>
+    <p>Most breaches don’t happen because the latest tool wasn’t purchased — they happen because a server was left exposed, a password was stolen, or a setting was misconfigured.</p>
+    <p>Security starts with hygiene, not hardware.</p>
+    
+    <h3>Final Thought: Conscious Security Over Consumption</h3>
+    <p>Security isn’t about buying tools — it’s about making them work together, through strategy and expertise.</p>
+    <p>Cyber defense isn’t a shopping list. More doesn’t mean better. Sometimes it means more confusion, cost, and vulnerability.</p>
+    <p>Let’s shift the mindset: from spend-spend-spend to connect-integrate-harden. That’s where true security lives.</p>
+
+    
+  </div>
+</body>
+</html>
