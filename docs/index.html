@@ -183,7 +183,7 @@
 
       main {
         padding: 2rem 1rem;
-        padding-bottom: 320px; /* prostor da Latest sekcije ne budu prekrivene */
+        padding-bottom: 320px;
       }
 
       h2 {
@@ -217,6 +217,22 @@
         <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- VIRUSTOTAL SEARCH BAR -->
+    <form id="vt-search" style="margin-left: 2rem; display:flex; gap:0.5rem;">
+      <input 
+        type="text" 
+        id="vt-query" 
+        placeholder="Scan with VirusTotal…" 
+        style="padding: 0.4rem 0.6rem; background:#121212; border:1px solid #444; color:#fff; border-radius:4px; width:180px;"
+      >
+      <button 
+        type="submit" 
+        style="padding: 0.4rem 0.8rem; background:#ff4500; border:none; color:#121212; font-weight:bold; border-radius:4px; cursor:pointer;"
+      >
+        Go
+      </button>
+    </form>
   </header>
 
   <main>
@@ -334,6 +350,14 @@
     }
 
     loadLatest();
+
+    /* VIRUSTOTAL SEARCH REDIRECT */
+    document.getElementById("vt-search").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const q = document.getElementById("vt-query").value.trim();
+      if (!q) return;
+      window.location.href = "https://www.virustotal.com/gui/search/" + encodeURIComponent(q);
+    });
   </script>
 
 </body>
