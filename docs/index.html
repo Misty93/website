@@ -170,31 +170,57 @@
     }
 
     @media (max-width: 768px) {
+
+      /* HEADER RASPORED */
       header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
       }
-      
+    
+      /* VIRUSTOTAL SEARCH BAR */
       #vt-search {
         width: 100%;
       }
-      
+    
       #vt-search input {
         width: 100%;
       }
-      
+    
+      /* NAVIGACIJA */
       nav {
         width: 100%;
       }
-      
+    
       nav ul {
-        width: 100%;
         flex-direction: column;
         gap: 0.5rem;
-        margin-top: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
+      }
+    
+      /* MAIN — OVO JE BILO KLJUČNO I NESTALO */
       main {
-        padding-bottom: 420px;
+        padding: 2rem 1rem;
+        padding-bottom: 320px; /* sprječava ask-box da prekriva sadržaj */
+      }
+    
+      /* TEKSTOVI */
+      h2 {
+        font-size: 1.5rem;
+      }
+    
+      p {
+        font-size: 1rem;
+      }
+    
+      /* ASK BOX */
+      .ask-box {
+        right: 10px;
+        left: auto;
+        width: 90vw;
+        max-width: 90vw;
+        box-sizing: border-box;
       }
     }
   </style>
