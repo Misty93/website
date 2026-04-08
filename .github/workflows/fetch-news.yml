@@ -2,7 +2,7 @@ name: Fetch Cybersecurity News
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # svakih 12 sati
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # VAŽNO: omogućuje pull i rebase
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,7 +33,7 @@ jobs:
           git config user.email "actions@github.com"
 
           # 🔥 Ovo rješava tvoj problem
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main
 
           git add docs/security-news/
           git commit -m "📰 Security News Update - $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
