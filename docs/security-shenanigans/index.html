@@ -1,28 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <title>Security Shenanigans</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Shenanigans Blog</title>
 
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #121212;
       color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
+      background-image: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
       margin: 0;
-      padding: 2rem;
-      text-align: center;
+      padding: 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #ff4500;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: justify;
     }
 
     h1 {
+      text-align: center;
       color: #ff4500;
       margin-bottom: 2rem;
     }
 
     .lang-switch {
+      text-align: center;
+      margin-bottom: 2rem;
       font-size: 1.3rem;
-      margin-bottom: 3rem;
     }
 
     .lang-switch a {
@@ -37,8 +93,9 @@
     }
 
     .back-link {
-      display: inline-block;
-      margin-top: 2rem;
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
       color: #ff4500;
       text-decoration: none;
       font-weight: bold;
@@ -52,14 +109,37 @@
 
 <body>
 
-  <h1>Security Shenanigans</h1>
+  <header>
+    <div class="logo">LM</div>
+    <nav>
+      <ul>
+        <li><a href="/bio/">Bio</a></li>
+        <li><a href="/security-news/">Security News</a></li>
+        <li><a href="/security-shenanigans/">Security Shenanigans</a></li>
+        <li><a href="/daily-ioc/">Daily IOC</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="lang-switch">
-    <a href="/security-shenanigans/article-hr.html">Hrvatski</a> |
-    <a href="/security-shenanigans/article-en.html">English</a>
-  </div>
+  <main>
+    <h1>Security Shenanigans Blog</h1>
 
-  <a class="back-link" href="/">← Back to homepage</a>
+    <div class="lang-switch">
+      <a href="/security-shenanigans/article-hr.html">Hrvatski</a> |
+      <a href="/security-shenanigans/article-en.html">English</a>
+    </div>
+
+    <p>
+    🇭🇷 Hrvatski
+    Dobrodošli u moj sigurnosni blog. Manje hypea, više realnosti.
+
+    🇬🇧 English
+    Welcome to my security blog. Less hype, more reality.
+    </p>
+
+    <a class="back-link" href="/">← Back to homepage</a>
+  </main>
 
 </body>
 </html>
