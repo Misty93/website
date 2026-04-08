@@ -18,13 +18,20 @@
   <meta name="twitter:description" content="Knock knock. Who’s there? Everyone. You left your ports open.">
 
   <style>
+
+    /* 🔥 FIX ZA PHANTOM SCROLL NA DESKTOPU */
+    html, body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #121212;
       color: #ffffff;
       background-image: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
-      overflow-x: hidden;
     }
 
     header {
@@ -37,7 +44,6 @@
       border-bottom: 1px solid #2a2a2a;
       position: sticky;
       top: 0;
-      overflow: hidden;
       z-index: 10;
     }
 
@@ -171,52 +177,47 @@
       text-decoration: underline;
     }
 
+    /* 📱 MOBITEL FIX — ORIGINAL + VT SEARCH */
     @media (max-width: 768px) {
 
-      /* HEADER RASPORED */
       header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
       }
-    
-      /* VIRUSTOTAL SEARCH BAR */
+
       #vt-search {
         width: 100%;
       }
-    
+
       #vt-search input {
         width: 100%;
       }
-    
-      /* NAVIGACIJA */
+
       nav {
         width: 100%;
       }
-    
+
       nav ul {
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
         margin-top: 1rem;
       }
-    
-      /* MAIN — OVO JE BILO KLJUČNO I NESTALO */
+
       main {
         padding: 2rem 1rem;
-        padding-bottom: 320px; /* sprječava ask-box da prekriva sadržaj */
+        padding-bottom: 320px;
       }
-    
-      /* TEKSTOVI */
+
       h2 {
         font-size: 1.5rem;
       }
-    
+
       p {
         font-size: 1rem;
       }
-    
-      /* ASK BOX */
+
       .ask-box {
         right: 10px;
         left: auto;
@@ -225,13 +226,14 @@
         box-sizing: border-box;
       }
     }
+
   </style>
 </head>
 <body>
 
-    <header>
+  <header>
     <div class="logo">LM</div>
-  
+
     <!-- VIRUSTOTAL SEARCH BAR -->
     <form id="vt-search" style="display:flex; gap:0.5rem; margin-left:2rem;">
       <input 
@@ -247,7 +249,7 @@
         Go
       </button>
     </form>
-  
+
     <nav style="margin-left:auto;">
       <ul>
         <li><a href="/bio/">Bio</a></li>
@@ -321,10 +323,8 @@
       }
     });
 
-    /* LOAD LATEST CONTENT — FIXED VERSION */
     async function loadLatest() {
       try {
-        /* NEWS */
         const news = await fetch('https://leonoramilisa.com/security-news/news.json').then(r => r.json());
         let newsHtml = "";
 
@@ -340,7 +340,6 @@
 
         document.getElementById('news-item').innerHTML = newsHtml;
 
-        /* BLOG */
         const blog = await fetch('https://leonoramilisa.com/security-shenanigans/posts.json').then(r => r.json());
         let blogHtml = "";
         
@@ -354,7 +353,6 @@
         
         document.getElementById('blog-item').innerHTML = blogHtml;
 
-        /* IOC */
         const ioc = await fetch('https://leonoramilisa.com/daily-ioc/iocs.json').then(r => r.json());
         let iocHtml = "";
 
@@ -375,7 +373,6 @@
 
     loadLatest();
 
-    /* VIRUSTOTAL SEARCH REDIRECT */
     document.getElementById("vt-search").addEventListener("submit", function(e) {
       e.preventDefault();
       const q = document.getElementById("vt-query").value.trim();
