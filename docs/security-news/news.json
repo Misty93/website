@@ -1,6 +1,22 @@
 {
-  "latest": {
-    "title": "Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)",
-    "url": "/security-news/"
-  }
+  "items": [
+    {
+      "title": "Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)",
+      "url": "https://thehackernews.com/2026/04/shrinking-iam-attack-surface-through.html",
+      "published": "Wed, 08 Apr 2026 17:00:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Anthropic's Claude Mythos Finds Thousands of Zero-Day Flaws Across Major Systems",
+      "url": "https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html",
+      "published": "Wed, 08 Apr 2026 14:46:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "N. Korean Hackers Spread 1,700 Malicious Packages Across npm, PyPI, Go, Rust",
+      "url": "https://thehackernews.com/2026/04/n-korean-hackers-spread-1700-malicious.html",
+      "published": "Wed, 08 Apr 2026 13:17:00 +0530",
+      "source": "The Hacker News"
+    }
+  ]
 }
