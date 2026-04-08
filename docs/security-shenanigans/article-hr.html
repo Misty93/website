@@ -68,7 +68,149 @@
   <div class="container">
 
     <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
+
+    <h2>Kako konfigurirati kućni SIEM</h2>
+
+    <p>Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja iz različitih izvora, uključujući endpoint uređaje, mrežnu opremu i cloud servise. Zahvaljujući modularnoj arhitekturi i agent‑based + agentless pristupu, idealan je za kućne labove, edukaciju i manje produkcijske okoline.</p>
     
+    <p>Postavljanje kućnog SIEM-a odličan je način za razumijevanje stvarnih sigurnosnih procesa: prikupljanja logova, korelacije događaja, detekcije anomalija i odgovora na incidente. U ovom vodiču prolazimo cijeli postupak — od pripreme virtualnog stroja do ingestiranja logova s endpointa i firewalla.</p>
+    
+    <h3>1. Priprema virtualnog stroja</h3>
+    
+    <p>Za Wazuh server preporučuje se Linux distribucija poput Ubuntu Servera ili Debian-a. Minimalna konfiguracija za kućni lab uključuje:</p>
+    
+    <p>
+    - 4 GB RAM-a<br>
+    - 2 CPU jezgre<br>
+    - 20–40 GB prostora<br>
+    - stabilnu mrežnu vezu (bridged ili NAT)
+    </p>
+    
+    <p>Prema Wazuh dokumentaciji, <strong>potrošnja resursa linearno raste s brojem agenata</strong>. Svaki agent generira vlastiti volumen događaja (autentikacije, sistemske promjene, FIM zapise, procese, mrežne aktivnosti). To znači da se CPU, RAM i disk moraju skalirati ovisno o broju endpointa. Kućni lab s nekoliko agenata može raditi na 2–4 GB RAM-a, dok okruženja s desetak ili više agenata zahtijevaju više resursa kako bi indeksiranje i obrada događaja ostali stabilni.</p>
+    
+    <p>Nakon kreiranja VM-a u VirtualBoxu, VMwareu ili Proxmoxu, instalira se operacijski sustav i postavlja statička IP adresa kako bi Wazuh server bio lako dostupan ostalim uređajima.</p>
+    
+    <h3>2. Instalacija Wazuh servera</h3>
+    
+    <p>Wazuh nudi jednostavnu <strong>instalacijsku skriptu</strong> koja automatski postavlja Elasticsearch, Kibanu i Wazuh server. To je najbrži i najstabilniji način za kućnu implementaciju.</p>
+    
+    <p>Na svježe instaliranom OS-u pokreni:</p>
+    
+    <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+    sudo bash wazuh-install.sh -a
+    </code></pre>
+    
+    <p>Instalacija traje nekoliko minuta. Nakon završetka, Wazuh dashboard dostupan je putem preglednika (najčešće na <code>https://IP-adresa:5601</code>). Prijavi se inicijalnim korisničkim podacima koje generira instalacijska skripta.</p>
+    
+    <h3>3. Dodavanje agenata – ingestiranje logova s računala</h3>
+    
+    <p>Wazuh agenti omogućuju prikupljanje logova s Windows, Linux i macOS sustava. Na Windowsu se agent instalira putem MSI instalera, dok se na Linuxu koristi paketni menadžer.</p>
+    
+    <p>U Wazuh dashboardu otvori <strong>Agents → Deploy new agent</strong>, odaberi operacijski sustav i slijedi upute. Ključni parametri su:</p>
+    
+    <p>
+    - IP adresa Wazuh servera<br>
+    - agent key (generira se automatski)<br>
+    - naziv agenta (hostname)
+    </p>
+    
+    <p>Nakon instalacije agent se automatski registrira i počinje slati logove: sistemske događaje, autentikacije, promjene datoteka, procese, mrežne aktivnosti i druge sigurnosno relevantne informacije.</p>
+    
+    <h3>4. Spajanje logova s firewalla</h3>
+    
+    <p>Wazuh može primati Syslog događaje iz bilo kojeg firewalla koji podržava slanje logova prema udaljenom Syslog serveru. Budući da Wazuh uključuje ugrađeni Syslog listener, firewall može slati logove izravno na Wazuh bez potrebe za dodatnim posredničkim serverom.</p>
+    
+    <p>Kada firewall pošalje događaje, Wazuh ih sprema u <code>/var/ossec/logs/archives/archives.log</code> u sirovom obliku, pod agent ID‑em <strong>000</strong>, jer se radi o agentless izvoru. U dokumentu se navodi: “You can see all your logs (in raw form) in the file <code>/var/ossec/logs/archives/archives.log</code>.”</p>
+    
+    <p>Ako se logovi ne pojavljuju, potrebno je omogućiti arhiviranje u <code>ossec.conf</code>:</p>
+    
+    <pre><code>&lt;global&gt;
+      &lt;alerts_log&gt;yes&lt;/alerts_log&gt;
+      &lt;logall&gt;yes&lt;/logall&gt;
+      &lt;logall_json&gt;yes&lt;/logall_json&gt;
+    &lt;/global&gt;
+    </code></pre>
+    
+    <p>Nakon izmjena:</p>
+    
+    <pre><code>sudo systemctl restart wazuh-manager
+    </code></pre>
+    
+    <h3>5. Dodavanje decodera za firewall logove</h3>
+    
+    <p>Ako se logovi pojavljuju u <code>archives.log</code>, ali ne i u dashboardu, potrebno je dodati decoder koji će Wazuh-u objasniti strukturu firewall događaja.</p>
+    
+    <p>Decoder se dodaje u:</p>
+    
+    <pre><code>/var/ossec/etc/decoders/local_decoder.xml
+    </code></pre>
+    
+    <p>Primjer generičkog decodera (prilagodljiv bilo kojem firewall formatu):</p>
+    
+    <pre><code>&lt;decoder name="Firewall_Generic"&gt;
+      &lt;type&gt;syslog&lt;/type&gt;
+      &lt;prematch&gt;device_name="&lt;/prematch&gt;
+    &lt;/decoder&gt;
+    
+    &lt;decoder name="Firewall_Generic_child"&gt;
+      &lt;parent&gt;Firewall_Generic&lt;/parent&gt;
+      &lt;regex&gt;device_name="(\S+)" timestamp="([^"]+)" log_type="([^"]+)" src_ip="([^"]+)" dst_ip="([^"]+)" protocol="([^"]+)" src_port=(\d+) dst_port=(\d+)"&lt;/regex&gt;
+      &lt;order&gt;device_name,timestamp,log_type,src_ip,dst_ip,protocol,src_port,dst_port&lt;/order&gt;
+    &lt;/decoder&gt;
+    </code></pre>
+    
+    <h3>6. Dodavanje pravila</h3>
+    
+    <p>Pravila se dodaju u:</p>
+    
+    <pre><code>/var/ossec/etc/rules/local_rules.xml
+    </code></pre>
+    
+    <p>Primjer:</p>
+    
+    <pre><code>&lt;group name="custom_firewall"&gt;
+      &lt;rule id="100040" level="3"&gt;
+        &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
+        &lt;description&gt;Firewall Log Event&lt;/description&gt;
+      &lt;/rule&gt;
+    &lt;/group&gt;
+    </code></pre>
+    
+    <h3>7. Testiranje logova (obavezno)</h3>
+    
+    <p>Wazuh ima ugrađeni alat za testiranje decodera i pravila. U dokumentu se navodi: “It’s important that you see the fields in Phase 2 and the alert in Phase 3.”</p>
+    
+    <p>Pokreni:</p>
+    
+    <pre><code>/var/ossec/bin/wazuh-logtest
+    </code></pre>
+    
+    <p>Zalijepi firewall log (bez timestamp dijela koji dodaje rsyslog), npr.:</p>
+    
+    <pre><code>device_name="FW" timestamp="2024-01-01T12:00:00+0100" log_type="Firewall" src_ip="1.2.3.4" dst_ip="5.6.7.8" protocol="TCP" src_port=1234 dst_port=443
+    </code></pre>
+    
+    <p>Ako je sve ispravno:</p>
+    
+    <p>
+    <strong>Phase 1:</strong> pre-decoding  
+    <strong>Phase 2:</strong> prikaz svih polja (decoder radi)  
+    <strong>Phase 3:</strong> aktivirano pravilo (alert generiran)
+    </p>
+    
+    <p>Nakon toga:</p>
+    
+    <pre><code>sudo systemctl restart wazuh-manager
+    </code></pre>
+    
+    <p>Firewall logovi sada će biti vidljivi u Wazuh dashboardu.</p>
+    
+    <h3>Završna misao</h3>
+    
+    <p>Kućni SIEM nije samo edukativan projekt — on daje stvarni uvid u sigurnosne događaje u tvojoj mreži. Wazuh je dovoljno moćan za profesionalnu upotrebu, ali i dovoljno jednostavan za kućni lab. Uz pravilnu konfiguraciju možeš pratiti sve: od endpoint aktivnosti do firewall prometa.</p>
+    
+    <p>Tijekom ovog serijala doticat ćemo se i drugih konfiguracijskih elemenata vezanih uz Wazuh, ali i drugih sigurnosnih proizvoda, kako bismo izgradili cjelovit, održiv i razumljiv sigurnosni ekosustav.</p>
+
     <h2>Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje</h2>
     <p>Sigurnost se ne može kupiti u kutiji. Ipak, mnoge organizacije se ponašaju kao da može. Primamljivo zapakirani sigurnosni softver često se nudi kao instant rješenje – ali bez stručnog korištenja, pretvara se u “policu”.</p>
     <p>U današnjem svijetu kibernetičke sigurnosti sve je prisutniji fenomen "gomilanja alata" – opsesivna kupovina sve više sigurnosnih rješenja u nadi da kvantiteta znači zaštitu. Vendori nude sjajne nadzorne ploče i zvučne kratice, preprodavači obećavaju savršenu dubinsku obranu, a rukovoditelji bez dubljeg tehničkog znanja potpisuju narudžbenice kao da skupljaju sličice.</p>
