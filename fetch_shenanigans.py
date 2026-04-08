@@ -39,9 +39,18 @@ def main():
         reverse=True
     )
 
+    # === Generate JSON for homepage (zadnja 3 članka) ===
+    latest_posts = posts[:3]  # uzmi 1, 2 ili 3 – koliko god postoji
+
     data = {
-        "latest": posts[0] if posts else {},
-        "posts": posts
+        "items": [
+            {
+                "title": p["title"],
+                "file": p["file"],
+                "description": p["description"]
+            }
+            for p in latest_posts
+        ]
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
