@@ -209,40 +209,33 @@ with open(index_path, "w", encoding="utf-8") as f:
 </body>
 </html>""")
 
-# === Generate latest IOC JSON for homepage (ISPRAVLJENO + FALLBACK) ===
+# === Generate IOC JSON for last 3 days ===
+from datetime import datetime, timedelta
+
 latest_json_path = "docs/daily-ioc/iocs.json"
+base_folder = "docs/daily-ioc"
 
-# Ako JSON već postoji → učitaj ga
-if os.path.exists(latest_json_path):
-    try:
-        with open(latest_json_path, "r", encoding="utf-8") as f:
-            existing = json.load(f)
+# Izračunaj zadnja 3 dana
+today_date = datetime.now().date()
+valid_dates = {
+    (today_date - timedelta(days=i)).strftime("%Y-%m-%d")
+    for i in range(3)
+}
 
-        # Ako JSON nije dict → reset
-        if not isinstance(existing, dict):
-            existing = {"items": []}
+# Pronađi IOC foldere koji odgovaraju zadnja 3 dana
+items = []
+for name in os.listdir(base_folder):
+    if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name)):
+        date_str = name.replace("ioc-", "")
+        if date_str in valid_dates:
+            items.append({
+                "date": date_str,
+                "folder": name
+            })
 
-        # Ako nema items → reset
-        if "items" not in existing or not isinstance(existing["items"], list):
-            existing = {"items": []}
-
-    except Exception:
-        # Ako je JSON korumpiran → reset
-        existing = {"items": []}
-else:
-    existing = {"items": []}
-
-# Dodaj novi IOC entry na početak liste
-existing["items"].insert(0, {
-    "date": today,
-    "folder": f"ioc-{today}"
-})
+# Sortiraj po datumu (najnoviji prvi)
+items.sort(key=lambda x: x["date"], reverse=True)
 
 # Spremi JSON
 with open(latest_json_path, "w", encoding="utf-8") as f:
-    json.dump(existing, f, indent=2)
-
-
-# Spremi JSON
-with open(latest_json_path, "w", encoding="utf-8") as f:
-    json.dump(existing, f, indent=2)
+    json.dump({"items": items}, f, indent=2)
