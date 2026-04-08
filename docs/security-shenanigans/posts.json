@@ -1,19 +1,19 @@
 {
   "latest": {
-    "title": "Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje",
+    "title": "Kako konfigurirati kućni SIEM",
     "file": "article-hr.html",
-    "description": "Security Shenanigans ← Back to Shenanigans English | Croatian Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje Sigurnost se ne može kupiti ..."
+    "description": "Security Shenanigans ← Back to Shenanigans Kako konfigurirati kućni SIEM Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano priku..."
   },
   "posts": [
     {
-      "title": "Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje",
+      "title": "Kako konfigurirati kućni SIEM",
       "file": "article-hr.html",
-      "description": "Security Shenanigans ← Back to Shenanigans English | Croatian Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje Sigurnost se ne može kupiti ..."
+      "description": "Security Shenanigans ← Back to Shenanigans Kako konfigurirati kućni SIEM Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano priku..."
     },
     {
       "title": "Irresponsible Sale of Security Tools: More Isn’t Always Better",
       "file": "article-en.html",
-      "description": "Security Shenanigans ← Back to Shenanigans English | Croatian Irresponsible Sale of Security Tools: More Isn’t Always Better Security can’t be bought ..."
+      "description": "Security Shenanigans ← Back to Shenanigans Irresponsible Sale of Security Tools: More Isn’t Always Better Security can’t be bought in a box. Yet many ..."
     }
   ]
 }
