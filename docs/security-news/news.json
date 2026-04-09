@@ -7,15 +7,15 @@
       "source": "The Hacker News"
     },
     {
-      "title": "Masjesu Botnet Emerges as DDoS-for-Hire Service Targeting Global IoT Devices",
-      "url": "https://thehackernews.com/2026/04/masjesu-botnet-emerges-as-ddos-for-hire.html",
-      "published": "Wed, 08 Apr 2026 22:00:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "U.S. CISA adds a flaw in Ivanti EPMM to its Known Exploited Vulnerabilities catalog",
       "url": "https://securityaffairs.com/190519/security/u-s-cisa-adds-a-flaw-in-ivanti-epmm-to-its-known-exploited-vulnerabilities-catalog-2.html",
       "published": "Wed, 08 Apr 2026 21:35:09 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Russia-linked APT28 uses PRISMEX to infiltrate Ukraine and allied infrastructure with advanced tactics",
+      "url": "https://securityaffairs.com/190510/apt/russia-linked-apt28-uses-prismex-to-infiltrate-ukraine-and-allied-infrastructure-with-advanced-tactics.html",
+      "published": "Wed, 08 Apr 2026 20:23:08 +0000",
       "source": "Security Affairs"
     }
   ]
