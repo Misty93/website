@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "EngageLab SDK Flaw Exposed 50M Android Users, Including 30M Crypto Wallets",
+      "title": "EngageLab SDK Flaw Exposed 50M Android Users, Including 30M Crypto Wallet Installs",
       "url": "https://thehackernews.com/2026/04/engagelab-sdk-flaw-exposed-50m-android.html",
       "published": "Thu, 09 Apr 2026 22:56:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "UAT-10362 Targets Taiwanese NGOs with LucidRook Malware in Spear-Phishing Campaigns",
-      "url": "https://thehackernews.com/2026/04/uat-10362-targets-taiwanese-ngos-with.html",
-      "published": "Thu, 09 Apr 2026 21:53:00 +0530",
       "source": "The Hacker News"
     },
     {
       "title": "Eurail data breach impacted 308,777 people",
       "url": "https://securityaffairs.com/190570/data-breach/eurail-data-breach-impacted-308777-people.html",
       "published": "Thu, 09 Apr 2026 20:42:14 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Malicious PDF reveals active Adobe Reader zero-day in the wild",
+      "url": "https://securityaffairs.com/190558/hacking/malicious-pdf-reveals-active-adobe-reader-zero-day-in-the-wild.html",
+      "published": "Thu, 09 Apr 2026 19:14:16 +0000",
       "source": "Security Affairs"
     }
   ]
