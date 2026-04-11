@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "EngageLab SDK Flaw Exposed 50M Android Users, Including 30M Crypto Wallet Installs",
-      "url": "https://thehackernews.com/2026/04/engagelab-sdk-flaw-exposed-50m-android.html",
-      "published": "Thu, 09 Apr 2026 22:56:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Eurail data breach impacted 308,777 people",
       "url": "https://securityaffairs.com/190570/data-breach/eurail-data-breach-impacted-308777-people.html",
       "published": "Thu, 09 Apr 2026 20:42:14 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Malicious PDF reveals active Adobe Reader zero-day in the wild",
-      "url": "https://securityaffairs.com/190558/hacking/malicious-pdf-reveals-active-adobe-reader-zero-day-in-the-wild.html",
-      "published": "Thu, 09 Apr 2026 19:14:16 +0000",
-      "source": "Security Affairs"
+      "title": "ChatGPT rolls out new $100 Pro subscription to challenge Claude",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-rolls-out-new-100-pro-subscription-to-challenge-claude/",
+      "published": "Fri, 10 Apr 2026 22:08:16 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "GlassWorm Campaign Uses Zig Dropper to Infect Multiple Developer IDEs",
+      "url": "https://thehackernews.com/2026/04/glassworm-campaign-uses-zig-dropper-to.html",
+      "published": "Fri, 10 Apr 2026 18:53:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
