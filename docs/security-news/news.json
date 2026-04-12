@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Censys finds 5,219 devices exposed to attacks by Iranian APTs, majority in U.S.",
+      "url": "https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html",
+      "published": "Sat, 11 Apr 2026 20:39:37 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "GlassWorm evolves with Zig dropper to infect multiple developer tools",
+      "url": "https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html",
+      "published": "Sat, 11 Apr 2026 16:27:02 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Citizen Lab: Law Enforcement Used Webloc to Track 500 Million Devices via Ad Data",
       "url": "https://thehackernews.com/2026/04/citizen-lab-law-enforcement-used-webloc.html",
       "published": "Sat, 11 Apr 2026 11:32:00 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "CVE-2026-39987: Marimo RCE exploited in hours after disclosure",
-      "url": "https://securityaffairs.com/190623/hacking/cve-2026-39987-marimo-rce-exploited-in-hours-after-disclosure.html",
-      "published": "Sat, 11 Apr 2026 09:44:44 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "ChatGPT rolls out new $100 Pro subscription to challenge Claude",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-rolls-out-new-100-pro-subscription-to-challenge-claude/",
-      "published": "Fri, 10 Apr 2026 22:08:16 -0400",
-      "source": "BleepingComputer"
     }
   ]
 }
