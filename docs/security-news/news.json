@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Censys finds 5,219 devices exposed to attacks by Iranian APTs, majority in U.S.",
-      "url": "https://securityaffairs.com/190646/ics-scada/censys-finds-5219-devices-exposed-to-attacks-by-iranian-apts-majority-in-u-s.html",
-      "published": "Sat, 11 Apr 2026 20:39:37 +0000",
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 92",
+      "url": "https://securityaffairs.com/190672/malware/security-affairs-malware-newsletter-round-92.html",
+      "published": "Sun, 12 Apr 2026 12:23:04 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "GlassWorm evolves with Zig dropper to infect multiple developer tools",
-      "url": "https://securityaffairs.com/190638/malware/glassworm-evolves-with-zig-dropper-to-infect-multiple-developer-tools.html",
-      "published": "Sat, 11 Apr 2026 16:27:02 +0000",
-      "source": "Security Affairs"
+      "title": "CPUID Breach Distributes STX RAT via Trojanized CPU-Z and HWMonitor Downloads",
+      "url": "https://thehackernews.com/2026/04/cpuid-breach-distributes-stx-rat-via.html",
+      "published": "Sun, 12 Apr 2026 11:24:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Citizen Lab: Law Enforcement Used Webloc to Track 500 Million Devices via Ad Data",
-      "url": "https://thehackernews.com/2026/04/citizen-lab-law-enforcement-used-webloc.html",
-      "published": "Sat, 11 Apr 2026 11:32:00 +0530",
+      "title": "Adobe Patches Actively Exploited Acrobat Reader Flaw CVE-2026-34621",
+      "url": "https://thehackernews.com/2026/04/adobe-patches-actively-exploited.html",
+      "published": "Sun, 12 Apr 2026 09:55:00 +0530",
       "source": "The Hacker News"
     }
   ]
