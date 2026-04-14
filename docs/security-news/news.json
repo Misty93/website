@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Adobe fixes actively exploited Acrobat Reader flaw CVE-2026-34621",
-      "url": "https://securityaffairs.com/190697/security/adobe-fixes-actively-exploited-acrobat-reader-flaw-cve-2026-34621.html",
-      "published": "Sun, 12 Apr 2026 17:47:08 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "CPUID Breach Distributes STX RAT via Trojanized CPU-Z and HWMonitor Downloads",
-      "url": "https://thehackernews.com/2026/04/cpuid-breach-distributes-stx-rat-via.html",
-      "published": "Sun, 12 Apr 2026 11:24:00 +0530",
+      "title": "JanelaRAT Malware Targets Latin American Banks with 14,739 Attacks in Brazil in 2025",
+      "url": "https://thehackernews.com/2026/04/janelarat-malware-targets-latin.html",
+      "published": "Mon, 13 Apr 2026 22:45:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Critical Marimo pre-auth RCE flaw now under active exploitation",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-marimo-pre-auth-rce-flaw-now-under-active-exploitation/",
-      "published": "Sun, 12 Apr 2026 10:20:31 -0400",
-      "source": "BleepingComputer"
+      "title": "FBI and Indonesian Police Dismantle W3LL Phishing Network Behind $20M Fraud Attempts",
+      "url": "https://thehackernews.com/2026/04/fbi-and-indonesian-police-dismantle.html",
+      "published": "Mon, 13 Apr 2026 20:16:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Hackers access Booking.com user data, company secures systems",
+      "url": "https://securityaffairs.com/190757/data-breach/hackers-access-booking-com-user-data-company-secures-systems.html",
+      "published": "Mon, 13 Apr 2026 19:13:18 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
