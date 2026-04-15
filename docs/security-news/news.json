@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "New PHP Composer Flaws Enable Arbitrary Command Execution \u2014 Patches Released",
-      "url": "https://thehackernews.com/2026/04/new-php-composer-flaws-enable-arbitrary.html",
-      "published": "Tue, 14 Apr 2026 21:27:00 +0530",
+      "title": "Actively Exploited nginx-ui Flaw (CVE-2026-33032) Enables Full Nginx Server Takeover",
+      "url": "https://thehackernews.com/2026/04/critical-nginx-ui-vulnerability-cve.html",
+      "published": "Wed, 15 Apr 2026 18:26:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Google Adds Rust-Based DNS Parser into Pixel 10 Modem to Enhance Security",
-      "url": "https://thehackernews.com/2026/04/google-adds-rust-based-dns-parser-into.html",
-      "published": "Tue, 14 Apr 2026 20:26:00 +0530",
+      "title": "April Patch Tuesday Fixes Critical Flaws Across SAP, Adobe, Microsoft, Fortinet, and More",
+      "url": "https://thehackernews.com/2026/04/april-patch-tuesday-fixes-critical.html",
+      "published": "Wed, 15 Apr 2026 18:07:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "AI-Driven Pushpaganda Scam Exploits Google Discover to Spread Scareware and Ad Fraud",
-      "url": "https://thehackernews.com/2026/04/ai-driven-pushpaganda-scam-exploits.html",
-      "published": "Tue, 14 Apr 2026 20:00:00 +0530",
+      "title": "Deterministic + Agentic AI: The Architecture Exposure Validation Requires",
+      "url": "https://thehackernews.com/2026/04/deterministic-agentic-ai-architecture.html",
+      "published": "Wed, 15 Apr 2026 17:00:00 +0530",
       "source": "The Hacker News"
     }
   ]
