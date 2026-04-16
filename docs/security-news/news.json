@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "n8n Webhooks Abused Since October 2025 to Deliver Malware via Phishing Emails",
+      "url": "https://thehackernews.com/2026/04/n8n-webhooks-abused-since-october-2025.html",
+      "published": "Wed, 15 Apr 2026 22:39:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Critical Nginx UI auth bypass flaw now actively exploited in the wild",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-nginx-ui-auth-bypass-flaw-now-actively-exploited-in-the-wild/",
+      "published": "Wed, 15 Apr 2026 18:35:09 -0400",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Actively Exploited nginx-ui Flaw (CVE-2026-33032) Enables Full Nginx Server Takeover",
       "url": "https://thehackernews.com/2026/04/critical-nginx-ui-vulnerability-cve.html",
       "published": "Wed, 15 Apr 2026 18:26:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "April Patch Tuesday Fixes Critical Flaws Across SAP, Adobe, Microsoft, Fortinet, and More",
-      "url": "https://thehackernews.com/2026/04/april-patch-tuesday-fixes-critical.html",
-      "published": "Wed, 15 Apr 2026 18:07:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Deterministic + Agentic AI: The Architecture Exposure Validation Requires",
-      "url": "https://thehackernews.com/2026/04/deterministic-agentic-ai-architecture.html",
-      "published": "Wed, 15 Apr 2026 17:00:00 +0530",
       "source": "The Hacker News"
     }
   ]
