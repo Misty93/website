@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "Hidden VMs: how hackers leverage QEMU to stealthily steal data and spread malware",
+      "url": "https://securityaffairs.com/190982/security/hidden-vms-how-hackers-leverage-qemu-to-stealthily-steal-data-and-spread-malware.html",
+      "published": "Sat, 18 Apr 2026 15:20:06 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "[Webinar] Eliminate Ghost Identities Before They Expose Your Enterprise Data",
       "url": "https://thehackernews.com/2026/04/webinar-find-and-eliminate-orphaned-non.html",
       "published": "Sat, 18 Apr 2026 13:37:00 +0530",
@@ -10,12 +16,6 @@
       "title": "$13.74M Hack Shuts Down Sanctioned Grinex Exchange After Intelligence Claims",
       "url": "https://thehackernews.com/2026/04/1374m-hack-shuts-down-sanctioned-grinex.html",
       "published": "Sat, 18 Apr 2026 13:29:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Mirai Variant Nexcorium Exploits CVE-2024-3721 to Hijack TBK DVRs for DDoS Botnet",
-      "url": "https://thehackernews.com/2026/04/mirai-variant-nexcorium-exploits-cve.html",
-      "published": "Sat, 18 Apr 2026 11:31:00 +0530",
       "source": "The Hacker News"
     }
   ]
