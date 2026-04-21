@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Cyber attacks fuel surge in cargo theft across logistics industry",
-      "url": "https://securityaffairs.com/191008/security/cyber-attacks-fuel-surge-in-cargo-theft-across-logistics-industry.html",
-      "published": "Sun, 19 Apr 2026 14:59:46 +0000",
+      "title": "SGLang CVE-2026-5760 (CVSS 9.8) Enables RCE via Malicious GGUF Model Files",
+      "url": "https://thehackernews.com/2026/04/sglang-cve-2026-5760-cvss-98-enables.html",
+      "published": "Mon, 20 Apr 2026 22:44:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "France\u2019s ANTS ID System website hit by cyberattack, possible data breach",
+      "url": "https://securityaffairs.com/191069/data-breach/frances-ants-id-system-website-hit-by-cyberattack-possible-data-breach.html",
+      "published": "Mon, 20 Apr 2026 20:30:17 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Vercel confirms breach as hackers claim to be selling stolen data",
-      "url": "https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/",
-      "published": "Sun, 19 Apr 2026 13:32:45 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 93",
-      "url": "https://securityaffairs.com/191001/security/security-affairs-malware-newsletter-round-93.html",
-      "published": "Sun, 19 Apr 2026 13:00:38 +0000",
-      "source": "Security Affairs"
+      "title": "\u26a1 Weekly Recap: Vercel Hack, Push Fraud, QEMU Abused, New Android RATs Emerge & More",
+      "url": "https://thehackernews.com/2026/04/weekly-recap-vercel-hack-push-fraud.html",
+      "published": "Mon, 20 Apr 2026 19:11:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
