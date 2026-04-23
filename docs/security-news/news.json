@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Lotus Wiper Malware Targets Venezuelan Energy Systems in Destructive Attack",
-      "url": "https://thehackernews.com/2026/04/lotus-wiper-malware-targets-venezuelan.html",
-      "published": "Wed, 22 Apr 2026 16:25:00 +0530",
+      "title": "Malicious KICS Docker Images and VS Code Extensions Hit Checkmarx Supply Chain",
+      "url": "https://thehackernews.com/2026/04/malicious-kics-docker-images-and-vs.html",
+      "published": "Wed, 22 Apr 2026 23:25:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Toxic Combinations: When Cross-App Permissions Stack into Risk",
-      "url": "https://thehackernews.com/2026/04/toxic-combinations-when-cross-app.html",
-      "published": "Wed, 22 Apr 2026 16:11:36 +0530",
+      "title": "Self-Propagating Supply Chain Worm Hijacks npm Packages to Steal Developer Tokens",
+      "url": "https://thehackernews.com/2026/04/self-propagating-supply-chain-worm.html",
+      "published": "Wed, 22 Apr 2026 23:03:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Microsoft Patches Critical ASP.NET Core CVE-2026-40372 Privilege Escalation Bug",
-      "url": "https://thehackernews.com/2026/04/microsoft-patches-critical-aspnet-core.html",
-      "published": "Wed, 22 Apr 2026 14:59:00 +0530",
+      "title": "Harvester Deploys Linux GoGra Backdoor in South Asia Using Microsoft Graph API",
+      "url": "https://thehackernews.com/2026/04/harvester-deploys-linux-gogra-backdoor.html",
+      "published": "Wed, 22 Apr 2026 20:58:00 +0530",
       "source": "The Hacker News"
     }
   ]
