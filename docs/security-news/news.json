@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Malicious KICS Docker Images and VS Code Extensions Hit Checkmarx Supply Chain",
-      "url": "https://thehackernews.com/2026/04/malicious-kics-docker-images-and-vs.html",
-      "published": "Wed, 22 Apr 2026 23:25:00 +0530",
-      "source": "The Hacker News"
+      "title": "DDoS wave continues as Mastodon hit after Bluesky incident",
+      "url": "https://securityaffairs.com/191144/cyber-crime/ddos-wave-continues-as-mastodon-hit-after-bluesky-incident.html",
+      "published": "Wed, 22 Apr 2026 18:49:49 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Self-Propagating Supply Chain Worm Hijacks npm Packages to Steal Developer Tokens",
-      "url": "https://thehackernews.com/2026/04/self-propagating-supply-chain-worm.html",
-      "published": "Wed, 22 Apr 2026 23:03:00 +0530",
-      "source": "The Hacker News"
+      "title": "Mirai Botnet exploits CVE-2025-29635 to target legacy D-Link routers",
+      "url": "https://securityaffairs.com/191135/malware/mirai-botnet-exploits-cve-2025-29635-to-target-legacy-d-link-routers.html",
+      "published": "Wed, 22 Apr 2026 17:31:17 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Harvester Deploys Linux GoGra Backdoor in South Asia Using Microsoft Graph API",
-      "url": "https://thehackernews.com/2026/04/harvester-deploys-linux-gogra-backdoor.html",
-      "published": "Wed, 22 Apr 2026 20:58:00 +0530",
-      "source": "The Hacker News"
+      "title": "Apple fixes bug that let the FBI recover deleted Signal messages",
+      "url": "https://www.bleepingcomputer.com/news/security/apple-fixes-ios-bug-that-retained-deleted-notification-data/",
+      "published": "Wed, 22 Apr 2026 16:58:58 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
