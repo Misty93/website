@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "How to Configure a Home SIEM",
-      "file": "article-en.html#how-to-configure-a-home-siem",
-      "description": "Wazuh is an open‑source SIEM and XDR platform that provides centralized collection, analysis, and correlation of security events from endpoints, network devices, and cloud services. Thanks to its modular architecture and combined agent‑based and agentless approach, it is ideal for home labs, education, and smaller production environments.",
-      "date": "08.04.2026."
-    },
-    {
       "title": "Kako konfigurirati kućni SIEM",
       "file": "article-hr.html#kako-konfigurirati-kućni-siem",
       "description": "Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja iz različitih izvora, uključujući endpoint uređaje, mrežnu opremu i cloud servise. Zahvaljujući modularnoj arhitekturi i agent‑based + agentless pristupu, idealan je za kućne labove, edukaciju i manje produkcijske okoline.",
       "date": "08.04.2026."
     },
     {
-      "title": "Irresponsible Sale of Security Tools: More Isn’t Always Better",
-      "file": "article-en.html#irresponsible-sale-of-security-tools-more-isnt-always-better",
-      "description": "Security can’t be bought in a box. Yet many organizations behave as if it can. Slickly packaged security software is often sold as an instant solution — but without expert handling, it becomes just “shelfware.”",
+      "title": "How to Configure a Home SIEM",
+      "file": "article-en.html#how-to-configure-a-home-siem",
+      "description": "Wazuh is an open‑source SIEM and XDR platform that provides centralized collection, analysis, and correlation of security events from endpoints, network devices, and cloud services. Thanks to its modular architecture and combined agent‑based and agentless approach, it is ideal for home labs, education, and smaller production environments.",
+      "date": "08.04.2026."
+    },
+    {
+      "title": "Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje",
+      "file": "article-hr.html#nesavjesna-prodaja-sigurnosnih-alata-više-nije-nužno-bolje",
+      "description": "Sigurnost se ne može kupiti u kutiji. Ipak, mnoge organizacije se ponašaju kao da može. Primamljivo zapakirani sigurnosni softver često se nudi kao instant rješenje – ali bez stručnog korištenja, pretvara se u “policu”.",
       "date": "07.04.2026."
     }
   ]
