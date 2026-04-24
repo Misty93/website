@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "DDoS wave continues as Mastodon hit after Bluesky incident",
-      "url": "https://securityaffairs.com/191144/cyber-crime/ddos-wave-continues-as-mastodon-hit-after-bluesky-incident.html",
-      "published": "Wed, 22 Apr 2026 18:49:49 +0000",
-      "source": "Security Affairs"
+      "title": "UNC6692 Impersonates IT Helpdesk via Microsoft Teams to Deploy SNOW Malware",
+      "url": "https://thehackernews.com/2026/04/unc6692-impersonates-it-helpdesk-via.html",
+      "published": "Thu, 23 Apr 2026 23:46:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Mirai Botnet exploits CVE-2025-29635 to target legacy D-Link routers",
-      "url": "https://securityaffairs.com/191135/malware/mirai-botnet-exploits-cve-2025-29635-to-target-legacy-d-link-routers.html",
-      "published": "Wed, 22 Apr 2026 17:31:17 +0000",
-      "source": "Security Affairs"
+      "title": "Bitwarden CLI Compromised in Ongoing Checkmarx Supply Chain Campaign",
+      "url": "https://thehackernews.com/2026/04/bitwarden-cli-compromised-in-ongoing.html",
+      "published": "Thu, 23 Apr 2026 19:12:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Apple fixes bug that let the FBI recover deleted Signal messages",
-      "url": "https://www.bleepingcomputer.com/news/security/apple-fixes-ios-bug-that-retained-deleted-notification-data/",
-      "published": "Wed, 22 Apr 2026 16:58:58 -0400",
-      "source": "BleepingComputer"
+      "title": "ThreatsDay Bulletin: $290M DeFi Hack, macOS LotL Abuse, ProxySmart SIM Farms +25 New Stories",
+      "url": "https://thehackernews.com/2026/04/threatsday-bulletin-290m-defi-hack.html",
+      "published": "Thu, 23 Apr 2026 18:47:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
