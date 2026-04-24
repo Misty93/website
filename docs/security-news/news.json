@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "UNC6692 Impersonates IT Helpdesk via Microsoft Teams to Deploy SNOW Malware",
+      "title": "UNC6692 Impersonates IT Help Desk via Microsoft Teams to Deploy SNOW Malware",
       "url": "https://thehackernews.com/2026/04/unc6692-impersonates-it-helpdesk-via.html",
       "published": "Thu, 23 Apr 2026 23:46:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Bitwarden CLI Compromised in Ongoing Checkmarx Supply Chain Campaign",
-      "url": "https://thehackernews.com/2026/04/bitwarden-cli-compromised-in-ongoing.html",
-      "published": "Thu, 23 Apr 2026 19:12:00 +0530",
-      "source": "The Hacker News"
+      "title": "Hackers exploit file upload bug in Breeze Cache WordPress plugin",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-file-upload-bug-in-breeze-cache-wordpress-plugin/",
+      "published": "Thu, 23 Apr 2026 17:33:45 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "ThreatsDay Bulletin: $290M DeFi Hack, macOS LotL Abuse, ProxySmart SIM Farms +25 New Stories",
-      "url": "https://thehackernews.com/2026/04/threatsday-bulletin-290m-defi-hack.html",
-      "published": "Thu, 23 Apr 2026 18:47:00 +0530",
-      "source": "The Hacker News"
+      "title": "Luxury cosmetics giant Rituals discloses data breach impacting member personal details",
+      "url": "https://securityaffairs.com/191192/data-breach/rituals-discloses-a-data-breach-impacting-member-personal-details.html",
+      "published": "Thu, 23 Apr 2026 17:32:19 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
