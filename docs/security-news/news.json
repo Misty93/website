@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "CISA reports persistent FIRESTARTER backdoor on Cisco ASA device in federal network",
-      "url": "https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html",
-      "published": "Sat, 25 Apr 2026 00:00:52 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "FIRESTARTER Backdoor Hit Federal Cisco Firepower Device, Survives Security Patches",
-      "url": "https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html",
-      "published": "Fri, 24 Apr 2026 22:36:00 +0530",
+      "title": "Researchers Uncover Pre-Stuxnet \u2018fast16\u2019 Malware Targeting Engineering Software",
+      "url": "https://thehackernews.com/2026/04/researchers-uncover-pre-stuxnet-fast16.html",
+      "published": "Sat, 25 Apr 2026 14:56:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "12-year-old Pack2TheRoot bug lets Linux users gain root privileges",
-      "url": "https://securityaffairs.com/191231/security/12-year-old-pack2theroot-bug-lets-linux-users-gain-root-privileges.html",
-      "published": "Fri, 24 Apr 2026 19:46:15 +0000",
+      "title": "CISA Adds 4 Exploited Flaws to KEV, Sets May 2026 Federal Deadline",
+      "url": "https://thehackernews.com/2026/04/cisa-adds-4-exploited-flaws-to-kev-sets.html",
+      "published": "Sat, 25 Apr 2026 10:38:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA reports persistent FIRESTARTER backdoor on Cisco ASA device in federal network",
+      "url": "https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html",
+      "published": "Sat, 25 Apr 2026 00:00:52 +0000",
       "source": "Security Affairs"
     }
   ]
