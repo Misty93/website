@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "UNC6692 Impersonates IT Help Desk via Microsoft Teams to Deploy SNOW Malware",
-      "url": "https://thehackernews.com/2026/04/unc6692-impersonates-it-helpdesk-via.html",
-      "published": "Thu, 23 Apr 2026 23:46:00 +0530",
+      "title": "CISA reports persistent FIRESTARTER backdoor on Cisco ASA device in federal network",
+      "url": "https://securityaffairs.com/191241/hacking/cisa-reports-persistent-firestarter-backdoor-on-cisco-asa-device-in-federal-network.html",
+      "published": "Sat, 25 Apr 2026 00:00:52 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "FIRESTARTER Backdoor Hit Federal Cisco Firepower Device, Survives Security Patches",
+      "url": "https://thehackernews.com/2026/04/firestarter-backdoor-hit-federal-cisco.html",
+      "published": "Fri, 24 Apr 2026 22:36:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Hackers exploit file upload bug in Breeze Cache WordPress plugin",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-file-upload-bug-in-breeze-cache-wordpress-plugin/",
-      "published": "Thu, 23 Apr 2026 17:33:45 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Luxury cosmetics giant Rituals discloses data breach impacting member personal details",
-      "url": "https://securityaffairs.com/191192/data-breach/rituals-discloses-a-data-breach-impacting-member-personal-details.html",
-      "published": "Thu, 23 Apr 2026 17:32:19 +0000",
+      "title": "12-year-old Pack2TheRoot bug lets Linux users gain root privileges",
+      "url": "https://securityaffairs.com/191231/security/12-year-old-pack2theroot-bug-lets-linux-users-gain-root-privileges.html",
+      "published": "Fri, 24 Apr 2026 19:46:15 +0000",
       "source": "Security Affairs"
     }
   ]
