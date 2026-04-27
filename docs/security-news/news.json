@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "Critical bug in CrowdStrike LogScale let attackers access files",
+      "url": "https://securityaffairs.com/191343/hacking/critical-bug-in-crowdstrike-logscale-let-attackers-access-files.html",
+      "published": "Sun, 26 Apr 2026 16:07:02 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "GopherWhisper: new China-linked APT targets Mongolia with Go-based malware",
+      "url": "https://securityaffairs.com/191318/apt/gopherwhisper-new-china-linked-apt-targets-mongolia-with-go-based-malware.html",
+      "published": "Sun, 26 Apr 2026 13:07:58 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 94",
       "url": "https://securityaffairs.com/191312/malware/security-affairs-malware-newsletter-round-94.html",
       "published": "Sun, 26 Apr 2026 11:32:42 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Trigona ransomware adopts custom tool to steal data and evade detection",
-      "url": "https://securityaffairs.com/191294/cyber-crime/trigona-ransomware-adopts-custom-tool-to-steal-data-and-evade-detection.html",
-      "published": "Sun, 26 Apr 2026 09:37:30 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Security Affairs newsletter Round 574 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
-      "url": "https://securityaffairs.com/191305/breaking-news/security-affairs-newsletter-round-574-by-pierluigi-paganini-international-edition.html",
-      "published": "Sun, 26 Apr 2026 08:41:06 +0000",
       "source": "Security Affairs"
     }
   ]
