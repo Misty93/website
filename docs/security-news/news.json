@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Critical bug in CrowdStrike LogScale let attackers access files",
-      "url": "https://securityaffairs.com/191343/hacking/critical-bug-in-crowdstrike-logscale-let-attackers-access-files.html",
-      "published": "Sun, 26 Apr 2026 16:07:02 +0000",
-      "source": "Security Affairs"
+      "title": "American utility firm Itron discloses breach of internal IT network",
+      "url": "https://www.bleepingcomputer.com/news/security/american-utility-firm-itron-discloses-breach-of-internal-it-network/",
+      "published": "Sun, 26 Apr 2026 10:22:34 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "GopherWhisper: new China-linked APT targets Mongolia with Go-based malware",
-      "url": "https://securityaffairs.com/191318/apt/gopherwhisper-new-china-linked-apt-targets-mongolia-with-go-based-malware.html",
-      "published": "Sun, 26 Apr 2026 13:07:58 +0000",
-      "source": "Security Affairs"
+      "title": "Researchers Uncover Pre-Stuxnet \u2018fast16\u2019 Malware Targeting Engineering Software",
+      "url": "https://thehackernews.com/2026/04/researchers-uncover-pre-stuxnet-fast16.html",
+      "published": "Sat, 25 Apr 2026 14:56:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 94",
-      "url": "https://securityaffairs.com/191312/malware/security-affairs-malware-newsletter-round-94.html",
-      "published": "Sun, 26 Apr 2026 11:32:42 +0000",
-      "source": "Security Affairs"
+      "title": "Mythos Changed the Math on Vulnerability Discovery. Most Teams Aren't Ready for the Remediation Side",
+      "url": "https://thehackernews.com/2026/04/mythos-changed-math-on-vulnerability.html",
+      "published": "Mon, 27 Apr 2026 17:28:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
