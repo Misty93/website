@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Checkmarx Confirms GitHub Repository Data Posted on Dark Web After March 23 Attack",
-      "url": "https://thehackernews.com/2026/04/checkmarx-confirms-github-repository.html",
-      "published": "Mon, 27 Apr 2026 19:49:00 +0530",
+      "title": "VECT 2.0 Ransomware Irreversibly Destroys Files Over 131KB on Windows, Linux, ESXi",
+      "url": "https://thehackernews.com/2026/04/vect-20-ransomware-irreversibly.html",
+      "published": "Tue, 28 Apr 2026 19:31:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Medtronic discloses security incident after ShinyHunters claimed theft of 9M+ records",
-      "url": "https://securityaffairs.com/191391/cyber-crime/medtronic-discloses-security-incident-after-shinyhunters-claimed-theft-of-9m-records.html",
-      "published": "Mon, 27 Apr 2026 19:12:50 +0000",
-      "source": "Security Affairs"
+      "title": "Why Secure Data Movement Is the Zero Trust Bottleneck Nobody Talks About",
+      "url": "https://thehackernews.com/2026/04/why-secure-data-movement-is-zero-trust.html",
+      "published": "Tue, 28 Apr 2026 17:28:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Robinhood account creation flaw abused to send phishing emails",
-      "url": "https://www.bleepingcomputer.com/news/security/robinhood-account-creation-flaw-abused-to-send-phishing-emails/",
-      "published": "Mon, 27 Apr 2026 19:11:01 -0400",
-      "source": "BleepingComputer"
+      "title": "Critical Unpatched Flaw Leaves Hugging Face LeRobot Open to Unauthenticated RCE",
+      "url": "https://thehackernews.com/2026/04/critical-cve-2026-25874-leaves-hugging.html",
+      "published": "Tue, 28 Apr 2026 16:48:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
