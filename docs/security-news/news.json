@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "American utility firm Itron discloses breach of internal IT network",
-      "url": "https://www.bleepingcomputer.com/news/security/american-utility-firm-itron-discloses-breach-of-internal-it-network/",
-      "published": "Sun, 26 Apr 2026 10:22:34 -0400",
+      "title": "Checkmarx Confirms GitHub Repository Data Posted on Dark Web After March 23 Attack",
+      "url": "https://thehackernews.com/2026/04/checkmarx-confirms-github-repository.html",
+      "published": "Mon, 27 Apr 2026 19:49:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Medtronic discloses security incident after ShinyHunters claimed theft of 9M+ records",
+      "url": "https://securityaffairs.com/191391/cyber-crime/medtronic-discloses-security-incident-after-shinyhunters-claimed-theft-of-9m-records.html",
+      "published": "Mon, 27 Apr 2026 19:12:50 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Robinhood account creation flaw abused to send phishing emails",
+      "url": "https://www.bleepingcomputer.com/news/security/robinhood-account-creation-flaw-abused-to-send-phishing-emails/",
+      "published": "Mon, 27 Apr 2026 19:11:01 -0400",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Researchers Uncover Pre-Stuxnet \u2018fast16\u2019 Malware Targeting Engineering Software",
-      "url": "https://thehackernews.com/2026/04/researchers-uncover-pre-stuxnet-fast16.html",
-      "published": "Sat, 25 Apr 2026 14:56:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Mythos Changed the Math on Vulnerability Discovery. Most Teams Aren't Ready for the Remediation Side",
-      "url": "https://thehackernews.com/2026/04/mythos-changed-math-on-vulnerability.html",
-      "published": "Mon, 27 Apr 2026 17:28:00 +0530",
-      "source": "The Hacker News"
     }
   ]
 }
