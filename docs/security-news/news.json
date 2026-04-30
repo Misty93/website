@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "SAP-Related npm Packages Compromised in Credential-Stealing Supply Chain Attack",
-      "url": "https://thehackernews.com/2026/04/sap-npm-packages-compromised-by-mini.html",
-      "published": "Wed, 29 Apr 2026 21:56:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New Wave of DPRK Attacks Uses AI-Inserted npm Malware, Fake Firms, and RATs",
-      "url": "https://thehackernews.com/2026/04/new-wave-of-dprk-attacks-uses-ai.html",
-      "published": "Wed, 29 Apr 2026 20:13:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "CVE-2026-42208: LiteLLM bug exploited 36 hours after its disclosure",
       "url": "https://securityaffairs.com/191483/hacking/cve-2026-42208-litellm-bug-exploited-36-hours-after-its-disclosure.html",
       "published": "Wed, 29 Apr 2026 20:09:58 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Official SAP npm packages compromised to steal credentials",
+      "url": "https://www.bleepingcomputer.com/news/security/official-sap-npm-packages-compromised-to-steal-credentials/",
+      "published": "Wed, 29 Apr 2026 18:43:44 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Internet censorship index reveals Russia\u2019s lead and widespread content blocking",
+      "url": "https://securityaffairs.com/191475/security/internet-censorship-index-reveals-russias-lead-and-widespread-content-blocking.html",
+      "published": "Wed, 29 Apr 2026 14:18:39 +0000",
       "source": "Security Affairs"
     }
   ]
