@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "PyTorch Lightning and Intercom-client Hit in Supply Chain Attacks to Steal Credentials",
-      "url": "https://thehackernews.com/2026/04/pytorch-lightning-compromised-in-pypi.html",
-      "published": "Thu, 30 Apr 2026 22:01:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ThreatsDay Bulletin: SMS Blaster Busts, OpenEMR Flaws, 600K Roblox Hacks and 25 More Stories",
-      "url": "https://thehackernews.com/2026/04/threatsday-bulletin-sms-blaster-busts.html",
-      "published": "Thu, 30 Apr 2026 19:25:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Copy Fail: New Linux bug enables Root via page\u2011cache corruption",
       "url": "https://securityaffairs.com/191519/hacking/copy-fail-new-linux-bug-enables-root-via-page-cache-corruption.html",
       "published": "Thu, 30 Apr 2026 18:23:30 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "30,000 Facebook Accounts Hacked via Google AppSheet Phishing Campaign",
+      "url": "https://thehackernews.com/2026/05/30000-facebook-accounts-hacked-via.html",
+      "published": "Fri, 01 May 2026 23:39:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Microsoft tests modern Windows Run, says it's faster than legacy dialog",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-modern-windows-run-says-its-faster-than-legacy-dialog/",
+      "published": "Fri, 01 May 2026 20:18:05 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
