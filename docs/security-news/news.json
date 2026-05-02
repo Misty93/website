@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Copy Fail: New Linux bug enables Root via page\u2011cache corruption",
-      "url": "https://securityaffairs.com/191519/hacking/copy-fail-new-linux-bug-enables-root-via-page-cache-corruption.html",
-      "published": "Thu, 30 Apr 2026 18:23:30 +0000",
+      "title": "Trellix discloses the breach of a code repository",
+      "url": "https://securityaffairs.com/191584/data-breach/trellix-discloses-the-breach-of-a-code-repository.html",
+      "published": "Sat, 02 May 2026 12:55:38 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "30,000 Facebook Accounts Hacked via Google AppSheet Phishing Campaign",
-      "url": "https://thehackernews.com/2026/05/30000-facebook-accounts-hacked-via.html",
-      "published": "Fri, 01 May 2026 23:39:00 +0530",
+      "title": "Trellix Confirms Source Code Breach With Unauthorized Repository Access",
+      "url": "https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html",
+      "published": "Sat, 02 May 2026 12:11:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Microsoft tests modern Windows Run, says it's faster than legacy dialog",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-modern-windows-run-says-its-faster-than-legacy-dialog/",
-      "published": "Fri, 01 May 2026 20:18:05 -0400",
-      "source": "BleepingComputer"
+      "title": "New Deep#Door RAT uses stealth and persistence to target Windows",
+      "url": "https://securityaffairs.com/191567/malware/new-deepdoor-rat-uses-stealth-and-persistence-to-target-windows.html",
+      "published": "Sat, 02 May 2026 08:22:39 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
