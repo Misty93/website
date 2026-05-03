@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Trellix discloses the breach of a code repository",
-      "url": "https://securityaffairs.com/191584/data-breach/trellix-discloses-the-breach-of-a-code-repository.html",
-      "published": "Sat, 02 May 2026 12:55:38 +0000",
+      "title": "Critrical cPanel flaw mass-exploited in \"Sorry\" ransomware attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/critrical-cpanel-flaw-mass-exploited-in-sorry-ransomware-attacks/",
+      "published": "Sat, 02 May 2026 17:54:00 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Two US cybersecurity experts sentenced in ransomware case, third awaits July ruling",
+      "url": "https://securityaffairs.com/191591/cyber-crime/two-us-cybersecurity-experts-sentenced-in-ransomware-case-third-awaits-july-ruling.html",
+      "published": "Sat, 02 May 2026 15:36:21 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Trellix Confirms Source Code Breach With Unauthorized Repository Access",
-      "url": "https://thehackernews.com/2026/05/trellix-confirms-source-code-breach.html",
-      "published": "Sat, 02 May 2026 12:11:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New Deep#Door RAT uses stealth and persistence to target Windows",
-      "url": "https://securityaffairs.com/191567/malware/new-deepdoor-rat-uses-stealth-and-persistence-to-target-windows.html",
-      "published": "Sat, 02 May 2026 08:22:39 +0000",
+      "title": "Trellix discloses the breach of a code repository",
+      "url": "https://securityaffairs.com/191584/data-breach/trellix-discloses-the-breach-of-a-code-repository.html",
+      "published": "Sat, 02 May 2026 12:55:38 +0000",
       "source": "Security Affairs"
     }
   ]
