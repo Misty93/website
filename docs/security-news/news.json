@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "published": "Sun, 03 May 2026 11:56:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Google Revamps Bug Bounty Programs: Android Rewards Rise, Chrome Payouts Drop in the Age of AI",
-      "url": "https://securityaffairs.com/191600/security/google-revamps-bug-bounty-programs-android-rewards-rise-chrome-payouts-drop-in-the-age-of-ai.html",
-      "published": "Sun, 03 May 2026 08:25:35 +0000",
+      "title": "Salt Typhoon breach IBM subsidiary in Italy: a warning for Europe\u2019s digital defenses",
+      "url": "https://securityaffairs.com/191638/apt/salt-typhoon-breach-ibm-subsidiary-in-italy-a-warning-for-europes-digital-defenses.html",
+      "published": "Sun, 03 May 2026 20:56:00 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Critrical cPanel flaw mass-exploited in \"Sorry\" ransomware attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/critrical-cpanel-flaw-mass-exploited-in-sorry-ransomware-attacks/",
-      "published": "Sat, 02 May 2026 17:54:00 -0400",
+      "title": "Instructure confirms data breach, ShinyHunters claims attack",
+      "url": "https://www.bleepingcomputer.com/news/security/instructure-confirms-data-breach-shinyhunters-claims-attack/",
+      "published": "Sun, 03 May 2026 18:16:27 -0400",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 95",
+      "url": "https://securityaffairs.com/191623/malware/security-affairs-malware-newsletter-round-95.html",
+      "published": "Sun, 03 May 2026 15:38:40 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
