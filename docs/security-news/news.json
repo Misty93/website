@@ -7,16 +7,16 @@
       "source": "Security Affairs"
     },
     {
-      "title": "Instructure confirms data breach, ShinyHunters claims attack",
-      "url": "https://www.bleepingcomputer.com/news/security/instructure-confirms-data-breach-shinyhunters-claims-attack/",
-      "published": "Sun, 03 May 2026 18:16:27 -0400",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 95",
       "url": "https://securityaffairs.com/191623/malware/security-affairs-malware-newsletter-round-95.html",
       "published": "Sun, 03 May 2026 15:38:40 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
+      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
+      "published": "Sun, 03 May 2026 11:56:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
