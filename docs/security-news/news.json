@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Salt Typhoon breach IBM subsidiary in Italy: a warning for Europe\u2019s digital defenses",
-      "url": "https://securityaffairs.com/191638/apt/salt-typhoon-breach-ibm-subsidiary-in-italy-a-warning-for-europes-digital-defenses.html",
-      "published": "Sun, 03 May 2026 20:56:00 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 95",
-      "url": "https://securityaffairs.com/191623/malware/security-affairs-malware-newsletter-round-95.html",
-      "published": "Sun, 03 May 2026 15:38:40 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
-      "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-      "published": "Sun, 03 May 2026 11:56:00 +0530",
+      "title": "Phishing Campaign Hits 80+ Orgs Using SimpleHelp and ScreenConnect RMM Tools",
+      "url": "https://thehackernews.com/2026/05/phishing-campaign-hits-80-orgs-using.html",
+      "published": "Mon, 04 May 2026 23:36:00 +0530",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Progress Patches Critical MOVEit Automation Bug Enabling Authentication Bypass",
+      "url": "https://thehackernews.com/2026/05/progress-patches-critical-moveit.html",
+      "published": "Mon, 04 May 2026 22:04:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "MOVEit automation flaws could enable full system compromise",
+      "url": "https://securityaffairs.com/191681/security/moveit-automation-flaws-could-enable-full-system-compromise.html",
+      "published": "Mon, 04 May 2026 21:32:10 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
