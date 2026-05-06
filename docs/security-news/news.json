@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "The Back Door Attackers Know About \u2014 and Most Security Teams Still Haven\u2019t Closed",
-      "url": "https://thehackernews.com/2026/05/the-back-door-attackers-know-about-and.html",
-      "published": "Tue, 05 May 2026 17:28:00 +0530",
+      "title": "Critical Apache HTTP/2 Flaw (CVE-2026-23918) Enables DoS and Potential RCE",
+      "url": "https://thehackernews.com/2026/05/critical-apache-http2-flaw-cve-2026.html",
+      "published": "Tue, 05 May 2026 21:49:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "MetInfo CMS CVE-2026-29014 Exploited for Remote Code Execution Attacks",
-      "url": "https://thehackernews.com/2026/05/metinfo-cms-cve-2026-29014-exploited.html",
-      "published": "Tue, 05 May 2026 17:26:00 +0530",
+      "title": "DAEMON Tools Supply Chain Attack Compromises Official Installers with Malware",
+      "url": "https://thehackernews.com/2026/05/daemon-tools-supply-chain-attack.html",
+      "published": "Tue, 05 May 2026 21:37:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "We Scanned 1 Million Exposed AI Services. Here's How Bad the Security Actually Is",
-      "url": "https://thehackernews.com/2026/05/we-scanned-1-million-exposed-ai.html",
-      "published": "Tue, 05 May 2026 16:00:00 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. court sentences Karakurt ransomware negotiator to 8.5 years",
+      "url": "https://securityaffairs.com/191722/cyber-crime/u-s-court-sentences-karakurt-ransomware-negotiator-to-8-5-years.html",
+      "published": "Tue, 05 May 2026 20:06:20 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
