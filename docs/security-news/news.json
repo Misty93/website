@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Taiwan High-Speed Rail Emergency Braking Hack: How a Student Stopped the Trains and Exposed a Major Security Gap",
-      "url": "https://securityaffairs.com/191785/hacking/taiwan-high-speed-rail-emergency-braking-hack-how-a-student-stopped-the-trains-and-exposed-a-major-security-gap.html",
-      "published": "Wed, 06 May 2026 23:05:09 +0000",
-      "source": "Security Affairs"
+      "title": "Ivanti EPMM CVE-2026-6973 RCE Under Active Exploitation Grants Admin-Level Access",
+      "url": "https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html",
+      "published": "Thu, 07 May 2026 23:25:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "After 17 years, Gavril Sandu extradited to U.S. for hacking scheme",
-      "url": "https://securityaffairs.com/191771/cyber-crime/after-17-years-gavril-sandu-extradited-to-u-s-for-hacking-scheme.html",
-      "published": "Wed, 06 May 2026 20:48:37 +0000",
-      "source": "Security Affairs"
+      "title": "PCPJack Credential Stealer Exploits 5 CVEs to Spread Worm-Like Across Cloud Systems",
+      "url": "https://thehackernews.com/2026/05/pcpjack-credential-stealer-exploits-5.html",
+      "published": "Thu, 07 May 2026 23:15:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Iranian cyber espionage disguised as a Chaos Ransomware attack",
-      "url": "https://securityaffairs.com/191765/breaking-news/iranian-cyber-espionage-disguised-as-a-chaos-ransomware-attack.html",
-      "published": "Wed, 06 May 2026 14:19:46 +0000",
+      "title": "Nation-state actors exploit Palo Alto PAN-OS zero-day for weeks",
+      "url": "https://securityaffairs.com/191831/security/nation-state-actors-exploit-palo-alto-pan-os-zero-day-for-weeks.html",
+      "published": "Thu, 07 May 2026 20:44:22 +0000",
       "source": "Security Affairs"
     }
   ]
