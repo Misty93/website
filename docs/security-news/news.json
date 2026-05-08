@@ -7,15 +7,15 @@
       "source": "The Hacker News"
     },
     {
-      "title": "PCPJack Credential Stealer Exploits 5 CVEs to Spread Worm-Like Across Cloud Systems",
-      "url": "https://thehackernews.com/2026/05/pcpjack-credential-stealer-exploits-5.html",
-      "published": "Thu, 07 May 2026 23:15:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Nation-state actors exploit Palo Alto PAN-OS zero-day for weeks",
       "url": "https://securityaffairs.com/191831/security/nation-state-actors-exploit-palo-alto-pan-os-zero-day-for-weeks.html",
       "published": "Thu, 07 May 2026 20:44:22 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "U.S. CISA adds a flaw in Ivanti Endpoint Manager Mobile (EPMM) to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/191822/security/u-s-cisa-adds-a-flaw-in-ivanti-endpoint-manager-mobile-epmm-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Thu, 07 May 2026 18:03:00 +0000",
       "source": "Security Affairs"
     }
   ]
