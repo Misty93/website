@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "cPanel, WHM Release Fixes for Three New Vulnerabilities \u2014 Patch Now",
+      "url": "https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html",
+      "published": "Sat, 09 May 2026 12:46:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Braintrust security incident raises concerns over AI supply chain risks",
+      "url": "https://securityaffairs.com/191888/data-breach/braintrust-security-incident-raises-concerns-over-ai-supply-chain-risks.html",
+      "published": "Sat, 09 May 2026 09:38:11 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "TCLBANKER Banking Trojan Targets Financial Platforms via WhatsApp and Outlook Worms",
       "url": "https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html",
       "published": "Fri, 08 May 2026 23:42:00 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Fake Call History Apps Stole Payments From Users After 7.3 Million Play Store Downloads",
-      "url": "https://thehackernews.com/2026/05/fake-call-history-apps-stole-payments.html",
-      "published": "Fri, 08 May 2026 20:38:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "RansomHouse says it breached Trellix and exposes internal systems",
-      "url": "https://securityaffairs.com/191879/cyber-crime/ransomhouse-says-it-breached-trellix-and-exposes-internal-systems.html",
-      "published": "Fri, 08 May 2026 20:34:26 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
