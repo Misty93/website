@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "JDownloader site hacked to replace installers with Python RAT malware",
-      "url": "https://www.bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware/",
-      "published": "Sat, 09 May 2026 15:27:58 -0400",
-      "source": "BleepingComputer"
+      "title": "Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak",
+      "url": "https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html",
+      "published": "Sun, 10 May 2026 18:11:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Quasar Linux RAT (QLNX): A Fileless Linux Implant Built for Stealth and Persistence",
-      "url": "https://securityaffairs.com/191898/malware/quasar-linux-rat-qlnx-a-fileless-linux-implant-built-for-stealth-and-persistence.html",
-      "published": "Sat, 09 May 2026 13:11:08 +0000",
+      "title": "Official JDownloader site served malware to Windows and Linux users between May 6 and May 7",
+      "url": "https://securityaffairs.com/191920/malware/official-jdownloader-site-served-malware-to-windows-and-linux-users.html",
+      "published": "Sun, 10 May 2026 12:33:57 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "cPanel, WHM Release Fixes for Three New Vulnerabilities \u2014 Patch Now",
-      "url": "https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html",
-      "published": "Sat, 09 May 2026 12:46:00 +0530",
-      "source": "The Hacker News"
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 96",
+      "url": "https://securityaffairs.com/191911/malware/security-affairs-malware-newsletter-round-96.html",
+      "published": "Sun, 10 May 2026 11:49:15 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
