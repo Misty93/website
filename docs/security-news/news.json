@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "cPanel, WHM Release Fixes for Three New Vulnerabilities \u2014 Patch Now",
-      "url": "https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html",
-      "published": "Sat, 09 May 2026 12:46:00 +0530",
-      "source": "The Hacker News"
+      "title": "JDownloader site hacked to replace installers with Python RAT malware",
+      "url": "https://www.bleepingcomputer.com/news/security/jdownloader-site-hacked-to-replace-installers-with-python-rat-malware/",
+      "published": "Sat, 09 May 2026 15:27:58 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Braintrust security incident raises concerns over AI supply chain risks",
-      "url": "https://securityaffairs.com/191888/data-breach/braintrust-security-incident-raises-concerns-over-ai-supply-chain-risks.html",
-      "published": "Sat, 09 May 2026 09:38:11 +0000",
+      "title": "Quasar Linux RAT (QLNX): A Fileless Linux Implant Built for Stealth and Persistence",
+      "url": "https://securityaffairs.com/191898/malware/quasar-linux-rat-qlnx-a-fileless-linux-implant-built-for-stealth-and-persistence.html",
+      "published": "Sat, 09 May 2026 13:11:08 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "TCLBANKER Banking Trojan Targets Financial Platforms via WhatsApp and Outlook Worms",
-      "url": "https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html",
-      "published": "Fri, 08 May 2026 23:42:00 +0530",
+      "title": "cPanel, WHM Release Fixes for Three New Vulnerabilities \u2014 Patch Now",
+      "url": "https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html",
+      "published": "Sat, 09 May 2026 12:46:00 +0530",
       "source": "The Hacker News"
     }
   ]
