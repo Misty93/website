@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak",
-      "url": "https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html",
-      "published": "Sun, 10 May 2026 18:11:00 +0530",
+      "title": "TeamPCP Compromises Checkmarx Jenkins AST Plugin Weeks After KICS Supply Chain Attack",
+      "url": "https://thehackernews.com/2026/05/teampcp-compromises-checkmarx-jenkins.html",
+      "published": "Tue, 12 May 2026 00:00:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "New cPanel vulnerabilities could allow file access and remote code execution",
-      "url": "https://securityaffairs.com/191931/security/new-cpanel-vulnerabilities-could-allow-file-access-and-remote-code-execution.html",
-      "published": "Sun, 10 May 2026 15:59:36 +0000",
-      "source": "Security Affairs"
+      "title": "cPanel CVE-2026-41940 Under Active Exploitation to Deploy Filemanager Backdoor",
+      "url": "https://thehackernews.com/2026/05/cpanel-cve-2026-41940-under-active.html",
+      "published": "Mon, 11 May 2026 23:24:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "cPanel, WHM Release Fixes for Three New Vulnerabilities \u2014 Patch Now",
-      "url": "https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html",
-      "published": "Sat, 09 May 2026 12:46:00 +0530",
+      "title": "Hackers Used AI to Develop First Known Zero-Day 2FA Bypass for Mass Exploitation",
+      "url": "https://thehackernews.com/2026/05/hackers-used-ai-to-develop-first-known.html",
+      "published": "Mon, 11 May 2026 21:15:00 +0530",
       "source": "The Hacker News"
     }
   ]
