@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access",
-      "url": "https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html",
-      "published": "Thu, 14 May 2026 23:15:20 +0530",
+      "title": "Turla Turns Kazuar Backdoor Into Modular P2P Botnet for Persistent Access",
+      "url": "https://thehackernews.com/2026/05/turla-turns-kazuar-backdoor-into.html",
+      "published": "Fri, 15 May 2026 22:40:25 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "TeamPCP hackers advertise Mistral AI code repos for sale",
-      "url": "https://www.bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale/",
-      "published": "Thu, 14 May 2026 18:50:36 -0400",
-      "source": "BleepingComputer"
+      "title": "Pwn2Own Berlin 2026, Day Two: $385,750 more, Microsoft Exchange falls, and the running total crosses $900K",
+      "url": "https://securityaffairs.com/192209/security/pwn2own-berlin-2026-day-two-385750-more-microsoft-exchange-falls-and-the-running-total-crosses-900k.html",
+      "published": "Fri, 15 May 2026 21:53:56 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "U.S. CISA adds a flaw in Cisco Catalyst SD-WAN\u00a0 to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/192157/hacking/u-s-cisa-adds-a-flaw-in-cisco-catalyst-sd-wan-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Thu, 14 May 2026 18:35:43 +0000",
-      "source": "Security Affairs"
+      "title": "Four OpenClaw Flaws Enable Data Theft, Privilege Escalation, and Persistence",
+      "url": "https://thehackernews.com/2026/05/four-openclaw-flaws-enable-data-theft.html",
+      "published": "Fri, 15 May 2026 19:05:04 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
