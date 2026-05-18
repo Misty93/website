@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Security Affairs newsletter Round 577 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
-      "url": "https://securityaffairs.com/192269/security/security-affairs-newsletter-round-577-by-pierluigi-paganini-international-edition.html",
-      "published": "Sun, 17 May 2026 12:59:38 +0000",
-      "source": "Security Affairs"
+      "title": "New Windows 'MiniPlasma' zero-day exploit gives SYSTEM access, PoC released",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/",
+      "published": "Sun, 17 May 2026 18:30:08 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt",
-      "url": "https://thehackernews.com/2026/05/grafana-github-token-breach-led-to.html",
-      "published": "Sun, 17 May 2026 12:43:33 +0530",
+      "title": "NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE",
+      "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
+      "published": "Sun, 17 May 2026 17:27:53 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Attackers exploit Funnel Builder bug to inject e-skimmers into e-stores",
-      "url": "https://securityaffairs.com/192260/cyber-crime/attackers-exploit-funnel-builder-bug-to-inject-e-skimmers-into-e-stores.html",
-      "published": "Sun, 17 May 2026 12:25:40 +0000",
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 97",
+      "url": "https://securityaffairs.com/192278/security/security-affairs-malware-newsletter-round-97.html",
+      "published": "Sun, 17 May 2026 13:54:22 +0000",
       "source": "Security Affairs"
     }
   ]
