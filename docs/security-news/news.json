@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "New Windows 'MiniPlasma' zero-day exploit gives SYSTEM access, PoC released",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/",
-      "published": "Sun, 17 May 2026 18:30:08 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE",
-      "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
-      "published": "Sun, 17 May 2026 17:27:53 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 97",
       "url": "https://securityaffairs.com/192278/security/security-affairs-malware-newsletter-round-97.html",
       "published": "Sun, 17 May 2026 13:54:22 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "\u26a1 Weekly Recap: Exchange 0-Day, npm Worm, Fake AI Repo, Cisco Exploit and More",
+      "url": "https://thehackernews.com/2026/05/weekly-recap-exchange-0-day-npm-worm.html",
+      "published": "Mon, 18 May 2026 19:20:17 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "How to Reduce Phishing Exposure Before It Turns into Business Disruption",
+      "url": "https://thehackernews.com/2026/05/how-to-reduce-phishing-exposure-before.html",
+      "published": "Mon, 18 May 2026 18:30:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
