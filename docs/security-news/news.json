@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "Microsoft Open-Sources RAMPART and Clarity to Secure AI Agents During Development",
+      "url": "https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html",
+      "published": "Wed, 20 May 2026 22:36:54 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "PinTheft: Another Linux Privilege Escalation, Another Working Exploit, This Time Targeting Arch",
+      "url": "https://securityaffairs.com/192456/security/pintheft-another-linux-privilege-escalation-another-working-exploit-this-time-targeting-arch.html",
+      "published": "Wed, 20 May 2026 20:32:53 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Microsoft Takes Down Malware-Signing Service Behind Ransomware Attacks",
       "url": "https://thehackernews.com/2026/05/microsoft-takes-down-malware-signing.html",
       "published": "Wed, 20 May 2026 20:06:44 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Webworm Deploys EchoCreep and GraphWorm Backdoors Using Discord and MS Graph API",
-      "url": "https://thehackernews.com/2026/05/webworm-deploys-echocreep-and-graphworm.html",
-      "published": "Wed, 20 May 2026 18:21:43 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Agent AI is Coming. Are You Ready?",
-      "url": "https://thehackernews.com/2026/05/agent-ai-is-coming-are-you-ready.html",
-      "published": "Wed, 20 May 2026 17:28:00 +0530",
       "source": "The Hacker News"
     }
   ]
