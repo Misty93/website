@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Microsoft Open-Sources RAMPART and Clarity to Secure AI Agents During Development",
-      "url": "https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html",
-      "published": "Wed, 20 May 2026 22:36:54 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "PinTheft: Another Linux Privilege Escalation, Another Working Exploit, This Time Targeting Arch",
       "url": "https://securityaffairs.com/192456/security/pintheft-another-linux-privilege-escalation-another-working-exploit-this-time-targeting-arch.html",
       "published": "Wed, 20 May 2026 20:32:53 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Microsoft Takes Down Malware-Signing Service Behind Ransomware Attacks",
-      "url": "https://thehackernews.com/2026/05/microsoft-takes-down-malware-signing.html",
-      "published": "Wed, 20 May 2026 20:06:44 +0530",
+      "title": "Microsoft issues YellowKey mitigation, no patch yet",
+      "url": "https://securityaffairs.com/192449/hacking/microsoft-issues-yellowkey-mitigation-no-patch-yet.html",
+      "published": "Wed, 20 May 2026 15:07:51 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Showboat Linux Malware Hits Middle East Telecom with SOCKS5 Proxy Backdoor",
+      "url": "https://thehackernews.com/2026/05/showboat-linux-malware-hits-middle-east.html",
+      "published": "Thu, 21 May 2026 19:47:09 +0530",
       "source": "The Hacker News"
     }
   ]
