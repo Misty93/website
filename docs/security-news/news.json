@@ -1,15 +1,9 @@
 {
   "items": [
     {
-      "title": "PinTheft: Another Linux Privilege Escalation, Another Working Exploit, This Time Targeting Arch",
-      "url": "https://securityaffairs.com/192456/security/pintheft-another-linux-privilege-escalation-another-working-exploit-this-time-targeting-arch.html",
-      "published": "Wed, 20 May 2026 20:32:53 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Microsoft issues YellowKey mitigation, no patch yet",
-      "url": "https://securityaffairs.com/192449/hacking/microsoft-issues-yellowkey-mitigation-no-patch-yet.html",
-      "published": "Wed, 20 May 2026 15:07:51 +0000",
+      "title": "U.S. CISA adds Microsoft and Adobe flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/192508/security/u-s-cisa-adds-microsoft-and-adobe-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Thu, 21 May 2026 20:27:11 +0000",
       "source": "Security Affairs"
     },
     {
@@ -17,6 +11,12 @@
       "url": "https://thehackernews.com/2026/05/showboat-linux-malware-hits-middle-east.html",
       "published": "Thu, 21 May 2026 19:47:09 +0530",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Global law enforcement operation takes First VPN offline",
+      "url": "https://securityaffairs.com/192491/cyber-crime/global-law-enforcement-operation-takes-first-vpn-offline.html",
+      "published": "Thu, 21 May 2026 17:57:24 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
