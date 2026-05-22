@@ -7,16 +7,16 @@
       "source": "Security Affairs"
     },
     {
-      "title": "Showboat Linux Malware Hits Middle East Telecom with SOCKS5 Proxy Backdoor",
-      "url": "https://thehackernews.com/2026/05/showboat-linux-malware-hits-middle-east.html",
-      "published": "Thu, 21 May 2026 19:47:09 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Global law enforcement operation takes First VPN offline",
       "url": "https://securityaffairs.com/192491/cyber-crime/global-law-enforcement-operation-takes-first-vpn-offline.html",
       "published": "Thu, 21 May 2026 17:57:24 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "Megalodon GitHub Attack Targets 5,561 Repos with Malicious CI/CD Workflows",
+      "url": "https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html",
+      "published": "Fri, 22 May 2026 17:25:24 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
