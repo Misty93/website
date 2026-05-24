@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "U.S. CISA adds Microsoft and Adobe flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/192508/security/u-s-cisa-adds-microsoft-and-adobe-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Thu, 21 May 2026 20:27:11 +0000",
-      "source": "Security Affairs"
+      "title": "npm Adds 2FA-Gated Publishing and Package Install Controls Against Supply Chain Attacks",
+      "url": "https://thehackernews.com/2026/05/npm-adds-2fa-gated-publishing-and.html",
+      "published": "Sat, 23 May 2026 22:05:10 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Packagist Supply Chain Attack Infects 8 Packages Using GitHub-Hosted Linux Malware",
+      "url": "https://thehackernews.com/2026/05/packagist-supply-chain-attack-infects-8.html",
+      "published": "Sat, 23 May 2026 21:37:51 +0530",
+      "source": "The Hacker News"
     },
     {
       "title": "Claude Mythos AI Finds 10,000 High-Severity Flaws in Widely Used Software",
       "url": "https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html",
       "published": "Sat, 23 May 2026 17:25:35 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Laravel-Lang PHP Packages Compromised to Deliver Cross-Platform Credential Stealer",
-      "url": "https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html",
-      "published": "Sat, 23 May 2026 15:21:13 +0530",
       "source": "The Hacker News"
     }
   ]
