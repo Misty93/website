@@ -58,10 +58,6 @@
       line-height: 1.4;
     }
 
-    h2 { margin-top: 0; }
-
-    h3 { margin-top: 2rem; }
-
     p {
       color: #cccccc;
       margin-bottom: 1rem;
@@ -101,115 +97,160 @@
       white-space: pre-wrap;
       word-break: break-word;
     }
-
-    @media (max-width: 768px) {
-      body { padding: 1rem; }
-      pre { padding: 0.8rem; }
-    }
   </style>
 </head>
 
 <body>
-
 <div class="container">
 
-  <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
+<a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
-  <article class="article">
+<!-- ===================== ARTICLE 1 ===================== -->
+<article class="article">
 
-    <div class="article-date">26.05.2026.</div>
+  <div class="article-date">26.05.2026.</div>
 
-    <h2>Besplatni Microsoft certifikacijski voucheri — Kako ih dobiti!</h2>
+  <h2>Besplatni Microsoft certifikacijski voucheri — Kako ih dobiti!</h2>
 
-    <p>
-      Nedavno sam naišla na program koji nudi 100% popust na Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za to.
-    </p>
+  <p>
+    Nedavno sam naišla na program koji nudi 100% popust na Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za to.
+  </p>
 
-    <p>
-      <a href="https://skillupwithlevelup.com/courses" target="_blank" rel="noopener noreferrer">
-        https://skillupwithlevelup.com/courses
-      </a>
-    </p>
+  <p>
+    <a href="https://skillupwithlevelup.com/courses" target="_blank" rel="noopener noreferrer">
+      https://skillupwithlevelup.com/courses
+    </a>
+  </p>
 
-    <h3>Kako funkcionira</h3>
+  <h3>Kako funkcionira</h3>
 
-    <ul>
-      <li>Upiši se na tečaj</li>
-      <li>Riješi test iz prvog pokušaja s min. 80%</li>
-      <li>Završi u roku od tjedan dana</li>
-      <li>Dobiješ voucher na email</li>
-    </ul>
+  <ul>
+    <li>Upiši se na tečaj</li>
+    <li>Riješi test iz prvog pokušaja s minimalno 80%</li>
+    <li>Završi unutar tjedan dana</li>
+    <li>Dobiješ voucher na email</li>
+  </ul>
 
-    <p>
-      Završila sam tri tečaja i dobila dva vouchera.
-    </p>
+  <p>
+    Završila sam tri tečaja i dobila dva vouchera.
+  </p>
 
-    <h3>Važne napomene</h3>
+  <h3>Važne napomene</h3>
 
-    <ol>
-      <li>Potreban poslovni/organizacijski email</li>
-      <li>Voucher se koristi preko Pearson VUE</li>
-      <li>Vrijedi do 30. lipnja 2026.</li>
-    </ol>
+  <ol>
+    <li>Potreban poslovni/organizacijski email</li>
+    <li>Voucher se koristi preko Pearson VUE</li>
+    <li>Vrijedi do 30. lipnja 2026.</li>
+  </ol>
 
-  </article>
+</article>
 
-  <article class="article">
+<!-- ===================== ARTICLE 2 ===================== -->
+<article class="article">
 
-    <div class="article-date">08.04.2026.</div>
+  <div class="article-date">08.04.2026.</div>
 
-    <h2>Kako konfigurirati kućni SIEM</h2>
+  <h2>Kako konfigurirati kućni SIEM</h2>
 
-    <p>
-      Wazuh je open-source SIEM i XDR platforma za centralizirano prikupljanje i analizu sigurnosnih događaja.
-    </p>
+  <p>
+    Wazuh je open-source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja iz različitih sustava.
+  </p>
 
-    <p>
-      Koristi se za monitoring logova, detekciju i korelaciju incidenata.
-    </p>
+  <p>
+    Koristi se za monitoring logova, detekciju i korelaciju incidenata u stvarnom vremenu.
+  </p>
 
-    <h3>1. Priprema VM-a</h3>
+  <h3>1. Priprema virtualnog stroja</h3>
 
-    <ul>
-      <li>4 GB RAM</li>
-      <li>2 CPU</li>
-      <li>20–40 GB disk</li>
-      <li>Mrežna povezanost</li>
-    </ul>
+  <ul>
+    <li>4 GB RAM</li>
+    <li>2 CPU jezgre</li>
+    <li>20–40 GB disk</li>
+    <li>Stabilna mrežna povezanost</li>
+  </ul>
 
-    <h3>2. Instalacija Wazuh servera</h3>
+  <h3>2. Instalacija Wazuh servera</h3>
 
-    <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+  <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 sudo bash wazuh-install.sh -a</code></pre>
 
-    <h3>3. Agenti</h3>
+  <h3>3. Dodavanje agenata</h3>
 
-    <p>Agenti šalju sistemske i sigurnosne logove na server.</p>
+  <p>
+    Agenti prikupljaju logove s endpointa i šalju ih na Wazuh manager.
+  </p>
 
-    <h3>4. Firewall logovi</h3>
+  <h3>4. Ingestiranje firewall logova</h3>
 
-    <pre><code>/var/ossec/logs/archives/archives.log</code></pre>
+  <pre><code>/var/ossec/logs/archives/archives.log</code></pre>
 
-    <pre><code>sudo systemctl restart wazuh-manager</code></pre>
+  <pre><code>sudo systemctl restart wazuh-manager</code></pre>
 
-    <h3>5. Decoder</h3>
+  <h3>5. Decoder</h3>
 
-    <p>Koristi se za parsiranje logova u strukturu.</p>
+  <p>
+    Decoders pretvaraju sirove logove u strukturirane podatke.
+  </p>
 
-    <h3>6. Pravila</h3>
+  <h3>6. Pravila</h3>
 
-    <pre><code>&lt;rule id="100040" level="3"&gt;
+  <pre><code>&lt;rule id="100040" level="3"&gt;
   &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
   &lt;description&gt;Firewall event&lt;/description&gt;
 &lt;/rule&gt;</code></pre>
 
-    <h3>7. Testiranje</h3>
+  <!-- ===== INSERTED SECTION (HR + EN) ===== -->
 
-    <pre><code>/var/ossec/bin/wazuh-logtest</code></pre>
+  <h3>7. Testiranje logova (obavezno)</h3>
 
-  </article>
+  <p>
+    Wazuh uključuje ugrađeni alat za testiranje dekodera i pravila. Dokument navodi:
+    “Važno je da vidite polja u Phase 2 i alert u Phase 3.”
+  </p>
+
+  <p>Pokreni:</p>
+
+  <pre><code>/var/ossec/bin/wazuh-logtest</code></pre>
+
+  <p>
+    Zalijepi firewall log (bez timestamp prefiksa koji dodaje rsyslog), primjer:
+  </p>
+
+  <pre><code>device_name="FW" timestamp="2024-01-01T12:00:00+0100" log_type="Firewall" src_ip="1.2.3.4" dst_ip="5.6.7.8" protocol="TCP" src_port=1234 dst_port=443</code></pre>
+
+  <p>Ako je sve ispravno:</p>
+
+  <p>
+    <strong>Phase 1:</strong> pre-decoding<br>
+    <strong>Phase 2:</strong> extracted fields (decoder radi)<br>
+    <strong>Phase 3:</strong> rule triggered (alert generiran)
+  </p>
+
+  <p>Restartaj manager:</p>
+
+  <pre><code>sudo systemctl restart wazuh-manager</code></pre>
+
+  <p>
+    Firewall logovi će se pojaviti u Wazuh dashboardu.
+  </p>
+
+  <h3>Završna misao</h3>
+
+  <p>
+    Kućni SIEM nije samo edukativni projekt — omogućuje stvarni uvid u sigurnosne događaje unutar mreže.
+    Wazuh je dovoljno moćan za produkciju, ali i dovoljno jednostavan za lab okruženje.
+  </p>
+
+  <p>
+    Uz pravilnu konfiguraciju moguće je pratiti endpoint aktivnosti i mrežni promet u stvarnom vremenu.
+  </p>
+
+  <p>
+    U nastavku serije obrađivat će se dodatne konfiguracije i sigurnosni scenariji za izgradnju kompletnog sigurnosnog sustava.
+  </p>
+
+</article>
 
 </div>
-
 </body>
 </html>
