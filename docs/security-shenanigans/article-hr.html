@@ -2,10 +2,15 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
-  <title>Security Shenanigans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Security Shenanigans</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #121212;
       color: #ffffff;
@@ -20,14 +25,57 @@
       margin: 0 auto;
     }
 
-    h2, h3 {
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
       color: #ff4500;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .article {
+      margin-bottom: 4rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .article:last-child {
+      border-bottom: none;
+    }
+
+    .article-date {
+      text-align: right;
+      color: #ff4500;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    h2,
+    h3 {
+      color: #ff4500;
+      line-height: 1.4;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    h3 {
       margin-top: 2rem;
     }
 
     p {
       color: #cccccc;
       margin-bottom: 1rem;
+    }
+
+    strong {
+      color: #ffffff;
     }
 
     a {
@@ -39,258 +87,282 @@
       text-decoration: underline;
     }
 
-    .back-link {
-      display: block;
-      margin-bottom: 2rem;
-      color: #ff4500;
-      font-weight: bold;
+    ul,
+    ol {
+      color: #cccccc;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .lang-switch {
-      margin-bottom: 2rem;
-      font-size: 1rem;
+    li {
+      margin-bottom: 0.6rem;
     }
 
-    .lang-switch a {
-      color: #ff4500;
-      margin-right: 0.5rem;
+    pre {
+      background-color: #1c1c1c;
+      border: 1px solid #2f2f2f;
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    code {
+      color: #ffb38a;
+      font-family: Consolas, Monaco, monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
 
     @media (max-width: 768px) {
       body {
         padding: 1rem;
       }
-    }
-    pre, code {
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      word-break: break-word;
-    }
-    .article-date {
-      text-align: right;
-      color: #ff4500;
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-      font-size: 0.95rem;
-}
 
+      pre {
+        padding: 0.8rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
-    <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
+    <a class="back-link" href="/security-shenanigans/">
+      ← Back to Shenanigans
+    </a>
 
-    <div class="article-date">26.05.2026.</div>
-    <h2>Besplatni Microsoft certifikacijski voucheri — Kako ih dobiti!</h2>
+    <!-- ARTICLE -->
 
-    <p>Nedavno sam naišla na program koji nudi 100% popust na Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za to.</p>
+    <article class="article">
 
-    <p>👉 <a href="https://skillupwithlevelup.com/courses">https://skillupwithlevelup.com/courses</a></p>
+      <div class="article-date">26.05.2026.</div>
 
-    <p><strong>Kako funkcionira:</strong></p>
+      <h2>Besplatni Microsoft certifikacijski voucheri — Kako ih dobiti!</h2>
 
-    <p>
-    - Upiši se na tečaj na platformi<br>
-    - Položi assessment test iz <strong>prvog pokušaja</strong> s minimalnih 80%<br>
-    - Assessment mora biti završen unutar tjedan dana od upisa<br>
-    - Ako ispuniš uvjete, kod za popust stiže direktno na tvoj mail
-    </p>
+      <p>
+        Nedavno sam naišla na program koji nudi 100% popust na Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za to.
+      </p>
 
-    <p>Osobno sam završila tri tečaja i dobila dva vouchera — pa je moja pretpostavka da je limit dva vouchera po osobi. Biraj tečajeve pametno!</p>
+      <p>
+        <a href="https://skillupwithlevelup.com/courses" target="_blank" rel="noopener noreferrer">
+          https://skillupwithlevelup.com/courses
+        </a>
+      </p>
 
-    <p>⚠️ Nekoliko važnih napomena:</p>
+      <h3>Kako funkcionira</h3>
 
-    <p>
-    1. Za registraciju moraš koristiti <strong>poslovni/organizacijski email</strong><br>
-    2. Voucher možeš iskoristiti na <strong>Pearson VUE-u s privatnim emailom</strong> prilikom rezervacije ispita<br>
-    3. Voucher mora biti iskorišten za prijavu i polaganje ispita <strong>do 30. lipnja 2026.</strong> — nemoj čekati!
-    </p>
+      <ul>
+        <li>Upiši se na tečaj na platformi</li>
+        <li>Položi assessment test iz prvog pokušaja s minimalno 80%</li>
+        <li>Assessment mora biti završen unutar tjedan dana od upisa</li>
+        <li>Ako ispuniš uvjete, voucher stiže na email</li>
+      </ul>
 
-    <p>Ovo je legitimna prilika za besplatnu certifikaciju, uz uvjet da si pripremljen/a i brzo se makneš.</p>
+      <p>
+        Osobno sam završila tri tečaja i dobila dva vouchera, pa pretpostavljam da je limit dva vouchera po osobi.
+      </p>
 
-    <p>Jesi li već probao/la? Ostavi komentar — volio/voljela bih čuti za koje certifikate idete! 👇</p>
+      <h3>Važne napomene</h3>
 
-    <p>📌 <strong>Provjeri preduvjete!</strong> Sve expert-razine certifikacije zahtijevaju najmanje jednu associate-razinu certifikaciju. Primjerice, za SC-100 (Cybersecurity Architect Expert) moraš imati položen SC-200, SC-300 ili AZ-500. Provjeri preduvjete za svoj ciljani cert <strong>prije nego se upiše na tečaj!</strong></p>
-    
-    <div class="article-date">08.04.2026.</div>
-    <h2>Kako konfigurirati kućni SIEM</h2>
+      <ol>
+        <li>Za registraciju je potreban poslovni ili organizacijski email</li>
+        <li>Voucher se može iskoristiti preko Pearson VUE-a i s privatnim emailom</li>
+        <li>Voucher mora biti iskorišten prije 30. lipnja 2026.</li>
+      </ol>
 
-    <p>Wazuh je open‑source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja iz različitih izvora, uključujući endpoint uređaje, mrežnu opremu i cloud servise. Zahvaljujući modularnoj arhitekturi i agent‑based + agentless pristupu, idealan je za kućne labove, edukaciju i manje produkcijske okoline.</p>
-    
-    <p>Postavljanje kućnog SIEM-a odličan je način za razumijevanje stvarnih sigurnosnih procesa: prikupljanja logova, korelacije događaja, detekcije anomalija i odgovora na incidente. U ovom vodiču prolazimo cijeli postupak — od pripreme virtualnog stroja do ingestiranja logova s endpointa i firewalla.</p>
-    
-    <h3>1. Priprema virtualnog stroja</h3>
-    
-    <p>Za Wazuh server preporučuje se Linux distribucija poput Ubuntu Servera ili Debian-a. Minimalna konfiguracija za kućni lab uključuje:</p>
-    
-    <p>
-    - 4 GB RAM-a<br>
-    - 2 CPU jezgre<br>
-    - 20–40 GB prostora<br>
-    - stabilnu mrežnu vezu (bridged ili NAT)
-    </p>
-    
-    <p>Prema Wazuh dokumentaciji, <strong>potrošnja resursa linearno raste s brojem agenata</strong>. Svaki agent generira vlastiti volumen događaja (autentikacije, sistemske promjene, FIM zapise, procese, mrežne aktivnosti). To znači da se CPU, RAM i disk moraju skalirati ovisno o broju endpointa. Kućni lab s nekoliko agenata može raditi na 2–4 GB RAM-a, dok okruženja s desetak ili više agenata zahtijevaju više resursa kako bi indeksiranje i obrada događaja ostali stabilni.</p>
-    
-    <p>Nakon kreiranja VM-a u VirtualBoxu, VMwareu ili Proxmoxu, instalira se operacijski sustav i postavlja statička IP adresa kako bi Wazuh server bio lako dostupan ostalim uređajima.</p>
-    
-    <h3>2. Instalacija Wazuh servera</h3>
-    
-    <p>Wazuh nudi jednostavnu <strong>instalacijsku skriptu</strong> koja automatski postavlja Elasticsearch, Kibanu i Wazuh server. To je najbrži i najstabilniji način za kućnu implementaciju.</p>
-    
-    <p>Na svježe instaliranom OS-u pokreni:</p>
-    
-    <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
-    sudo bash wazuh-install.sh -a
-    </code></pre>
-    
-    <p>Instalacija traje nekoliko minuta. Nakon završetka, Wazuh dashboard dostupan je putem preglednika (najčešće na <code>https://IP-adresa:5601</code>). Prijavi se inicijalnim korisničkim podacima koje generira instalacijska skripta.</p>
-    
-    <h3>3. Dodavanje agenata – ingestiranje logova s računala</h3>
-    
-    <p>Wazuh agenti omogućuju prikupljanje logova s Windows, Linux i macOS sustava. Na Windowsu se agent instalira putem MSI instalera, dok se na Linuxu koristi paketni menadžer.</p>
-    
-    <p>U Wazuh dashboardu otvori <strong>Agents → Deploy new agent</strong>, odaberi operacijski sustav i slijedi upute. Ključni parametri su:</p>
-    
-    <p>
-    - IP adresa Wazuh servera<br>
-    - agent key (generira se automatski)<br>
-    - naziv agenta (hostname)
-    </p>
-    
-    <p>Nakon instalacije agent se automatski registrira i počinje slati logove: sistemske događaje, autentikacije, promjene datoteka, procese, mrežne aktivnosti i druge sigurnosno relevantne informacije.</p>
-    
-    <h3>4. Spajanje logova s firewalla</h3>
-    
-    <p>Wazuh može primati Syslog događaje iz bilo kojeg firewalla koji podržava slanje logova prema udaljenom Syslog serveru. Budući da Wazuh uključuje ugrađeni Syslog listener, firewall može slati logove izravno na Wazuh bez potrebe za dodatnim posredničkim serverom.</p>
-    
-    <p>Kada firewall pošalje događaje, Wazuh ih sprema u <code>/var/ossec/logs/archives/archives.log</code> u sirovom obliku, pod agent ID‑em <strong>000</strong>, jer se radi o agentless izvoru. U dokumentu se navodi: “You can see all your logs (in raw form) in the file <code>/var/ossec/logs/archives/archives.log</code>.”</p>
-    
-    <p>Ako se logovi ne pojavljuju, potrebno je omogućiti arhiviranje u <code>ossec.conf</code>:</p>
-    
-    <pre><code>&lt;global&gt;
-      &lt;alerts_log&gt;yes&lt;/alerts_log&gt;
-      &lt;logall&gt;yes&lt;/logall&gt;
-      &lt;logall_json&gt;yes&lt;/logall_json&gt;
-    &lt;/global&gt;
-    </code></pre>
-    
-    <p>Nakon izmjena:</p>
-    
-    <pre><code>sudo systemctl restart wazuh-manager
-    </code></pre>
-    
-    <h3>5. Dodavanje decodera za firewall logove</h3>
-    
-    <p>Ako se logovi pojavljuju u <code>archives.log</code>, ali ne i u dashboardu, potrebno je dodati decoder koji će Wazuh-u objasniti strukturu firewall događaja.</p>
-    
-    <p>Decoder se dodaje u:</p>
-    
-    <pre><code>/var/ossec/etc/decoders/local_decoder.xml
-    </code></pre>
-    
-    <p>Primjer generičkog decodera (prilagodljiv bilo kojem firewall formatu):</p>
-    
-    <pre><code>&lt;decoder name="Firewall_Generic"&gt;
-      &lt;type&gt;syslog&lt;/type&gt;
-      &lt;prematch&gt;device_name="&lt;/prematch&gt;
-    &lt;/decoder&gt;
-    
-    &lt;decoder name="Firewall_Generic_child"&gt;
-      &lt;parent&gt;Firewall_Generic&lt;/parent&gt;
-      &lt;regex&gt;device_name="(\S+)" timestamp="([^"]+)" log_type="([^"]+)" src_ip="([^"]+)" dst_ip="([^"]+)" protocol="([^"]+)" src_port=(\d+) dst_port=(\d+)"&lt;/regex&gt;
-      &lt;order&gt;device_name,timestamp,log_type,src_ip,dst_ip,protocol,src_port,dst_port&lt;/order&gt;
-    &lt;/decoder&gt;
-    </code></pre>
-    
-    <h3>6. Dodavanje pravila</h3>
-    
-    <p>Pravila se dodaju u:</p>
-    
-    <pre><code>/var/ossec/etc/rules/local_rules.xml
-    </code></pre>
-    
-    <p>Primjer:</p>
-    
-    <pre><code>&lt;group name="custom_firewall"&gt;
-      &lt;rule id="100040" level="3"&gt;
-        &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
-        &lt;description&gt;Firewall Log Event&lt;/description&gt;
-      &lt;/rule&gt;
-    &lt;/group&gt;
-    </code></pre>
-    
-    <h3>7. Testiranje logova (obavezno)</h3>
-    
-    <p>Wazuh ima ugrađeni alat za testiranje decodera i pravila. U dokumentu se navodi: “It’s important that you see the fields in Phase 2 and the alert in Phase 3.”</p>
-    
-    <p>Pokreni:</p>
-    
-    <pre><code>/var/ossec/bin/wazuh-logtest
-    </code></pre>
-    
-    <p>Zalijepi firewall log (bez timestamp dijela koji dodaje rsyslog), npr.:</p>
-    
-    <pre><code>device_name="FW" timestamp="2024-01-01T12:00:00+0100" log_type="Firewall" src_ip="1.2.3.4" dst_ip="5.6.7.8" protocol="TCP" src_port=1234 dst_port=443
-    </code></pre>
-    
-    <p>Ako je sve ispravno:</p>
-    
-    <p>
-    <strong>Phase 1:</strong> pre-decoding  
-    <strong>Phase 2:</strong> prikaz svih polja (decoder radi)  
-    <strong>Phase 3:</strong> aktivirano pravilo (alert generiran)
-    </p>
-    
-    <p>Nakon toga:</p>
-    
-    <pre><code>sudo systemctl restart wazuh-manager
-    </code></pre>
-    
-    <p>Firewall logovi sada će biti vidljivi u Wazuh dashboardu.</p>
-    
-    <h3>Završna misao</h3>
-    
-    <p>Kućni SIEM nije samo edukativan projekt — on daje stvarni uvid u sigurnosne događaje u tvojoj mreži. Wazuh je dovoljno moćan za profesionalnu upotrebu, ali i dovoljno jednostavan za kućni lab. Uz pravilnu konfiguraciju možeš pratiti sve: od endpoint aktivnosti do firewall prometa.</p>
-    
-    <p>Tijekom ovog serijala doticat ćemo se i drugih konfiguracijskih elemenata vezanih uz Wazuh, ali i drugih sigurnosnih proizvoda, kako bismo izgradili cjelovit, održiv i razumljiv sigurnosni ekosustav.</p>
+      <p>
+        Ovo je legitimna prilika za besplatnu certifikaciju ako si pripremljen/a i odradiš sve na vrijeme.
+      </p>
 
-    <div class="article-date">07.04.2026.</div>
-    <h2>Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje</h2>
-    <p>Sigurnost se ne može kupiti u kutiji. Ipak, mnoge organizacije se ponašaju kao da može. Primamljivo zapakirani sigurnosni softver često se nudi kao instant rješenje – ali bez stručnog korištenja, pretvara se u “policu”.</p>
-    <p>U današnjem svijetu kibernetičke sigurnosti sve je prisutniji fenomen "gomilanja alata" – opsesivna kupovina sve više sigurnosnih rješenja u nadi da kvantiteta znači zaštitu. Vendori nude sjajne nadzorne ploče i zvučne kratice, preprodavači obećavaju savršenu dubinsku obranu, a rukovoditelji bez dubljeg tehničkog znanja potpisuju narudžbenice kao da skupljaju sličice.</p>
-    <p>Ali istina je jednostavna: bez prave integracije, posvećenih stručnjaka, upravljanja i strategije, više alata često znači manje sigurnosti.</p>
-    <h3>Gomilanje alata = gomilanje problema</h3>
-    <p>Svaki sigurnosni alat donosi vlastite agente, pravila, zapisnike i alarme. Umnožite to s deset ili dvadeset sustava i dobit ćete kaos umjesto kontrole. Mnogi alati se preklapaju u funkcionalnosti, sukobljavaju se međusobno ili djeluju izolirano bez razmjene konteksta.</p>
-    <p>U nekim okruženjima alati se doslovno bore jedni s drugima. Vatrozidi blokiraju legitiman promet koji je drugi alat označio. DLP i backup sustavi se sukobljavaju oko pristupa datotekama. Jedan alat označi upozorenje, ali ga SIEM ne može povezati jer formati nisu usklađeni. Drugim riječima, pretjerana kompleksnost urušava preglednost i učinkovitost obrane. Nije rijetkost da čak trećina novo kupljenih sigurnosnih rješenja ostane neiskorištena ili tek djelomično korištena</p>
-    <p>Rezultat? Sigurnosne rupe. Promašena upozorenja. Frustrirani timovi. Usporeni odgovori na incidente. I u najgorem slučaju – lažan osjećaj sigurnosti.</p>
-    <h3>Iluzija sigurnosti kroz trošenje</h3>
-    <p>Sigurnosni vendori se hrane strahom, neizvjesnošću i sumnjom. Pokazuju crne statistike o probojima, nude skupe "srebrne metke" i sugeriraju da će vaša tvrtka biti sljedeća žrtva bez njihovog rješenja.</p>
-    <p>Ovakav model prodaje često uspije – ne zato što su alati loši (neki su izvrsni!) – već zato što donositelji odluka često nemaju tehničko vodstvo. Rukovoditelji bez savjetnika od povjerenja mogu odobriti nabave alata koje ne razumiju, ne trebaju ili ne mogu integrirati.</p>
-    <p>Nije rijetkost da organizacije troše stotine tisuća eura na sigurnosna rješenja, da bi mnoga od njih ostala neiskorištena ili loše konfigurirana. "shelfware" je svuda. Proračuni su potrošeni. Sigurnost nije poboljšana.</p>
-    <h3>Raspršenost alata slabi sigurnosni lanac</h3>
-    <p>Kibernetička sigurnost je lanac. Svaka komponenta mora komunicirati, podržavati i ojačavati druge. Ako je ijedan dio neuravnotežen – direktorij koji ne sinkronizira, nezaštićeni endpoint, loše povezan IDS – lanac puca.</p>
-    <p>Raspršenost sigurnosnih alata povećava površinu napada. Više alata znači veću kompleksnost, više patchiranja, više posla oko integracije i više šansi za pogrešnu konfiguraciju.</p>
-    <p>Umjesto orkestrirane obrane, mnoge tvrtke završe s bučnim, fragmentiranim sustavom. Sigurnosni timovi žongliraju konzolama, upozorenja se gube u šumu, a napadači iskorištavaju rupe između alata.</p>
-    <h3>Korisnici i dalje igraju ključnu ulogu</h3>
-    <p>Još jedan zanemaren aspekt? Krajnji korisnik. Alati štite ljude, ali mnoge sigurnosne strategije ignoriraju stvarne korisnike sustava.</p>
-    <p>Korisnici nisu sigurnosni stručnjaci. Ako je alat preinvazivan, zbunjujuć ili loše objašnjen, korisnici će ga zaobići, isključiti ili napraviti greške. Nije važno koliko vendora sudjeluje – ako sustav nije dizajniran s korisnikom na umu, neće funkcionirati.</p>
-    <h3>Odgovornost naspram profita</h3>
-    <p>Sigurnosni alati koštaju – s razlogom. Razvoj, održavanje i podrška su zahtjevni. Vendori zaslužuju zaraditi.</p>
-    <p>Ali moć nosi odgovornost.</p>
-    <p>Sigurnost ne smije biti pogonjena kratkoročnim profitom i taktikama zastrašivanja. Umjesto toga, cilj mora biti edukacija korisnika, procjena rizika i usklađivanje tehnologije, procesa i ljudi kako bi se rizik stvarno smanjio.</p>
-    <p>Vendori koji se ponašaju kao partneri, a ne prodavači, dugoročno će steći više povjerenja i posla. Kompetentni tehnički savjetnici igraju ovdje veliku ulogu. Bilo da su interni (vaš CISO, arhitekt sigurnosti) ili eksterni konzultanti, bitno je imati nekoga tko gleda širu sliku i nije zaslijepljen prodajnim targetima. Takvi savjetnici mogu napraviti pravu tehničku procjenu prije odluke o kupnji: sagledati cijeli lanac, uočiti gdje su stvarne slabe karike, te predložiti rješenja (bilo proceduralna ili tehnološka) koja će te karike ojačati bez da oslabe druge. Njihova uloga je biti glas razuma koji će reći “ne” kad se predloži nepotreban alat, ili “da, ali pod ovim uvjetima integracije” kad se razmatra neko rješenje. Nažalost, kao što smo vidjeli, taj glas se ponekad zagubi u metežu marketinga i prodaje. No, organizacije koje ga uspiju čuti i slijediti, izgradit će daleko otporniju obranu.</p>
-    <h3>Higijena prije hypea</h3>
-    <p>Prije nego što kupite još jedan "srebrni metak", popravite ono što već imate.</p>
-    <p>Patchirajte sustave. Pregledajte konfiguracije. Obučite ljude. Ugasite zastarjele račune. Uvedite MFA. Pratite postojeće alate.</p>
-    <p>Većina proboja se ne događa jer nije kupljen najnoviji alat, već zato što je ostavljen nezaštićen server, ukradena lozinka ili pogrešno postavljena opcija.</p>
-    <p>Sigurnost počinje s higijenom, a ne s hardverom.</p>
-    <h3>Završna misao: Svjesna sigurnost ispred potrošnje</h3>
-    <p>Sigurnost nije u kupnji alata – nego u tome da oni rade zajedno, kroz strategiju i stručnost.</p>
-    <p>Kibernetička zaštita nije lista za shopping. Više ne znači bolje. Ponekad znači – više zbrke, troškova i ranjivosti.</p>
-    <p>Promijenimo način razmišljanja: od troši-troši-troši do poveži-integriraj-učvrsti. Tu stanuje prava sigurnost.</p> 
+      <p>
+        Provjeri preduvjete prije prijave. Expert-level certifikati zahtijevaju associate-level certifikat.
+      </p>
+
+      <p>
+        Primjerice, za SC-100 potrebno je imati SC-200, SC-300 ili AZ-500.
+      </p>
+
+    </article>
+
+    <!-- ARTICLE -->
+
+    <article class="article">
+
+      <div class="article-date">08.04.2026.</div>
+
+      <h2>Kako konfigurirati kućni SIEM</h2>
+
+      <p>
+        Wazuh je open-source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja.
+      </p>
+
+      <p>
+        Postavljanje kućnog SIEM-a odličan je način za razumijevanje stvarnih sigurnosnih procesa i rada s logovima.
+      </p>
+
+      <h3>1. Priprema virtualnog stroja</h3>
+
+      <ul>
+        <li>4 GB RAM-a</li>
+        <li>2 CPU jezgre</li>
+        <li>20–40 GB prostora</li>
+        <li>Stabilna mrežna povezanost</li>
+      </ul>
+
+      <p>
+        Potrošnja resursa raste proporcionalno broju agenata i količini događaja.
+      </p>
+
+      <h3>2. Instalacija Wazuh servera</h3>
+
+      <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+sudo bash wazuh-install.sh -a</code></pre>
+
+      <p>
+        Dashboard je najčešće dostupan na:
+      </p>
+
+      <pre><code>https://IP-adresa:5601</code></pre>
+
+      <h3>3. Dodavanje agenata</h3>
+
+      <ul>
+        <li>IP adresa Wazuh servera</li>
+        <li>Agent key</li>
+        <li>Hostname uređaja</li>
+      </ul>
+
+      <h3>4. Ingestiranje firewall logova</h3>
+
+      <p>
+        Ako logovi nisu vidljivi, uključi arhiviranje unutar <code>ossec.conf</code>.
+      </p>
+
+      <pre><code>&lt;global&gt;
+  &lt;alerts_log&gt;yes&lt;/alerts_log&gt;
+  &lt;logall&gt;yes&lt;/logall&gt;
+  &lt;logall_json&gt;yes&lt;/logall_json&gt;
+&lt;/global&gt;</code></pre>
+
+      <pre><code>sudo systemctl restart wazuh-manager</code></pre>
+
+      <h3>5. Decoder za firewall logove</h3>
+
+      <pre><code>&lt;decoder name="Firewall_Generic"&gt;
+  &lt;type&gt;syslog&lt;/type&gt;
+  &lt;prematch&gt;device_name="&lt;/prematch&gt;
+&lt;/decoder&gt;
+
+&lt;decoder name="Firewall_Generic_child"&gt;
+  &lt;parent&gt;Firewall_Generic&lt;/parent&gt;
+
+  &lt;regex&gt;
+device_name="(\S+)"
+timestamp="([^"]+)"
+log_type="([^"]+)"
+src_ip="([^"]+)"
+dst_ip="([^"]+)"
+protocol="([^"]+)"
+src_port=(\d+)
+dst_port=(\d+)
+  &lt;/regex&gt;
+
+  &lt;order&gt;
+device_name,timestamp,log_type,src_ip,dst_ip,protocol,src_port,dst_port
+  &lt;/order&gt;
+
+&lt;/decoder&gt;</code></pre>
+
+      <h3>6. Dodavanje pravila</h3>
+
+      <pre><code>&lt;group name="custom_firewall"&gt;
+  &lt;rule id="100040" level="3"&gt;
+    &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
+    &lt;description&gt;Firewall Log Event&lt;/description&gt;
+  &lt;/rule&gt;
+&lt;/group&gt;</code></pre>
+
+      <h3>7. Testiranje logova</h3>
+
+      <pre><code>/var/ossec/bin/wazuh-logtest</code></pre>
+
+      <pre><code>device_name="FW"
+timestamp="2024-01-01T12:00:00+0100"
+log_type="Firewall"
+src_ip="1.2.3.4"
+dst_ip="5.6.7.8"
+protocol="TCP"
+src_port=1234
+dst_port=443</code></pre>
+
+      <pre><code>sudo systemctl restart wazuh-manager</code></pre>
+
+      <p>
+        Nakon toga firewall logovi trebali bi biti vidljivi u dashboardu.
+      </p>
+
+      <h3>Završna misao</h3>
+
+      <p>
+        Kućni SIEM daje stvarni uvid u sigurnosne događaje unutar mreže i odličan je način za učenje sigurnosnih procesa.
+      </p>
+
+    </article>
+
+    <!-- ARTICLE -->
+
+    <article class="article">
+
+      <div class="article-date">07.04.2026.</div>
+
+      <h2>Nesavjesna prodaja sigurnosnih alata: Više nije nužno bolje</h2>
+
+      <p>
+        Sigurnost se ne može kupiti u kutiji. Bez pravilne integracije i stručnog upravljanja, više alata često znači manje sigurnosti.
+      </p>
+
+      <h3>Gomilanje alata = gomilanje problema</h3>
+
+      <p>
+        Svaki alat donosi vlastite agente, pravila, logove i upozorenja. Velik broj nepovezanih alata često rezultira kaosom umjesto kontrolom.
+      </p>
+
+      <p>
+        Kompleksnost povećava mogućnost pogrešne konfiguracije, sigurnosnih rupa i propuštenih upozorenja.
+      </p>
+
+      <h3>Iluzija sigurnosti kroz trošenje</h3>
+
+      <p>
+        Organizacije često kupuju alate koje ne razumiju ili ne mogu kvalitetno integrirati.
+      </p>
+
+      <p>
+        Budžeti se troše, ali sigurnost se realno ne poboljšava.
+      </p>
+
+      <h3>Higijena prije hypea</h3>
+
+      <p>
+        Prije novih rješenja potrebno je zakrpati sustave, pregledati konfiguracije, ukloniti stare račune i pravilno koristiti postojeće alate.
+      </p>
+
+      <p>
+        Većina incidenata ne događa se zbog manjka alata, nego zbog loše osnovne sigurnosne higijene.
+      </p>
+
+      <h3>Završna misao</h3>
+
+      <p>
+        Sigurnost nije shopping lista. Bitno je da alati rade zajedno kroz dobru strategiju, integraciju i stručnost.
+      </p>
+
+    </article>
+
   </div>
+
 </body>
 </html>
