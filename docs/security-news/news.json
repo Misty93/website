@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 98",
-      "url": "https://securityaffairs.com/192598/malware/security-affairs-malware-newsletter-round-98.html",
-      "published": "Sun, 24 May 2026 12:11:38 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Security Affairs newsletter Round 578 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
-      "url": "https://securityaffairs.com/192586/hacking/security-affairs-newsletter-round-578-by-pierluigi-paganini-international-edition.html",
-      "published": "Sun, 24 May 2026 11:51:37 +0000",
-      "source": "Security Affairs"
-    },
-    {
       "title": "Ghost CMS SQL injection flaw exploited in large-scale ClickFix campaign",
       "url": "https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/",
       "published": "Sun, 24 May 2026 10:12:32 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Laravel Lang packages hijacked to deploy credential-stealing malware",
+      "url": "https://www.bleepingcomputer.com/news/security/laravel-lang-packages-hijacked-to-deploy-credential-stealing-malware/",
+      "published": "Sat, 23 May 2026 16:48:23 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Italy disrupts CINEMAGOAL piracy app that stole streaming auth codes",
+      "url": "https://www.bleepingcomputer.com/news/legal/italy-disrupts-cinemagoal-piracy-app-that-stole-streaming-auth-codes/",
+      "published": "Sat, 23 May 2026 10:23:44 -0400",
       "source": "BleepingComputer"
     }
   ]
