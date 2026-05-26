@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,10 +110,10 @@
 
   <div class="article-date">26.05.2026.</div>
 
-  <h2>Besplatni Microsoft certifikacijski voucheri — Kako ih dobiti!</h2>
+  <h2>Free Microsoft Certification Vouchers — How to Get Them!</h2>
 
   <p>
-    Nedavno sam naišla na program koji nudi 100% popust na Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za to.
+    I recently came across a program offering 100% discount vouchers for Microsoft certification exams, and I think more people should know about it.
   </p>
 
   <p>
@@ -122,25 +122,25 @@
     </a>
   </p>
 
-  <h3>Kako funkcionira</h3>
+  <h3>How it works</h3>
 
   <ul>
-    <li>Upiši se na tečaj</li>
-    <li>Riješi test iz prvog pokušaja s minimalno 80%</li>
-    <li>Završi unutar tjedan dana</li>
-    <li>Dobiješ voucher na email</li>
+    <li>Enroll in a course</li>
+    <li>Pass the assessment test on the first attempt with at least 80%</li>
+    <li>Complete it within one week</li>
+    <li>You receive a voucher by email</li>
   </ul>
 
   <p>
-    Završila sam tri tečaja i dobila dva vouchera.
+    I personally completed three courses and received two vouchers.
   </p>
 
-  <h3>Važne napomene</h3>
+  <h3>Important notes</h3>
 
   <ol>
-    <li>Potreban poslovni/organizacijski email</li>
-    <li>Voucher se koristi preko Pearson VUE</li>
-    <li>Vrijedi do 30. lipnja 2026.</li>
+    <li>A work/organization email is required</li>
+    <li>The voucher is redeemed via Pearson VUE</li>
+    <li>Valid until June 30, 2026</li>
   </ol>
 
 </article>
@@ -150,37 +150,37 @@
 
   <div class="article-date">08.04.2026.</div>
 
-  <h2>Kako konfigurirati kućni SIEM</h2>
+  <h2>How to Configure a Home SIEM</h2>
 
   <p>
-    Wazuh je open-source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja iz različitih sustava.
+    Wazuh is an open-source SIEM and XDR platform that enables centralized collection, analysis, and correlation of security events across systems.
   </p>
 
   <p>
-    Koristi se za monitoring logova, detekciju i korelaciju incidenata u stvarnom vremenu.
+    It is used for log monitoring, detection, and incident correlation in real time.
   </p>
 
-  <h3>1. Priprema virtualnog stroja</h3>
+  <h3>1. Virtual Machine Setup</h3>
 
   <ul>
     <li>4 GB RAM</li>
-    <li>2 CPU jezgre</li>
-    <li>20–40 GB disk</li>
-    <li>Stabilna mrežna povezanost</li>
+    <li>2 CPU cores</li>
+    <li>20–40 GB disk space</li>
+    <li>Stable network connection</li>
   </ul>
 
-  <h3>2. Instalacija Wazuh servera</h3>
+  <h3>2. Installing Wazuh Server</h3>
 
   <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 sudo bash wazuh-install.sh -a</code></pre>
 
-  <h3>3. Dodavanje agenata</h3>
+  <h3>3. Adding Agents</h3>
 
   <p>
-    Agenti prikupljaju logove s endpointa i šalju ih na Wazuh manager.
+    Agents collect logs from endpoints and forward them to the Wazuh manager.
   </p>
 
-  <h3>4. Ingestiranje firewall logova</h3>
+  <h3>4. Ingesting Firewall Logs</h3>
 
   <pre><code>/var/ossec/logs/archives/archives.log</code></pre>
 
@@ -189,64 +189,59 @@ sudo bash wazuh-install.sh -a</code></pre>
   <h3>5. Decoder</h3>
 
   <p>
-    Decoders pretvaraju sirove logove u strukturirane podatke.
+    Decoders convert raw logs into structured fields.
   </p>
 
-  <h3>6. Pravila</h3>
+  <h3>6. Rules</h3>
 
   <pre><code>&lt;rule id="100040" level="3"&gt;
   &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
   &lt;description&gt;Firewall event&lt;/description&gt;
 &lt;/rule&gt;</code></pre>
 
-  <!-- ===== INSERTED SECTION (HR + EN) ===== -->
-
-  <h3>7. Testiranje logova (obavezno)</h3>
+  <h3>7. Log Testing (Required)</h3>
 
   <p>
-    Wazuh uključuje ugrađeni alat za testiranje dekodera i pravila. Dokument navodi:
-    “Važno je da vidite polja u Phase 2 i alert u Phase 3.”
+    Wazuh includes a built-in tool for testing decoders and rules. The documentation states:
+    “It is important that you see the fields in Phase 2 and the alert in Phase 3.”
   </p>
 
-  <p>Pokreni:</p>
+  <p>Run:</p>
 
   <pre><code>/var/ossec/bin/wazuh-logtest</code></pre>
 
-  <p>
-    Zalijepi firewall log (bez timestamp prefiksa koji dodaje rsyslog), primjer:
-  </p>
+  <p>Paste a firewall log (without the timestamp prefix added by rsyslog), for example:</p>
 
   <pre><code>device_name="FW" timestamp="2024-01-01T12:00:00+0100" log_type="Firewall" src_ip="1.2.3.4" dst_ip="5.6.7.8" protocol="TCP" src_port=1234 dst_port=443</code></pre>
 
-  <p>Ako je sve ispravno:</p>
+  <p>If everything is correct:</p>
 
   <p>
     <strong>Phase 1:</strong> pre-decoding<br>
-    <strong>Phase 2:</strong> extracted fields (decoder radi)<br>
-    <strong>Phase 3:</strong> rule triggered (alert generiran)
+    <strong>Phase 2:</strong> extracted fields (decoder works)<br>
+    <strong>Phase 3:</strong> rule triggered (alert generated)
   </p>
 
-  <p>Restartaj manager:</p>
+  <p>Restart the manager:</p>
 
   <pre><code>sudo systemctl restart wazuh-manager</code></pre>
 
   <p>
-    Firewall logovi će se pojaviti u Wazuh dashboardu.
+    Firewall logs will then appear in the Wazuh dashboard.
   </p>
 
-  <h3>Završna misao</h3>
+  <h3>Final Thoughts</h3>
 
   <p>
-    Kućni SIEM nije samo edukativni projekt — omogućuje stvarni uvid u sigurnosne događaje unutar mreže.
-    Wazuh je dovoljno moćan za produkciju, ali i dovoljno jednostavan za lab okruženje.
-  </p>
-
-  <p>
-    Uz pravilnu konfiguraciju moguće je pratiti endpoint aktivnosti i mrežni promet u stvarnom vremenu.
+    A home SIEM is not just an educational project — it provides real visibility into security events inside a network.
   </p>
 
   <p>
-    U nastavku serije obrađivat će se dodatne konfiguracije i sigurnosni scenariji za izgradnju kompletnog sigurnosnog sustava.
+    Wazuh is powerful enough for production use, but simple enough for a lab environment.
+  </p>
+
+  <p>
+    With proper configuration, endpoint activity and network traffic can be monitored in real time.
   </p>
 
 </article>
