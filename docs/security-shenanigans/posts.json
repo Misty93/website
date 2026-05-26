@@ -7,15 +7,15 @@
       "date": "26.05.2026."
     },
     {
-      "title": "Free Microsoft Certification Vouchers — How to Get Them!",
-      "file": "article-hr.html#free-microsoft-certification-vouchers-—-how-to-get-them!",
-      "description": "I recently came across a program offering 100% discount vouchers for Microsoft certification exams, and I think more people should know about it.",
+      "title": "Besplatni Microsoft certifikacijski voucheri — Evo kako do svog!",
+      "file": "article-hr.html#besplatni-microsoft-certifikacijski-voucheri-—-evo-kako-do-svog!",
+      "description": "Nedavno sam naišla na program koji daje 100% discount voucher za Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za ovo.",
       "date": "26.05.2026."
     },
     {
       "title": "How to Configure a Home SIEM",
       "file": "article-en.html#how-to-configure-a-home-siem",
-      "description": "Wazuh is an open-source SIEM and XDR platform for centralized security monitoring across endpoints and infrastructure.",
+      "description": "Wazuh is an open-source SIEM and XDR platform that provides centralized collection, analysis, and correlation of security events from endpoints, network devices, and cloud services.\nThanks to its modular architecture and combined agent-based and agentless approach, it is ideal for home labs, education, and smaller production environments.",
       "date": "08.04.2026."
     }
   ]
