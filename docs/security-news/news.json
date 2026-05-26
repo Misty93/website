@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Ghost CMS SQL injection flaw exploited in large-scale ClickFix campaign",
-      "url": "https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/",
-      "published": "Sun, 24 May 2026 10:12:32 -0400",
-      "source": "BleepingComputer"
+      "title": "[THN Webinar] New AI DDoS Attacks Are Smarter. Learn How to Fight Back",
+      "url": "https://thehackernews.com/2026/05/new-ai-ddos-attacks-are-smarter-learn.html",
+      "published": "Tue, 26 May 2026 17:28:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Laravel Lang packages hijacked to deploy credential-stealing malware",
-      "url": "https://www.bleepingcomputer.com/news/security/laravel-lang-packages-hijacked-to-deploy-credential-stealing-malware/",
-      "published": "Sat, 23 May 2026 16:48:23 -0400",
-      "source": "BleepingComputer"
+      "title": "Microsoft Patches SharePoint RCE Flaw CVE-2026-45659 Across Server Versions",
+      "url": "https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html",
+      "published": "Tue, 26 May 2026 17:19:53 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Italy disrupts CINEMAGOAL piracy app that stole streaming auth codes",
-      "url": "https://www.bleepingcomputer.com/news/legal/italy-disrupts-cinemagoal-piracy-app-that-stole-streaming-auth-codes/",
-      "published": "Sat, 23 May 2026 10:23:44 -0400",
-      "source": "BleepingComputer"
+      "title": "MFA Prompt Bombing: Why Your Second Factor Isn't Saving You",
+      "url": "https://thehackernews.com/2026/05/mfa-prompt-bombing-why-your-second.html",
+      "published": "Tue, 26 May 2026 16:00:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
