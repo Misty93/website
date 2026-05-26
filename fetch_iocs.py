@@ -42,7 +42,11 @@ def fetch_abuseipdb_ips():
         "Accept": "application/json"
     }
     try:
-        r = requests.get("https://api.abuseipdb.com/api/v2/blacklist?confidenceMinimum=90", headers=headers, timeout=10)
+        r = requests.get(
+            "https://api.abuseipdb.com/api/v2/blacklist?confidenceMinimum=90",
+            headers=headers,
+            timeout=10
+        )
         data = r.json().get("data", [])
         return [entry["ipAddress"].replace(".", "[.]") for entry in data]
     except Exception as e:
@@ -92,82 +96,146 @@ def fetch_urlscan_domains():
         print(f"[!] Error fetching URLScan domains: {e}")
         return []
 
-# === HTML template update ===
-def update_section(section_title, new_items, html_path):
-    deduped_items = sorted(set(new_items))
-    section_html = f"<h2>{section_title}</h2>\n<div style='overflow-x: auto;'>\n<ul>\n" + "\n".join(f"<li>{item}</li>" for item in deduped_items) + "\n</ul>\n</div>"
-
-    if not os.path.exists(html_path):
-        with open(html_path, "w", encoding="utf-8") as f:
-            f.write(f"""<!DOCTYPE html>
+# === HTML template init ===
+def init_html(path):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Daily IOC – {today}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily IOC – {today}</title>
+
   <style>
+    * {{
+      box-sizing: border-box;
+    }}
+
     body {{
       background-color: #121212;
       color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       padding: 2rem;
-      max-width: 100%;
       overflow-x: hidden;
     }}
+
     h1, h2 {{
       color: #ff4500;
     }}
+
+    .container {{
+      max-width: 900px;
+      margin: 0 auto;
+    }}
+
+    .ioc-section {{
+      margin-bottom: 2rem;
+    }}
+
+    .ioc-box {{
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      max-width: 100%;
+      overflow-x: auto;
+    }}
+
     ul {{
       list-style: none;
       padding: 0;
-      width: 100%;
+      margin: 0;
     }}
+
     li {{
-      background-color: #1e1e1e;
-      padding: 0.5rem 1rem;
-      margin: 0.3rem 0;
-      border-left: 3px solid #ff4500;
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid #2a2a2a;
       font-family: monospace;
-      word-break: break-all;
-      overflow-wrap: break-word;
-      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }}
+
+    li:last-child {{
+      border-bottom: none;
+    }}
+
+    a {{
+      color: #ff4500;
+      text-decoration: none;
+    }}
+
+    a:hover {{
+      text-decoration: underline;
+    }}
+
+    .back-link {{
+      display: inline-block;
+      margin-bottom: 1rem;
     }}
   </style>
 </head>
-<body>
-  <h1>IOC Report</h1>
-  <p><a href="/daily-ioc/">← Back to IOC archive</a></p>
-  <p class="date">Date: <span id="date">{today}</span></p>
 
-  <!-- Automatski generirane sekcije -->
+<body>
+  <div class="container">
+
+    <h1>IOC Report</h1>
+    <a class="back-link" href="/daily-ioc/">← Back to IOC archive</a>
+    <p>Date: {today}</p>
+
+    <!-- CONTENT -->
+
+  </div>
 </body>
-</html>""")
+</html>
+""")
+
+# === HTML section update ===
+def update_section(section_title, new_items, html_path):
+    deduped_items = sorted(set(new_items))
+
+    section_html = f"""
+    <section class="ioc-section">
+      <h2>{section_title}</h2>
+      <div class="ioc-box">
+        <ul>
+          {''.join(f"<li>{item}</li>" for item in deduped_items)}
+        </ul>
+      </div>
+    </section>
+    """
+
+    if not os.path.exists(html_path):
+        init_html(html_path)
 
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = re.compile(rf"<h2>{re.escape(section_title)}</h2>\s*<div[^>]*>\s*<ul>.*?</ul>\s*</div>", re.DOTALL)
+    pattern = re.compile(
+        rf"<section class=\"ioc-section\">\s*<h2>{re.escape(section_title)}</h2>.*?</section>",
+        re.DOTALL
+    )
+
     if pattern.search(content):
         content = pattern.sub(section_html, content)
     else:
-        content = content.replace("<!-- Automatski generirane sekcije -->", f"<!-- Automatski generirane sekcije -->\n{section_html}")
+        content = content.replace("<!-- CONTENT -->", f"<!-- CONTENT -->\n{section_html}")
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(content)
 
-# === Fetch IOC podaci ===
+# === Fetch IOC data ===
 ips = list(set(fetch_feodo_ips() + fetch_abuseipdb_ips()))
 hashes = fetch_malware_hashes()
 domains = list(set(fetch_threatfox_domains() + fetch_urlscan_domains()))
 emails = []
 
-# === Piši IOC u HTML ===
-update_section("🔴 Malicious IPs", ips, output_file)
-update_section("🧬 File Hashes", hashes, output_file)
-update_section("🌐 Domains", domains, output_file)
-update_section("✉️ Emails", emails, output_file)
+# === Write IOC sections ===
+update_section("Malicious IPs", ips, output_file)
+update_section("File Hashes", hashes, output_file)
+update_section("Domains", domains, output_file)
+update_section("Emails", emails, output_file)
 
-# === Snimi IOC i kao JSON (po danu) ===
+# === Save JSON ===
 with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
     json.dump({
         "date": today,
@@ -177,7 +245,7 @@ with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
         "emails": emails
     }, f, indent=2)
 
-# === Obnovi index.html (arhiva) ===
+# === Archive index ===
 index_path = "docs/daily-ioc/index.html"
 base_folder = "docs/daily-ioc"
 
@@ -196,7 +264,7 @@ with open(index_path, "w", encoding="utf-8") as f:
   <title>IOC Archive</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <style>
-    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; max-width: 100%; overflow-x: hidden; }
+    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; }
     h1 { color: #ff4500; }
     ul { list-style: none; padding: 0; }
     li { margin: 0.3rem 0; }
@@ -215,7 +283,7 @@ with open(index_path, "w", encoding="utf-8") as f:
 </body>
 </html>""")
 
-# === Generate IOC JSON for last 3 days ===
+# === Last 3 days JSON ===
 latest_json_path = "docs/daily-ioc/iocs.json"
 
 today_date = datetime.now().date()
