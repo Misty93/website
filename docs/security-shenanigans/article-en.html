@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Security Shenanigans</title>
@@ -7,62 +7,77 @@
 
 <style>
 body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 2rem;
-  line-height: 1.7;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.7;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h2, h3 {
-  color: #ff4500;
-  margin-top: 2rem;
+    color: #ff4500;
+    margin-top: 2rem;
 }
 
-p {
-  color: #cccccc;
-  margin-bottom: 1rem;
+p, li {
+    color: #cccccc;
 }
 
 a {
-  color: #ff4500;
-  text-decoration: none;
+    color: #ff4500;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
-}
-
-pre, code {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  word-break: break-word;
-}
-
-.article-date {
-  text-align: right;
-  color: #ff4500;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-  font-size: 0.95rem;
+    text-decoration: underline;
 }
 
 .back-link {
-  display: block;
-  margin-bottom: 2rem;
-  color: #ff4500;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 2rem;
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.article-date {
+    text-align: right;
+    color: #ff4500;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+pre {
+    background: #1e1e1e;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
@@ -73,81 +88,379 @@ pre, code {
 
 <p>I recently came across a program that gives you a 100% discount voucher for Microsoft certification exams, and I think more people should know about it.</p>
 
-<p>👉 <a href="https://skillupwithlevelup.com/courses">https://skillupwithlevelup.com/courses</a></p>
+<p>
+👉 
+<a href="https://skillupwithlevelup.com/courses" target="_blank">
+https://skillupwithlevelup.com/courses
+</a>
+</p>
 
-<p><strong>How it works:</strong></p>
+<h3>How it works</h3>
 
 <ul>
 <li>Enroll in a course on the platform</li>
 <li>Complete the assessment test on your FIRST attempt with a minimum score of 80%</li>
 <li>The assessment must be completed within one week of enrollment</li>
+<li>If you meet the criteria, a discount code lands straight in your inbox</li>
 </ul>
 
-<p>Personally, I completed three courses and received two vouchers.</p>
+<p>Personally, I completed three courses and received two vouchers — so my best guess is that the limit is two vouchers per person. Choose your courses wisely.</p>
 
-<p>⚠️ Requirements:</p>
+<h3>Important Notes</h3>
 
 <ol>
-<li>Work/organization email required</li>
-<li>Voucher can be redeemed via Pearson VUE</li>
-<li>Valid until June 30, 2026</li>
+<li>You need to sign up using your <strong>organization/work email</strong> to be eligible</li>
+<li>You can realistically redeem the voucher on <strong>Pearson VUE using your personal email</strong> when booking the exam</li>
+<li>The voucher must be used to schedule and take your exam <strong>before June 30, 2026</strong></li>
 </ol>
 
-<hr>
+<p>This is a legitimate opportunity to get certified without spending money, as long as you're prepared and move quickly.</p>
+
+<p>Have you tried this already? Drop a comment — would love to hear which certifications people are going for.</p>
+
+<p>
+📌 <strong>Always check the prerequisites.</strong>
+All expert-level certifications require at least one associate-level certification before you can earn them.
+For example, to achieve the SC-100 (Cybersecurity Architect Expert), you must first hold SC-200, SC-300, or AZ-500.
+Make sure you double-check the requirements for your target certification before you enroll in the course.
+</p>
 
 <div class="article-date">08.04.2026.</div>
 
 <h2>How to Configure a Home SIEM</h2>
 
-<p>Wazuh is an open-source SIEM and XDR platform for centralized security monitoring across endpoints and infrastructure.</p>
+<p>
+Wazuh is an open-source SIEM and XDR platform that provides centralized collection, analysis, and correlation of security events from endpoints, network devices, and cloud services.
+Thanks to its modular architecture and combined agent-based and agentless approach, it is ideal for home labs, education, and smaller production environments.
+</p>
 
-<p>It enables log collection, correlation, and incident detection in real time.</p>
+<p>
+Setting up a home SIEM is an excellent way to understand real security processes: log collection, event correlation, anomaly detection, and incident response.
+This guide walks through the entire process — from preparing the virtual machine to ingesting logs from endpoints and firewalls.
+</p>
 
 <h3>1. Preparing the Virtual Machine</h3>
 
 <p>
-- 4 GB RAM<br>
-- 2 CPU cores<br>
-- 20–40 GB disk<br>
-- stable network connection
+For the Wazuh server, a Linux distribution such as Ubuntu Server or Debian is recommended.
+A minimal configuration for a home lab includes:
 </p>
 
-<p>Resource usage increases with number of agents.</p>
+<ul>
+<li>4 GB RAM</li>
+<li>2 CPU cores</li>
+<li>20–40 GB disk space</li>
+<li>Stable network connection (bridged or NAT)</li>
+</ul>
+
+<p>
+According to Wazuh documentation, <strong>resource consumption scales linearly with the number of agents</strong>.
+Each agent generates its own volume of events including authentication logs, system changes, FIM entries, processes, and network activity.
+This means CPU, RAM, and disk requirements increase depending on the number of endpoints.
+</p>
+
+<p>
+A small home lab with a few agents can run on 2–4 GB RAM, while environments with ten or more agents require additional resources to keep indexing and event processing stable.
+</p>
+
+<p>
+After creating the VM in VirtualBox, VMware, or Proxmox, install the operating system and assign a static IP address so the Wazuh server is easily reachable by other devices.
+</p>
 
 <h3>2. Installing the Wazuh Server</h3>
 
+<p>
+Wazuh provides a simple installation script that automatically deploys Elasticsearch, Kibana, and the Wazuh server.
+This is the fastest and most stable method for home use.
+</p>
+
+<p>On a fresh OS installation, run:</p>
+
 <pre><code>curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
-sudo bash wazuh-install.sh -a
-</code></pre>
+sudo bash wazuh-install.sh -a</code></pre>
 
-<h3>3. Adding Agents</h3>
+<p>
+The installation takes a few minutes.
+Once complete, the Wazuh dashboard is available in your browser, typically at:
+<code>https://IP-address:5601</code>
+</p>
 
-<p>Agents forward system and security logs to the Wazuh manager.</p>
+<p>Log in using the initial credentials generated by the installation script.</p>
 
-<h3>4. Firewall Logs</h3>
+<h3>3. Adding Agents — Ingesting Logs from Computers</h3>
 
-<pre><code>/var/ossec/logs/archives/archives.log</code></pre>
+<p>
+Wazuh agents collect logs from Windows, Linux, and macOS systems.
+On Windows, the agent is installed via an MSI installer, while Linux systems use the package manager.
+</p>
+
+<p>
+In the Wazuh dashboard, open:
+<strong>Agents → Deploy new agent</strong>
+</p>
+
+<p>Choose the operating system and follow the instructions.</p>
+
+<p>Key parameters include:</p>
+
+<ul>
+<li>Wazuh server IP address</li>
+<li>Agent key generated automatically</li>
+<li>Agent hostname</li>
+</ul>
+
+<p>
+Once installed, the agent registers automatically and begins sending logs including system events, authentications, file changes, processes, and network activity.
+</p>
+
+<h3>4. Ingesting Firewall Logs</h3>
+
+<p>
+Wazuh can receive Syslog events from any firewall capable of sending logs to a remote Syslog server.
+Since Wazuh includes a built-in Syslog listener, the firewall can send logs directly to Wazuh without requiring an intermediate server.
+</p>
+
+<p>
+When the firewall sends events, Wazuh stores them in:
+<code>/var/ossec/logs/archives/archives.log</code>
+</p>
+
+<p>
+The logs are stored in raw form under agent ID <strong>000</strong> because this is an agentless source.
+</p>
+
+<p>
+If logs do not appear, enable log archiving in:
+<code>ossec.conf</code>
+</p>
+
+<pre><code>&lt;global&gt;
+  &lt;alerts_log&gt;yes&lt;/alerts_log&gt;
+  &lt;logall&gt;yes&lt;/logall&gt;
+  &lt;logall_json&gt;yes&lt;/logall_json&gt;
+&lt;/global&gt;</code></pre>
+
+<p>Then restart the manager:</p>
 
 <pre><code>sudo systemctl restart wazuh-manager</code></pre>
 
-<h3>5. Decoder Setup</h3>
+<h3>5. Creating a Decoder for Firewall Logs</h3>
 
-<p>Used to structure raw log data into fields.</p>
+<p>
+If logs appear in <code>archives.log</code> but not in the dashboard, Wazuh needs a decoder to interpret the firewall event structure.
+</p>
 
-<h3>6. Rules</h3>
+<p>Add a decoder to:</p>
 
-<pre><code>&lt;rule id="100040" level="3"&gt;
-  &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
-  &lt;description&gt;Firewall Log Event&lt;/description&gt;
-&lt;/rule&gt;
-</code></pre>
+<pre><code>/var/ossec/etc/decoders/local_decoder.xml</code></pre>
 
-<h3>7. Testing</h3>
+<p>Example generic decoder:</p>
+
+<pre><code>&lt;decoder name="Firewall_Generic"&gt;
+  &lt;type&gt;syslog&lt;/type&gt;
+  &lt;prematch&gt;device_name="&lt;/prematch&gt;
+&lt;/decoder&gt;
+
+&lt;decoder name="Firewall_Generic_child"&gt;
+  &lt;parent&gt;Firewall_Generic&lt;/parent&gt;
+  &lt;regex&gt;device_name="(\S+)" timestamp="([^"]+)" log_type="([^"]+)" src_ip="([^"]+)" dst_ip="([^"]+)" protocol="([^"]+)" src_port=(\d+) dst_port=(\d+)"&lt;/regex&gt;
+  &lt;order&gt;device_name,timestamp,log_type,src_ip,dst_ip,protocol,src_port,dst_port&lt;/order&gt;
+&lt;/decoder&gt;</code></pre>
+
+<h3>6. Adding a Rule</h3>
+
+<p>Rules are added to:</p>
+
+<pre><code>/var/ossec/etc/rules/local_rules.xml</code></pre>
+
+<p>Example:</p>
+
+<pre><code>&lt;group name="custom_firewall"&gt;
+  &lt;rule id="100040" level="3"&gt;
+    &lt;decoded_as&gt;Firewall_Generic&lt;/decoded_as&gt;
+    &lt;description&gt;Firewall Log Event&lt;/description&gt;
+  &lt;/rule&gt;
+&lt;/group&gt;</code></pre>
+
+<h3>7. Testing Logs (Required)</h3>
+
+<p>
+Wazuh includes a built-in tool for testing decoders and rules.
+It is important to verify that all fields appear correctly and that the alert triggers successfully.
+</p>
+
+<p>Run:</p>
 
 <pre><code>/var/ossec/bin/wazuh-logtest</code></pre>
 
-<p>Phase 2 = decoding, Phase 3 = alert generation.</p>
+<p>Paste a firewall log, for example:</p>
+
+<pre><code>device_name="FW" timestamp="2024-01-01T12:00:00+0100" log_type="Firewall" src_ip="1.2.3.4" dst_ip="5.6.7.8" protocol="TCP" src_port=1234 dst_port=443</code></pre>
+
+<p>If everything is configured correctly:</p>
+
+<ul>
+<li><strong>Phase 1:</strong> Pre-decoding</li>
+<li><strong>Phase 2:</strong> Fields extracted successfully</li>
+<li><strong>Phase 3:</strong> Rule triggered and alert generated</li>
+</ul>
+
+<p>Restart the manager afterward:</p>
+
+<pre><code>sudo systemctl restart wazuh-manager</code></pre>
+
+<p>Firewall logs should now appear in the Wazuh dashboard.</p>
+
+<h3>Final Thoughts</h3>
+
+<p>
+A home SIEM is not just an educational project — it provides real visibility into security events occurring within your network.
+Wazuh is powerful enough for professional environments while remaining accessible for home labs and learning purposes.
+</p>
+
+<p>
+Throughout this series, we will explore additional Wazuh configuration topics and other security products to build a sustainable and understandable security ecosystem.
+</p>
+
+<div class="article-date">07.04.2026.</div>
+
+<h2>Irresponsible Sale of Security Tools: More Isn’t Always Better</h2>
+
+<p>
+Security cannot be bought in a box.
+Yet many organizations behave as if it can.
+Security software is often sold as an instant solution, but without expert handling it becomes little more than expensive shelfware.
+</p>
+
+<p>
+In today’s cybersecurity landscape, tool sprawl is increasingly common — an obsessive race to buy more and more security solutions under the assumption that quantity equals protection.
+</p>
+
+<p>
+Vendors present flashy dashboards and catchy acronyms, resellers promise perfect layered defenses, and executives with limited technical oversight approve purchases without understanding operational impact.
+</p>
+
+<p>
+The reality is much simpler:
+without proper integration, skilled experts, management, and strategy, more tools frequently create less security.
+</p>
+
+<h3>Tool Sprawl = Problem Sprawl</h3>
+
+<p>
+Every security tool introduces additional agents, rules, logs, and alerts.
+Multiply that by dozens of systems and organizations often create chaos instead of visibility.
+</p>
+
+<p>
+Many tools overlap in functionality, conflict with each other, or operate in complete isolation without sharing context.
+</p>
+
+<p>
+In some environments, tools actively interfere with one another.
+Firewalls block legitimate traffic flagged elsewhere, DLP systems collide with backup solutions, and SIEM platforms fail to correlate events due to incompatible formats.
+</p>
+
+<p>
+The result is reduced visibility, missed alerts, slower incident response, frustrated teams, and sometimes a dangerous false sense of security.
+</p>
+
+<h3>The Illusion of Security Through Spending</h3>
+
+<p>
+Security vendors frequently rely on fear, uncertainty, and doubt to drive purchases.
+Breach statistics and expensive “silver bullet” products are used to convince organizations that another purchase automatically means stronger protection.
+</p>
+
+<p>
+This sales model works because many organizations lack strong technical leadership and trusted security advisors capable of evaluating whether tools are actually necessary or sustainable.
+</p>
+
+<p>
+It is not uncommon for companies to spend hundreds of thousands of euros on products that remain unused or only partially implemented.
+</p>
+
+<h3>Tool Fragmentation Weakens the Security Chain</h3>
+
+<p>
+Cybersecurity functions as a chain where every component must communicate and support the others.
+If one component is misconfigured or disconnected, the entire chain weakens.
+</p>
+
+<p>
+More tools mean more integrations, more maintenance, more patching, and more opportunities for misconfiguration.
+</p>
+
+<p>
+Instead of coordinated defense, many organizations create fragmented and noisy environments where attackers exploit gaps between disconnected systems.
+</p>
+
+<h3>Users Still Play a Key Role</h3>
+
+<p>
+Another frequently ignored element is the end user.
+Security exists to protect people, yet many strategies overlook usability completely.
+</p>
+
+<p>
+If tools are invasive, confusing, or poorly explained, users eventually bypass them, disable them, or unintentionally create additional risk.
+</p>
+
+<h3>Responsibility vs. Profit</h3>
+
+<p>
+Security tools are expensive for legitimate reasons including development, maintenance, and support costs.
+Vendors deserve profit, but profit should not outweigh responsibility.
+</p>
+
+<p>
+Security should focus on education, realistic risk assessment, and alignment between technology, processes, and people.
+</p>
+
+<p>
+Trusted advisors — whether internal security architects or external consultants — play a critical role in evaluating actual organizational needs and preventing unnecessary complexity.
+</p>
+
+<h3>Hygiene Before Hype</h3>
+
+<p>
+Before purchasing another “silver bullet,” organizations should first improve the fundamentals:
+</p>
+
+<ul>
+<li>Patch systems regularly</li>
+<li>Review configurations</li>
+<li>Train employees</li>
+<li>Remove unused accounts</li>
+<li>Implement MFA</li>
+<li>Monitor existing tools properly</li>
+</ul>
+
+<p>
+Most breaches happen because of exposed systems, stolen credentials, or misconfigurations — not because the newest tool was missing.
+</p>
+
+<p>Security starts with hygiene, not hype.</p>
+
+<h3>Final Thought: Conscious Security Over Consumption</h3>
+
+<p>
+Security is not about accumulating tools.
+It is about making technology work together through strategy, expertise, and operational discipline.
+</p>
+
+<p>
+Cyber defense is not a shopping list.
+More tools do not automatically mean stronger protection.
+Sometimes they simply create more confusion, cost, and vulnerability.
+</p>
+
+<p>
+Organizations should shift their mindset from endless spending toward integration, hardening, and sustainability.
+That is where effective security actually begins.
+</p>
 
 </div>
+
 </body>
 </html>
