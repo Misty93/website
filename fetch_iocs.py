@@ -2,7 +2,7 @@ import os
 import requests
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # === Datum i direktoriji ===
 today = datetime.now().strftime("%Y-%m-%d")
@@ -95,7 +95,7 @@ def fetch_urlscan_domains():
 # === HTML template update ===
 def update_section(section_title, new_items, html_path):
     deduped_items = sorted(set(new_items))
-    section_html = f"<h2>{section_title}</h2>\n<ul>\n" + "\n".join(f"<li>{item}</li>" for item in deduped_items) + "\n</ul>"
+    section_html = f"<h2>{section_title}</h2>\n<div style='overflow-x: auto;'>\n<ul>\n" + "\n".join(f"<li>{item}</li>" for item in deduped_items) + "\n</ul>\n</div>"
 
     if not os.path.exists(html_path):
         with open(html_path, "w", encoding="utf-8") as f:
@@ -111,6 +111,8 @@ def update_section(section_title, new_items, html_path):
       color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
       padding: 2rem;
+      max-width: 100%;
+      overflow-x: hidden;
     }}
     h1, h2 {{
       color: #ff4500;
@@ -118,6 +120,7 @@ def update_section(section_title, new_items, html_path):
     ul {{
       list-style: none;
       padding: 0;
+      width: 100%;
     }}
     li {{
       background-color: #1e1e1e;
@@ -125,6 +128,9 @@ def update_section(section_title, new_items, html_path):
       margin: 0.3rem 0;
       border-left: 3px solid #ff4500;
       font-family: monospace;
+      word-break: break-all;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }}
   </style>
 </head>
@@ -140,7 +146,7 @@ def update_section(section_title, new_items, html_path):
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = re.compile(rf"<h2>{re.escape(section_title)}</h2>\s*<ul>.*?</ul>", re.DOTALL)
+    pattern = re.compile(rf"<h2>{re.escape(section_title)}</h2>\s*<div[^>]*>\s*<ul>.*?</ul>\s*</div>", re.DOTALL)
     if pattern.search(content):
         content = pattern.sub(section_html, content)
     else:
@@ -190,7 +196,7 @@ with open(index_path, "w", encoding="utf-8") as f:
   <title>IOC Archive</title>
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <style>
-    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; }
+    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; max-width: 100%; overflow-x: hidden; }
     h1 { color: #ff4500; }
     ul { list-style: none; padding: 0; }
     li { margin: 0.3rem 0; }
@@ -210,19 +216,14 @@ with open(index_path, "w", encoding="utf-8") as f:
 </html>""")
 
 # === Generate IOC JSON for last 3 days ===
-from datetime import datetime, timedelta
-
 latest_json_path = "docs/daily-ioc/iocs.json"
-base_folder = "docs/daily-ioc"
 
-# Izračunaj zadnja 3 dana
 today_date = datetime.now().date()
 valid_dates = {
     (today_date - timedelta(days=i)).strftime("%Y-%m-%d")
     for i in range(3)
 }
 
-# Pronađi IOC foldere koji odgovaraju zadnja 3 dana
 items = []
 for name in os.listdir(base_folder):
     if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name)):
@@ -233,9 +234,7 @@ for name in os.listdir(base_folder):
                 "folder": name
             })
 
-# Sortiraj po datumu (najnoviji prvi)
 items.sort(key=lambda x: x["date"], reverse=True)
 
-# Spremi JSON
 with open(latest_json_path, "w", encoding="utf-8") as f:
     json.dump({"items": items}, f, indent=2)
