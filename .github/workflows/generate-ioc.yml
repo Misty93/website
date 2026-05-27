@@ -24,6 +24,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate IOC HTML + JSON
+        env:
+          ABUSEIPDBKEY: ${{ secrets.ABUSEIPDBKEY }}
+          URLSCANIO: ${{ secrets.URLSCANIO }}
+          URLHAUS: ${{ secrets.URLHAUS }}
         run: python3 fetch_iocs.py
 
       - name: Commit and push changes
