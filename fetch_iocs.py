@@ -12,10 +12,10 @@ os.makedirs(folder, exist_ok=True)
 
 output_file = os.path.join(folder, "index.html")
 
-# === API ključevi (NE DIRANO) ===
-URLSCAN_API_KEY = "019e684b-7f1c-7081-ae66-a0599e161f03"
-ABUSEIPDB_API_KEY = "9d65c5d41328705852b276fded1d7c15e23adf4e415752dcc0f895171e34e4d0a84c1"
-URLHAUS_API_KEY = "9855c372bef1a34518253ab2036a90a764a95f2bd5fcf01b"
+# === API ključevi iz GitHub Secrets ===
+ABUSEIPDB_API_KEY = os.getenv("ABUSEIPDBKEY")
+URLSCAN_API_KEY = os.getenv("URLSCANIO")
+URLHAUS_API_KEY = os.getenv("URLHAUS")
 
 urlscan_headers = {
     "Content-Type": "application/json",
@@ -51,9 +51,13 @@ def fetch_feodo_ips():
 
 
 # =========================================================
-# ABUSEIPDB (FIXED)
+# ABUSEIPDB
 # =========================================================
 def fetch_abuseipdb_ips():
+
+    if not ABUSEIPDB_API_KEY:
+        print("[!] Missing ABUSEIPDB API KEY")
+        return []
 
     headers = {
         "Key": ABUSEIPDB_API_KEY.strip(),
@@ -77,7 +81,11 @@ def fetch_abuseipdb_ips():
 
         data = r.json().get("data", [])
 
-        return [x.get("ipAddress", "").replace(".", "[.]") for x in data if x.get("ipAddress")]
+        return [
+            x.get("ipAddress", "").replace(".", "[.]")
+            for x in data
+            if x.get("ipAddress")
+        ]
 
     except:
         return []
@@ -128,6 +136,7 @@ def fetch_threatfox_domains():
 
         for item in data:
             ioc = item.get("ioc", "")
+
             if "." not in ioc:
                 continue
             if ioc.startswith("http"):
@@ -147,6 +156,9 @@ def fetch_threatfox_domains():
 # URLSCAN
 # =========================================================
 def fetch_urlscan_domains():
+
+    if not URLSCAN_API_KEY:
+        return []
 
     url = "https://urlscan.io/api/v1/search/?q=visibility:public"
 
@@ -169,7 +181,7 @@ def fetch_urlscan_domains():
 
 
 # =========================================================
-# URLHAUS (FIXED + ADDED)
+# URLHAUS
 # =========================================================
 def fetch_urlhaus():
 
@@ -183,7 +195,6 @@ def fetch_urlhaus():
 
         data = r.json().get("urls", [])
 
-        ips = []
         domains = []
 
         for item in data:
@@ -192,7 +203,7 @@ def fetch_urlhaus():
                 dom = u.split("/")[2]
                 domains.append(dom.replace(".", "[.]"))
 
-        return ips, domains
+        return [], domains
 
     except:
         return [], []
@@ -206,7 +217,7 @@ def extract_emails(domains):
     out = []
 
     for d in domains:
-        d = d.replace("[.]", "")
+        d = d.replace("[.]", ".")
         if d.startswith("www."):
             d = d[4:]
         out.append(f"abuse@{d}")
@@ -215,7 +226,7 @@ def extract_emails(domains):
 
 
 # =========================================================
-# HTML (UNCHANGED DESIGN)
+# HTML TEMPLATE (UNCHANGED DESIGN)
 # =========================================================
 def init_html(path):
 
@@ -267,7 +278,6 @@ li {{
     padding: 0.7rem 1rem;
     border-bottom: 1px solid #2a2a2a;
     font-family: monospace;
-    word-break: break-word;
 }}
 
 a {{
@@ -339,7 +349,6 @@ abuse = fetch_abuseipdb_ips()
 urlhaus_ips, urlhaus_domains = fetch_urlhaus()
 
 ips = sorted(set(feodo + abuse + urlhaus_ips))
-
 hashes = fetch_malware_hashes()
 
 domains = sorted(set(
@@ -358,7 +367,7 @@ update_section("File Hashes", hashes, output_file)
 update_section("Domains", domains, output_file)
 update_section("Emails", emails, output_file)
 
-with open(os.path.join(folder, "index.json"), "w") as f:
+with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
     json.dump({
         "date": today,
         "ips": ips,
@@ -367,4 +376,5 @@ with open(os.path.join(folder, "index.json"), "w") as f:
         "emails": emails
     }, f, indent=2)
 
+print("[+] IOC generated:", output_file)
 print("[+] IOC generated:", output_file)
