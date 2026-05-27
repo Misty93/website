@@ -19,7 +19,7 @@ URLHAUS_API_KEY = os.getenv("URLHAUS")
 
 urlscan_headers = {
     "Content-Type": "application/json",
-    "API-Key": URLSCAN_API_KEY
+    "API-Key": (URLSCAN_API_KEY or "").strip()
 }
 
 # =========================================================
@@ -74,12 +74,21 @@ def fetch_abuseipdb_ips():
         )
 
         if r.status_code != 200:
-            print(r.text)
             return []
 
         data = r.json().get("data", [])
 
         ips = []
+
+        for x in data:
+            ip = x.get("ipAddress", "")
+            if ip:
+                ips.append(ip.replace(".", "[.]"))
+
+        return ips
+
+    except:
+        return []
 
 
 # =========================================================
@@ -128,10 +137,15 @@ def fetch_threatfox_domains():
         for item in data:
             ioc = item.get("ioc", "")
 
+            if not ioc:
+                continue
+
             if "." not in ioc:
                 continue
+
             if ioc.startswith("http"):
                 continue
+
             if re.match(r"^\d{1,3}(\.\d{1,3}){3}$", ioc):
                 continue
 
@@ -148,9 +162,6 @@ def fetch_threatfox_domains():
 # =========================================================
 def fetch_urlscan_domains():
 
-    if not URLSCAN_API_KEY:
-        return []
-
     url = "https://urlscan.io/api/v1/search/?q=visibility:public"
 
     try:
@@ -161,11 +172,14 @@ def fetch_urlscan_domains():
 
         data = r.json().get("results", [])
 
-        return [
-            x.get("page", {}).get("domain", "").replace(".", "[.]")
-            for x in data
-            if x.get("page", {}).get("domain")
-        ]
+        domains = []
+
+        for x in data:
+            d = x.get("page", {}).get("domain", "")
+            if d:
+                domains.append(d.replace(".", "[.]"))
+
+        return domains
 
     except:
         return []
@@ -217,7 +231,7 @@ def extract_emails(domains):
 
 
 # =========================================================
-# HTML TEMPLATE (UNCHANGED DESIGN)
+# HTML TEMPLATE
 # =========================================================
 def init_html(path):
 
@@ -230,13 +244,8 @@ def init_html(path):
 <title>Daily IOC – {today}</title>
 
 <style>
-
 * {{
     box-sizing: border-box;
-}}
-
-html {{
-    overflow-x: hidden;
 }}
 
 body {{
@@ -245,12 +254,9 @@ body {{
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 2rem;
-    overflow-x: hidden;
-    line-height: 1.6;
 }}
 
 .container {{
-    width: 100%;
     max-width: 900px;
     margin: 0 auto;
 }}
@@ -274,11 +280,9 @@ li {{
 a {{
     color: #ff4500;
 }}
-
 </style>
 
 </head>
-
 <body>
 <div class="container">
 
@@ -367,5 +371,4 @@ with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
         "emails": emails
     }, f, indent=2)
 
-print("[+] IOC generated:", output_file)
 print("[+] IOC generated:", output_file)
