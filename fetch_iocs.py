@@ -55,22 +55,20 @@ def fetch_feodo_ips():
 # =========================================================
 def fetch_abuseipdb_ips():
 
-    if not ABUSEIPDB_API_KEY:
-        print("[!] Missing ABUSEIPDB API KEY")
-        return []
+    url = "https://api.abuseipdb.com/api/v2/blacklist"
 
     headers = {
-        "Key": ABUSEIPDB_API_KEY.strip(),
+        "Key": (ABUSEIPDB_API_KEY or "").strip(),
         "Accept": "application/json"
     }
 
     try:
         r = requests.get(
-            "https://api.abuseipdb.com/api/v2/blacklist",
+            url,
             headers=headers,
             params={
-                "confidenceMinimum": 90,
-                "limit": 10000
+                "confidenceMinimum": 75,
+                "limit": 9999999
             },
             timeout=20
         )
@@ -81,14 +79,7 @@ def fetch_abuseipdb_ips():
 
         data = r.json().get("data", [])
 
-        return [
-            x.get("ipAddress", "").replace(".", "[.]")
-            for x in data
-            if x.get("ipAddress")
-        ]
-
-    except:
-        return []
+        ips = []
 
 
 # =========================================================
