@@ -13,9 +13,9 @@ os.makedirs(folder, exist_ok=True)
 output_file = os.path.join(folder, "index.html")
 
 # === API ključevi ===
-URLSCAN_API_KEY = "YOUR_URLSCAN_API_KEY"
+URLSCAN_API_KEY = "019e684b-7f1c-7081-ae66-a0599e161f03"
 
-ABUSEIPDB_API_KEY = "YOUR_ABUSEIPDB_KEY"
+ABUSEIPDB_API_KEY = "9d65c5d41328705852b276fded1d7c15e23adf4e415752dcc0f895171e34e4c40e93554e4d0a84c1"
 
 urlscan_headers = {
     "Content-Type": "application/json",
