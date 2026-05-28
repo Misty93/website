@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import re
+import time
 from datetime import datetime, timedelta
 
 # === Datum i direktoriji ===
@@ -34,7 +35,6 @@ def fetch_feodo_ips():
             return []
 
         ips = []
-
         for line in r.text.splitlines():
             if line.startswith("#") or not line.strip():
                 continue
@@ -79,7 +79,6 @@ def fetch_abuseipdb_ips():
         data = r.json().get("data", [])
 
         ips = []
-
         for x in data:
             ip = x.get("ipAddress", "")
             if ip:
@@ -133,19 +132,15 @@ def fetch_threatfox_domains():
         data = r.json().get("data", [])
 
         out = []
-
         for item in data:
             ioc = item.get("ioc", "")
 
             if not ioc:
                 continue
-
             if "." not in ioc:
                 continue
-
             if ioc.startswith("http"):
                 continue
-
             if re.match(r"^\d{1,3}(\.\d{1,3}){3}$", ioc):
                 continue
 
@@ -173,7 +168,6 @@ def fetch_urlscan_domains():
         data = r.json().get("results", [])
 
         domains = []
-
         for x in data:
             d = x.get("page", {}).get("domain", "")
             if d:
@@ -220,7 +214,6 @@ def fetch_urlhaus():
 def extract_emails(domains):
 
     out = []
-
     for d in domains:
         d = d.replace("[.]", ".")
         if d.startswith("www."):
@@ -340,23 +333,13 @@ def update_section(title, items, path):
 # =========================================================
 feodo = fetch_feodo_ips()
 abuse = fetch_abuseipdb_ips()
-
 urlhaus_ips, urlhaus_domains = fetch_urlhaus()
 
 ips = sorted(set(feodo + abuse + urlhaus_ips))
 hashes = fetch_malware_hashes()
-
-domains = sorted(set(
-    fetch_threatfox_domains()
-    + fetch_urlscan_domains()
-    + urlhaus_domains
-))
-
+domains = sorted(set(fetch_threatfox_domains() + fetch_urlscan_domains() + urlhaus_domains))
 emails = extract_emails(domains)
 
-# =========================================================
-# OUTPUT
-# =========================================================
 update_section("Malicious IPs", ips, output_file)
 update_section("File Hashes", hashes, output_file)
 update_section("Domains", domains, output_file)
@@ -370,5 +353,52 @@ with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
         "domains": domains,
         "emails": emails
     }, f, indent=2)
+
+# =========================================================
+# ARCHIVE (MOVED TO END — FIX)
+# =========================================================
+
+time.sleep(2)
+
+base_folder = "docs/daily-ioc"
+index_path = "docs/daily-ioc/index.html"
+
+entries = [
+    name.replace("ioc-", "")
+    for name in os.listdir(base_folder)
+    if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name))
+]
+
+entries.sort(reverse=True)
+
+with open(index_path, "w", encoding="utf-8") as f:
+    f.write("""<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8' />
+  <title>IOC Archive</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <style>
+    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; }
+    h1 { color: #ff4500; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 0.3rem 0; }
+    a { color: #ff4500; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>IOC Archive</h1>
+  <ul>
+""")
+
+    for date in entries:
+        f.write(f"    <li><a href='/daily-ioc/ioc-{date}/'>{date}</a></li>\n")
+
+    f.write("""  </ul>
+</body>
+</html>""")
+
+# =========================================================
 
 print("[+] IOC generated:", output_file)
