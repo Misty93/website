@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Romanian Hacker Gets Nearly 5 Years in US Prison Over Network Intrusion",
-      "url": "https://securityaffairs.com/192770/cyber-crime/romanian-hacker-gets-nearly-5-years-in-us-prison-over-network-intrusion.html",
-      "published": "Wed, 27 May 2026 21:43:23 +0000",
-      "source": "Security Affairs"
-    },
-    {
       "title": "Grandoreiro Malware and BTMOB RAT Campaigns Target Windows and Android Users",
       "url": "https://thehackernews.com/2026/05/grandoreiro-malware-and-btmob-rat.html",
       "published": "Wed, 27 May 2026 21:40:21 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Malicious npm Package Stole Files From Claude AI User Directory via GitHub",
-      "url": "https://thehackernews.com/2026/05/malicious-npm-package-stole-files-from.html",
-      "published": "Wed, 27 May 2026 21:14:29 +0530",
+      "title": "Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Removal",
+      "url": "https://thehackernews.com/2026/05/microsoft-slams-public-zero-day.html",
+      "published": "Thu, 28 May 2026 19:23:52 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ThreatsDay Bulletin: Claude Security Plugin, Azure Priv-Esc, Kali365 MFA Bypass, FIFA Scams +15 More",
+      "url": "https://thehackernews.com/2026/05/threatsday-bulletin-claude-security.html",
+      "published": "Thu, 28 May 2026 19:03:16 +0530",
       "source": "The Hacker News"
     }
   ]
