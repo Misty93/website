@@ -2,13 +2,13 @@ import os
 import requests
 import json
 import re
-import time
-from datetime import datetime, timedelta
+from datetime import datetime
 
 # === Datum i direktoriji ===
 today = datetime.now().strftime("%Y-%m-%d")
 
-folder = f"docs/daily-ioc/ioc-{today}"
+base_folder = "docs/daily-ioc"
+folder = f"{base_folder}/ioc-{today}"
 os.makedirs(folder, exist_ok=True)
 
 output_file = os.path.join(folder, "index.html")
@@ -49,26 +49,26 @@ def fetch_feodo_ips():
     except:
         return []
 
-
 # =========================================================
 # ABUSEIPDB
 # =========================================================
 def fetch_abuseipdb_ips():
 
-    url = "https://api.abuseipdb.com/api/v2/blacklist"
+    if not ABUSEIPDB_API_KEY:
+        return []
 
     headers = {
-        "Key": (ABUSEIPDB_API_KEY or "").strip(),
+        "Key": ABUSEIPDB_API_KEY.strip(),
         "Accept": "application/json"
     }
 
     try:
         r = requests.get(
-            url,
+            "https://api.abuseipdb.com/api/v2/blacklist",
             headers=headers,
             params={
                 "confidenceMinimum": 75,
-                "limit": 9999999
+                "limit": 10000
             },
             timeout=20
         )
@@ -78,23 +78,15 @@ def fetch_abuseipdb_ips():
 
         data = r.json().get("data", [])
 
-        ips = []
-        for x in data:
-            ip = x.get("ipAddress", "")
-            if ip:
-                ips.append(ip.replace(".", "[.]"))
-
-        return ips
+        return [x.get("ipAddress", "").replace(".", "[.]") for x in data if x.get("ipAddress")]
 
     except:
         return []
-
 
 # =========================================================
 # MALWAREBAZAAR
 # =========================================================
 def fetch_malware_hashes():
-
     url = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
 
     try:
@@ -102,29 +94,19 @@ def fetch_malware_hashes():
         if r.status_code != 200:
             return []
 
-        return [
-            line.strip()
-            for line in r.text.splitlines()
-            if line and not line.startswith("#")
-        ]
+        return [line.strip() for line in r.text.splitlines() if line and not line.startswith("#")]
 
     except:
         return []
-
 
 # =========================================================
 # THREATFOX
 # =========================================================
 def fetch_threatfox_domains():
-
     url = "https://threatfox.abuse.ch/api/v1/"
 
     try:
-        r = requests.post(
-            url,
-            json={"query": "get_iocs", "days": 1},
-            timeout=20
-        )
+        r = requests.post(url, json={"query": "get_iocs", "days": 1}, timeout=20)
 
         if r.status_code != 200:
             return []
@@ -134,28 +116,21 @@ def fetch_threatfox_domains():
         out = []
         for item in data:
             ioc = item.get("ioc", "")
-
-            if not ioc:
-                continue
-            if "." not in ioc:
-                continue
-            if ioc.startswith("http"):
-                continue
-            if re.match(r"^\d{1,3}(\.\d{1,3}){3}$", ioc):
-                continue
-
-            out.append(ioc.replace(".", "[.]"))
+            if "." in ioc and not ioc.startswith("http"):
+                out.append(ioc.replace(".", "[.]"))
 
         return out
 
     except:
         return []
 
-
 # =========================================================
 # URLSCAN
 # =========================================================
 def fetch_urlscan_domains():
+
+    if not URLSCAN_API_KEY:
+        return []
 
     url = "https://urlscan.io/api/v1/search/?q=visibility:public"
 
@@ -167,23 +142,19 @@ def fetch_urlscan_domains():
 
         data = r.json().get("results", [])
 
-        domains = []
-        for x in data:
-            d = x.get("page", {}).get("domain", "")
-            if d:
-                domains.append(d.replace(".", "[.]"))
-
-        return domains
+        return [
+            x.get("page", {}).get("domain", "").replace(".", "[.]")
+            for x in data
+            if x.get("page", {}).get("domain")
+        ]
 
     except:
         return []
-
 
 # =========================================================
 # URLHAUS
 # =========================================================
 def fetch_urlhaus():
-
     url = "https://urlhaus-api.abuse.ch/v1/urls/recent/"
 
     try:
@@ -195,7 +166,6 @@ def fetch_urlhaus():
         data = r.json().get("urls", [])
 
         domains = []
-
         for item in data:
             u = item.get("url", "")
             if "://" in u:
@@ -207,27 +177,22 @@ def fetch_urlhaus():
     except:
         return [], []
 
-
 # =========================================================
 # EMAILS
 # =========================================================
 def extract_emails(domains):
-
     out = []
     for d in domains:
         d = d.replace("[.]", ".")
         if d.startswith("www."):
             d = d[4:]
         out.append(f"abuse@{d}")
-
     return sorted(set(out))
-
 
 # =========================================================
 # HTML TEMPLATE
 # =========================================================
 def init_html(path):
-
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"""<!DOCTYPE html>
 <html lang="en">
@@ -237,9 +202,7 @@ def init_html(path):
 <title>Daily IOC – {today}</title>
 
 <style>
-* {{
-    box-sizing: border-box;
-}}
+* {{ box-sizing: border-box; }}
 
 body {{
     background-color: #121212;
@@ -254,9 +217,7 @@ body {{
     margin: 0 auto;
 }}
 
-h1, h2 {{
-    color: #ff4500;
-}}
+h1, h2 {{ color: #ff4500; }}
 
 .ioc-box {{
     background: #1a1a1a;
@@ -270,9 +231,7 @@ li {{
     font-family: monospace;
 }}
 
-a {{
-    color: #ff4500;
-}}
+a {{ color: #ff4500; }}
 </style>
 
 </head>
@@ -291,7 +250,6 @@ a {{
 </body>
 </html>
 """)
-
 
 # =========================================================
 # SECTION UPDATE
@@ -327,7 +285,6 @@ def update_section(title, items, path):
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
 
-
 # =========================================================
 # PIPELINE
 # =========================================================
@@ -345,29 +302,16 @@ update_section("File Hashes", hashes, output_file)
 update_section("Domains", domains, output_file)
 update_section("Emails", emails, output_file)
 
-with open(os.path.join(folder, "index.json"), "w", encoding="utf-8") as f:
-    json.dump({
-        "date": today,
-        "ips": ips,
-        "hashes": hashes,
-        "domains": domains,
-        "emails": emails
-    }, f, indent=2)
-
 # =========================================================
-# ARCHIVE (MOVED TO END — FIX)
+# ARCHIVE (FIX: always rebuilt AFTER all writes)
 # =========================================================
+index_path = os.path.join(base_folder, "index.html")
 
-time.sleep(2)
-
-base_folder = "docs/daily-ioc"
-index_path = "docs/daily-ioc/index.html"
-
-entries = [
-    name.replace("ioc-", "")
-    for name in os.listdir(base_folder)
-    if name.startswith("ioc-") and os.path.isdir(os.path.join(base_folder, name))
-]
+entries = []
+for name in os.listdir(base_folder):
+    path = os.path.join(base_folder, name)
+    if os.path.isdir(path) and name.startswith("ioc-"):
+        entries.append(name.replace("ioc-", ""))
 
 entries.sort(reverse=True)
 
@@ -375,30 +319,38 @@ with open(index_path, "w", encoding="utf-8") as f:
     f.write("""<!DOCTYPE html>
 <html lang='en'>
 <head>
-  <meta charset='UTF-8' />
-  <title>IOC Archive</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <style>
-    body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 2rem; }
-    h1 { color: #ff4500; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 0.3rem 0; }
-    a { color: #ff4500; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+<meta charset='UTF-8' />
+<title>IOC Archive</title>
+<style>
+body { background:#121212; color:#fff; font-family:sans-serif; padding:2rem; }
+h1 { color:#ff4500; }
+a { color:#ff4500; }
+</style>
 </head>
 <body>
-  <h1>IOC Archive</h1>
-  <ul>
+<h1>IOC Archive</h1>
+<ul>
 """)
 
-    for date in entries:
-        f.write(f"    <li><a href='/daily-ioc/ioc-{date}/'>{date}</a></li>\n")
+    for d in entries:
+        f.write(f"<li><a href='/daily-ioc/ioc-{d}/'>{d}</a></li>\n")
 
-    f.write("""  </ul>
+    f.write("""
+</ul>
 </body>
-</html>""")
+</html>
+""")
 
 # =========================================================
+# JSON EXPORT
+# =========================================================
+with open(os.path.join(base_folder, "iocs.json"), "w", encoding="utf-8") as f:
+    json.dump({
+        "date": today,
+        "ips": ips,
+        "hashes": hashes,
+        "domains": domains,
+        "emails": emails
+    }, f, indent=2)
 
 print("[+] IOC generated:", output_file)
