@@ -4,16 +4,21 @@ import json
 import re
 from datetime import datetime
 
-# === Datum i direktoriji ===
+# =========================================================
+# DATUM I DIREKTORIJI
+# =========================================================
 today = datetime.now().strftime("%Y-%m-%d")
 
 base_folder = "docs/daily-ioc"
 folder = f"{base_folder}/ioc-{today}"
+
 os.makedirs(folder, exist_ok=True)
 
 output_file = os.path.join(folder, "index.html")
 
-# === API ključevi iz GitHub Secrets ===
+# =========================================================
+# API KLJUČEVI
+# =========================================================
 ABUSEIPDB_API_KEY = os.getenv("ABUSEIPDBKEY")
 URLSCAN_API_KEY = os.getenv("URLSCANIO")
 URLHAUS_API_KEY = os.getenv("URLHAUS")
@@ -27,15 +32,20 @@ urlscan_headers = {
 # FEODO
 # =========================================================
 def fetch_feodo_ips():
+
     url = "https://feodotracker.abuse.ch/downloads/ipblocklist.csv"
 
     try:
+
         r = requests.get(url, timeout=20)
+
         if r.status_code != 200:
             return []
 
         ips = []
+
         for line in r.text.splitlines():
+
             if line.startswith("#") or not line.strip():
                 continue
 
@@ -63,6 +73,7 @@ def fetch_abuseipdb_ips():
     }
 
     try:
+
         r = requests.get(
             "https://api.abuseipdb.com/api/v2/blacklist",
             headers=headers,
@@ -78,7 +89,11 @@ def fetch_abuseipdb_ips():
 
         data = r.json().get("data", [])
 
-        return [x.get("ipAddress", "").replace(".", "[.]") for x in data if x.get("ipAddress")]
+        return [
+            x.get("ipAddress", "").replace(".", "[.]")
+            for x in data
+            if x.get("ipAddress")
+        ]
 
     except:
         return []
@@ -87,14 +102,21 @@ def fetch_abuseipdb_ips():
 # MALWAREBAZAAR
 # =========================================================
 def fetch_malware_hashes():
+
     url = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
 
     try:
+
         r = requests.get(url, timeout=20)
+
         if r.status_code != 200:
             return []
 
-        return [line.strip() for line in r.text.splitlines() if line and not line.startswith("#")]
+        return [
+            line.strip()
+            for line in r.text.splitlines()
+            if line and not line.startswith("#")
+        ]
 
     except:
         return []
@@ -103,10 +125,19 @@ def fetch_malware_hashes():
 # THREATFOX
 # =========================================================
 def fetch_threatfox_domains():
+
     url = "https://threatfox.abuse.ch/api/v1/"
 
     try:
-        r = requests.post(url, json={"query": "get_iocs", "days": 1}, timeout=20)
+
+        r = requests.post(
+            url,
+            json={
+                "query": "get_iocs",
+                "days": 1
+            },
+            timeout=20
+        )
 
         if r.status_code != 200:
             return []
@@ -114,8 +145,11 @@ def fetch_threatfox_domains():
         data = r.json().get("data", [])
 
         out = []
+
         for item in data:
+
             ioc = item.get("ioc", "")
+
             if "." in ioc and not ioc.startswith("http"):
                 out.append(ioc.replace(".", "[.]"))
 
@@ -135,18 +169,28 @@ def fetch_urlscan_domains():
     url = "https://urlscan.io/api/v1/search/?q=visibility:public"
 
     try:
-        r = requests.get(url, headers=urlscan_headers, timeout=20)
+
+        r = requests.get(
+            url,
+            headers=urlscan_headers,
+            timeout=20
+        )
 
         if r.status_code != 200:
             return []
 
         data = r.json().get("results", [])
 
-        return [
-            x.get("page", {}).get("domain", "").replace(".", "[.]")
-            for x in data
-            if x.get("page", {}).get("domain")
-        ]
+        out = []
+
+        for item in data:
+
+            domain = item.get("page", {}).get("domain")
+
+            if domain:
+                out.append(domain.replace(".", "[.]"))
+
+        return out
 
     except:
         return []
@@ -155,9 +199,11 @@ def fetch_urlscan_domains():
 # URLHAUS
 # =========================================================
 def fetch_urlhaus():
+
     url = "https://urlhaus-api.abuse.ch/v1/urls/recent/"
 
     try:
+
         r = requests.get(url, timeout=20)
 
         if r.status_code != 200:
@@ -166,11 +212,18 @@ def fetch_urlhaus():
         data = r.json().get("urls", [])
 
         domains = []
+
         for item in data:
+
             u = item.get("url", "")
+
             if "://" in u:
-                dom = u.split("/")[2]
-                domains.append(dom.replace(".", "[.]"))
+
+                try:
+                    dom = u.split("/")[2]
+                    domains.append(dom.replace(".", "[.]"))
+                except:
+                    pass
 
         return [], domains
 
@@ -181,91 +234,220 @@ def fetch_urlhaus():
 # EMAILS
 # =========================================================
 def extract_emails(domains):
+
     out = []
+
     for d in domains:
+
         d = d.replace("[.]", ".")
+
         if d.startswith("www."):
             d = d[4:]
+
         out.append(f"abuse@{d}")
+
     return sorted(set(out))
 
 # =========================================================
 # HTML TEMPLATE
 # =========================================================
 def init_html(path):
+
     with open(path, "w", encoding="utf-8") as f:
+
         f.write(f"""<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Daily IOC – {today}</title>
 
 <style>
-* {{ box-sizing: border-box; }}
+
+* {{
+    box-sizing: border-box;
+}}
+
+html,
+body {{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}}
 
 body {{
     background-color: #121212;
     color: #ffffff;
     font-family: 'Segoe UI', sans-serif;
+
     margin: 0;
     padding: 2rem;
+
+    line-height: 1.6;
 }}
 
 .container {{
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
 }}
 
-h1, h2 {{ color: #ff4500; }}
+h1,
+h2 {{
+    color: #ff4500;
+    word-break: break-word;
+}}
+
+p {{
+    overflow-wrap: break-word;
+}}
+
+a {{
+    color: #ff4500;
+    text-decoration: none;
+
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}}
+
+a:hover {{
+    text-decoration: underline;
+}}
+
+.back-link {{
+    display: inline-block;
+    margin-bottom: 1rem;
+}}
+
+.bottom-link {{
+    display: inline-block;
+    margin-top: 2rem;
+}}
+
+.ioc-section {{
+    margin-bottom: 2rem;
+}}
 
 .ioc-box {{
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 10px;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: hidden;
+}}
+
+ul {{
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    max-width: 100%;
 }}
 
 li {{
     padding: 0.7rem 1rem;
+
     border-bottom: 1px solid #2a2a2a;
+
     font-family: monospace;
+    font-size: 0.95rem;
+
+    white-space: normal;
+
+    word-break: break-all;
+    overflow-wrap: anywhere;
+
+    max-width: 100%;
 }}
 
-a {{ color: #ff4500; }}
+li:last-child {{
+    border-bottom: none;
+}}
+
+@media (max-width: 768px) {{
+
+    body {{
+        padding: 1rem;
+        font-size: 0.95rem;
+    }}
+
+    .container {{
+        max-width: 100%;
+    }}
+
+    h1 {{
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }}
+
+    h2 {{
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }}
+
+    li {{
+        font-size: 0.82rem;
+        padding: 0.65rem 0.8rem;
+    }}
+}}
+
 </style>
 
 </head>
+
 <body>
+
 <div class="container">
 
 <h1>IOC Report</h1>
 
-<a href="/daily-ioc/">← Back to IOC archive</a>
+<a class="back-link" href="/daily-ioc/">
+← Back to IOC archive
+</a>
 
 <p>Date: {today}</p>
 
 <!-- CONTENT -->
 
+<a class="bottom-link" href="/daily-ioc/">
+← Back to IOC archive
+</a>
+
 </div>
+
 </body>
 </html>
 """)
 
 # =========================================================
-# SECTION UPDATE
+# UPDATE SECTION
 # =========================================================
 def update_section(title, items, path):
 
     items = sorted(set(items))
 
     html = f"""
-<section>
+<section class="ioc-section">
+
 <h2>{title}</h2>
+
 <div class="ioc-box">
+
 <ul>
 {''.join(f"<li>{i}</li>" for i in items)}
+
 </ul>
+
 </div>
+
 </section>
 """
 
@@ -275,12 +457,18 @@ def update_section(title, items, path):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    pattern = re.compile(rf"<section>\s*<h2>{re.escape(title)}</h2>.*?</section>", re.S)
+    pattern = re.compile(
+        rf"<section class=\"ioc-section\">\s*<h2>{re.escape(title)}</h2>.*?</section>",
+        re.DOTALL
+    )
 
     if pattern.search(content):
         content = pattern.sub(html, content)
     else:
-        content = content.replace("<!-- CONTENT -->", f"<!-- CONTENT -->\n{html}")
+        content = content.replace(
+            "<!-- CONTENT -->",
+            f"<!-- CONTENT -->\n{html}"
+        )
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -289,54 +477,168 @@ def update_section(title, items, path):
 # PIPELINE
 # =========================================================
 feodo = fetch_feodo_ips()
+
 abuse = fetch_abuseipdb_ips()
+
 urlhaus_ips, urlhaus_domains = fetch_urlhaus()
 
-ips = sorted(set(feodo + abuse + urlhaus_ips))
+ips = sorted(set(
+    feodo +
+    abuse +
+    urlhaus_ips
+))
+
 hashes = fetch_malware_hashes()
-domains = sorted(set(fetch_threatfox_domains() + fetch_urlscan_domains() + urlhaus_domains))
+
+domains = sorted(set(
+    fetch_threatfox_domains() +
+    fetch_urlscan_domains() +
+    urlhaus_domains
+))
+
 emails = extract_emails(domains)
 
+# =========================================================
+# WRITE HTML
+# =========================================================
 update_section("Malicious IPs", ips, output_file)
+
 update_section("File Hashes", hashes, output_file)
+
 update_section("Domains", domains, output_file)
+
 update_section("Emails", emails, output_file)
 
 # =========================================================
-# ARCHIVE (FIX: always rebuilt AFTER all writes)
+# ARCHIVE INDEX
 # =========================================================
 index_path = os.path.join(base_folder, "index.html")
 
 entries = []
+
 for name in os.listdir(base_folder):
+
     path = os.path.join(base_folder, name)
-    if os.path.isdir(path) and name.startswith("ioc-"):
+
+    if (
+        os.path.isdir(path)
+        and name.startswith("ioc-")
+    ):
         entries.append(name.replace("ioc-", ""))
 
 entries.sort(reverse=True)
 
 with open(index_path, "w", encoding="utf-8") as f:
+
     f.write("""<!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
-<meta charset='UTF-8' />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>IOC Archive</title>
+
 <style>
-body { background:#121212; color:#fff; font-family:sans-serif; padding:2rem; }
-h1 { color:#ff4500; }
-a { color:#ff4500; }
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff4500;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.6rem 0;
+
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #ff4500;
+    text-decoration: none;
+
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    li {
+        font-size: 0.95rem;
+    }
+}
+
 </style>
+
 </head>
+
 <body>
+
+<div class="container">
+
 <h1>IOC Archive</h1>
+
+<p>
+<a href="/">← Back to homepage</a>
+</p>
+
 <ul>
 """)
 
     for d in entries:
-        f.write(f"<li><a href='/daily-ioc/ioc-{d}/'>{d}</a></li>\n")
+
+        f.write(
+            f'<li><a href="/daily-ioc/ioc-{d}/">{d}</a></li>\n'
+        )
 
     f.write("""
 </ul>
+
+</div>
+
 </body>
 </html>
 """)
@@ -344,7 +646,12 @@ a { color:#ff4500; }
 # =========================================================
 # JSON EXPORT
 # =========================================================
-with open(os.path.join(base_folder, "iocs.json"), "w", encoding="utf-8") as f:
+with open(
+    os.path.join(base_folder, "iocs.json"),
+    "w",
+    encoding="utf-8"
+) as f:
+
     json.dump({
         "date": today,
         "ips": ips,
