@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Grandoreiro Malware and BTMOB RAT Campaigns Target Windows and Android Users",
-      "url": "https://thehackernews.com/2026/05/grandoreiro-malware-and-btmob-rat.html",
-      "published": "Wed, 27 May 2026 21:40:21 +0530",
+      "title": "Critical Gogs RCE Vulnerability Lets Any Authenticated User Execute Arbitrary Code",
+      "url": "https://thehackernews.com/2026/05/critical-gogs-rce-vulnerability-lets.html",
+      "published": "Thu, 28 May 2026 22:54:44 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Removal",
-      "url": "https://thehackernews.com/2026/05/microsoft-slams-public-zero-day.html",
-      "published": "Thu, 28 May 2026 19:23:52 +0530",
+      "title": "Threat Actors Exploit Critical FortiClient EMS Flaw to Deploy Credential Stealer",
+      "url": "https://thehackernews.com/2026/05/threat-actors-exploit-critical.html",
+      "published": "Thu, 28 May 2026 20:56:04 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "ThreatsDay Bulletin: Claude Security Plugin, Azure Priv-Esc, Kali365 MFA Bypass, FIFA Scams +15 More",
-      "url": "https://thehackernews.com/2026/05/threatsday-bulletin-claude-security.html",
-      "published": "Thu, 28 May 2026 19:03:16 +0530",
-      "source": "The Hacker News"
+      "title": "Anthropic confirms Claude Mythos-class models will roll out to the public",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-mythos-class-models-will-roll-out-to-the-public/",
+      "published": "Thu, 28 May 2026 20:21:03 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
