@@ -257,22 +257,18 @@ def init_html(path):
 
         f.write(f"""<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Daily IOC – {today}</title>
 
 <style>
-
 * {{
     box-sizing: border-box;
 }}
 
-html,
-body {{
+html, body {{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -282,10 +278,8 @@ body {{
     background-color: #121212;
     color: #ffffff;
     font-family: 'Segoe UI', sans-serif;
-
     margin: 0;
     padding: 2rem;
-
     line-height: 1.6;
 }}
 
@@ -295,26 +289,16 @@ body {{
     margin: 0 auto;
 }}
 
-h1,
-h2 {{
+h1, h2 {{
     color: #ff4500;
     word-break: break-word;
-}}
-
-p {{
-    overflow-wrap: break-word;
 }}
 
 a {{
     color: #ff4500;
     text-decoration: none;
-
     word-break: break-word;
     overflow-wrap: anywhere;
-}}
-
-a:hover {{
-    text-decoration: underline;
 }}
 
 .back-link {{
@@ -335,74 +319,31 @@ a:hover {{
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 10px;
-
     width: 100%;
-    max-width: 100%;
-
     overflow-x: hidden;
 }}
 
 ul {{
     list-style: none;
-
     padding: 0;
     margin: 0;
-
-    width: 100%;
-    max-width: 100%;
 }}
 
 li {{
     padding: 0.7rem 1rem;
-
     border-bottom: 1px solid #2a2a2a;
-
     font-family: monospace;
-    font-size: 0.95rem;
-
-    white-space: normal;
-
     word-break: break-all;
-    overflow-wrap: anywhere;
-
-    max-width: 100%;
-}}
-
-li:last-child {{
-    border-bottom: none;
 }}
 
 @media (max-width: 768px) {{
-
     body {{
         padding: 1rem;
-        font-size: 0.95rem;
-    }}
-
-    .container {{
-        max-width: 100%;
-    }}
-
-    h1 {{
-        font-size: 1.7rem;
-        line-height: 1.2;
-    }}
-
-    h2 {{
-        font-size: 1.25rem;
-        line-height: 1.3;
-    }}
-
-    li {{
-        font-size: 0.82rem;
-        padding: 0.65rem 0.8rem;
     }}
 }}
-
 </style>
 
 </head>
-
 <body>
 
 <div class="container">
@@ -422,7 +363,6 @@ li:last-child {{
 </a>
 
 </div>
-
 </body>
 </html>
 """)
@@ -436,18 +376,12 @@ def update_section(title, items, path):
 
     html = f"""
 <section class="ioc-section">
-
 <h2>{title}</h2>
-
 <div class="ioc-box">
-
 <ul>
 {''.join(f"<li>{i}</li>" for i in items)}
-
 </ul>
-
 </div>
-
 </section>
 """
 
@@ -465,10 +399,7 @@ def update_section(title, items, path):
     if pattern.search(content):
         content = pattern.sub(html, content)
     else:
-        content = content.replace(
-            "<!-- CONTENT -->",
-            f"<!-- CONTENT -->\n{html}"
-        )
+        content = content.replace("<!-- CONTENT -->", f"<!-- CONTENT -->\n{html}")
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -477,36 +408,17 @@ def update_section(title, items, path):
 # PIPELINE
 # =========================================================
 feodo = fetch_feodo_ips()
-
 abuse = fetch_abuseipdb_ips()
-
 urlhaus_ips, urlhaus_domains = fetch_urlhaus()
 
-ips = sorted(set(
-    feodo +
-    abuse +
-    urlhaus_ips
-))
-
+ips = sorted(set(feodo + abuse + urlhaus_ips))
 hashes = fetch_malware_hashes()
-
-domains = sorted(set(
-    fetch_threatfox_domains() +
-    fetch_urlscan_domains() +
-    urlhaus_domains
-))
-
+domains = sorted(set(fetch_threatfox_domains() + fetch_urlscan_domains() + urlhaus_domains))
 emails = extract_emails(domains)
 
-# =========================================================
-# WRITE HTML
-# =========================================================
 update_section("Malicious IPs", ips, output_file)
-
 update_section("File Hashes", hashes, output_file)
-
 update_section("Domains", domains, output_file)
-
 update_section("Emails", emails, output_file)
 
 # =========================================================
@@ -517,13 +429,9 @@ index_path = os.path.join(base_folder, "index.html")
 entries = []
 
 for name in os.listdir(base_folder):
-
     path = os.path.join(base_folder, name)
 
-    if (
-        os.path.isdir(path)
-        and name.startswith("ioc-")
-    ):
+    if os.path.isdir(path) and name.startswith("ioc-"):
         entries.append(name.replace("ioc-", ""))
 
 entries.sort(reverse=True)
@@ -532,132 +440,65 @@ with open(index_path, "w", encoding="utf-8") as f:
 
     f.write("""<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>IOC Archive</title>
 
 <style>
-
-* {
-    box-sizing: border-box;
-}
-
-html,
 body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    background:#121212;
+    color:#fff;
+    font-family:sans-serif;
+    padding:2rem;
 }
-
-body {
-    background: #121212;
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-
-    margin: 0;
-    padding: 2rem;
-}
-
-.container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h1 {
-    color: #ff4500;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.6rem 0;
-
-    word-break: break-word;
-    overflow-wrap: anywhere;
-}
-
-a {
-    color: #ff4500;
-    text-decoration: none;
-
-    word-break: break-word;
-    overflow-wrap: anywhere;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-
-    body {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    li {
-        font-size: 0.95rem;
-    }
-}
-
+a { color:#ff4500; }
 </style>
 
 </head>
-
 <body>
 
-<div class="container">
-
 <h1>IOC Archive</h1>
-
-<p>
-<a href="/">← Back to homepage</a>
-</p>
 
 <ul>
 """)
 
     for d in entries:
-
-        f.write(
-            f'<li><a href="/daily-ioc/ioc-{d}/">{d}</a></li>\n'
-        )
+        f.write(f"<li><a href='/daily-ioc/ioc-{d}/'>{d}</a></li>\n")
 
     f.write("""
 </ul>
-
-</div>
 
 </body>
 </html>
 """)
 
 # =========================================================
-# JSON EXPORT
+# JSON EXPORT (FIXED FOR LANDING PAGE)
 # =========================================================
-with open(
-    os.path.join(base_folder, "iocs.json"),
-    "w",
-    encoding="utf-8"
-) as f:
+latest_json_path = os.path.join(base_folder, "iocs.json")
 
+entries_json = []
+
+for name in os.listdir(base_folder):
+
+    path = os.path.join(base_folder, name)
+
+    if os.path.isdir(path) and name.startswith("ioc-"):
+
+        date_str = name.replace("ioc-", "")
+
+        entries_json.append({
+            "date": date_str,
+            "folder": name
+        })
+
+entries_json.sort(key=lambda x: x["date"], reverse=True)
+
+with open(latest_json_path, "w", encoding="utf-8") as f:
     json.dump({
-        "date": today,
-        "ips": ips,
-        "hashes": hashes,
-        "domains": domains,
-        "emails": emails
+        "items": entries_json[:3]
     }, f, indent=2)
 
 print("[+] IOC generated:", output_file)
