@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+
+    font-family: 'Segoe UI', sans-serif;
+
+    background-color: #121212;
+    color: #ffffff;
+
+    line-height: 1.6;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Headings */
+h1, h2 {
+    color: #ff4500;
+    word-break: break-word;
+    margin-top: 0;
+}
+
+/* Links */
+a {
+    color: #ff4500;
+    text-decoration: none;
+
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* IOC blocks */
+.ioc-section {
+    margin-bottom: 2rem;
+}
+
+.ioc-box {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid #2a2a2a;
+
+    font-family: monospace;
+
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Back links */
+.back-link,
+.bottom-link {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    li {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
