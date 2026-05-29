@@ -32,7 +32,6 @@ urlscan_headers = {
 # FEODO
 # =========================================================
 def fetch_feodo_ips():
-
     url = "https://feodotracker.abuse.ch/downloads/ipblocklist.csv"
 
     try:
@@ -41,7 +40,6 @@ def fetch_feodo_ips():
             return []
 
         ips = []
-
         for line in r.text.splitlines():
             if line.startswith("#") or not line.strip():
                 continue
@@ -52,7 +50,6 @@ def fetch_feodo_ips():
                 ips.append(ip.replace(".", "[.]"))
 
         return ips
-
     except:
         return []
 
@@ -60,7 +57,6 @@ def fetch_feodo_ips():
 # ABUSEIPDB
 # =========================================================
 def fetch_abuseipdb_ips():
-
     if not ABUSEIPDB_API_KEY:
         return []
 
@@ -81,7 +77,6 @@ def fetch_abuseipdb_ips():
             return []
 
         data = r.json().get("data", [])
-
         return [x.get("ipAddress", "").replace(".", "[.]") for x in data if x.get("ipAddress")]
 
     except:
@@ -91,7 +86,6 @@ def fetch_abuseipdb_ips():
 # MALWAREBAZAAR
 # =========================================================
 def fetch_malware_hashes():
-
     url = "https://bazaar.abuse.ch/export/txt/sha256/recent/"
 
     try:
@@ -100,7 +94,6 @@ def fetch_malware_hashes():
             return []
 
         return [line.strip() for line in r.text.splitlines() if line and not line.startswith("#")]
-
     except:
         return []
 
@@ -108,7 +101,6 @@ def fetch_malware_hashes():
 # THREATFOX
 # =========================================================
 def fetch_threatfox_domains():
-
     url = "https://threatfox.abuse.ch/api/v1/"
 
     try:
@@ -122,7 +114,6 @@ def fetch_threatfox_domains():
             return []
 
         data = r.json().get("data", [])
-
         out = []
 
         for item in data:
@@ -139,7 +130,6 @@ def fetch_threatfox_domains():
 # URLSCAN
 # =========================================================
 def fetch_urlscan_domains():
-
     if not URLSCAN_API_KEY:
         return []
 
@@ -152,7 +142,6 @@ def fetch_urlscan_domains():
             return []
 
         data = r.json().get("results", [])
-
         return [x.get("page", {}).get("domain", "").replace(".", "[.]")
                 for x in data if x.get("page", {}).get("domain")]
 
@@ -163,7 +152,6 @@ def fetch_urlscan_domains():
 # URLHAUS
 # =========================================================
 def fetch_urlhaus():
-
     url = "https://urlhaus-api.abuse.ch/v1/urls/recent/"
 
     try:
@@ -172,7 +160,6 @@ def fetch_urlhaus():
             return [], []
 
         data = r.json().get("urls", [])
-
         domains = []
 
         for item in data:
@@ -193,7 +180,6 @@ def fetch_urlhaus():
 # EMAILS
 # =========================================================
 def extract_emails(domains):
-
     out = []
 
     for d in domains:
@@ -205,25 +191,34 @@ def extract_emails(domains):
     return sorted(set(out))
 
 # =========================================================
-# HTML TEMPLATE
+# HTML TEMPLATE (FIXED CSS LINK)
 # =========================================================
 def init_html(path):
-
     with open(path, "w", encoding="utf-8") as f:
         f.write(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Daily IOC – {today}</title>
+
+<link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
 <div class="container">
+
 <h1>IOC Report</h1>
+
 <a href="/daily-ioc/">← Back to IOC archive</a>
+
 <p>Date: {today}</p>
+
 <!-- CONTENT -->
+
 <a href="/daily-ioc/">← Back to IOC archive</a>
+
 </div>
 </body>
 </html>
@@ -233,7 +228,6 @@ def init_html(path):
 # UPDATE SECTION
 # =========================================================
 def update_section(title, items, path):
-
     items = sorted(set(items))
 
     html = f"""
@@ -291,15 +285,23 @@ entries = sorted(
 
 with open(index_path, "w", encoding="utf-8") as f:
     f.write("""<!DOCTYPE html>
-<html lang="en"><body><h1>IOC Archive</h1><ul>""")
+<html lang="en">
+<body>
+<h1>IOC Archive</h1>
+<ul>
+""")
 
     for d in entries:
         f.write(f"<li><a href='/daily-ioc/ioc-{d}/'>{d}</a></li>\n")
 
-    f.write("</ul></body></html>")
+    f.write("""
+</ul>
+</body>
+</html>
+""")
 
 # =========================================================
-# JSON EXPORT (FIX FOR LANDING)
+# JSON EXPORT (LANDING FIXED)
 # =========================================================
 latest_json_path = os.path.join(base_folder, "iocs.json")
 
