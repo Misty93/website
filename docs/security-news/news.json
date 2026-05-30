@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Critical Gogs RCE Vulnerability Lets Any Authenticated User Execute Arbitrary Code",
-      "url": "https://thehackernews.com/2026/05/critical-gogs-rce-vulnerability-lets.html",
-      "published": "Thu, 28 May 2026 22:54:44 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Carnival Data Breach Exposes Personal Data of Nearly 6 Million Customers",
       "url": "https://securityaffairs.com/192833/uncategorized/carnival-data-breach-exposes-personal-data-of-nearly-6-million-customers.html",
       "published": "Thu, 28 May 2026 19:32:55 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-35616: FortiClient EMS Flaw Actively Exploited in Malware Attacks",
-      "url": "https://securityaffairs.com/192817/malware/cve-2026-35616-forticlient-ems-flaw-actively-exploited-in-malware-attacks.html",
-      "published": "Thu, 28 May 2026 16:05:32 +0000",
-      "source": "Security Affairs"
+      "title": "ChatGPhish Vulnerability Turns ChatGPT Web Summaries Into a Phishing Surface",
+      "url": "https://thehackernews.com/2026/05/chatgphish-vulnerability-turns-chatgpt.html",
+      "published": "Fri, 29 May 2026 23:37:12 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Attackers Use LLM Agent for Post-Exploitation After Marimo CVE-2026-39987 Exploit",
+      "url": "https://thehackernews.com/2026/05/attackers-use-llm-agent-for-post.html",
+      "published": "Fri, 29 May 2026 20:09:56 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
