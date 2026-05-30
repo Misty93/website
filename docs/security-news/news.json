@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Carnival Data Breach Exposes Personal Data of Nearly 6 Million Customers",
-      "url": "https://securityaffairs.com/192833/uncategorized/carnival-data-breach-exposes-personal-data-of-nearly-6-million-customers.html",
-      "published": "Thu, 28 May 2026 19:32:55 +0000",
+      "title": "PAN-OS GlobalProtect Authentication Bypass (CVE-2026-0257) Under Active Exploitation",
+      "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
+      "published": "Sat, 30 May 2026 12:11:26 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Signal Phishing Campaign Targets Journalists and Activists to Steal Backup Recovery Keys",
+      "url": "https://securityaffairs.com/192899/security/signal-phishing-campaign-targets-journalists-and-activists-to-steal-backup-recovery-keys.html",
+      "published": "Sat, 30 May 2026 09:25:45 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "ChatGPhish Vulnerability Turns ChatGPT Web Summaries Into a Phishing Surface",
-      "url": "https://thehackernews.com/2026/05/chatgphish-vulnerability-turns-chatgpt.html",
-      "published": "Fri, 29 May 2026 23:37:12 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Attackers Use LLM Agent for Post-Exploitation After Marimo CVE-2026-39987 Exploit",
-      "url": "https://thehackernews.com/2026/05/attackers-use-llm-agent-for-post.html",
-      "published": "Fri, 29 May 2026 20:09:56 +0530",
-      "source": "The Hacker News"
+      "title": "Botnet of 17 Million Devices Dismantled in the Netherlands",
+      "url": "https://securityaffairs.com/192890/malware/botnet-of-17-million-devices-dismantled-in-the-netherlands.html",
+      "published": "Sat, 30 May 2026 08:16:15 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
