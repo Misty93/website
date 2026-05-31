@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "Dutch Authorities Dismantle Botnet Linked to 17 Million Infected Devices",
+      "url": "https://thehackernews.com/2026/05/dutch-authorities-dismantle-botnet.html",
+      "published": "Sun, 31 May 2026 17:52:12 +0530",
+      "source": "The Hacker News"
+    },
+    {
       "title": "ShinyHunters Leaks Charter Communications Data, Potentially Impacting 5 Million Customers",
       "url": "https://securityaffairs.com/192907/uncategorized/shinyhunters-leaks-charter-communications-data-potentially-impacting-5-million-customers.html",
       "published": "Sat, 30 May 2026 16:33:14 +0000",
@@ -11,12 +17,6 @@
       "url": "https://www.bleepingcomputer.com/news/security/palo-alto-globalprotect-vpn-auth-bypass-flaw-now-exploited-in-attacks/",
       "published": "Sat, 30 May 2026 14:02:51 -0400",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "PAN-OS GlobalProtect Authentication Bypass (CVE-2026-0257) Under Active Exploitation",
-      "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
-      "published": "Sat, 30 May 2026 12:11:26 +0530",
-      "source": "The Hacker News"
     }
   ]
 }
