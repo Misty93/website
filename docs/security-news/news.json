@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "ShinyHunters Leaks Charter Communications Data, Potentially Impacting 5 Million Customers",
+      "url": "https://securityaffairs.com/192907/uncategorized/shinyhunters-leaks-charter-communications-data-potentially-impacting-5-million-customers.html",
+      "published": "Sat, 30 May 2026 16:33:14 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Palo Alto GlobalProtect VPN auth bypass flaw now exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-globalprotect-vpn-auth-bypass-flaw-now-exploited-in-attacks/",
+      "published": "Sat, 30 May 2026 14:02:51 -0400",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "PAN-OS GlobalProtect Authentication Bypass (CVE-2026-0257) Under Active Exploitation",
       "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
       "published": "Sat, 30 May 2026 12:11:26 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Signal Phishing Campaign Targets Journalists and Activists to Steal Backup Recovery Keys",
-      "url": "https://securityaffairs.com/192899/security/signal-phishing-campaign-targets-journalists-and-activists-to-steal-backup-recovery-keys.html",
-      "published": "Sat, 30 May 2026 09:25:45 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Botnet of 17 Million Devices Dismantled in the Netherlands",
-      "url": "https://securityaffairs.com/192890/malware/botnet-of-17-million-devices-dismantled-in-the-netherlands.html",
-      "published": "Sat, 30 May 2026 08:16:15 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
