@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "CVE-2026-0257: Rapid7 Caught Attackers Abusing Forged VPN Cookies Against Multiple Customers",
-      "url": "https://securityaffairs.com/192933/security/cve-2026-0257-rapid7-caught-attackers-abusing-forged-vpn-cookies-against-multiple-customers.html",
-      "published": "Sun, 31 May 2026 17:52:29 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Dutch Authorities Dismantle Botnet Linked to 17 Million Infected Devices",
-      "url": "https://thehackernews.com/2026/05/dutch-authorities-dismantle-botnet.html",
-      "published": "Sun, 31 May 2026 17:52:12 +0530",
+      "title": "\u26a1 Weekly Recap: New Linux Flaw, PAN-OS Exploit, AI-Powered Attacks, OAuth Phishing and More",
+      "url": "https://thehackernews.com/2026/06/weekly-recap-new-linux-flaw-pan-os.html",
+      "published": "Mon, 01 Jun 2026 19:29:54 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 99",
-      "url": "https://securityaffairs.com/192928/security/security-affairs-malware-newsletter-round-99.html",
-      "published": "Sun, 31 May 2026 14:53:47 +0000",
-      "source": "Security Affairs"
+      "title": "China-Aligned Groups Ramp Up Attacks: Dragon Weave Hits Czech Republic & Taiwan",
+      "url": "https://thehackernews.com/2026/06/china-aligned-groups-ramp-up-attacks.html",
+      "published": "Mon, 01 Jun 2026 17:24:24 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "The Security Growth Platform: Why MSPs Are Moving Beyond vCISO Tools",
+      "url": "https://thehackernews.com/2026/06/the-security-growth-platform-why-msps.html",
+      "published": "Mon, 01 Jun 2026 17:00:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
