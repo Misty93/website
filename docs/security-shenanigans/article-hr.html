@@ -82,6 +82,172 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Povratak na Shenanigans</a>
 
+<div class="article-date">02.06.2026.</div>
+
+<h2>Tri vatrozida, tri filozofije</h2>
+
+<p>
+Kada se spomene kućni vatrozid, mnogi i dalje zamišljaju uređaj koji samo propušta ili blokira promet između lokalne mreže i interneta. Međutim, moderna rješenja odavno su prerasla tu ulogu.
+</p>
+
+<p>
+Današnje vrste vatrozida mogu analizirati aplikacijski promet, provoditi SSL/TLS inspekciju, koristiti podatke iz threat intelligence izvora, prepoznavati poznate obrasce napada i donositi sigurnosne odluke na temelju mnogo više od IP adrese i porta.
+</p>
+
+<p>
+Zahvaljujući tome, tehnologije koje su nekada bile rezervirane za poslovna okruženja danas su dostupne i korisnicima koji žele više kontrole nad vlastitom mrežom, bilo da je riječ o učenju, testiranju novih tehnologija ili izgradnji kućnog laba.
+</p>
+
+<p>
+Za ovu usporedbu fokusirala sam se na tri rješenja koja se najčešće spominju među mrežnim administratorima i entuzijastima: Sophos Firewall Home Edition, OPNsense i pfSense.
+</p>
+
+<p>
+Iako sva tri proizvoda bez problema mogu odraditi osnovne zadaće poput rutiranja, NAT-a, VPN-a i segmentacije mreže, razlike postaju vidljive kada se krene analizirati sigurnosne mogućnosti, integracije, način administracije i ukupnu filozofiju proizvoda.
+</p>
+
+<h3>Sophos Firewall Home Edition</h3>
+
+<p>
+Sophos Firewall Home Edition temelji se na istoj platformi koja se koristi i u poslovnim okruženjima. Korisnik tako dobiva pristup velikom broju funkcionalnosti koje se inače susreću u znatno skupljim komercijalnim rješenjima.
+</p>
+
+<p>
+Uz standardna pravila filtriranja prometa dostupni su IPS, web filtering, application control, SSL/TLS inspekcija, geo-IP filtriranje, zaštita od različitih mrežnih napada te napredni mehanizmi za otkrivanje prijetnji.
+</p>
+
+<p>
+Posebno zanimljiv dio platforme predstavlja Extended Threat Feeds. Putem API-ja moguće je povezati vanjske izvore podataka te automatski uvoziti IOC-eve poput zlonamjernih IP adresa, domena ili URL-ova. Na taj način vatrozid može koristiti informacije iz threat intelligence platformi, vlastitih IOC lista ili drugih sigurnosnih sustava i na temelju njih automatski donositi odluke o blokiranju ili označavanju prometa.
+</p>
+
+<p>
+Za korisnike koji žele eksperimentirati s automatizacijom, integracijama i modernim pristupom obrani riječ je o vrlo zanimljivoj mogućnosti koja se rijetko viđa u besplatnim kućnim izdanjima.
+</p>
+
+<p>
+Ono što mi se posebno sviđa jest činjenica da većina funkcionalnosti dolazi integrirana unutar samog proizvoda. Nema potrebe za instalacijom dodatnih paketa ili povezivanjem više različitih komponenti kako bi se dobile napredne sigurnosne mogućnosti.
+</p>
+
+<p>
+Implementacija je relativno jednostavna, administracijsko sučelje pregledno, a velik broj opcija dostupan je odmah nakon instalacije. Upravo zbog toga Sophos ostavlja dojam vrlo zaokruženog rješenja koje uspješno spaja jednostavnost korištenja i napredne sigurnosne mogućnosti.
+</p>
+
+<h3>OPNsense</h3>
+
+<p>
+OPNsense predstavlja nešto drugačiju filozofiju.
+</p>
+
+<p>
+Riječ je o open source projektu koji korisniku pruža vrlo veliku razinu fleksibilnosti i kontrole. Umjesto unaprijed definiranog pristupa, administrator sam odlučuje koje će funkcionalnosti koristiti i na koji način će ih implementirati.
+</p>
+
+<p>
+Jedna od najvećih prednosti OPNsensea svakako je bogat ekosustav dodataka. Alati poput Suricate, WireGuarda, Zenarmora, HAProxyja i brojnih drugih servisa mogu se integrirati u postojeće okruženje bez većih poteškoća.
+</p>
+
+<p>
+Takav pristup omogućuje izgradnju vrlo moćnog sustava prilagođenog konkretnim potrebama korisnika. S druge strane, zahtijeva više vremena za konfiguraciju, održavanje i razumijevanje pojedinih komponenti.
+</p>
+
+<p>
+Za administratore koji vole imati potpunu kontrolu nad svakim detaljem infrastrukture upravo je to često najveća prednost OPNsensea.
+</p>
+
+<h3>pfSense</h3>
+
+<p>
+pfSense je već godinama jedno od najpoznatijih imena kada je riječ o kućnim i manjim poslovnim implementacijama.
+</p>
+
+<p>
+Njegova najveća prednost leži u zrelosti platforme, velikoj zajednici korisnika i ogromnoj količini dostupne dokumentacije. Gotovo svaki problem na koji možete naići već je netko ranije dokumentirao ili riješio.
+</p>
+
+<p>
+Funkcionalno gledano, pfSense i dalje predstavlja vrlo sposobno rješenje koje može zadovoljiti potrebe većine korisnika. Stabilan je, provjeren i dobro poznat mrežnim administratorima.
+</p>
+
+<p>
+Ipak, posljednjih godina dio zajednice okreće se OPNsenseu, prvenstveno zbog otvorenijeg modela razvoja i nešto bržeg uvođenja pojedinih funkcionalnosti.
+</p>
+
+<h3>Sigurnost i ranjivosti</h3>
+
+<p>
+Prilikom usporedbe sigurnosnih proizvoda često se postavlja pitanje koji je od njih najsigurniji.
+</p>
+
+<p>
+U stvarnosti odgovor nije toliko jednostavan.
+</p>
+
+<p>
+Sophos je imao nekoliko ozbiljnih ranjivosti koje su omogućavale udaljeno izvršavanje koda i druge oblike kompromitacije sustava. Upravo zbog velike prisutnosti u poslovnim okruženjima takvi propusti često privlače značajnu pažnju sigurnosne zajednice.
+</p>
+
+<p>
+S druge strane, i OPNsense i pfSense redovito objavljuju sigurnosne zakrpe za novootkrivene propuste. Sama činjenica da proizvod ima CVE ne govori mnogo o njegovoj kvaliteti. Puno je važnije koliko brzo proizvođač reagira, koliko transparentno komunicira problem i koliko jednostavno korisnici mogu primijeniti dostupne zakrpe.
+</p>
+
+<p>
+Vrijedi spomenuti i koncept tehnološke raznolikosti.
+</p>
+
+<p>
+Kada se govori o sigurnosnoj arhitekturi, cilj ne mora uvijek biti pronaći jedno savršeno rješenje koje će raditi sve. Ovisno o potrebama i mogućnostima, ponekad ima smisla koristiti više različitih sigurnosnih tehnologija.
+</p>
+
+<p>
+Razlog nije samo funkcionalnost nego i smanjenje rizika. Ako se cijela infrastruktura oslanja na jednog proizvođača, ozbiljna ranjivost može imati znatno veći utjecaj nego u okruženju koje koristi različite tehnologije.
+</p>
+
+<p>
+Različiti proizvođači koriste različite razvojne timove, različite sigurnosne mehanizme i različite pristupe obrani. Propust koji postoji u jednom proizvodu neće nužno postojati i u drugome.
+</p>
+
+<p>
+Iz perspektive napadača homogena infrastruktura često je predvidljivija. Raznolikije okruženje zahtijeva više istraživanja, više prilagodbe i često više resursa za uspješnu kompromitaciju.
+</p>
+
+<p>
+Naravno, veći broj tehnologija donosi i dodatnu složenost pa je uvijek potrebno pronaći ravnotežu između sigurnosti i jednostavnosti održavanja.
+</p>
+
+<h3>Zaključak</h3>
+
+<p>
+Sva tri proizvoda imaju svoje mjesto i svoju publiku.
+</p>
+
+<p>
+OPNsense će se najviše svidjeti korisnicima koji žele maksimalnu fleksibilnost i otvorenost sustava. pfSense ostaje stabilna i provjerena platforma iza koje stoji velika zajednica korisnika i bogata dokumentacija.
+</p>
+
+<p>
+Meni se u ovoj usporedbi najviše istaknuo Sophos Firewall Home Edition. Količina funkcionalnosti dostupnih odmah nakon instalacije, jednostavnost implementacije, integrirane sigurnosne mogućnosti te mogućnost korištenja threat intelligence podataka bez dodatnih alata ostavili su vrlo pozitivan dojam.
+</p>
+
+<p>
+Naravno, ovo nije konačna lista tehnologija koje planiram isprobati.
+</p>
+
+<p>
+Jedan od razloga zašto uopće imam kućni lab jest mogućnost testiranja različitih tehnologija, usporedbe pristupa različitih proizvođača i stjecanja praktičnog iskustva izvan produkcijskih okruženja.
+</p>
+
+<p>
+Zato me zanima i mišljenje šire publike.
+</p>
+
+<p>
+Koje bih rješenje trebala sljedeće implementirati u svom kućnom labu? Koristite li neki vatrozid, IDS/IPS sustav, mrežni alat ili sigurnosni proizvod za koji smatrate da zaslužuje više pažnje nego što je trenutno dobiva?
+</p>
+
+<p>
+Prijedloge slobodno ostavite u komentarima. Možda upravo jedan od njih postane tema nekog budućeg članka.
+</p>
+
 <div class="article-date">01.06.2026.</div>
 
 <h2>Ljudsko biće kao sigurnosni rizik</h2>
