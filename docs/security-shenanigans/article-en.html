@@ -82,6 +82,172 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
+<div class="article-date">02.06.2026.</div>
+
+<h2>Three Firewalls, Three Philosophies</h2>
+
+<p>
+When people think of a home firewall, many still imagine a device that simply allows or blocks traffic between a local network and the internet. However, modern solutions have evolved far beyond that role.
+</p>
+
+<p>
+Today's firewalls can analyze application traffic, perform SSL/TLS inspection, leverage threat intelligence sources, identify known attack patterns, and make security decisions based on far more than just IP addresses and ports.
+</p>
+
+<p>
+As a result, technologies that were once reserved for enterprise environments are now available to anyone looking for greater visibility and control over their network, whether for learning, testing new technologies, or building a home lab.
+</p>
+
+<p>
+For this comparison, I focused on three solutions that are frequently mentioned among network administrators and enthusiasts: Sophos Firewall Home Edition, OPNsense, and pfSense.
+</p>
+
+<p>
+While all three products can easily handle core functions such as routing, NAT, VPN connectivity, and network segmentation, the differences become apparent when evaluating security capabilities, integrations, administration, and overall design philosophy.
+</p>
+
+<h3>Sophos Firewall Home Edition</h3>
+
+<p>
+Sophos Firewall Home Edition is built on the same platform used in enterprise environments. As a result, users gain access to a wide range of capabilities typically found in significantly more expensive commercial solutions.
+</p>
+
+<p>
+In addition to standard traffic filtering rules, it includes IPS, web filtering, application control, SSL/TLS inspection, geo-IP filtering, protection against various network attacks, and advanced threat detection capabilities.
+</p>
+
+<p>
+One particularly interesting feature is Extended Threat Feeds. Through API integrations, administrators can automatically import IOCs such as malicious IP addresses, domains, and URLs from external sources. This allows the firewall to consume data from threat intelligence platforms, custom IOC feeds, or other security systems and automatically make decisions about blocking or flagging traffic.
+</p>
+
+<p>
+For users interested in automation, integrations, and modern defensive strategies, this is a highly valuable capability that is rarely seen in free home editions.
+</p>
+
+<p>
+What stands out most to me is how much functionality is integrated directly into the platform. There is no need to install multiple add-ons or combine several separate components to achieve advanced security functionality.
+</p>
+
+<p>
+Deployment is relatively straightforward, the administrative interface is easy to navigate, and a large number of features are available immediately after installation. Because of this, Sophos feels like a very complete solution that successfully combines ease of use with advanced security capabilities.
+</p>
+
+<h3>OPNsense</h3>
+
+<p>
+OPNsense represents a different philosophy.
+</p>
+
+<p>
+As an open-source project, it offers users a very high level of flexibility and control. Rather than following a predefined approach, administrators decide which components they want to use and how they want to implement them.
+</p>
+
+<p>
+One of OPNsense's greatest strengths is its extensive ecosystem of plugins. Tools such as Suricata, WireGuard, Zenarmor, HAProxy, and many others can be integrated into an existing environment with relative ease.
+</p>
+
+<p>
+This approach enables the creation of highly customized and powerful environments tailored to specific requirements. At the same time, it requires additional time for configuration, maintenance, and understanding the various components involved.
+</p>
+
+<p>
+For administrators who prefer complete control over every aspect of their infrastructure, this is often OPNsense's biggest advantage.
+</p>
+
+<h3>pfSense</h3>
+
+<p>
+pfSense has long been one of the most recognizable names in the home and small business firewall space.
+</p>
+
+<p>
+Its greatest strengths are platform maturity, a large user community, and extensive documentation. Almost any issue you encounter has likely been documented or solved by someone before.
+</p>
+
+<p>
+From a functionality standpoint, pfSense remains a highly capable solution that can satisfy the needs of most users. It is stable, proven, and well known throughout the networking community.
+</p>
+
+<p>
+That said, in recent years part of the community has gradually shifted toward OPNsense, primarily due to its more open development model and faster adoption of certain features.
+</p>
+
+<h3>Security and Vulnerabilities</h3>
+
+<p>
+When comparing security products, one question inevitably comes up: which one is the most secure?
+</p>
+
+<p>
+In reality, the answer is not that simple.
+</p>
+
+<p>
+Sophos has experienced several serious vulnerabilities that allowed remote code execution and other forms of system compromise. Due to its significant presence in enterprise environments, such issues often receive considerable attention from the security community.
+</p>
+
+<p>
+On the other hand, both OPNsense and pfSense regularly release security updates addressing newly discovered vulnerabilities. The mere existence of CVEs says very little about the quality of a product. What matters far more is how quickly vendors respond, how transparently they communicate issues, and how easily users can apply available patches.
+</p>
+
+<p>
+Another concept worth discussing is technological diversity.
+</p>
+
+<p>
+When designing security architecture, the goal is not always to find a single solution capable of doing everything. Depending on requirements and available resources, there can be value in using multiple security technologies.
+</p>
+
+<p>
+The reason is not only functionality but also risk reduction. If an entire infrastructure relies on a single vendor, a critical vulnerability may have a much greater impact than in an environment built on multiple technologies.
+</p>
+
+<p>
+Different vendors use different development teams, security controls, and defensive approaches. A vulnerability affecting one product will not necessarily exist in another.
+</p>
+
+<p>
+From an attacker's perspective, homogeneous environments are often more predictable. More diverse environments typically require additional research, adaptation, and resources to compromise successfully.
+</p>
+
+<p>
+Of course, introducing additional technologies also increases operational complexity, so finding the right balance between security and manageability remains important.
+</p>
+
+<h3>Conclusion</h3>
+
+<p>
+All three products have their place and their audience.
+</p>
+
+<p>
+OPNsense will likely appeal most to users seeking maximum flexibility and openness. pfSense remains a stable and proven platform backed by a large community and extensive documentation.
+</p>
+
+<p>
+In this comparison, Sophos Firewall Home Edition stood out the most to me. The amount of functionality available immediately after deployment, ease of implementation, integrated security capabilities, and the ability to leverage threat intelligence data without additional tools left a very positive impression.
+</p>
+
+<p>
+Of course, this is far from the final list of technologies I plan to explore.
+</p>
+
+<p>
+One of the reasons I maintain a home lab is the opportunity to test different technologies, compare approaches from different vendors, and gain hands-on experience outside production environments.
+</p>
+
+<p>
+That brings me to a question for the wider community.
+</p>
+
+<p>
+What solution should I implement next in my home lab? Are there any firewalls, IDS/IPS platforms, networking tools, or security products that you believe deserve more attention than they currently receive?
+</p>
+
+<p>
+Feel free to leave your suggestions in the comments. One of them might become the subject of a future technical review.
+</p>
+
 <div class="article-date">01.06.2026.</div>
 
 <h2>Human being as a security risk</h2>
