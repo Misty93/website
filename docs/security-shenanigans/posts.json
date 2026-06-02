@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Besplatni Microsoft certifikacijski voucheri — Evo kako do svog!",
-      "file": "article-hr.html#besplatni-microsoft-certifikacijski-voucheri-—-evo-kako-do-svog!",
-      "description": "Nedavno sam naišla na program koji daje 100% discount voucher za Microsoft certifikacijske ispite i mislim da bi više ljudi trebalo znati za ovo.",
-      "date": "26.05.2026."
+      "title": "Tri vatrozida, tri filozofije",
+      "file": "article-hr.html#tri-vatrozida-tri-filozofije",
+      "description": "Kada se spomene kućni vatrozid, mnogi i dalje zamišljaju uređaj koji samo propušta ili blokira promet između lokalne mreže i interneta. Međutim, moderna rješenja odavno su prerasla tu ulogu.",
+      "date": "02.06.2026."
     },
     {
-      "title": "Free Microsoft Certification Vouchers — Here's How to Get Yours!",
-      "file": "article-en.html#free-microsoft-certification-vouchers-—-here's-how-to-get-yours!",
-      "description": "I recently came across a program that gives you a 100% discount voucher for Microsoft certification exams, and I think more people should know about it.",
-      "date": "26.05.2026."
+      "title": "Three Firewalls, Three Philosophies",
+      "file": "article-en.html#three-firewalls-three-philosophies",
+      "description": "When people think of a home firewall, many still imagine a device that simply allows or blocks traffic between a local network and the internet. However, modern solutions have evolved far beyond that role.",
+      "date": "02.06.2026."
     },
     {
-      "title": "Kako konfigurirati kućni SIEM",
-      "file": "article-hr.html#kako-konfigurirati-kućni-siem",
-      "description": "Wazuh je open-source SIEM i XDR platforma koja omogućuje centralizirano prikupljanje, analizu i korelaciju sigurnosnih događaja s endpoint uređaja, mrežnih uređaja i cloud servisa.\nZahvaljujući modularnoj arhitekturi i kombinaciji agent-based i agentless pristupa, idealan je za kućne labove, edukaciju i manje produkcijske okoline.",
-      "date": "08.04.2026."
+      "title": "Ljudsko biće kao sigurnosni rizik",
+      "file": "article-hr.html#ljudsko-biće-kao-sigurnosni-rizik",
+      "description": "Kada se govori o kibernetičkoj sigurnosti, fokus je gotovo uvijek na tehnologiji. Organizacije ulažu značajna sredstva u zaštitne sustave, napredne vatrozide, EDR platforme, sustave za detekciju prijetnji, segmentaciju mreže i višefaktorsku autentikaciju. Provode se sigurnosne procjene, redovito se instaliraju zakrpe i definiraju stroge sigurnosne politike.",
+      "date": "01.06.2026."
     }
   ]
 }
