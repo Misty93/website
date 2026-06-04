@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Google DoubleClick Abused in New Malspam Campaign to Deliver DesckVB RAT",
-      "url": "https://thehackernews.com/2026/06/google-doubleclick-abused-in-new.html",
-      "published": "Wed, 03 Jun 2026 21:59:16 +0530",
+      "title": "Cyber espionage campaign targeted stock exchange executive\u2019s Outlook account",
+      "url": "https://securityaffairs.com/193086/intelligence/cyber-espionage-campaign-targeted-stock-exchange-executives-outlook-account.html",
+      "published": "Wed, 03 Jun 2026 18:13:17 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Claude Code GitHub Action Flaw Let One Malicious Issue Hijack Repositories",
+      "url": "https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html",
+      "published": "Thu, 04 Jun 2026 20:45:26 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Beyond the Zero-Day: See Your Network Like an Attacker | Webinar with HD Moore",
-      "url": "https://thehackernews.com/2026/06/beyond-zero-day-see-your-network-like.html",
-      "published": "Wed, 03 Jun 2026 20:26:46 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft 365 Android Apps Let Any App Steal Account Tokens via Leftover Debug Flag",
-      "url": "https://thehackernews.com/2026/06/microsoft-365-android-apps-let-any-app.html",
-      "published": "Wed, 03 Jun 2026 20:26:35 +0530",
+      "title": "ThreatsDay Bulletin: AI Agents Gone Wrong, Sketchy C2 Tools, ClickFix Tricks, JS Backdoors & 20+ New Stories",
+      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-ai-agents-gone.html",
+      "published": "Thu, 04 Jun 2026 19:30:49 +0530",
       "source": "The Hacker News"
     }
   ]
