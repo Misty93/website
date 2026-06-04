@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "One-Click GitHub Dev Attack Lets Attackers Steal Full GitHub OAuth Tokens",
-      "url": "https://thehackernews.com/2026/06/one-click-github-dev-attack-lets.html",
-      "published": "Wed, 03 Jun 2026 18:28:22 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)",
-      "url": "https://thehackernews.com/2026/06/shrinking-iam-attack-surface-through.html",
-      "published": "Wed, 03 Jun 2026 17:28:00 +0530",
+      "title": "Google DoubleClick Abused in New Malspam Campaign to Deliver DesckVB RAT",
+      "url": "https://thehackernews.com/2026/06/google-doubleclick-abused-in-new.html",
+      "published": "Wed, 03 Jun 2026 21:59:16 +0530",
       "source": "The Hacker News"
     },
     {
       "title": "Beyond the Zero-Day: See Your Network Like an Attacker | Webinar with HD Moore",
       "url": "https://thehackernews.com/2026/06/beyond-zero-day-see-your-network-like.html",
-      "published": "Wed, 03 Jun 2026 16:58:59 +0530",
+      "published": "Wed, 03 Jun 2026 20:26:46 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Microsoft 365 Android Apps Let Any App Steal Account Tokens via Leftover Debug Flag",
+      "url": "https://thehackernews.com/2026/06/microsoft-365-android-apps-let-any-app.html",
+      "published": "Wed, 03 Jun 2026 20:26:35 +0530",
       "source": "The Hacker News"
     }
   ]
