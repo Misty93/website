@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Cisco Patches CVE-2026-20230 in Unified CM as Exploit Code Goes Public",
-      "url": "https://thehackernews.com/2026/06/cisco-patches-cve-2026-20230-in-unified.html",
-      "published": "Thu, 04 Jun 2026 22:25:51 +0530",
-      "source": "The Hacker News"
+      "title": "Brave Software releases Origin for a paid, bloat-free browsing experience",
+      "url": "https://www.bleepingcomputer.com/news/software/brave-software-releases-origin-for-a-paid-bloat-free-browsing-experience/",
+      "published": "Thu, 04 Jun 2026 17:37:10 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Claude Code GitHub Action Flaw Let One Malicious Issue Hijack Repositories",
-      "url": "https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html",
-      "published": "Thu, 04 Jun 2026 20:45:26 +0530",
-      "source": "The Hacker News"
+      "title": "Hola Browser for Windows compromised to deliver cryptominer",
+      "url": "https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/",
+      "published": "Thu, 04 Jun 2026 17:27:25 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Agentic AI Is Transforming Defense, But Only Secure IT Infrastructure Will Maximize It",
-      "url": "https://thehackernews.com/2026/06/agentic-ai-is-transforming-defense-but.html",
-      "published": "Thu, 04 Jun 2026 20:40:00 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. CISA adds Mirasvit Full Page Cache Warmer flaw to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/193156/security/u-s-cisa-adds-mirasvit-full-page-cache-warmer-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Thu, 04 Jun 2026 17:10:17 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
