@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "U.S. CISA adds Mirasvit Full Page Cache Warmer flaw to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/193156/security/u-s-cisa-adds-mirasvit-full-page-cache-warmer-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Thu, 04 Jun 2026 17:10:17 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks",
-      "url": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html",
-      "published": "Fri, 05 Jun 2026 23:35:30 +0530",
+      "title": "Free Apps Are Quietly Turning Smart TVs Into Web-Scraping Proxies for AI",
+      "url": "https://thehackernews.com/2026/06/free-apps-are-quietly-turning-smart-tvs.html",
+      "published": "Sat, 06 Jun 2026 13:59:05 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Android Spyware Asin Targets Arabic Users via Fake News, PDF and War Map Apps",
-      "url": "https://thehackernews.com/2026/06/android-spyware-asin-targets-arabic.html",
-      "published": "Fri, 05 Jun 2026 20:23:40 +0530",
+      "title": "CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog",
+      "url": "https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html",
+      "published": "Sat, 06 Jun 2026 13:44:31 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "AI Agent Uncovers 21 Zero-Days in FFmpeg; Chrome Patches Record 429 Bugs",
+      "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
+      "published": "Sat, 06 Jun 2026 12:58:30 +0530",
       "source": "The Hacker News"
     }
   ]
