@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Brave Software releases Origin for a paid, bloat-free browsing experience",
-      "url": "https://www.bleepingcomputer.com/news/software/brave-software-releases-origin-for-a-paid-bloat-free-browsing-experience/",
-      "published": "Thu, 04 Jun 2026 17:37:10 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Hola Browser for Windows compromised to deliver cryptominer",
-      "url": "https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/",
-      "published": "Thu, 04 Jun 2026 17:27:25 -0400",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "U.S. CISA adds Mirasvit Full Page Cache Warmer flaw to its Known Exploited Vulnerabilities catalog",
       "url": "https://securityaffairs.com/193156/security/u-s-cisa-adds-mirasvit-full-page-cache-warmer-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
       "published": "Thu, 04 Jun 2026 17:10:17 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "IronWorm and New Miasma Worm Variant Hit npm in Supply Chain Attacks",
+      "url": "https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html",
+      "published": "Fri, 05 Jun 2026 23:35:30 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Android Spyware Asin Targets Arabic Users via Fake News, PDF and War Map Apps",
+      "url": "https://thehackernews.com/2026/06/android-spyware-asin-targets-arabic.html",
+      "published": "Fri, 05 Jun 2026 20:23:40 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
