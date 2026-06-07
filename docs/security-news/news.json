@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Free Apps Are Quietly Turning Smart TVs Into Web-Scraping Proxies for AI",
-      "url": "https://thehackernews.com/2026/06/free-apps-are-quietly-turning-smart-tvs.html",
-      "published": "Sat, 06 Jun 2026 13:59:05 +0530",
+      "title": "U.S. CISA adds SolarWinds Serv-U flaw to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/193245/security/u-s-cisa-adds-solarwinds-serv-u-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Sat, 06 Jun 2026 21:44:53 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "New ChatGPT Lockdown Mode Limits Tools That Could Enable Data Exfiltration",
+      "url": "https://thehackernews.com/2026/06/new-chatgpt-lockdown-mode-limits-tools.html",
+      "published": "Sat, 06 Jun 2026 19:06:57 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "CISA Adds Actively Exploited SolarWinds Serv-U DoS Flaw to KEV Catalog",
-      "url": "https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html",
-      "published": "Sat, 06 Jun 2026 13:44:31 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "AI Agent Uncovers 21 Zero-Days in FFmpeg; Chrome Patches Record 429 Bugs",
-      "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-      "published": "Sat, 06 Jun 2026 12:58:30 +0530",
-      "source": "The Hacker News"
+      "title": "Report: Anthropic Deploys Engineers to Support NSA Use of Mythos",
+      "url": "https://securityaffairs.com/193234/ai/report-anthropic-deploys-engineers-to-support-nsa-use-of-mythos.html",
+      "published": "Sat, 06 Jun 2026 16:18:53 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
