@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Hands on with Intelligent Terminal, an AI-powered Windows Terminal",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/hands-on-with-intelligent-terminal-an-ai-powered-windows-terminal/",
-      "published": "Sun, 07 Jun 2026 19:20:02 -0400",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "DentaQuest Breach: ShinyHunters Publish Data Impacting 2.6M People",
       "url": "https://securityaffairs.com/193274/data-breach/dentaquest-breach-shinyhunters-publish-data-impacting-2-6m-people.html",
       "published": "Sun, 07 Jun 2026 18:42:59 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND  100",
-      "url": "https://securityaffairs.com/193268/malware/security-affairs-malware-newsletter-round-100.html",
-      "published": "Sun, 07 Jun 2026 15:38:25 +0000",
-      "source": "Security Affairs"
+      "title": "Critical Check Point VPN Flaw Exploited to Bypass Passwords in IKEv1 Setups",
+      "url": "https://thehackernews.com/2026/06/critical-check-point-vpn-flaw-exploited.html",
+      "published": "Mon, 08 Jun 2026 19:47:39 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "AI Phishing Is Crushing SOCs with Alert Volume: How to Reduce Tier 1 Overload",
+      "url": "https://thehackernews.com/2026/06/ai-phishing-is-crushing-socs-with-alert.html",
+      "published": "Mon, 08 Jun 2026 18:49:13 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
