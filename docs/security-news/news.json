@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "WinRAR Flaw Exploited by Russia-Aligned Groups to Deploy Stealers in Ukraine",
-      "url": "https://thehackernews.com/2026/06/winrar-flaw-exploited-by-russia-aligned.html",
-      "published": "Tue, 09 Jun 2026 17:56:10 +0530",
+      "title": "Microsoft Releases Record-Breaking Patch Tuesday With 208 CVEs",
+      "url": "https://securityaffairs.com/193417/security/microsoft-releases-record-breaking-patch-tuesday-with-208-cves.html",
+      "published": "Tue, 09 Jun 2026 22:55:48 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Meta to Use Off-Site Business Data for Feed and AI Personalization",
+      "url": "https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html",
+      "published": "Tue, 09 Jun 2026 22:33:58 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Researchers Build Self-Replicating AI Worm That Operates Entirely on Local, Open-Weight Models",
-      "url": "https://thehackernews.com/2026/06/researchers-build-self-replicating-ai.html",
-      "published": "Tue, 09 Jun 2026 17:29:03 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Chrome V8 Zero-Day CVE-2026-11645 Exploited in the Wild - Patch Now",
-      "url": "https://thehackernews.com/2026/06/chrome-v8-zero-day-cve-2026-11645.html",
-      "published": "Tue, 09 Jun 2026 17:28:49 +0530",
+      "title": "Veeam Backup & Replication RCE Flaw Lets Domain Users Run Remote Code",
+      "url": "https://thehackernews.com/2026/06/veeam-backup-replication-rce-flaw-lets.html",
+      "published": "Tue, 09 Jun 2026 22:09:47 +0530",
       "source": "The Hacker News"
     }
   ]
