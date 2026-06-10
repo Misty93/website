@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Tri vatrozida, tri filozofije",
-      "file": "article-hr.html#tri-vatrozida-tri-filozofije",
-      "description": "Kada se spomene kućni vatrozid, mnogi i dalje zamišljaju uređaj koji samo propušta ili blokira promet između lokalne mreže i interneta. Međutim, moderna rješenja odavno su prerasla tu ulogu.",
-      "date": "02.06.2026."
-    },
-    {
       "title": "Three Firewalls, Three Philosophies",
       "file": "article-en.html#three-firewalls-three-philosophies",
       "description": "When people think of a home firewall, many still imagine a device that simply allows or blocks traffic between a local network and the internet. However, modern solutions have evolved far beyond that role.",
       "date": "02.06.2026."
     },
     {
-      "title": "Ljudsko biće kao sigurnosni rizik",
-      "file": "article-hr.html#ljudsko-biće-kao-sigurnosni-rizik",
-      "description": "Kada se govori o kibernetičkoj sigurnosti, fokus je gotovo uvijek na tehnologiji. Organizacije ulažu značajna sredstva u zaštitne sustave, napredne vatrozide, EDR platforme, sustave za detekciju prijetnji, segmentaciju mreže i višefaktorsku autentikaciju. Provode se sigurnosne procjene, redovito se instaliraju zakrpe i definiraju stroge sigurnosne politike.",
+      "title": "Tri vatrozida, tri filozofije",
+      "file": "article-hr.html#tri-vatrozida-tri-filozofije",
+      "description": "Kada se spomene kućni vatrozid, mnogi i dalje zamišljaju uređaj koji samo propušta ili blokira promet između lokalne mreže i interneta. Međutim, moderna rješenja odavno su prerasla tu ulogu.",
+      "date": "02.06.2026."
+    },
+    {
+      "title": "Human being as a security risk",
+      "file": "article-en.html#human-being-as-a-security-risk",
+      "description": "In cybersecurity, the focus is almost always on technology. Organizations invest significant resources into defensive systems, advanced firewalls, EDR platforms, threat detection systems, network segmentation, and multi factor authentication. Security assessments are performed, patches are regularly applied, and strict security policies are defined.",
       "date": "01.06.2026."
     }
   ]
