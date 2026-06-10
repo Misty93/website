@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Microsoft Releases Record-Breaking Patch Tuesday With 208 CVEs",
-      "url": "https://securityaffairs.com/193417/security/microsoft-releases-record-breaking-patch-tuesday-with-208-cves.html",
-      "published": "Tue, 09 Jun 2026 22:55:48 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Meta to Use Off-Site Business Data for Feed and AI Personalization",
-      "url": "https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html",
-      "published": "Tue, 09 Jun 2026 22:33:58 +0530",
+      "title": "Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities",
+      "url": "https://thehackernews.com/2026/06/ivanti-fortinet-and-sap-release-patches.html",
+      "published": "Wed, 10 Jun 2026 20:40:59 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Veeam Backup & Replication RCE Flaw Lets Domain Users Run Remote Code",
-      "url": "https://thehackernews.com/2026/06/veeam-backup-replication-rce-flaw-lets.html",
-      "published": "Tue, 09 Jun 2026 22:09:47 +0530",
+      "title": "Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RCE",
+      "url": "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html",
+      "published": "Wed, 10 Jun 2026 20:30:59 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA Adds Cisco, Chrome, and Arista Flaws to KEV Catalog Amid Active Exploitation",
+      "url": "https://thehackernews.com/2026/06/cisa-adds-cisco-chrome-and-arista-flaws.html",
+      "published": "Wed, 10 Jun 2026 20:14:29 +0530",
       "source": "The Hacker News"
     }
   ]
