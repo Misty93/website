@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "China-Linked JDY Botnet Expands to 1,500+ Devices for Cyber Reconnaissance",
-      "url": "https://thehackernews.com/2026/06/china-linked-jdy-botnet-expands-to-1500.html",
-      "published": "Wed, 10 Jun 2026 21:38:42 +0530",
+      "title": "Russian APTs Still Exploiting Patched WinRAR Flaw CVE-2025-8088",
+      "url": "https://securityaffairs.com/193476/apt/russian-apts-still-exploiting-patched-winrar-flaw-cve-2025-8088.html",
+      "published": "Wed, 10 Jun 2026 13:34:45 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Cybersecurity Stars Awards 2026: Winners Announced Across 95 Categories",
+      "url": "https://thehackernews.com/2026/06/cybersecurity-stars-awards-2026-winners.html",
+      "published": "Thu, 11 Jun 2026 18:56:13 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Ivanti, Fortinet, and SAP Release Patches for Multiple Critical Vulnerabilities",
-      "url": "https://thehackernews.com/2026/06/ivanti-fortinet-and-sap-release-patches.html",
-      "published": "Wed, 10 Jun 2026 20:40:59 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Unpatched Langflow Flaw CVE-2026-5027 Exploited for Unauthenticated RCE",
-      "url": "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html",
-      "published": "Wed, 10 Jun 2026 20:30:59 +0530",
+      "title": "ThreatsDay Bulletin: Worm Code Leaked, AI Agent Phished, Claude Action Patch + 28 New Stories",
+      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-worm-code-leaked-ai.html",
+      "published": "Thu, 11 Jun 2026 18:50:41 +0530",
       "source": "The Hacker News"
     }
   ]
