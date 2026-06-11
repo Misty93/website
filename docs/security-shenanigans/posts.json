@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "Kako dobiti prvi posao u kibernetičkoj sigurnosti?",
+      "file": "article-hr.html#kako-dobiti-prvi-posao-u-kibernetičkoj-sigurnosti",
+      "description": "Prije nego što dođemo do konkretnih koraka koje ću predstaviti u ovom tekstu, potrebno je postaviti si nekoliko praktičnih pitanja: zašto uopće želim posao u IT-u, a zatim i u kibernetičkoj sigurnosti? Kao i za svaki drugi posao, prvo pitanje glasi: jesam li ovdje iz pravih razloga? Ulazak u IT nije odluka koja se donosi preko noći, a ni posao, nažalost, ne dolazi preko noći.",
+      "date": "11.06.2026."
+    },
+    {
       "title": "Tri vatrozida, tri filozofije",
       "file": "article-hr.html#tri-vatrozida-tri-filozofije",
       "description": "Kada se spomene kućni vatrozid, mnogi i dalje zamišljaju uređaj koji samo propušta ili blokira promet između lokalne mreže i interneta. Međutim, moderna rješenja odavno su prerasla tu ulogu.",
@@ -11,12 +17,6 @@
       "file": "article-en.html#three-firewalls-three-philosophies",
       "description": "When people think of a home firewall, many still imagine a device that simply allows or blocks traffic between a local network and the internet. However, modern solutions have evolved far beyond that role.",
       "date": "02.06.2026."
-    },
-    {
-      "title": "Ljudsko biće kao sigurnosni rizik",
-      "file": "article-hr.html#ljudsko-biće-kao-sigurnosni-rizik",
-      "description": "Kada se govori o kibernetičkoj sigurnosti, fokus je gotovo uvijek na tehnologiji. Organizacije ulažu značajna sredstva u zaštitne sustave, napredne vatrozide, EDR platforme, sustave za detekciju prijetnji, segmentaciju mreže i višefaktorsku autentikaciju. Provode se sigurnosne procjene, redovito se instaliraju zakrpe i definiraju stroge sigurnosne politike.",
-      "date": "01.06.2026."
     }
   ]
 }
