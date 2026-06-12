@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Russian APTs Still Exploiting Patched WinRAR Flaw CVE-2025-8088",
-      "url": "https://securityaffairs.com/193476/apt/russian-apts-still-exploiting-patched-winrar-flaw-cve-2025-8088.html",
-      "published": "Wed, 10 Jun 2026 13:34:45 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Cybersecurity Stars Awards 2026: Winners Announced Across 95 Categories",
-      "url": "https://thehackernews.com/2026/06/cybersecurity-stars-awards-2026-winners.html",
-      "published": "Thu, 11 Jun 2026 18:56:13 +0530",
+      "title": "New Attacks Trick OpenClaw AI Agent Into Running Code and Leaking Secrets",
+      "url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html",
+      "published": "Thu, 11 Jun 2026 23:16:32 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "ThreatsDay Bulletin: Worm Code Leaked, AI Agent Phished, Claude Action Patch + 28 New Stories",
-      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-worm-code-leaked-ai.html",
-      "published": "Thu, 11 Jun 2026 18:50:41 +0530",
+      "title": "New GreatXML Exploit Bypasses Windows BitLocker via Recovery Partition XML Files",
+      "url": "https://thehackernews.com/2026/06/new-greatxml-exploit-bypasses-windows.html",
+      "published": "Thu, 11 Jun 2026 23:13:52 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "The Gentlemen Ransomware Claims 478 Victims, Can Spread Like a Worm",
+      "url": "https://thehackernews.com/2026/06/the-gentlemen-ransomware-claims-478.html",
+      "published": "Thu, 11 Jun 2026 22:20:47 +0530",
       "source": "The Hacker News"
     }
   ]
