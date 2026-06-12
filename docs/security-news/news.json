@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "New Attacks Trick OpenClaw AI Agent Into Running Code and Leaking Secrets",
-      "url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html",
-      "published": "Thu, 11 Jun 2026 23:16:32 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-10520 Exploited: Ivanti Sentry Gateways Compromised Shortly After Patch Release",
+      "url": "https://securityaffairs.com/193530/uncategorized/cve-2026-10520-exploited-ivanti-sentry-gateways-compromised-shortly-after-patch-release.html",
+      "published": "Thu, 11 Jun 2026 17:57:40 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "New GreatXML Exploit Bypasses Windows BitLocker via Recovery Partition XML Files",
-      "url": "https://thehackernews.com/2026/06/new-greatxml-exploit-bypasses-windows.html",
-      "published": "Thu, 11 Jun 2026 23:13:52 +0530",
-      "source": "The Hacker News"
+      "title": "OnyxC2 Malware-as-a-Service Offers Enterprise-Grade Data Theft",
+      "url": "https://securityaffairs.com/193523/malware/onyxc2-malware-as-a-service-offers-enterprise-grade-data-theft.html",
+      "published": "Thu, 11 Jun 2026 14:22:21 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "The Gentlemen Ransomware Claims 478 Victims, Can Spread Like a Worm",
-      "url": "https://thehackernews.com/2026/06/the-gentlemen-ransomware-claims-478.html",
-      "published": "Thu, 11 Jun 2026 22:20:47 +0530",
-      "source": "The Hacker News"
+      "title": "Chaotic Eclipse Strikes Again: New Zero-Day Unlocks BitLocker in Four Hours of Research",
+      "url": "https://securityaffairs.com/193516/security/chaotic-eclipse-strikes-again-new-zero-day-unlocks-bitlocker-in-four-hours-of-research.html",
+      "published": "Thu, 11 Jun 2026 10:58:21 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
