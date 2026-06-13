@@ -2,21 +2,21 @@
   "items": [
     {
       "title": "CVE-2026-10520 Exploited: Ivanti Sentry Gateways Compromised Shortly After Patch Release",
-      "url": "https://securityaffairs.com/193530/uncategorized/cve-2026-10520-exploited-ivanti-sentry-gateways-compromised-shortly-after-patch-release.html",
+      "url": "https://securityaffairs.com/193530/hacking/cve-2026-10520-exploited-ivanti-sentry-gateways-compromised-shortly-after-patch-release.html",
       "published": "Thu, 11 Jun 2026 17:57:40 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "OnyxC2 Malware-as-a-Service Offers Enterprise-Grade Data Theft",
-      "url": "https://securityaffairs.com/193523/malware/onyxc2-malware-as-a-service-offers-enterprise-grade-data-theft.html",
-      "published": "Thu, 11 Jun 2026 14:22:21 +0000",
-      "source": "Security Affairs"
+      "title": "Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit",
+      "url": "https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html",
+      "published": "Sat, 13 Jun 2026 01:03:25 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Chaotic Eclipse Strikes Again: New Zero-Day Unlocks BitLocker in Four Hours of Research",
-      "url": "https://securityaffairs.com/193516/security/chaotic-eclipse-strikes-again-new-zero-day-unlocks-bitlocker-in-four-hours-of-research.html",
-      "published": "Thu, 11 Jun 2026 10:58:21 +0000",
-      "source": "Security Affairs"
+      "title": "Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing",
+      "url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html",
+      "published": "Sat, 13 Jun 2026 00:29:32 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
