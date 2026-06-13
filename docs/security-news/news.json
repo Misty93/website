@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "CVE-2026-10520 Exploited: Ivanti Sentry Gateways Compromised Shortly After Patch Release",
-      "url": "https://securityaffairs.com/193530/hacking/cve-2026-10520-exploited-ivanti-sentry-gateways-compromised-shortly-after-patch-release.html",
-      "published": "Thu, 11 Jun 2026 17:57:40 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit",
-      "url": "https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html",
-      "published": "Sat, 13 Jun 2026 01:03:25 +0530",
+      "title": "Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication",
+      "url": "https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html",
+      "published": "Sat, 13 Jun 2026 18:53:03 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing",
-      "url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html",
-      "published": "Sat, 13 Jun 2026 00:29:32 +0530",
+      "title": "U.S. Orders Anthropic to Suspend Fable 5 and Mythos 5 Access for Foreign Nationals",
+      "url": "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html",
+      "published": "Sat, 13 Jun 2026 11:12:50 +0530",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Chinese hackers hijack auth flow, spy on isolated network for a decade",
+      "url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-hijack-auth-flow-spy-on-isolated-network-for-a-decade/",
+      "published": "Sat, 13 Jun 2026 10:06:42 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
