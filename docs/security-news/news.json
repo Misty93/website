@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 101",
-      "url": "https://securityaffairs.com/193609/breaking-news/security-affairs-malware-newsletter-round-101.html",
-      "published": "Sun, 14 Jun 2026 13:23:29 +0000",
-      "source": "Security Affairs"
+      "title": "Chinese Hackers Abused Google Workspace Rules to Steal Research and Defense Emails",
+      "url": "https://thehackernews.com/2026/06/chinese-hackers-abused-google-workspace.html",
+      "published": "Tue, 16 Jun 2026 01:14:06 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "North Korean Hackers Are Turning Developer Tools Into Malware Delivery Channels",
+      "url": "https://thehackernews.com/2026/06/north-korean-hackers-are-turning.html",
+      "published": "Tue, 16 Jun 2026 01:02:52 +0530",
+      "source": "The Hacker News"
     },
     {
       "title": "LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers",
       "url": "https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html",
       "published": "Mon, 15 Jun 2026 22:09:01 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "One-Click Microsoft 365 Copilot Flaw Could Have Let Attackers Steal Emails, Files, and MFA Codes",
-      "url": "https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html",
-      "published": "Mon, 15 Jun 2026 20:39:05 +0530",
       "source": "The Hacker News"
     }
   ]
