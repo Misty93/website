@@ -81,6 +81,176 @@ code {
 <div class="container">
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
+
+<div class="article-date">17.06.2026.</div>
+<h2>Kako razmišlja dobar SOC analitičar?</h2>
+
+<p>Jedna od najčešćih pogrešaka kod SOC analitičara jest uvjerenje da je analiza završena onog trenutka kada pronađu upozorenje. U stvarnosti, upozorenje nije odgovor. Upozorenje je samo početak istrage.</p>
+
+<p>Sigurnosni alati dizajnirani su kako bi analitičaru olakšali razumijevanje onoga što se događa ili se dogodilo na sustavu. Oni prikupljaju, koreliraju i ističu događaje koji mogu biti sigurnosno relevantni te usmjeravaju pažnju na aktivnosti koje zahtijevaju dodatnu provjeru. Međutim, sami po sebi rijetko pružaju potpunu sliku incidenta. Upravo zato analiza konteksta ostaje jedan od najvažnijih zadataka svakog SOC analitičara.</p>
+
+<p>Upravo zato dva ista upozorenja mogu predstavljati potpuno različite situacije. Jedno može biti legitimna administratorska aktivnost, dok drugo može biti početak ozbiljne kompromitacije.</p>
+
+<h3>Dobra analiza počinje pitanjem: Zašto?</h3>
+
+<p>Kada se pojavi upozorenje, prvo pitanje ne bi trebalo biti kako ga zatvoriti. Prvo pitanje trebalo bi biti zašto se pravilo uopće aktiviralo. Tek kada razumijemo logiku pravila možemo razumjeti što se zapravo dogodilo na sustavu.</p>
+
+<p>Primjerice, ako vidimo upozorenje „Encoded PowerShell“, sama činjenica da je PowerShell pokrenut nije dovoljna za zaključak. Potrebno je razumjeti što je izvršeno, tko je pokrenuo proces, iz kojeg konteksta i s kojim ciljem.</p>
+
+<p>U tom trenutku analiza tek počinje.</p>
+
+<h3>Kako zapravo izgleda analiza?</h3>
+
+<p><strong>Korak 1 – Zaprimljeno je upozorenje</strong></p>
+
+<p>Prvi korak je pregledati upozorenje i prikupiti osnovne informacije. Potrebno je provjeriti naziv pravila, vrijeme događaja, korisnika, uređaj, izvor događaja i razinu ozbiljnosti.</p>
+
+<p>U ovoj fazi ne donosimo zaključke. Cilj je razumjeti što je sustav detektirao.</p>
+
+<p><strong>Korak 2 – Pročitati naziv pravila</strong></p>
+
+<p>Naziv pravila vrlo često daje prve naznake što treba analizirati.</p>
+
+<p>Ako vidimo pravilo „Abnormal Parent Child Process“, odmah znamo da ćemo analizirati odnos između roditeljskog i podređenog procesa.</p>
+
+<p>Ako vidimo pravilo „Encoded PowerShell“, fokus istrage bit će PowerShell naredbe i parametri naredbenog retka.</p>
+
+<p>Ako vidimo pravilo „Impossible Travel“, analizirat ćemo korisničke prijave, geolokacije i događaje autentikacije.</p>
+
+<p>Dobar analitičar prvo pokušava razumjeti što pravilo pokušava detektirati.</p>
+
+<p><strong>Korak 3 – Pročitati opis pravila</strong></p>
+
+<p>Nakon naziva pravila potrebno je pročitati njegov opis.</p>
+
+<p>Opis pravila objašnjava zašto je upozorenje generirano, koje ponašanje se smatra sumnjivim i što pravilo zapravo pokušava detektirati.</p>
+
+<p>Tek kada razumijemo logiku pravila možemo započeti kvalitetnu analizu.</p>
+
+<p><strong>Korak 4 – Odrediti početnu točku analize</strong></p>
+
+<p>Svako pravilo ima svoju početnu točku.</p>
+
+<p>Ako je riječ o korisničkom računu, analiziraju se prijave, višefaktorska autentikacija, IP adrese i geolokacije.</p>
+
+<p>Ako je riječ o procesu, analiziraju se roditeljski proces, podređeni proces, parametri naredbenog retka i putanja izvršavanja.</p>
+
+<p>Ako je riječ o mrežnoj aktivnosti, analiziraju se IP adrese, domene, mrežne veze i reputacija odredišta.</p>
+
+<p>Pravilo određuje odakle analiza kreće.</p>
+
+<p><strong>Korak 5 – Prikupiti kontekst</strong></p>
+
+<p>Jedno upozorenje gotovo nikada ne daje kompletnu sliku događaja.</p>
+
+<p>Potrebno je prikupiti dodatna upozorenja, povezane incidente, indikatore kompromitacije, procese, korisničke aktivnosti, mrežnu komunikaciju i povijesne događaje.</p>
+
+<p>Tek tada počinjemo dobivati širu sliku onoga što se dogodilo.</p>
+
+<p><strong>Korak 6 – Analizirati kontekst procesa</strong></p>
+
+<p>Mnogi analitičari gledaju samo naziv procesa.</p>
+
+<p>To nije dovoljno.</p>
+
+<p>Primjerice, powershell.exe sam po sebi ne znači gotovo ništa. Potrebno je analizirati tko ga je pokrenuo, kada ga je pokrenuo, koji ga je roditeljski proces pokrenuo, koje su naredbe izvršene, postoji li mrežna komunikacija i je li proces digitalno potpisan.</p>
+
+<p>Vrlo je važno analizirati odnos između roditeljskog i podređenog procesa. Nije neuobičajeno da određeni proces pokreće druge procese tijekom svog normalnog rada, no postoje situacije u kojima upravo taj odnos može ukazivati na kompromitaciju sustava.</p>
+
+<p>Primjerice, ako explorer.exe pokrene cmd.exe ili powershell.exe, takvo ponašanje može biti očekivano. Međutim, ako Office dokument pokrene powershell.exe, koji zatim pokrene dodatne procese ili mrežnu komunikaciju, potrebno je dodatno istražiti radi li se o legitimnoj aktivnosti ili pokušaju kompromitacije.</p>
+
+<p>Kontekst procesa često je važniji od samog procesa. Potrebno je razumjeti zašto je proces pokrenut, iz kojeg konteksta, od strane kojeg korisnika te je li takvo ponašanje uobičajeno za promatrani sustav.</p>
+
+<p><strong>Korak 7 – Analizirati putanju procesa</strong></p>
+
+<p>Vrlo je važno provjeriti odakle je proces pokrenut.</p>
+
+<p>Nije isto izvršava li se proces iz direktorija C:\Windows\System32 ili iz direktorija AppData, Temp ili Downloads.</p>
+
+<p>Međutim, ovdje dolazimo do jedne od najčešćih pogrešaka tijekom analize sigurnosnih događaja.</p>
+
+<p>Aktivnost iz Temp direktorija ne znači automatski da se radi o napadu.</p>
+
+<p>Tijekom nadogradnji aplikacija, instalacija softvera, primjene sigurnosnih zakrpa ili aktivnosti implementacije sustava vrlo je uobičajeno da se datoteke privremeno raspakiravaju i izvršavaju upravo iz privremenih direktorija.</p>
+
+<p>Drugim riječima, legitimna aktivnost ponekad može izgledati vrlo slično zlonamjernoj aktivnosti.</p>
+
+<p>Jednako tako, PowerShell nije zlonamjeran alat. Cmd nije zlonamjeran alat. Rundll32 nije zlonamjeran alat. Sve su to legitimni Windows alati koje koriste i administratori i napadači.</p>
+
+<p>Upravo zato kontekst određuje je li nešto legitimno ili zlonamjerno.</p>
+
+<p>Zbog toga putanja procesa nikada ne smije biti jedini kriterij za procjenu incidenta. Potrebno je sagledati cjelokupni kontekst događaja prije donošenja zaključka.</p>
+
+<p><strong>Korak 8 – Provjeriti legitimnost aktivnosti</strong></p>
+
+<p>Nakon tehničke analize potrebno je odgovoriti na pitanje: je li korisnik očekivao ovu aktivnost?</p>
+
+<p>Vrlo često upravo korisnik daje informaciju koja potvrđuje ili odbacuje sumnju.</p>
+
+<p>Ponekad će se ispostaviti da je riječ o nadogradnji aplikacije, administratorskom zadatku, implementaciji novog sustava, automatiziranom procesu ili legitimnoj poslovnoj aktivnosti.</p>
+
+<p>Na prvi pogled takve aktivnosti mogu izgledati identično kao kompromitacija.</p>
+
+<p><strong>Korak 9 – Donijeti zaključak</strong></p>
+
+<p>Tek nakon što prikupimo sve informacije možemo donijeti zaključak.</p>
+
+<p>Radi li se o legitimnoj aktivnosti? Radi li se o lažno pozitivnoj detekciji? Radi li se o sumnjivoj aktivnosti? Radi li se o potvrđenoj kompromitaciji?</p>
+
+<p>Preskakanje koraka gotovo uvijek vodi prema pogrešnim zaključcima.</p>
+
+<p><strong>Korak 10 – Primijeniti odgovarajuću proceduru postupanja</strong></p>
+
+<p>Kada razumijemo što se dogodilo, primjenjujemo odgovarajuću proceduru postupanja.</p>
+
+<p>To može biti procedura za korisničke račune, krajnje uređaje, zlonamjerni softver, mehanizme postojanosti, lateralno kretanje ili odgovor na sigurnosni incident.</p>
+
+<p>Procedura nije tu da ograniči analitičara. Njezina svrha nije da analitičar mehanički prati korake bez razmišljanja.</p>
+
+<p>Dobra procedura služi kao vodič koji osigurava da svaki analitičar, bez obzira na iskustvo, prolazi kroz iste ključne korake analize. Ona osigurava da tijekom istrage ne propustimo važne informacije, indikatore kompromitacije, povezane događaje ili korake koji mogu biti ključni za razumijevanje incidenta.</p>
+
+<h3>Analitičar mora razmišljati kao istražitelj</h3>
+
+<p>Kvalitetna analiza nije lista klikova koje treba napraviti u SIEM-u ili EDR-u. Kvalitetna analiza je proces postavljanja pitanja i traženja odgovora kroz dostupne podatke.</p>
+
+<p>Dobar analitičar nakon svakog upozorenja traži dodatni kontekst. Postoje li povezana upozorenja? Je li korisnik radio nešto neuobičajeno? Postoje li indikatori kompromitacije? Je li aktivnost viđena i na drugim uređajima? Postoji li komunikacija prema sumnjivim IP adresama ili domenama?</p>
+
+<p>Razlika između operatera koji obrađuje upozorenja i analitičara koji provodi istragu upravo je u načinu razmišljanja.</p>
+
+<p>Operater vidi upozorenje i traži razlog za zatvaranje.</p>
+
+<p>Analitičar vidi upozorenje i traži razlog zašto se ono aktiviralo.</p>
+
+<p>Svako pravilo koje generira upozorenje ima određenu logiku i svrhu. Ako ne razumijemo što pravilo pokušava detektirati, velika je vjerojatnost da ćemo propustiti važne indikatore kompromitacije ili pogrešno procijeniti ozbiljnost događaja.</p>
+
+<h3>Zašto su procedure postupanja važne?</h3>
+
+<p>Tek nakon što razumijemo što se dogodilo možemo primijeniti odgovarajuću proceduru postupanja.</p>
+
+<p>Njezina svrha je osigurati da svaki analitičar prolazi kroz iste ključne korake analize i da tijekom istrage ne propusti važne informacije.</p>
+
+<p>Dobra procedura ne govori analitičaru što da misli.</p>
+
+<p>Dobra procedura osigurava da postavi sva važna pitanja.</p>
+
+<h3>Zaključak</h3>
+
+<p>Najvažnija vještina SOC analitičara nije poznavanje određenog alata, nego sposobnost razumijevanja konteksta i povezivanja informacija.</p>
+
+<p>Analiza počinje čitanjem pravila.</p>
+
+<p>Nastavlja se razumijevanjem konteksta.</p>
+
+<p>Završava donošenjem zaključka temeljenog na dokazima.</p>
+
+<p>Upozorenje nije dokaz kompromitacije.</p>
+
+<p>Upozorenje je indikator da nešto zahtijeva dodatnu provjeru.</p>
+
+<p>Dobra analiza ne traži razlog za zatvaranje upozorenja.</p>
+
+<p>Dobra analiza traži razlog zašto se upozorenje aktiviralo.</p>
+
     
 <div class="article-date">11.06.2026.</div>
 <h2>Kako dobiti prvi posao u kibernetičkoj sigurnosti?</h2>
