@@ -82,6 +82,177 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
+<div class="article-date">17.06.2026.</div>
+<h2>How Does a Good SOC Analyst Think?</h2>
+
+<p>One of the most common mistakes among SOC analysts is believing that the analysis is complete the moment they find an alert. In reality, an alert is not the answer. An alert is only the beginning of an investigation.</p>
+
+<p>Security tools are designed to help analysts understand what is happening or what has happened on a system. They collect, correlate, and highlight events that may be security-relevant and direct attention toward activities that require further investigation. However, on their own, they rarely provide a complete picture of an incident. That is why contextual analysis remains one of the most important responsibilities of every SOC analyst.</p>
+
+<p>This is precisely why two identical alerts can represent completely different situations. One may be a legitimate administrative activity, while the other may be the beginning of a serious compromise.</p>
+
+<h3>Good Analysis Starts with a Question: Why?</h3>
+
+<p>When an alert appears, the first question should not be how to close it. The first question should be why the rule triggered in the first place. Only when we understand the logic behind the rule can we understand what actually happened on the system.</p>
+
+<p>For example, if we see an "Encoded PowerShell" alert, the mere fact that PowerShell was executed is not enough to draw a conclusion. We need to understand what was executed, who executed it, from which context, and for what purpose.</p>
+
+<p>At that point, the analysis is only beginning.</p>
+
+<h3>What Does the Analysis Process Actually Look Like?</h3>
+
+<p><strong>Step 1 – An Alert Is Received</strong></p>
+
+<p>The first step is to review the alert and gather basic information. This includes checking the rule name, event time, user, device, data source, and severity level.</p>
+
+<p>At this stage, no conclusions should be made. The goal is to understand what the system has detected.</p>
+
+<p><strong>Step 2 – Read the Rule Name</strong></p>
+
+<p>The rule name often provides the first clues about what should be analyzed.</p>
+
+<p>If we see a rule called "Abnormal Parent Child Process," we immediately know that we will need to analyze the relationship between the parent process and the child process.</p>
+
+<p>If we see "Encoded PowerShell," the investigation will focus on PowerShell commands and command-line arguments.</p>
+
+<p>If we see "Impossible Travel," we will analyze user logins, geolocation data, and authentication events.</p>
+
+<p>A good analyst first tries to understand what the rule is attempting to detect.</p>
+
+<p><strong>Step 3 – Read the Rule Description</strong></p>
+
+<p>After reading the rule name, the next step is to review the rule description.</p>
+
+<p>The description explains why the alert was generated, what behavior is considered suspicious, and what the rule is actually designed to detect.</p>
+
+<p>Only after understanding the rule logic can a quality investigation begin.</p>
+
+<p><strong>Step 4 – Determine the Starting Point of the Investigation</strong></p>
+
+<p>Every rule has its own starting point.</p>
+
+<p>If the alert is related to a user account, login activity, multi-factor authentication events, IP addresses, and geolocation data should be analyzed.</p>
+
+<p>If the alert is related to a process, the parent process, child process, command-line arguments, and execution path should be reviewed.</p>
+
+<p>If the alert is related to network activity, IP addresses, domains, network connections, and destination reputation should be examined.</p>
+
+<p>The rule determines where the investigation begins.</p>
+
+<p><strong>Step 5 – Gather Context</strong></p>
+
+<p>A single alert almost never provides the complete picture.</p>
+
+<p>Additional alerts, related incidents, indicators of compromise, process activity, user actions, network communications, and historical events should all be collected and reviewed.</p>
+
+<p>Only then can we begin to understand what actually happened.</p>
+
+<p><strong>Step 6 – Analyze Process Context</strong></p>
+
+<p>Many analysts focus solely on the process name.</p>
+
+<p>That is not enough.</p>
+
+<p>For example, powershell.exe by itself means very little. It is necessary to determine who launched it, when it was launched, which parent process initiated it, what commands were executed, whether network communication occurred, and whether the process is digitally signed.</p>
+
+<p>It is especially important to analyze the relationship between the parent process and the child process. While processes routinely spawn other processes during normal operation, there are situations where that relationship may indicate a system compromise.</p>
+
+<p>For example, if explorer.exe launches cmd.exe or powershell.exe, the behavior may be perfectly legitimate. However, if a Microsoft Office document launches powershell.exe, which then launches additional processes or establishes network communication, further investigation is required to determine whether the activity is legitimate or malicious.</p>
+
+<p>Process context is often more important than the process itself. Analysts must understand why the process was executed, under what circumstances, by which user, and whether the behavior is normal for the environment being analyzed.</p>
+
+<p><strong>Step 7 – Analyze the Process Execution Path</strong></p>
+
+<p>It is very important to determine where a process was launched from.</p>
+
+<p>A process executing from C:\Windows\System32 is very different from a process executing from AppData, Temp, or Downloads directories.</p>
+
+<p>However, this is where one of the most common mistakes in security analysis occurs.</p>
+
+<p>Activity originating from the Temp directory does not automatically indicate an attack.</p>
+
+<p>During software upgrades, installations, patch deployments, and system implementation activities, it is common for files to be temporarily extracted and executed from temporary directories.</p>
+
+<p>In other words, legitimate activity can sometimes look very similar to malicious activity.</p>
+
+<p>Likewise, PowerShell is not malicious by itself. Cmd is not malicious by itself. Rundll32 is not malicious by itself. These are legitimate Windows tools used by both administrators and attackers.</p>
+
+<p>This is why context determines whether an activity is legitimate or malicious.</p>
+
+<p>For that reason, the execution path alone should never be the sole factor used to assess an incident. The entire context must be considered before drawing conclusions.</p>
+
+<p><strong>Step 8 – Verify Whether the Activity Is Legitimate</strong></p>
+
+<p>After completing the technical analysis, it is important to answer a simple question:</p>
+
+<p>Did the user expect this activity?</p>
+
+<p>Very often, the user provides the information needed to confirm or dismiss suspicion.</p>
+
+<p>It may turn out that the activity was part of a software upgrade, an administrative task, a new system deployment, an automated process, or a legitimate business operation.</p>
+
+<p>At first glance, such activities may appear identical to a compromise.</p>
+
+<p><strong>Step 9 – Draw a Conclusion</strong></p>
+
+<p>Only after gathering all relevant information can a conclusion be reached.</p>
+
+<p>Is this legitimate activity? Is it a false positive? Is it suspicious activity? Is it a confirmed compromise?</p>
+
+<p>Skipping investigation steps almost always leads to incorrect conclusions.</p>
+
+<p><strong>Step 10 – Apply the Appropriate Response Procedure</strong></p>
+
+<p>Once we understand what happened, we apply the appropriate response procedure.</p>
+
+<p>This may involve procedures for user accounts, endpoints, malware, persistence mechanisms, lateral movement, or incident response.</p>
+
+<p>A procedure is not intended to limit an analyst. Its purpose is not to encourage blind execution of steps.</p>
+
+<p>A good procedure serves as a guide that ensures every analyst follows the same critical investigative steps. It helps ensure that important information, indicators of compromise, related events, and key findings are not overlooked.</p>
+
+<h3>An Analyst Must Think Like an Investigator</h3>
+
+<p>Quality analysis is not a checklist of clicks performed in a SIEM or EDR platform. Quality analysis is the process of asking questions and finding answers through available data.</p>
+
+<p>A good analyst constantly looks for additional context. Are there related alerts? Has the user performed unusual actions? Are there indicators of compromise? Has similar activity been observed on other systems? Is there communication with suspicious IP addresses or domains?</p>
+
+<p>The difference between an operator who processes alerts and an analyst who performs investigations lies in the way they think.</p>
+
+<p>An operator sees an alert and looks for a reason to close it.</p>
+
+<p>An analyst sees an alert and looks for the reason it was triggered.</p>
+
+<p>Every detection rule has a specific purpose and logic. If we do not understand what a rule is trying to detect, there is a high probability that we will miss important indicators of compromise or incorrectly assess the severity of an event.</p>
+
+<h3>Why Are Response Procedures Important?</h3>
+
+<p>Only after understanding what happened can we apply the appropriate response procedure.</p>
+
+<p>The purpose of a procedure is to ensure that every analyst follows the same critical analysis steps and does not overlook important information during the investigation.</p>
+
+<p>A good procedure does not tell an analyst what to think.</p>
+
+<p>A good procedure ensures that the analyst asks all the right questions.</p>
+
+<h3>Conclusion</h3>
+
+<p>The most important skill of a SOC analyst is not knowledge of a specific tool, but the ability to understand context and connect information.</p>
+
+<p>Analysis begins by reading the rule.</p>
+
+<p>It continues through understanding the context.</p>
+
+<p>It ends with conclusions based on evidence.</p>
+
+<p>An alert is not proof of compromise.</p>
+
+<p>An alert is an indicator that something requires further investigation.</p>
+
+<p>Good analysis does not look for a reason to close an alert.</p>
+
+<p>Good analysis looks for the reason why the alert was triggered.</p>
+
 <div class="article-date">11.06.2026.</div>
 <h2>How to land your first job in cybersecurity?</h2>
 
