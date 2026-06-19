@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "F5 Patches Two Critical NGINX Open Source Flaws Enabling Remote Code Execution",
-      "url": "https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html",
-      "published": "Thu, 18 Jun 2026 23:02:14 +0530",
+      "title": "Tor-Based Clipper Malware Targets Wallet Seed Phrases",
+      "url": "https://securityaffairs.com/193860/uncategorized/tor-based-clipper-malware-targets-wallet-seed-phrases.html",
+      "published": "Thu, 18 Jun 2026 18:32:32 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Operation Endgame Disrupts SocGholish Servers, Cleans 14,971 WordPress Sites",
+      "url": "https://thehackernews.com/2026/06/operation-endgame-disrupts-socgholish.html",
+      "published": "Fri, 19 Jun 2026 20:37:54 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Orphaned AI Agents: How to Find Hidden Access Risks Inside Your Network",
-      "url": "https://thehackernews.com/2026/06/orphaned-ai-agents-how-to-find-hidden.html",
-      "published": "Thu, 18 Jun 2026 21:03:49 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ThreatsDay Bulletin: Claude Chat Abuse, NastyC2 npm Packages, Device-Code Phishing + 25 More Stories",
-      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html",
-      "published": "Thu, 18 Jun 2026 20:57:54 +0530",
+      "title": "CISA Warns Fortinet Customers as FortiBleed Hits 86,644 FortiGate Devices",
+      "url": "https://thehackernews.com/2026/06/cisa-warns-fortinet-customers-as.html",
+      "published": "Fri, 19 Jun 2026 19:30:21 +0530",
       "source": "The Hacker News"
     }
   ]
