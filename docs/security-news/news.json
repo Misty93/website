@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "DragonForce Hid Inside Microsoft Teams and Nobody Noticed for Two Months",
-      "url": "https://securityaffairs.com/193801/security/dragonforce-hid-inside-microsoft-teams-and-nobody-noticed-for-two-months.html",
-      "published": "Wed, 17 Jun 2026 15:55:10 +0000",
-      "source": "Security Affairs"
+      "title": "F5 Patches Two Critical NGINX Open Source Flaws Enabling Remote Code Execution",
+      "url": "https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html",
+      "published": "Thu, 18 Jun 2026 23:02:14 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "U.S. CISA adds Widget Factory Joomla Content Editor\u00a0flaw to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/193775/hacking/u-s-cisa-adds-widget-factory-joomla-content-editor-jce-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Wed, 17 Jun 2026 15:18:04 +0000",
-      "source": "Security Affairs"
+      "title": "Orphaned AI Agents: How to Find Hidden Access Risks Inside Your Network",
+      "url": "https://thehackernews.com/2026/06/orphaned-ai-agents-how-to-find-hidden.html",
+      "published": "Thu, 18 Jun 2026 21:03:49 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Microsoft Details Windows Clipper Malware Campaign Using USB LNK Worm and Tor-Based C2",
-      "url": "https://thehackernews.com/2026/06/microsoft-details-windows-clipper.html",
-      "published": "Thu, 18 Jun 2026 20:00:42 +0530",
+      "title": "ThreatsDay Bulletin: Claude Chat Abuse, NastyC2 npm Packages, Device-Code Phishing + 25 More Stories",
+      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html",
+      "published": "Thu, 18 Jun 2026 20:57:54 +0530",
       "source": "The Hacker News"
     }
   ]
