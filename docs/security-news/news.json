@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Inside GentleKiller: The EDR-Killer Powering The Gentlemen",
+      "url": "https://securityaffairs.com/193941/uncategorized/inside-gentlekiller-the-edr-killer-powering-the-gentlemen.html",
+      "published": "Sat, 20 Jun 2026 15:30:22 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Hackers Exploit Gravity SMTP WordPress Plugin Bug to Expose API Keys",
       "url": "https://thehackernews.com/2026/06/hackers-exploit-gravity-smtp-wordpress.html",
       "published": "Sat, 20 Jun 2026 15:26:04 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Microsoft links Mastra AI supply chain attack to North Korean hackers",
-      "url": "https://www.bleepingcomputer.com/news/security/microsoft-links-mastra-ai-supply-chain-attack-to-north-korean-hackers/",
-      "published": "Sat, 20 Jun 2026 10:09:19 -0400",
+      "title": "New Prinz Eugen ransomware prioritizes recent files for encryption",
+      "url": "https://www.bleepingcomputer.com/news/security/new-prinz-eugen-ransomware-prioritizes-recent-files-for-encryption/",
+      "published": "Sat, 20 Jun 2026 11:23:46 -0400",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "FortiBleed Exposes Global Credential-Spraying Operation",
-      "url": "https://securityaffairs.com/193931/hacking/fortibleed-exposes-global-credential-spraying-operation.html",
-      "published": "Sat, 20 Jun 2026 08:37:49 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
