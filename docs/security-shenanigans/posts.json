@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Best entry-level cybersecurity certifications in 2026",
+      "file": "article-en.html#best-entry-level-cybersecurity-certifications-in-2026",
+      "description": "If you're just entering the world of cybersecurity, you'll very quickly come across hundreds of different certifications, recommendations, and opinions. The problem is that a large number of lists on the internet come down to copying the same recommendations year after year. That's why the question of how much a particular certification will actually help you when you first sit down in front of a real system, security tool, or incident is often neglected.",
+      "date": "23.06.2026."
+    },
+    {
+      "title": "Najbolji početni certifikati za kibernetičku sigurnost u 2026. godini",
+      "file": "article-hr.html#najbolji-početni-certifikati-za-kibernetičku-sigurnost-u-2026-godini",
+      "description": "Ako tek ulaziš u svijet kibernetičke sigurnosti, vrlo brzo ćeš naići na stotine različitih certifikata, preporuka i mišljenja. Problem je što se velik broj popisa na internetu svodi na prepisivanje istih preporuka iz godine u godinu. Zato se često zanemaruje pitanje koliko će ti određeni certifikat zaista pomoći kada prvi put sjedneš pred stvarni sustav, sigurnosni alat ili incident.",
+      "date": "23.06.2026."
+    },
+    {
       "title": "How Does a Good SOC Analyst Think?",
       "file": "article-en.html#how-does-a-good-soc-analyst-think",
       "description": "One of the most common mistakes among SOC analysts is believing that the analysis is complete the moment they find an alert. In reality, an alert is not the answer. An alert is only the beginning of an investigation.",
       "date": "17.06.2026."
-    },
-    {
-      "title": "Kako razmišlja dobar SOC analitičar?",
-      "file": "article-hr.html#kako-razmišlja-dobar-soc-analitičar",
-      "description": "Jedna od najčešćih pogrešaka kod SOC analitičara jest uvjerenje da je analiza završena onog trenutka kada pronađu upozorenje. U stvarnosti, upozorenje nije odgovor. Upozorenje je samo početak istrage.",
-      "date": "17.06.2026."
-    },
-    {
-      "title": "How to land your first job in cybersecurity?",
-      "file": "article-en.html#how-to-land-your-first-job-in-cybersecurity",
-      "description": "Before we get to the concrete steps I'm going to lay out in this article, we need to ask ourselves a few practical questions: why do I want a job in IT at all, and then in cybersecurity specifically? As with any other job, the first question is: am I here for the right reasons? Getting into IT is not a decision made overnight, and unfortunately, the job doesn't come overnight either.",
-      "date": "11.06.2026."
     }
   ]
 }
