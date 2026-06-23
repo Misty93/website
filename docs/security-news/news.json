@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 102",
-      "url": "https://securityaffairs.com/193960/security/security-affairs-malware-newsletter-round-102.html",
-      "published": "Sun, 21 Jun 2026 20:15:22 +0000",
+      "title": "ShapedPlugin WordPress Pro Plugins Backdoored in Supply Chain Attack",
+      "url": "https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html",
+      "published": "Mon, 22 Jun 2026 23:30:48 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Researchers Detail DifyTap Flaws in Dify That Could Expose AI Chats Across Tenants",
+      "url": "https://thehackernews.com/2026/06/researchers-detail-difytap-flaws-in.html",
+      "published": "Mon, 22 Jun 2026 21:43:28 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "WhatsApp Malware Campaign Hijacks Trust, Installs Legitimate Admin Tools",
+      "url": "https://securityaffairs.com/194031/malware/whatsapp-malware-campaign-hijacks-trust-installs-legitimate-admin-tools.html",
+      "published": "Mon, 22 Jun 2026 20:25:55 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "AryStinger botnet infected thousands of D-Link routers worldwide",
-      "url": "https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/",
-      "published": "Sun, 21 Jun 2026 10:14:22 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "New Prinz Eugen ransomware prioritizes recent files for encryption",
-      "url": "https://www.bleepingcomputer.com/news/security/new-prinz-eugen-ransomware-prioritizes-recent-files-for-encryption/",
-      "published": "Sat, 20 Jun 2026 11:23:46 -0400",
-      "source": "BleepingComputer"
     }
   ]
 }
