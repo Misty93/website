@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "GitHub Updates actions/checkout to Block Common Pwn Request Attack Patterns",
-      "url": "https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html",
-      "published": "Tue, 23 Jun 2026 19:52:03 +0530",
+      "title": "FortiBleed Targeted FortiGate Firewalls in 110 Million-Credential Harvesting Operation",
+      "url": "https://thehackernews.com/2026/06/fortibleed-targeted-fortigate-firewalls.html",
+      "published": "Tue, 23 Jun 2026 23:50:49 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Agentic AI: The Weapon That No Longer Needs a Warrior",
-      "url": "https://thehackernews.com/2026/06/agentic-ai-weapon-that-no-longer-needs.html",
-      "published": "Tue, 23 Jun 2026 17:00:00 +0530",
-      "source": "The Hacker News"
+      "title": "Samsung KNOX Kernel UAF Exposes Millions of Galaxy Devices",
+      "url": "https://securityaffairs.com/194090/security/samsung-knox-kernel-uaf-exposes-millions-of-galaxy-devices.html",
+      "published": "Tue, 23 Jun 2026 23:00:16 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Malicious npm Packages Pose as PostCSS Tools to Deliver Windows RAT",
-      "url": "https://thehackernews.com/2026/06/malicious-npm-packages-pose-as-postcss.html",
-      "published": "Tue, 23 Jun 2026 14:24:32 +0530",
+      "title": "Fake AI Agent Skill Passed Security Scans and Reportedly Reached 26,000 Agents",
+      "url": "https://thehackernews.com/2026/06/fake-ai-agent-skill-passed-security.html",
+      "published": "Tue, 23 Jun 2026 20:46:43 +0530",
       "source": "The Hacker News"
     }
   ]
