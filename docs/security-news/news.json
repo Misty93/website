@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Google releases new privacy controls for activity history, personalization",
-      "url": "https://www.bleepingcomputer.com/news/google/google-releases-new-privacy-controls-for-activity-history-personalization/",
-      "published": "Wed, 24 Jun 2026 19:46:17 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Europol Disrupts StealC and Amadey Malware Infrastructure in Operation Endgame",
-      "url": "https://securityaffairs.com/194173/cyber-crime/europol-disrupts-stealc-and-amadey-malware-infrastructure-in-operation-endgame.html",
-      "published": "Wed, 24 Jun 2026 18:43:16 +0000",
+      "title": "Tata Electronics Confirms Data Breach After 630GB Leak Claim Targets Apple and Tesla",
+      "url": "https://securityaffairs.com/194237/data-breach/tata-electronics-confirms-data-breach-after-630gb-leak-claim-targets-apple-and-tesla.html",
+      "published": "Thu, 25 Jun 2026 20:41:16 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "DraftKings hacker 'Snoopy' sentenced to 18 months in prison",
-      "url": "https://www.bleepingcomputer.com/news/security/draftkings-hacker-snoopy-sentenced-to-18-months-in-prison/",
-      "published": "Wed, 24 Jun 2026 17:55:43 -0400",
-      "source": "BleepingComputer"
+      "title": "Chrome Ad Blocker with 10M+ Installs Found with Dormant Script Injection Capability",
+      "url": "https://thehackernews.com/2026/06/chrome-ad-blocker-with-10m-installs.html",
+      "published": "Thu, 25 Jun 2026 19:42:52 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Curl Fixes a 25-Year-Old Bug in Its Largest CVE Release Yet",
+      "url": "https://securityaffairs.com/194220/security/curl-fixes-a-25-year-old-bug-in-its-largest-cve-release-yet.html",
+      "published": "Thu, 25 Jun 2026 19:20:27 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
