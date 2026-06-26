@@ -20,13 +20,6 @@ output_file = os.path.join(folder, "index.html")
 # API KLJUČEVI
 # =========================================================
 ABUSEIPDB_API_KEY = os.getenv("ABUSEIPDBKEY")
-URLSCAN_API_KEY = os.getenv("URLSCANIO")
-URLHAUS_API_KEY = os.getenv("URLHAUS")
-
-urlscan_headers = {
-    "Content-Type": "application/json",
-    "API-Key": (URLSCAN_API_KEY or "").strip()
-}
 
 # =========================================================
 # FEODO
@@ -47,9 +40,7 @@ def fetch_feodo_ips():
             ip = line.split(",")[0].strip()
 
             if re.match(r"^\d{1,3}(\.\d{1,3}){3}$", ip):
-                ips.append(ip.replace(".", "[.]")
-
-                )
+                ips.append(ip.replace(".", "[.]"))
 
         return ips
     except:
@@ -98,99 +89,6 @@ def fetch_malware_hashes():
         return [line.strip() for line in r.text.splitlines() if line and not line.startswith("#")]
     except:
         return []
-
-# =========================================================
-# THREATFOX
-# =========================================================
-def fetch_threatfox_domains():
-    url = "https://threatfox.abuse.ch/api/v1/"
-
-    try:
-        r = requests.post(
-            url,
-            json={"query": "get_iocs", "days": 1},
-            timeout=20
-        )
-
-        if r.status_code != 200:
-            return []
-
-        data = r.json().get("data", [])
-        out = []
-
-        for item in data:
-            ioc = item.get("ioc", "")
-            if "." in ioc and not ioc.startswith("http"):
-                out.append(ioc.replace(".", "[.]"))
-
-        return out
-
-    except:
-        return []
-
-# =========================================================
-# URLSCAN
-# =========================================================
-def fetch_urlscan_domains():
-    if not URLSCAN_API_KEY:
-        return []
-
-    url = "https://urlscan.io/api/v1/search/?q=visibility:public"
-
-    try:
-        r = requests.get(url, headers=urlscan_headers, timeout=20)
-
-        if r.status_code != 200:
-            return []
-
-        data = r.json().get("results", [])
-        return [x.get("page", {}).get("domain", "").replace(".", "[.]")
-                for x in data if x.get("page", {}).get("domain")]
-
-    except:
-        return []
-
-# =========================================================
-# URLHAUS
-# =========================================================
-def fetch_urlhaus():
-    url = "https://urlhaus-api.abuse.ch/v1/urls/recent/"
-
-    try:
-        r = requests.get(url, timeout=20)
-        if r.status_code != 200:
-            return [], []
-
-        data = r.json().get("urls", [])
-        domains = []
-
-        for item in data:
-            u = item.get("url", "")
-            if "://" in u:
-                try:
-                    dom = u.split("/")[2]
-                    domains.append(dom.replace(".", "[.]"))
-                except:
-                    pass
-
-        return [], domains
-
-    except:
-        return [], []
-
-# =========================================================
-# EMAILS
-# =========================================================
-def extract_emails(domains):
-    out = []
-
-    for d in domains:
-        d = d.replace("[.]", ".")
-        if d.startswith("www."):
-            d = d[4:]
-        out.append(f"abuse@{d}")
-
-    return sorted(set(out))
 
 # =========================================================
 # HTML TEMPLATE (DETAIL + CSS FIX)
@@ -260,17 +158,12 @@ def update_section(title, items, path):
 # =========================================================
 feodo = fetch_feodo_ips()
 abuse = fetch_abuseipdb_ips()
-urlhaus_ips, urlhaus_domains = fetch_urlhaus()
 
-ips = sorted(set(feodo + abuse + urlhaus_ips))
+ips = sorted(set(feodo + abuse))
 hashes = fetch_malware_hashes()
-domains = sorted(set(fetch_threatfox_domains() + fetch_urlscan_domains() + urlhaus_domains))
-emails = extract_emails(domains)
 
 update_section("Malicious IPs", ips, output_file)
 update_section("File Hashes", hashes, output_file)
-update_section("Domains", domains, output_file)
-update_section("Emails", emails, output_file)
 
 # =========================================================
 # ARCHIVE INDEX
