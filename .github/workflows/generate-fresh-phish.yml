@@ -1,1 +1,40 @@
+name: Fresh Phish Generator
 
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Generate Fresh Phish JSON
+        run: python3 fetch_fresh_phish.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "leonorabot"
+          git config user.email "actions@github.com"
+
+          git add docs/fresh-phish/phishing.json
+
+          git diff --cached --quiet && exit 0
+
+          git commit -m "Fresh Phish update - $(date +'%Y-%m-%d %H:%M')"
+
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
