@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fresh Phish | Leonora Miliša</title>
+
+  <meta name="description" content="Fresh phishing domains, URLs and IP addresses updated automatically from community-maintained threat intelligence feeds." />
+
+  <meta property="og:title" content="Fresh Phish | Leonora Miliša" />
+  <meta property="og:description" content="Fresh phishing domains, URLs and IP addresses updated automatically." />
+  <meta property="og:url" content="https://leonoramilisa.com/fresh-phish/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://leonoramilisa.com/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fresh Phish | Leonora Miliša">
+  <meta name="twitter:description" content="Fresh phishing domains, URLs and IP addresses updated automatically.">
+
+  <style>
+    html, body {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      background-image: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    nav {
+      margin-left: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #ff4500;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    main {
+      padding: 4rem 2rem;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      color: #ff4500;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #ff4500;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #cccccc;
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .source-note {
+      border-left: 2px solid #ff4500;
+      background: #1a1a1a;
+      padding: 1rem;
+      max-width: 850px;
+      margin: 2rem auto;
+      color: #cccccc;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .source-note a {
+      color: #ff4500;
+      text-decoration: none;
+    }
+
+    .source-note a:hover {
+      text-decoration: underline;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+
+    .stat-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-left: 2px solid #ff4500;
+      padding: 1.2rem;
+      text-align: left;
+    }
+
+    .stat-card span {
+      display: block;
+      color: #cccccc;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-card strong {
+      color: #ffffff;
+      font-size: 1.8rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .controls input,
+    .controls select {
+      background: #121212;
+      border: 1px solid #444;
+      color: #ffffff;
+      padding: 0.7rem;
+      border-radius: 4px;
+      min-width: 220px;
+    }
+
+    .feed-section {
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .feed-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #2a2a2a;
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+    }
+
+    .feed-header h2 {
+      margin: 0;
+    }
+
+    .feed-count {
+      color: #cccccc;
+      font-size: 0.95rem;
+    }
+
+    .ioc-list {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .ioc-item {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      padding: 0.8rem 1rem;
+      color: #cccccc;
+      word-break: break-word;
+      font-family: Consolas, monospace;
+      font-size: 0.95rem;
+    }
+
+    .ioc-type {
+      color: #ff4500;
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .loading {
+      color: #cccccc;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .footer-note {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #2a2a2a;
+      color: #999999;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-note a {
+      color: #ff4500;
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+
+    .flame {
+      position: fixed;
+      bottom: 20px;
+      font-size: 6rem;
+      opacity: 0.08;
+      animation: flicker 3s infinite, float 6s ease-in-out infinite;
+      pointer-events: none;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 0.08; }
+      50% { opacity: 0.18; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(-50%); }
+      50% { transform: translateY(-10px) translateX(-50%); }
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      nav {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.6rem;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        display: block;
+        padding: 0.35rem 0;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        align-items: stretch;
+      }
+
+      .controls input,
+      .controls select {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">LM</div>
+
+    <nav>
+      <ul>
+        <li><a href="/bio/">Bio</a></li>
+        <li><a href="/security-news/">Security News</a></li>
+        <li><a href="/security-shenanigans/">Security Shenanigans</a></li>
+        <li><a href="/daily-ioc/">Daily IOC</a></li>
+        <li><a href="/fresh-phish/" class="active">Fresh Phish</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Fresh Phish</h1>
+
+    <p>
+      Fresh phishing domains, URLs and IP addresses updated automatically from community-maintained threat intelligence feeds.
+    </p>
+
+    <div class="source-note">
+      Fresh Phish republishes selected phishing intelligence from the
+      <a href="https://github.com/Phishing-Database/Phishing.Database" target="_blank" rel="noopener noreferrer">Phishing.Database</a>
+      project. Data is maintained by Mitchell Krog, Nissar Chababy and the Phishing.Database contributors, and is used under the
+      <a href="https://github.com/Phishing-Database/Phishing.Database/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>.
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span>Active domains</span>
+        <strong id="domains-count">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Active URLs</span>
+        <strong id="urls-count">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Active IPs</span>
+        <strong id="ips-count">0</strong>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="search-input" placeholder="Search phishing indicators..." />
+
+      <select id="type-filter">
+        <option value="all">All indicators</option>
+        <option value="domain">Domains</option>
+        <option value="url">URLs</option>
+        <option value="ip">IPs</option>
+      </select>
+    </div>
+
+    <div id="last-updated" class="loading">Loading Fresh Phish feed...</div>
+
+    <section class="feed-section">
+      <div class="feed-header">
+        <h2>Latest Indicators</h2>
+        <span class="feed-count" id="visible-count">0 visible</span>
+      </div>
+
+      <div id="ioc-list" class="ioc-list"></div>
+    </section>
+
+    <div class="footer-note">
+      Source attribution: phishing data is provided by
+      <a href="https://github.com/Phishing-Database/Phishing.Database" target="_blank" rel="noopener noreferrer">Phishing.Database</a>.
+      This page displays selected and defanged indicators for educational and threat intelligence purposes.
+    </div>
+  </main>
+
+  <div class="flame">🐟</div>
+
+  <script>
+    const FEED_URL = "/fresh-phish/phishing.json";
+
+    const state = {
+      items: [],
+      filtered: []
+    };
+
+    function defang(value) {
+      if (!value) return "";
+
+      return value
+        .replaceAll("http://", "hxxp://")
+        .replaceAll("https://", "hxxps://")
+        .replaceAll(".", "[.]");
+    }
+
+    function detectType(value) {
+      if (/^https?:\/\//i.test(value)) return "url";
+      if (/^\d{1,3}(\.\d{1,3}){3}$/.test(value)) return "ip";
+      return "domain";
+    }
+
+    function normalizeFeed(data) {
+      const items = [];
+
+      if (Array.isArray(data.items)) {
+        data.items.forEach(item => {
+          items.push({
+            type: item.type || detectType(item.value || item.indicator || ""),
+            value: item.value || item.indicator || ""
+          });
+        });
+      }
+
+      if (Array.isArray(data.domains)) {
+        data.domains.forEach(value => items.push({ type: "domain", value }));
+      }
+
+      if (Array.isArray(data.urls)) {
+        data.urls.forEach(value => items.push({ type: "url", value }));
+      }
+
+      if (Array.isArray(data.ips)) {
+        data.ips.forEach(value => items.push({ type: "ip", value }));
+      }
+
+      return items.filter(item => item.value);
+    }
+
+    function renderStats(items) {
+      document.getElementById("domains-count").textContent = items.filter(i => i.type === "domain").length;
+      document.getElementById("urls-count").textContent = items.filter(i => i.type === "url").length;
+      document.getElementById("ips-count").textContent = items.filter(i => i.type === "ip").length;
+    }
+
+    function renderItems() {
+      const query = document.getElementById("search-input").value.toLowerCase().trim();
+      const type = document.getElementById("type-filter").value;
+
+      state.filtered = state.items.filter(item => {
+        const matchesType = type === "all" || item.type === type;
+        const matchesSearch = !query || item.value.toLowerCase().includes(query);
+        return matchesType && matchesSearch;
+      });
+
+      const list = document.getElementById("ioc-list");
+      const visibleCount = document.getElementById("visible-count");
+
+      visibleCount.textContent = `${state.filtered.length} visible`;
+
+      if (state.filtered.length === 0) {
+        list.innerHTML = `<div class="ioc-item">No indicators found.</div>`;
+        return;
+      }
+
+      list.innerHTML = state.filtered.slice(0, 500).map(item => {
+        return `
+          <div class="ioc-item">
+            <span class="ioc-type">${item.type.toUpperCase()}</span>
+            ${defang(item.value)}
+          </div>
+        `;
+      }).join("");
+    }
+
+    async function loadFreshPhish() {
+      try {
+        const response = await fetch(FEED_URL, { cache: "no-store" });
+
+        if (!response.ok) {
+          throw new Error("Feed not available yet.");
+        }
+
+        const data = await response.json();
+
+        state.items = normalizeFeed(data);
+
+        renderStats(state.items);
+        renderItems();
+
+        const updated = data.last_updated || data.generated_at || "unknown";
+        document.getElementById("last-updated").textContent = `Last updated: ${updated}`;
+
+      } catch (error) {
+        document.getElementById("last-updated").textContent = "Fresh Phish feed is not available yet. Add phishing.json after automation is created.";
+        document.getElementById("ioc-list").innerHTML = `<div class="ioc-item">Waiting for automated feed generation.</div>`;
+      }
+    }
+
+    document.getElementById("search-input").addEventListener("input", renderItems);
+    document.getElementById("type-filter").addEventListener("change", renderItems);
+
+    loadFreshPhish();
+  </script>
+
+</body>
+</html>
