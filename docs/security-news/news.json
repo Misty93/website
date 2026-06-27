@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "OpenAI Previews GPT-5.6 Sol With Restricted Access and Stronger Cyber Safeguards",
+      "url": "https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html",
+      "published": "Sat, 27 Jun 2026 17:49:37 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root",
+      "url": "https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html",
+      "published": "Sat, 27 Jun 2026 09:12:26 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys",
       "url": "https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html",
       "published": "Sat, 27 Jun 2026 01:08:29 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New SharkLoader Malware Deploys Cobalt Strike in StrikeShark Cyberattacks",
-      "url": "https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html",
-      "published": "Fri, 26 Jun 2026 23:47:46 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Chinese-Speaking APT Deploys New TinyRCT Backdoor in Southeast Asia Campaign",
-      "url": "https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html",
-      "published": "Fri, 26 Jun 2026 21:51:25 +0530",
       "source": "The Hacker News"
     }
   ]
