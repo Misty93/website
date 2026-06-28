@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials",
+      "url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
+      "published": "Sat, 27 Jun 2026 22:57:11 +0530",
+      "source": "The Hacker News"
+    },
+    {
       "title": "OpenAI Previews GPT-5.6 Sol With Restricted Access and Stronger Cyber Safeguards",
       "url": "https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html",
       "published": "Sat, 27 Jun 2026 17:49:37 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "DirtyClone: Fourth Linux Kernel Flaw in Six Weeks Escalates to Root",
-      "url": "https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html",
-      "published": "Sat, 27 Jun 2026 09:12:26 +0000",
+      "title": "New FBI Alert: Russian Intelligence Uses Signal Recovery Keys to Access Messages",
+      "url": "https://securityaffairs.com/194360/intelligence/new-fbi-alert-russian-intelligence-uses-signal-recovery-keys-to-access-messages.html",
+      "published": "Sat, 27 Jun 2026 16:08:57 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys",
-      "url": "https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html",
-      "published": "Sat, 27 Jun 2026 01:08:29 +0530",
-      "source": "The Hacker News"
     }
   ]
 }
