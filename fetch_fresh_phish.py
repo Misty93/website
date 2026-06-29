@@ -11,19 +11,22 @@ BASE_URL = "https://raw.githubusercontent.com/Phishing-Database/Phishing.Databas
 
 FEEDS = {
     "domains": [
-        f"{BASE_URL}/phishing-domains-ACTIVE.txt",
-        f"{BASE_URL}/phishing-domains-NEW-today.txt",
         f"{BASE_URL}/phishing-domains-NEW-last-hour.txt",
+        f"{BASE_URL}/phishing-domains-NEW-today.txt",
+        f"{BASE_URL}/phishing-domains-ACTIVE-today",
+        f"{BASE_URL}/phishing-domains-ACTIVE.txt",
     ],
     "urls": [
-        f"{BASE_URL}/phishing-links-ACTIVE.txt",
-        f"{BASE_URL}/phishing-links-NEW-today.txt",
         f"{BASE_URL}/phishing-links-NEW-last-hour.txt",
+        f"{BASE_URL}/phishing-links-NEW-today.txt",
+        f"{BASE_URL}/phishing-links-ACTIVE-today",
+        f"{BASE_URL}/phishing-links-ACTIVE.txt",
     ],
     "ips": [
-        f"{BASE_URL}/phishing-IPs-ACTIVE.txt",
-        f"{BASE_URL}/phishing-ips-NEW-today.txt",
         f"{BASE_URL}/phishing-ips-NEW-last-hour.txt",
+        f"{BASE_URL}/phishing-ips-NEW-today.txt",
+        f"{BASE_URL}/phishing-IPs-ACTIVE-today",
+        f"{BASE_URL}/phishing-IPs-ACTIVE.txt",
     ],
 }
 
