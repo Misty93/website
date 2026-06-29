@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29 04:57:59 UTC",
+  "generated_at": "2026-06-29 07:15:55 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -12,6 +12,9 @@
     ]
   },
   "domains": [
+    "boutique-dofus.fr",
+    "grcontestzackretsport.000webhostapp.com",
+    "societegeneral-securedaccount.fr",
     "00000000000000000000000000000000000000000.xyz",
     "00000000000000000000000000000000000000dfjjjhv.000webhostapp.com",
     "0000000000000000000000000.findyourjacket.com",
@@ -508,12 +511,12 @@
     "0211ze21ze212ez1ezze-d19e64.ingress-earth.ewp.live",
     "0215412pageaccountserve23-confirm.start.page",
     "021bag.com",
-    "021c.awzh.workers.dev",
-    "021lm.com",
-    "02213.pages.net.br",
-    "02221203252120.duckdns.org"
+    "021c.awzh.workers.dev"
   ],
   "urls": [
+    "https://www.boutique-dofus.fr",
+    "https://www.boutique-dofus.fr/mmorpg",
+    "https://www.boutique-dofus.fr/mmorpg/actualites/recompenses/grimoire/succes",
     "ftp://188.128.111.33/iptv/tv1324/view.html",
     "ftp://me@createkindlebooks.org:noobasshole@createkindlebooks.org/index.html",
     "http://00000000000000000000000000000000000000dfjjjhv.000webhostapp.com/yahoo/yahooattt/global/attverzon/login.php?.intl=us&.lang=en-us&https://login.yahoo.com/?.src=ym",
@@ -1010,10 +1013,7 @@
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ad21433c951950329e0f/clients",
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ad21433c951950329e0f/clients/pass.php",
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients/pass.php",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/b5180966f71fd94f2257",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/b5180966f71fd94f2257/clients"
+    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients"
   ],
   "ips": [
     "100.25.1.9",
