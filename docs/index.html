@@ -281,6 +281,11 @@
       <h2>Latest IOC</h2>
       <div id="ioc-item">Loading...</div>
     </section>
+
+    <section id="latest-phish" style="margin-top: 4rem;">
+      <h2>Latest Fresh Phish</h2>
+      <div id="phish-item">Loading...</div>
+    </section>
   </main>
 
   <div class="ask-box">
@@ -367,6 +372,44 @@
         }
 
         document.getElementById('ioc-item').innerHTML = iocHtml;
+        const phish = await fetch('https://leonoramilisa.com/fresh-phish/phishing.json').then(r => r.json());
+        let phishHtml = "";
+        
+        const phishItems = [];
+        
+        if (phish.domains && phish.domains.length > 0) {
+          phish.domains.slice(0, 1).forEach(value => {
+            phishItems.push({ type: "DOMAIN", value });
+          });
+        }
+        
+        if (phish.urls && phish.urls.length > 0) {
+          phish.urls.slice(0, 1).forEach(value => {
+            phishItems.push({ type: "URL", value });
+          });
+        }
+        
+        if (phish.ips && phish.ips.length > 0) {
+          phish.ips.slice(0, 1).forEach(value => {
+            phishItems.push({ type: "IP", value });
+          });
+        }
+        
+        if (phishItems.length > 0) {
+          phishItems.slice(0, 3).forEach(item => {
+            const safeValue = item.value
+              .replaceAll("http://", "hxxp://")
+              .replaceAll("https://", "hxxps://")
+              .replaceAll(".", "[.]");
+        
+            phishHtml += `<div class="list-item"><a href="/fresh-phish/">${item.type}: ${safeValue}</a></div>`;
+          });
+        } else {
+          phishHtml = "No Fresh Phish indicators available.";
+        }
+        
+        document.getElementById('phish-item').innerHTML = phishHtml;
+        
 
       } catch (e) {
         console.error(e);
