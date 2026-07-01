@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01 00:20:01 UTC",
+  "generated_at": "2026-07-01 05:53:51 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -1520,7 +1520,7 @@
   "stats": {
     "domains": {
       "displayed": 500,
-      "collected_before_limit": 391558,
+      "collected_before_limit": 391559,
       "limit": 500
     },
     "urls": {
