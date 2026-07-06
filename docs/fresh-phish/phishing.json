@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06 19:04:15 UTC",
+  "generated_at": "2026-07-06 20:59:36 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -12,8 +12,6 @@
     ]
   },
   "domains": [
-    "access-authority-2faa9bb814.s3.eu-north-1.amazonaws.com",
-    "updatenow.click",
     "boutique-dofus.fr",
     "grcontestzackretsport.000webhostapp.com",
     "societegeneral-securedaccount.fr",
@@ -511,7 +509,9 @@
     "020saibo.com",
     "021034662015959.kitlanchesisa.com.br",
     "0211ze21ze212ez1ezze-d19e64.ingress-earth.ewp.live",
-    "0215412pageaccountserve23-confirm.start.page"
+    "0215412pageaccountserve23-confirm.start.page",
+    "021bag.com",
+    "021c.awzh.workers.dev"
   ],
   "urls": [
     "https://www.boutique-dofus.fr",
