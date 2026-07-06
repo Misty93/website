@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06 00:16:23 UTC",
+  "generated_at": "2026-07-06 04:40:16 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -12,6 +12,21 @@
     ]
   },
   "domains": [
+    "bbviop.com",
+    "bdbofp.com",
+    "bdbovip.com",
+    "bdfofp.com",
+    "bdjofp.com",
+    "bdnofp.com",
+    "bdopakj.com",
+    "bdoveboip.com",
+    "bdoviop.cc",
+    "bdoviwp.cc",
+    "bopdd.cc",
+    "bpihub.com",
+    "bpioop.com",
+    "bpitub.com",
+    "dofpsx.com",
     "boutique-dofus.fr",
     "grcontestzackretsport.000webhostapp.com",
     "societegeneral-securedaccount.fr",
@@ -496,22 +511,7 @@
     "01za-bh.pages.dev",
     "020101.000webhostapp.com",
     "02012348.com",
-    "0202.472607582.workers.dev",
-    "02025iyalh00inc24i2ec72cirs25ce2a78ios.github.io",
-    "0202.com.tw",
-    "0203659.com",
-    "0204.pages.dev",
-    "0205.vip",
-    "0205ya1h00inc092irs89vire092doc09ioswin.github.io",
-    "020c184d.webmailonline.pages.dev",
-    "020k365.com",
-    "020life.com",
-    "020saibo.com",
-    "021034662015959.kitlanchesisa.com.br",
-    "0211ze21ze212ez1ezze-d19e64.ingress-earth.ewp.live",
-    "0215412pageaccountserve23-confirm.start.page",
-    "021bag.com",
-    "021c.awzh.workers.dev"
+    "0202.472607582.workers.dev"
   ],
   "urls": [
     "https://www.boutique-dofus.fr",
@@ -1016,6 +1016,7 @@
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients"
   ],
   "ips": [
+    "8.212.177.167",
     "100.25.1.9",
     "100.42.65.208",
     "100.42.65.230",
@@ -1514,13 +1515,12 @@
     "1.120.5.247",
     "112.120.68.236",
     "112.121.164.154",
-    "112.135.217.244",
-    "112.175.150.158"
+    "112.135.217.244"
   ],
   "stats": {
     "domains": {
       "displayed": 500,
-      "collected_before_limit": 391564,
+      "collected_before_limit": 391579,
       "limit": 500
     },
     "urls": {
@@ -1530,7 +1530,7 @@
     },
     "ips": {
       "displayed": 500,
-      "collected_before_limit": 7119,
+      "collected_before_limit": 7120,
       "limit": 500
     }
   }
