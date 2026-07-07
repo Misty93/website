@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations",
+      "url": "https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html",
+      "published": "Tue, 07 Jul 2026 00:04:26 +0530",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Medtronic Notifies 3.8 Million After ShinyHunters Data Breach",
       "url": "https://securityaffairs.com/194788/cyber-crime/medtronic-notifies-3-8-million-after-shinyhunters-data-breach.html",
       "published": "Sun, 05 Jul 2026 18:31:18 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 104",
-      "url": "https://securityaffairs.com/194785/uncategorized/security-affairs-malware-newsletter-round-104.html",
-      "published": "Sun, 05 Jul 2026 17:37:07 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Flipper Zero firmware development continues with community help",
-      "url": "https://www.bleepingcomputer.com/news/security/flipper-zero-firmware-development-continues-with-community-help/",
-      "published": "Sun, 05 Jul 2026 10:14:52 -0400",
-      "source": "BleepingComputer"
+      "title": "16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems",
+      "url": "https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html",
+      "published": "Mon, 06 Jul 2026 23:07:01 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
