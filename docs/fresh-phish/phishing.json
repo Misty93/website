@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08 23:30:36 UTC",
+  "generated_at": "2026-07-09 04:11:34 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -11,8 +11,15 @@
       "Phishing.Database Contributors"
     ]
   },
-  "domains": [],
+  "domains": [
+    "boutique-dofus.fr",
+    "grcontestzackretsport.000webhostapp.com",
+    "societegeneral-securedaccount.fr"
+  ],
   "urls": [
+    "https://www.boutique-dofus.fr",
+    "https://www.boutique-dofus.fr/mmorpg",
+    "https://www.boutique-dofus.fr/mmorpg/actualites/recompenses/grimoire/succes",
     "ftp://188.128.111.33/iptv/tv1324/view.html",
     "ftp://me@createkindlebooks.org:noobasshole@createkindlebooks.org/index.html",
     "http://00000000000000000000000000000000000000dfjjjhv.000webhostapp.com/yahoo/yahooattt/global/attverzon/login.php?.intl=us&.lang=en-us&https://login.yahoo.com/?.src=ym",
@@ -509,10 +516,7 @@
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ad21433c951950329e0f/clients",
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ad21433c951950329e0f/clients/pass.php",
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients/pass.php",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/b5180966f71fd94f2257",
-    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/b5180966f71fd94f2257/clients"
+    "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients"
   ],
   "ips": [
     "100.25.1.9",
@@ -1018,13 +1022,13 @@
   ],
   "stats": {
     "domains": {
-      "displayed": 0,
-      "collected_before_limit": 0,
+      "displayed": 3,
+      "collected_before_limit": 3,
       "limit": 500
     },
     "urls": {
       "displayed": 500,
-      "collected_before_limit": 789054,
+      "collected_before_limit": 789057,
       "limit": 500
     },
     "ips": {
