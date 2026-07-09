@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "AI Coding Agents Found Triggering Endpoint Security Rules Built to Catch Attackers",
-      "url": "https://thehackernews.com/2026/07/ai-coding-agents-found-triggering.html",
-      "published": "Wed, 08 Jul 2026 22:32:12 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New HalluSquatting Attack Could Trick AI Coding Assistants Into Installing Botnet Malware",
-      "url": "https://thehackernews.com/2026/07/new-hallusquatting-attack-could-trick.html",
-      "published": "Wed, 08 Jul 2026 20:37:24 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Ubiquiti Patches Critical UniFi OS Flaws Allowing Command Injection and Privilege Escalation",
       "url": "https://securityaffairs.com/194978/security/ubiquiti-patches-critical-unifi-os-flaws-allowing-command-injection-and-privilege-escalation.html",
       "published": "Wed, 08 Jul 2026 20:20:39 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "A Hacker Claims 35 GB of Accenture Source Code. The Company discloses the data breach",
+      "url": "https://securityaffairs.com/194962/data-breach/a-hacker-claims-35-gb-of-accenture-source-code-the-company-discloses-the-data-breach.html",
+      "published": "Wed, 08 Jul 2026 18:33:43 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "AI Attacks Move in Minutes. Join This Webinar on Building a Defense That Keeps Up",
+      "url": "https://thehackernews.com/2026/07/ai-attacks-move-in-minutes-join-this.html",
+      "published": "Thu, 09 Jul 2026 17:56:58 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
