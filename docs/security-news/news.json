@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "New GigaWiper Windows Backdoor Bundles Disk Wiping, Fake Ransomware, and Spyware",
-      "url": "https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html",
-      "published": "Thu, 09 Jul 2026 23:38:07 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "npm 12 Disables Install Scripts by Default to Reduce Supply Chain Risk",
-      "url": "https://thehackernews.com/2026/07/npm-12-disables-install-scripts-by.html",
-      "published": "Thu, 09 Jul 2026 22:19:02 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "INTERPOL Operation First Light Nets 5,811 Arrests and Seizes $293 Million",
       "url": "https://securityaffairs.com/195056/security/interpol-operation-first-light-nets-5811-arrests-and-seizes-293-million.html",
       "published": "Thu, 09 Jul 2026 21:29:15 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "OpenMandriva Linux says contributor tried to sabotage the project",
+      "url": "https://www.bleepingcomputer.com/news/security/openmandriva-linux-says-contributor-tried-to-sabotage-the-project/",
+      "published": "Thu, 09 Jul 2026 18:14:13 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Injective SDK on npm infected with cryptocurrency wallet stealer",
+      "url": "https://www.bleepingcomputer.com/news/security/injective-sdk-on-npm-infected-with-cryptocurrency-wallet-stealer/",
+      "published": "Thu, 09 Jul 2026 16:10:00 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
