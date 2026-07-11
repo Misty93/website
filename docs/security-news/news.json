@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions",
+      "url": "https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html",
+      "published": "Sat, 11 Jul 2026 12:15:55 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "'Ghostcommit' hides prompt injection in images to fool AI agents, steal secrets",
+      "url": "https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/",
+      "published": "Sat, 11 Jul 2026 05:03:57 -0400",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
       "url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
       "published": "Fri, 10 Jul 2026 22:00:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages",
-      "url": "https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html",
-      "published": "Fri, 10 Jul 2026 21:59:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot",
-      "url": "https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html",
-      "published": "Fri, 10 Jul 2026 21:27:14 +0530",
       "source": "The Hacker News"
     }
   ]
