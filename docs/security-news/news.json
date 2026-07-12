@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "Security Affairs newsletter Round 585 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
+      "url": "https://securityaffairs.com/195175/breaking-news/security-affairs-newsletter-round-585-by-pierluigi-paganini-international-edition.html",
+      "published": "Sun, 12 Jul 2026 04:58:08 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
       "url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
       "published": "Sat, 11 Jul 2026 23:29:26 +0530",
@@ -11,12 +17,6 @@
       "url": "https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html",
       "published": "Sat, 11 Jul 2026 23:19:31 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "U.S. CISA adds iCagenda and Balbooa Forms flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/195164/security/u-s-cisa-adds-icagenda-and-balbooa-forms-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Sat, 11 Jul 2026 19:31:19 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
