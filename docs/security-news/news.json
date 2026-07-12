@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions",
-      "url": "https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html",
-      "published": "Sat, 11 Jul 2026 12:15:55 +0530",
+      "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
+      "url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+      "published": "Sat, 11 Jul 2026 23:29:26 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "'Ghostcommit' hides prompt injection in images to fool AI agents, steal secrets",
-      "url": "https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/",
-      "published": "Sat, 11 Jul 2026 05:03:57 -0400",
-      "source": "BleepingComputer"
+      "title": "Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns",
+      "url": "https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html",
+      "published": "Sat, 11 Jul 2026 23:19:31 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
-      "url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
-      "published": "Fri, 10 Jul 2026 22:00:00 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. CISA adds iCagenda and Balbooa Forms flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/195164/security/u-s-cisa-adds-icagenda-and-balbooa-forms-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Sat, 11 Jul 2026 19:31:19 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
