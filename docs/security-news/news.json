@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "OkoBot Malware Framework Injects Seed Phrase Phishing Into Ledger and Trezor Apps",
-      "url": "https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html",
-      "published": "Wed, 15 Jul 2026 21:00:30 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "US and allied Governments\u2019 Recommendations: Securing Network Devices Against Russian APT Groups",
       "url": "https://securityaffairs.com/195448/apt/us-and-allied-governments-recommendations-securing-network-devices-against-russian-apt-groups.html",
       "published": "Wed, 15 Jul 2026 18:59:09 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Firefox, Chrome, Adobe, and VMware Updates Fix Multiple Critical Security Flaws",
-      "url": "https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html",
-      "published": "Wed, 15 Jul 2026 18:48:53 +0530",
+      "title": "Chaotic Eclipse Unveils LegacyHive Exploit Affecting Fully Patched Windows Systems",
+      "url": "https://securityaffairs.com/195418/hacking/chaotic-eclipse-unveils-legacyhive-exploit-affecting-fully-patched-windows-systems.html",
+      "published": "Wed, 15 Jul 2026 16:57:55 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "New TELEPUZ Malware Spreads via ClickFix to Steal Data and Run Commands",
+      "url": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html",
+      "published": "Thu, 16 Jul 2026 18:20:13 +0530",
       "source": "The Hacker News"
     }
   ]
