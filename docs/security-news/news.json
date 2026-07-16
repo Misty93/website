@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "OkoBot Malware Framework Injects Seed Phrase Phishing Into Ledger and Trezor Apps",
+      "url": "https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html",
+      "published": "Wed, 15 Jul 2026 21:00:30 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "US and allied Governments\u2019 Recommendations: Securing Network Devices Against Russian APT Groups",
+      "url": "https://securityaffairs.com/195448/apt/us-and-allied-governments-recommendations-securing-network-devices-against-russian-apt-groups.html",
+      "published": "Wed, 15 Jul 2026 18:59:09 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Firefox, Chrome, Adobe, and VMware Updates Fix Multiple Critical Security Flaws",
       "url": "https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html",
       "published": "Wed, 15 Jul 2026 18:48:53 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "SASE Has An AI Blind Spot. Inspecting Packets Is No Longer Enough.",
-      "url": "https://thehackernews.com/2026/07/sase-has-ai-blind-spot-inspecting.html",
-      "published": "Wed, 15 Jul 2026 17:20:01 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday",
-      "url": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html",
-      "published": "Wed, 15 Jul 2026 16:37:07 +0530",
       "source": "The Hacker News"
     }
   ]
