@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "US and allied Governments\u2019 Recommendations: Securing Network Devices Against Russian APT Groups",
-      "url": "https://securityaffairs.com/195448/apt/us-and-allied-governments-recommendations-securing-network-devices-against-russian-apt-groups.html",
-      "published": "Wed, 15 Jul 2026 18:59:09 +0000",
+      "title": "New ClickLock macOS malware traps users into revealing login password",
+      "url": "https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/",
+      "published": "Thu, 16 Jul 2026 17:52:54 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Two Scattered Spider Members Sentenced to Prison Over \u00a329 Million TfL Cyberattack",
+      "url": "https://securityaffairs.com/195501/cyber-crime/two-scattered-spider-members-sentenced-to-prison-over-29-million-tfl-cyberattack.html",
+      "published": "Thu, 16 Jul 2026 17:34:13 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Two Scattered Spider Hackers Get 5.5 Years Each for \u00a329 Million TfL Hack",
-      "url": "https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html",
-      "published": "Thu, 16 Jul 2026 22:39:25 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ThreatsDay: Game Cheat Spyware, 24-Hour Ransomware, Chrome Sync Stalking + 12 More Stories",
-      "url": "https://thehackernews.com/2026/07/threatsday-game-cheat-spyware-24-hour.html",
-      "published": "Thu, 16 Jul 2026 21:11:15 +0530",
-      "source": "The Hacker News"
+      "title": "TuxBot v3: The IoT Botnet Built With AI \u2013 Bugs, Disclaimers and All",
+      "url": "https://securityaffairs.com/195486/ai/tuxbot-v3-the-iot-botnet-built-with-ai-bugs-disclaimers-and-all.html",
+      "published": "Thu, 16 Jul 2026 11:13:09 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
