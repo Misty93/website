@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Two Scattered Spider Members Sentenced to Prison Over \u00a329 Million TfL Cyberattack",
-      "url": "https://securityaffairs.com/195501/cyber-crime/two-scattered-spider-members-sentenced-to-prison-over-29-million-tfl-cyberattack.html",
-      "published": "Thu, 16 Jul 2026 17:34:13 +0000",
+      "title": "U.S. CISA adds Fortinet FortiSandbox and Microsoft SharePoint flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/195569/security/u-s-cisa-adds-fortinet-fortisandbox-and-microsoft-sharepoint-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Sat, 18 Jul 2026 11:49:16 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "The Future of Age Verification: Your Face Never Leaves Your Device",
+      "url": "https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/",
+      "published": "Sat, 18 Jul 2026 09:15:24 -0400",
+      "source": "BleepingComputer"
     },
     {
       "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
       "url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
       "published": "Sat, 18 Jul 2026 02:50:10 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "OpenSSL HollowByte Flaw Could Freeze Server Memory with 11-Byte TLS Requests",
-      "url": "https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html",
-      "published": "Sat, 18 Jul 2026 01:50:53 +0530",
       "source": "The Hacker News"
     }
   ]
