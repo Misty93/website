@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "New ClickLock macOS malware traps users into revealing login password",
-      "url": "https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/",
-      "published": "Thu, 16 Jul 2026 17:52:54 -0400",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Two Scattered Spider Members Sentenced to Prison Over \u00a329 Million TfL Cyberattack",
       "url": "https://securityaffairs.com/195501/cyber-crime/two-scattered-spider-members-sentenced-to-prison-over-29-million-tfl-cyberattack.html",
       "published": "Thu, 16 Jul 2026 17:34:13 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "TuxBot v3: The IoT Botnet Built With AI \u2013 Bugs, Disclaimers and All",
-      "url": "https://securityaffairs.com/195486/ai/tuxbot-v3-the-iot-botnet-built-with-ai-bugs-disclaimers-and-all.html",
-      "published": "Thu, 16 Jul 2026 11:13:09 +0000",
-      "source": "Security Affairs"
+      "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
+      "url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
+      "published": "Sat, 18 Jul 2026 02:50:10 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "OpenSSL HollowByte Flaw Could Freeze Server Memory with 11-Byte TLS Requests",
+      "url": "https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html",
+      "published": "Sat, 18 Jul 2026 01:50:53 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
