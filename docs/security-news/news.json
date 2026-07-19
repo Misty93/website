@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "Attackers Can Take Over WordPress Sites Using Newly Released wp2shell Exploits",
+      "url": "https://securityaffairs.com/195597/hacking/attackers-can-take-over-wordpress-sites-using-newly-released-wp2shell-exploits.html",
+      "published": "Sun, 19 Jul 2026 05:04:03 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "OpenSSL Fixes HollowByte Memory Exhaustion Bug",
       "url": "https://securityaffairs.com/195588/hacking/openssl-fixes-hollowbyte-memory-exhaustion-bug.html",
       "published": "Sat, 18 Jul 2026 18:24:32 +0000",
@@ -11,12 +17,6 @@
       "url": "https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/",
       "published": "Sat, 18 Jul 2026 15:32:02 -0400",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Daxin: 13-Year-Old China-Linked Malware Found Still Active on Manufacturer\u2019s Network",
-      "url": "https://securityaffairs.com/195577/malware/daxin-13-year-old-china-linked-malware-found-still-active-on-manufacturers-network.html",
-      "published": "Sat, 18 Jul 2026 14:01:03 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
