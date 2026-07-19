@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "U.S. CISA adds Fortinet FortiSandbox and Microsoft SharePoint flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/195569/security/u-s-cisa-adds-fortinet-fortisandbox-and-microsoft-sharepoint-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Sat, 18 Jul 2026 11:49:16 +0000",
+      "title": "OpenSSL Fixes HollowByte Memory Exhaustion Bug",
+      "url": "https://securityaffairs.com/195588/hacking/openssl-fixes-hollowbyte-memory-exhaustion-bug.html",
+      "published": "Sat, 18 Jul 2026 18:24:32 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "The Future of Age Verification: Your Face Never Leaves Your Device",
-      "url": "https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/",
-      "published": "Sat, 18 Jul 2026 09:15:24 -0400",
+      "title": "Update now: 7-Zip fixes RCE flaw exploitable with malicious archives",
+      "url": "https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/",
+      "published": "Sat, 18 Jul 2026 15:32:02 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
-      "url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
-      "published": "Sat, 18 Jul 2026 02:50:10 +0530",
-      "source": "The Hacker News"
+      "title": "Daxin: 13-Year-Old China-Linked Malware Found Still Active on Manufacturer\u2019s Network",
+      "url": "https://securityaffairs.com/195577/malware/daxin-13-year-old-china-linked-malware-found-still-active-on-manufacturers-network.html",
+      "published": "Sat, 18 Jul 2026 14:01:03 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
