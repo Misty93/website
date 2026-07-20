@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Attackers Can Take Over WordPress Sites Using Newly Released wp2shell Exploits",
-      "url": "https://securityaffairs.com/195597/hacking/attackers-can-take-over-wordpress-sites-using-newly-released-wp2shell-exploits.html",
-      "published": "Sun, 19 Jul 2026 05:04:03 +0000",
-      "source": "Security Affairs"
+      "title": "UAC-0145 Uses ClickFix CAPTCHAs to Infect Ukrainian Devices wih Malware",
+      "url": "https://thehackernews.com/2026/07/uac-0145-uses-clickfix-captchas-to.html",
+      "published": "Sun, 19 Jul 2026 19:00:55 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "OpenSSL Fixes HollowByte Memory Exhaustion Bug",
-      "url": "https://securityaffairs.com/195588/hacking/openssl-fixes-hollowbyte-memory-exhaustion-bug.html",
-      "published": "Sat, 18 Jul 2026 18:24:32 +0000",
-      "source": "Security Affairs"
+      "title": "SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access",
+      "url": "https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html",
+      "published": "Sun, 19 Jul 2026 18:48:56 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Update now: 7-Zip fixes RCE flaw exploitable with malicious archives",
-      "url": "https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/",
-      "published": "Sat, 18 Jul 2026 15:32:02 -0400",
-      "source": "BleepingComputer"
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 106",
+      "url": "https://securityaffairs.com/195620/malware/security-affairs-malware-newsletter-round-106.html",
+      "published": "Sun, 19 Jul 2026 14:59:49 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
