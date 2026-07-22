@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs",
-      "url": "https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html",
-      "published": "Wed, 22 Jul 2026 00:16:32 +0530",
+      "title": "Hackers Exploit Windmill Flaw to Read Arbitrary Server Files Without Authentication",
+      "url": "https://thehackernews.com/2026/07/hackers-exploit-windmill-flaw-to-read.html",
+      "published": "Wed, 22 Jul 2026 18:06:36 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Public PoC triggers active exploitation of critical SharePoint RCE vulnerability CVE-2026-50522",
-      "url": "https://securityaffairs.com/195760/security/public-poc-triggers-active-exploitation-of-critical-sharepoint-rce-vulnerability-cve-2026-50522.html",
-      "published": "Tue, 21 Jul 2026 21:38:37 +0000",
-      "source": "Security Affairs"
+      "title": "The Fastest Path to AI Adoption Runs Through Security",
+      "url": "https://thehackernews.com/2026/07/the-fastest-path-to-ai-adoption-runs.html",
+      "published": "Wed, 22 Jul 2026 17:28:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code",
-      "url": "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html",
-      "published": "Tue, 21 Jul 2026 21:36:12 +0530",
+      "title": "OpenAI Says Its AI Models Escaped Sandbox, Targeted Hugging Face to Cheat Benchmark",
+      "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html",
+      "published": "Wed, 22 Jul 2026 17:00:02 +0530",
       "source": "The Hacker News"
     }
   ]
