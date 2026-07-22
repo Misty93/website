@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access",
-      "url": "https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html",
-      "published": "Tue, 21 Jul 2026 19:34:57 +0530",
+      "title": "Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs",
+      "url": "https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html",
+      "published": "Wed, 22 Jul 2026 00:16:32 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities",
-      "url": "https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html",
-      "published": "Tue, 21 Jul 2026 18:48:31 +0530",
-      "source": "The Hacker News"
+      "title": "Public PoC triggers active exploitation of critical SharePoint RCE vulnerability CVE-2026-50522",
+      "url": "https://securityaffairs.com/195760/security/public-poc-triggers-active-exploitation-of-critical-sharepoint-rce-vulnerability-cve-2026-50522.html",
+      "published": "Tue, 21 Jul 2026 21:38:37 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs",
-      "url": "https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html",
-      "published": "Tue, 21 Jul 2026 17:28:00 +0530",
+      "title": "AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code",
+      "url": "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html",
+      "published": "Tue, 21 Jul 2026 21:36:12 +0530",
       "source": "The Hacker News"
     }
   ]
