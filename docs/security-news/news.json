@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Hackers Exploit Windmill Flaw to Read Arbitrary Server Files Without Authentication",
-      "url": "https://thehackernews.com/2026/07/hackers-exploit-windmill-flaw-to-read.html",
-      "published": "Wed, 22 Jul 2026 18:06:36 +0530",
+      "title": "Ubuntu snap-confine Flaw Could Give Local Users Root on Default Desktop Installs",
+      "url": "https://thehackernews.com/2026/07/ubuntu-snap-confine-flaw-could-give.html",
+      "published": "Wed, 22 Jul 2026 23:37:16 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "The Fastest Path to AI Adoption Runs Through Security",
-      "url": "https://thehackernews.com/2026/07/the-fastest-path-to-ai-adoption-runs.html",
-      "published": "Wed, 22 Jul 2026 17:28:00 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-8933: Ubuntu security flaw breaks Snap sandbox protections",
+      "url": "https://securityaffairs.com/195833/security/cve-2026-8933-ubuntu-security-flaw-breaks-snap-sandbox-protections.html",
+      "published": "Wed, 22 Jul 2026 22:25:57 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "OpenAI Says Its AI Models Escaped Sandbox, Targeted Hugging Face to Cheat Benchmark",
-      "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html",
-      "published": "Wed, 22 Jul 2026 17:00:02 +0530",
-      "source": "The Hacker News"
+      "title": "Adobe Acrobat Chrome extension bug enabled silent WhatsApp data theft",
+      "url": "https://securityaffairs.com/195805/hacking/adobe-acrobat-chrome-extension-bug-enabled-silent-whatsapp-data-theft.html",
+      "published": "Wed, 22 Jul 2026 21:19:29 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
