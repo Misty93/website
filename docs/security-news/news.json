@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "CVE-2026-8933: Ubuntu security flaw breaks Snap sandbox protections",
-      "url": "https://securityaffairs.com/195833/security/cve-2026-8933-ubuntu-security-flaw-breaks-snap-sandbox-protections.html",
-      "published": "Wed, 22 Jul 2026 22:25:57 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "ThreatsDay: Android Spyware, PLC Attacks, AI Image Prompt Injection + 12 More Stories",
-      "url": "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html",
-      "published": "Thu, 23 Jul 2026 20:32:07 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "U.S. CISA adds Microsoft SharePoint and Check Point SmartConsole flaws to its Known Exploited Vulnerabilities catalog",
       "url": "https://securityaffairs.com/195889/security/u-s-cisa-adds-microsoft-sharepoint-and-check-point-smartconsole-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
       "published": "Thu, 23 Jul 2026 20:10:46 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "New Dolphin X malware uses AI to rank high-value targets",
+      "url": "https://www.bleepingcomputer.com/news/security/new-dolphin-x-malware-uses-ai-to-rank-high-value-targets/",
+      "published": "Thu, 23 Jul 2026 17:20:34 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Australian energy provider Origin says data breach exposes client data",
+      "url": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/",
+      "published": "Thu, 23 Jul 2026 16:14:35 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
