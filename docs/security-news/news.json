@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Google Fined \u20ac890M Under EU Digital Markets Act Over Search and Play Store Practices",
-      "url": "https://securityaffairs.com/195963/laws-and-regulations/google-fined-e890m-under-eu-digital-markets-act-over-search-and-play-store-practices.html",
-      "published": "Fri, 24 Jul 2026 20:47:13 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "BlueNoroff Zoom Phishing Kit Profiles Crypto Wallets Before Malware Delivery",
-      "url": "https://thehackernews.com/2026/07/bluenoroff-zoom-phishing-kit-profiles.html",
-      "published": "Fri, 24 Jul 2026 20:42:35 +0530",
+      "title": "Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available",
+      "url": "https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html",
+      "published": "Sat, 25 Jul 2026 18:22:43 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller",
-      "url": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html",
-      "published": "Fri, 24 Jul 2026 19:45:21 +0530",
+      "title": "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git",
+      "url": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
+      "published": "Sat, 25 Jul 2026 15:44:26 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CTM360 Research Reveals How Insurance Phishing Has Evolved Into Real-Time Account Hijacking",
+      "url": "https://thehackernews.com/2026/07/ctm360-research-reveals-how-insurance.html",
+      "published": "Sat, 25 Jul 2026 15:44:21 +0530",
       "source": "The Hacker News"
     }
   ]
