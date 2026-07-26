@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Hackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Credentials",
+      "url": "https://securityaffairs.com/196017/security/hackers-hijack-hotel-wi-fi-to-steal-microsoft-365-credentials.html",
+      "published": "Sun, 26 Jul 2026 13:04:27 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Security Affairs newsletter Round 587 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
+      "url": "https://securityaffairs.com/196006/security/security-affairs-newsletter-round-587-by-pierluigi-paganini-international-edition.html",
+      "published": "Sun, 26 Jul 2026 11:42:44 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Malvertising Sends Malware in Pieces, Then Makes the Browser Build the Executable",
       "url": "https://thehackernews.com/2026/07/malvertising-sends-malware-in-pieces.html",
       "published": "Sun, 26 Jul 2026 00:18:44 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Iran-Linked Actors Breach Are Targeting US Water and Energy Control Systems",
-      "url": "https://securityaffairs.com/195991/apt/iran-linked-actors-breach-are-targeting-us-water-and-energy-control-systems.html",
-      "published": "Sat, 25 Jul 2026 20:11:48 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Steam forum ClickFix attacks infect gamers with XMRig cryptominers",
-      "url": "https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/",
-      "published": "Sat, 25 Jul 2026 18:37:47 -0400",
-      "source": "BleepingComputer"
     }
   ]
 }
