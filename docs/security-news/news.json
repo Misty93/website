@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 107",
-      "url": "https://securityaffairs.com/196037/malware/security-affairs-malware-newsletter-round-107.html",
-      "published": "Sun, 26 Jul 2026 13:30:44 +0000",
+      "title": "NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework",
+      "url": "https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html",
+      "published": "Mon, 27 Jul 2026 23:40:05 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Dysphoria IoT Botnet Adds Blockchain C2 and Victim Relays After JackSkid Disruption",
+      "url": "https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html",
+      "published": "Mon, 27 Jul 2026 22:46:28 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Reuters: OpenAI Agent Hacked Hugging Face for Days Before Being Detected",
+      "url": "https://securityaffairs.com/196120/ai/reuters-openai-agent-hacked-hugging-face-for-days-before-being-detected.html",
+      "published": "Mon, 27 Jul 2026 21:44:28 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "GitHub, PyPI add time-based defenses against supply chain attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/",
-      "published": "Sun, 26 Jul 2026 10:13:39 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Steam forum ClickFix attacks infect gamers with XMRig cryptominers",
-      "url": "https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/",
-      "published": "Sat, 25 Jul 2026 18:37:47 -0400",
-      "source": "BleepingComputer"
     }
   ]
 }
