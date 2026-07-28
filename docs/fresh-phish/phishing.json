@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28 14:33:51 UTC",
+  "generated_at": "2026-07-28 16:49:17 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -12,7 +12,7 @@
     ]
   },
   "domains": [
-    "parys.debijenkorfs.help",
+    "easyqapark.vu",
     "boutique-dofus.fr",
     "grcontestzackretsport.000webhostapp.com",
     "societegeneral-securedaccount.fr",
@@ -1520,7 +1520,7 @@
   "stats": {
     "domains": {
       "displayed": 500,
-      "collected_before_limit": 391608,
+      "collected_before_limit": 391609,
       "limit": 500
     },
     "urls": {
