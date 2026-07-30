@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
-      "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
-      "published": "Wed, 29 Jul 2026 23:40:00 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Claude Mythos Shows AI Can Outpace Human Cryptography Research",
       "url": "https://securityaffairs.com/196265/ai/claude-mythos-shows-ai-can-outpace-human-cryptography-research.html",
       "published": "Wed, 29 Jul 2026 21:10:02 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory",
-      "url": "https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html",
-      "published": "Wed, 29 Jul 2026 21:09:30 +0530",
-      "source": "The Hacker News"
+      "title": "Russian hackers exploit Exchange OWA zero-day for long-term mailbox access",
+      "url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/",
+      "published": "Wed, 29 Jul 2026 19:44:07 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Anthropic confirms Claude is down worldwide",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-worldwide/",
+      "published": "Wed, 29 Jul 2026 17:39:29 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
