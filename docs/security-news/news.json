@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Mythos Asks the Right Question. It Doesn't Answer It.",
-      "url": "https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html",
-      "published": "Wed, 29 Jul 2026 17:45:00 +0530",
+      "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
+      "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
+      "published": "Wed, 29 Jul 2026 23:40:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser",
-      "url": "https://thehackernews.com/2026/07/researchers-show-single-malicious.html",
-      "published": "Wed, 29 Jul 2026 17:27:00 +0530",
-      "source": "The Hacker News"
+      "title": "Claude Mythos Shows AI Can Outpace Human Cryptography Research",
+      "url": "https://securityaffairs.com/196265/ai/claude-mythos-shows-ai-can-outpace-human-cryptography-research.html",
+      "published": "Wed, 29 Jul 2026 21:10:02 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "73% of Organizations Say They Are Not Fully Ready for a Major Cyberattack",
-      "url": "https://thehackernews.com/2026/07/73-of-organizations-say-they-are-not.html",
-      "published": "Wed, 29 Jul 2026 16:43:10 +0530",
+      "title": "Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory",
+      "url": "https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html",
+      "published": "Wed, 29 Jul 2026 21:09:30 +0530",
       "source": "The Hacker News"
     }
   ]
