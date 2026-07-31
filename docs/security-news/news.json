@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Claude Mythos Shows AI Can Outpace Human Cryptography Research",
-      "url": "https://securityaffairs.com/196265/ai/claude-mythos-shows-ai-can-outpace-human-cryptography-research.html",
-      "published": "Wed, 29 Jul 2026 21:10:02 +0000",
+      "title": "DPRK-Linked macOS Malvertising Uses Fake Updates to Deliver Crypto-Stealing Malware",
+      "url": "https://thehackernews.com/2026/07/dprk-linked-macos-malvertising-uses.html",
+      "published": "Thu, 30 Jul 2026 23:48:24 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Researchers Expose Flying Eagle Criminal Ecosystem Behind Fake Chinese Police App",
+      "url": "https://securityaffairs.com/196369/malware/researchers-expose-flying-eagle-criminal-ecosystem-behind-fake-chinese-police-app.html",
+      "published": "Thu, 30 Jul 2026 22:41:51 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Russian hackers exploit Exchange OWA zero-day for long-term mailbox access",
-      "url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/",
-      "published": "Wed, 29 Jul 2026 19:44:07 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Anthropic confirms Claude is down worldwide",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-worldwide/",
-      "published": "Wed, 29 Jul 2026 17:39:29 -0400",
+      "title": "Anthropic's Claude breached 3 orgs, uploaded PyPI malware during tests",
+      "url": "https://www.bleepingcomputer.com/news/security/anthropics-claude-breached-3-orgs-uploaded-pypi-malware-during-tests/",
+      "published": "Thu, 30 Jul 2026 20:57:25 -0400",
       "source": "BleepingComputer"
     }
   ]
