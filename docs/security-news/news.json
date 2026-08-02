@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "CISA Urges Utilities to Remove Internet-Exposed PLCs After Minnesota Attacks",
+      "url": "https://securityaffairs.com/196453/ics-scada/cisa-urges-utilities-to-remove-internet-exposed-plcs-after-minnesota-attacks.html",
+      "published": "Sun, 02 Aug 2026 05:06:33 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
       "url": "https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html",
       "published": "Sat, 01 Aug 2026 22:47:22 +0530",
@@ -11,12 +17,6 @@
       "url": "https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html",
       "published": "Sat, 01 Aug 2026 14:33:07 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Russian Hackers Hijack Hotel Wi-Fi to Steal Microsoft 365 Tokens",
-      "url": "https://securityaffairs.com/196441/apt/russian-hackers-hijack-hotel-wi-fi-to-steal-microsoft-365-tokens.html",
-      "published": "Sat, 01 Aug 2026 14:11:37 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
