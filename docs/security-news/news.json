@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "AI Deception Emerges in Cyber Tests as Agents Target Real People and Systems",
-      "url": "https://securityaffairs.com/196695/ai/ai-deception-emerges-in-cyber-tests-as-agents-target-real-people-and-systems.html",
-      "published": "Wed, 05 Aug 2026 19:39:58 +0000",
-      "source": "Security Affairs"
+      "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
+      "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
+      "published": "Thu, 06 Aug 2026 23:28:30 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Ransom Cartel ransomware creator sentenced to 16 years in prison",
-      "url": "https://www.bleepingcomputer.com/news/security/ransom-cartel-ransomware-creator-sentenced-to-16-years-in-prison/",
-      "published": "Wed, 05 Aug 2026 19:00:50 -0400",
-      "source": "BleepingComputer"
+      "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
+      "url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
+      "published": "Thu, 06 Aug 2026 22:43:15 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Canadian pleads guilty to Snowflake cloud data-theft attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/canadian-pleads-guilty-to-snowflake-cloud-data-theft-attacks/",
-      "published": "Wed, 05 Aug 2026 17:53:26 -0400",
-      "source": "BleepingComputer"
+      "title": "New Interrupt Injection Attack Can Bypass Spectre v2 Defenses on Intel and AMD CPUs",
+      "url": "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html",
+      "published": "Thu, 06 Aug 2026 21:47:13 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
