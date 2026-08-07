@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
-      "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
-      "published": "Thu, 06 Aug 2026 23:28:30 +0530",
-      "source": "The Hacker News"
+      "title": "OpenAI rolls out a major ChatGPT upgrade, even if you don\u2019t pay for it",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-rolls-out-a-major-chatgpt-upgrade-even-if-you-dont-pay-for-it/",
+      "published": "Thu, 06 Aug 2026 18:48:22 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
-      "url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
-      "published": "Thu, 06 Aug 2026 22:43:15 +0530",
-      "source": "The Hacker News"
+      "title": "ClickFix attack pushes macOS infostealer for crypto theft attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/",
+      "published": "Thu, 06 Aug 2026 18:37:17 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "New Interrupt Injection Attack Can Bypass Spectre v2 Defenses on Intel and AMD CPUs",
-      "url": "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html",
-      "published": "Thu, 06 Aug 2026 21:47:13 +0530",
-      "source": "The Hacker News"
+      "title": "Exposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records",
+      "url": "https://securityaffairs.com/196766/data-breach/exposed-sisvisa-database-leaks-102000-brazilian-health-surveillance-records.html",
+      "published": "Thu, 06 Aug 2026 16:44:26 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
