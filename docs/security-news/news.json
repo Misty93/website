@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers",
-      "url": "https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html",
-      "published": "Sat, 08 Aug 2026 14:24:50 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Palo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions",
-      "url": "https://securityaffairs.com/196881/intelligence/palo-alto-networks-faces-china-cybersecurity-review-amid-rising-tech-tensions.html",
-      "published": "Sat, 08 Aug 2026 13:41:32 +0000",
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 109",
+      "url": "https://securityaffairs.com/196919/malware/security-affairs-malware-newsletter-round-109.html",
+      "published": "Sun, 09 Aug 2026 12:29:47 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens",
-      "url": "https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html",
-      "published": "Sat, 08 Aug 2026 13:33:57 +0530",
-      "source": "The Hacker News"
+      "title": "Security Affairs newsletter Round 589 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
+      "url": "https://securityaffairs.com/196911/security/security-affairs-newsletter-round-589-by-pierluigi-paganini-international-edition.html",
+      "published": "Sun, 09 Aug 2026 11:49:08 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Webmail CSS Attacks Expose a New Risk for AI-Powered Email Tools",
+      "url": "https://securityaffairs.com/196899/hacking/webmail-css-attacks-expose-a-new-risk-for-ai-powered-email-tools.html",
+      "published": "Sun, 09 Aug 2026 08:01:00 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
