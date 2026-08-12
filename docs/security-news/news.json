@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
-      "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "published": "Wed, 12 Aug 2026 01:40:55 +0530",
+      "title": "OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning",
+      "url": "https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html",
+      "published": "Wed, 12 Aug 2026 17:17:38 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Kimwolf v7 Android Botnet Makes HTTP/2 DDoS Traffic Look Like Legitimate Browsing",
-      "url": "https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html",
-      "published": "Wed, 12 Aug 2026 01:06:37 +0530",
+      "title": "Enterprise Defenses Recovered at the Edge and Collapsed Inside",
+      "url": "https://thehackernews.com/2026/08/enterprise-defenses-recovered-at-edge.html",
+      "published": "Wed, 12 Aug 2026 17:11:34 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Zoom Annotation Flaws Could Let a Meeting Participant Hijack Another Attendee's Client",
-      "url": "https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html",
-      "published": "Wed, 12 Aug 2026 00:38:47 +0530",
+      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+      "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+      "published": "Wed, 12 Aug 2026 16:43:03 +0530",
       "source": "The Hacker News"
     }
   ]
