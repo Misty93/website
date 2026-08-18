@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "DDoS Attacks Cause Major Threema Outages",
-      "url": "https://securityaffairs.com/197353/hacking/ddos-attacks-cause-major-threema-outages.html",
-      "published": "Sun, 16 Aug 2026 23:38:43 +0000",
-      "source": "Security Affairs"
+      "title": "Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects",
+      "url": "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
+      "published": "Tue, 18 Aug 2026 02:33:04 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "SafePal data breach impacts 39,798 customers, stolen info for sale",
-      "url": "https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/",
-      "published": "Sun, 16 Aug 2026 19:47:06 -0400",
-      "source": "BleepingComputer"
+      "title": "Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection",
+      "url": "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html",
+      "published": "Tue, 18 Aug 2026 00:14:17 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 110",
-      "url": "https://securityaffairs.com/197314/malware/security-affairs-malware-newsletter-round-110.html",
-      "published": "Sun, 16 Aug 2026 17:43:31 +0000",
-      "source": "Security Affairs"
+      "title": "Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads",
+      "url": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
+      "published": "Mon, 17 Aug 2026 23:52:09 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
