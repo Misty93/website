@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects",
-      "url": "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
-      "published": "Tue, 18 Aug 2026 02:33:04 +0530",
+      "title": "16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets",
+      "url": "https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html",
+      "published": "Tue, 18 Aug 2026 17:10:06 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection",
-      "url": "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html",
-      "published": "Tue, 18 Aug 2026 00:14:17 +0530",
+      "title": "One Attacker Has Scraped Both Salesforce and ServiceNow Portals Since 2025",
+      "url": "https://thehackernews.com/2026/08/one-attacker-has-scraped-both.html",
+      "published": "Tue, 18 Aug 2026 17:00:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads",
-      "url": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
-      "published": "Mon, 17 Aug 2026 23:52:09 +0530",
+      "title": "SafePal Hardware Wallet Maker Says Flaw Exposed Data of Nearly 40,000 Customers",
+      "url": "https://thehackernews.com/2026/08/safepal-hardware-wallet-maker-says-flaw.html",
+      "published": "Tue, 18 Aug 2026 14:40:45 +0530",
       "source": "The Hacker News"
     }
   ]
