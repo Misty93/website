@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Inside Operation CameraSwarm: How One Actor Took Over 14,000 Dahua Cameras",
-      "url": "https://securityaffairs.com/197527/iot/inside-operation-cameraswarm-how-one-actor-took-over-14000-dahua-cameras.html",
-      "published": "Wed, 19 Aug 2026 17:35:26 +0000",
-      "source": "Security Affairs"
+      "title": "ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit and More",
+      "url": "https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html",
+      "published": "Thu, 20 Aug 2026 22:53:48 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Microsoft Tracks MacSync Stealer by Its Behavior, Not Its Domains",
-      "url": "https://securityaffairs.com/197514/malware/microsoft-tracks-macsync-stealer-by-its-behavior-not-its-domains.html",
-      "published": "Wed, 19 Aug 2026 08:55:47 +0000",
-      "source": "Security Affairs"
+      "title": "AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure",
+      "url": "https://thehackernews.com/2026/08/ai-generated-exploit-scripts-target.html",
+      "published": "Thu, 20 Aug 2026 22:29:44 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands",
-      "url": "https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html",
-      "published": "Thu, 20 Aug 2026 16:35:11 +0530",
+      "title": "New Cryptographic Context Injection Attack Could Let Web Pages Steal Grok Chat Data",
+      "url": "https://thehackernews.com/2026/08/new-cryptographic-context-injection.html",
+      "published": "Thu, 20 Aug 2026 20:06:27 +0530",
       "source": "The Hacker News"
     }
   ]
