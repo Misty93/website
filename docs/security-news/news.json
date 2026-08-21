@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit and More",
-      "url": "https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html",
-      "published": "Thu, 20 Aug 2026 22:53:48 +0530",
+      "title": "Hackers poison arrayref Rust crate to push infostealer malware",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-poison-arrayref-rust-crate-to-push-infostealer-malware/",
+      "published": "Thu, 20 Aug 2026 13:53:52 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Wazuh and AI For Enhanced SOC Workflows",
+      "url": "https://thehackernews.com/2026/08/wazuh-and-ai-for-enhanced-soc-workflows.html",
+      "published": "Fri, 21 Aug 2026 16:51:39 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure",
-      "url": "https://thehackernews.com/2026/08/ai-generated-exploit-scripts-target.html",
-      "published": "Thu, 20 Aug 2026 22:29:44 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New Cryptographic Context Injection Attack Could Let Web Pages Steal Grok Chat Data",
-      "url": "https://thehackernews.com/2026/08/new-cryptographic-context-injection.html",
-      "published": "Thu, 20 Aug 2026 20:06:27 +0530",
+      "title": "Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0",
+      "url": "https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html",
+      "published": "Fri, 21 Aug 2026 15:33:11 +0530",
       "source": "The Hacker News"
     }
   ]
