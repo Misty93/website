@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Hackers poison arrayref Rust crate to push infostealer malware",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-poison-arrayref-rust-crate-to-push-infostealer-malware/",
-      "published": "Thu, 20 Aug 2026 13:53:52 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Wazuh and AI For Enhanced SOC Workflows",
-      "url": "https://thehackernews.com/2026/08/wazuh-and-ai-for-enhanced-soc-workflows.html",
-      "published": "Fri, 21 Aug 2026 16:51:39 +0530",
+      "title": "14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2",
+      "url": "https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html",
+      "published": "Sat, 22 Aug 2026 00:23:00 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0",
-      "url": "https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html",
-      "published": "Fri, 21 Aug 2026 15:33:11 +0530",
+      "title": "Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at Boot",
+      "url": "https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html",
+      "published": "Fri, 21 Aug 2026 21:22:10 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Android Car Malware Spreads Through Built-In Updaters for Ad Fraud, Proxy Botnet",
+      "url": "https://thehackernews.com/2026/08/android-car-malware-spreads-through.html",
+      "published": "Fri, 21 Aug 2026 21:11:44 +0530",
       "source": "The Hacker News"
     }
   ]
