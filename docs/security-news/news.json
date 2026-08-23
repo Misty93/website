@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Malware Hijacks Android Car Head Units",
-      "url": "https://securityaffairs.com/197700/hacking/malware-hijacks-android-car-head-units.html",
-      "published": "Sat, 22 Aug 2026 08:55:18 +0000",
+      "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
+      "url": "https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html",
+      "published": "Sat, 22 Aug 2026 20:02:41 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ToxicPanda 2.0 Gets a Major Upgrade, Expanding Attacks Across 16 Countries",
+      "url": "https://securityaffairs.com/197681/breaking-news/toxicpanda-2-0-gets-a-major-upgrade.html",
+      "published": "Sat, 22 Aug 2026 16:50:20 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Critical Flaw in NASA/JPL Open-Source Spacecraft Command Software Allowed Unauthenticated Command Execution",
-      "url": "https://securityaffairs.com/197689/hacking/critical-flaw-in-nasa-jpl-open-source-spacecraft-command-software.html",
-      "published": "Sat, 22 Aug 2026 08:04:09 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "U.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/197693/security/u-s-cisa-adds-zimbra-collaboration-suite-zcs-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Sat, 22 Aug 2026 07:17:49 +0000",
-      "source": "Security Affairs"
+      "title": "Hackers infect Android car head units with proxy botnet malware",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-infect-android-car-head-units-with-proxy-botnet-malware/",
+      "published": "Sat, 22 Aug 2026 10:14:24 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
