@@ -1,21 +1,21 @@
 {
   "items": [
     {
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 111",
+      "url": "https://securityaffairs.com/197743/security/security-affairs-malware-newsletter-round-111.html",
+      "published": "Sun, 23 Aug 2026 17:04:47 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "ToxicPanda Android malware uses VPN permissions to block Google Play",
+      "url": "https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/",
+      "published": "Sun, 23 Aug 2026 10:23:46 -0400",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "UK Power Plant Disabled for Four Days by Iran-Linked Hackers, Concurrent with US Water Attacks",
       "url": "https://securityaffairs.com/197734/cyber-warfare-2/uk-power-plant-disabled-for-four-days-by-iran-linked-hackers-concurrent-with-us-water-attacks.html",
       "published": "Sun, 23 Aug 2026 08:48:14 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Security Affairs newsletter Round 591 by Pierluigi Paganini \u2013 INTERNATIONAL EDITION",
-      "url": "https://securityaffairs.com/197728/breaking-news/security-affairs-newsletter-round-591-by-pierluigi-paganini-international-edition.html",
-      "published": "Sun, 23 Aug 2026 08:29:02 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Zero-Click Grok Chat History Theft: Adversa AI Demonstrates Cryptographic Context Injection",
-      "url": "https://securityaffairs.com/197717/hacking/zero-click-grok-chat-history-theft-adversa-ai-demonstrates-cryptographic-context-injection.html",
-      "published": "Sun, 23 Aug 2026 07:20:38 +0000",
       "source": "Security Affairs"
     }
   ]
