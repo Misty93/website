@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Unpatched Kaltura mwEmbed Flaws Could Let Remote Attackers Read Files and Run Code",
-      "url": "https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html",
-      "published": "Wed, 26 Aug 2026 17:25:00 +0530",
+      "title": "CISA Red Team Fully Compromised Two Critical Infrastructure Orgs",
+      "url": "https://securityaffairs.com/197901/hacking/cisa-red-team-fully-compromised-two-critical-infrastructure-orgs.html",
+      "published": "Wed, 26 Aug 2026 23:20:53 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations",
+      "url": "https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html",
+      "published": "Wed, 26 Aug 2026 22:12:03 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Imagine the SOC Without a Queue: From Alert Backlog to AI Hypothesis Engine",
-      "url": "https://thehackernews.com/2026/08/imagine-soc-without-queue-from-alert.html",
-      "published": "Wed, 26 Aug 2026 17:06:49 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Claude Opus 4.6 Bypasses Gym Booking Limit, Cancels Other Users' Reservations in Tests",
-      "url": "https://thehackernews.com/2026/08/claude-opus-46-bypasses-gym-booking.html",
-      "published": "Wed, 26 Aug 2026 15:57:23 +0530",
+      "title": "Nimbus Manticore Expands Toolset With TWOSTROKE-Like Backdoor and SSH Tunneler",
+      "url": "https://thehackernews.com/2026/08/nimbus-manticore-expands-toolset-with.html",
+      "published": "Wed, 26 Aug 2026 21:05:05 +0530",
       "source": "The Hacker News"
     }
   ]
