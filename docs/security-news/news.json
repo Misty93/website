@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "CISA Red Team Fully Compromised Two Critical Infrastructure Orgs",
-      "url": "https://securityaffairs.com/197901/hacking/cisa-red-team-fully-compromised-two-critical-infrastructure-orgs.html",
-      "published": "Wed, 26 Aug 2026 23:20:53 +0000",
+      "title": "Next.js Patches Critical AVIF and Windows Flaws Enabling Unauthenticated RCE",
+      "url": "https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html",
+      "published": "Thu, 27 Aug 2026 20:43:00 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ThreatsDay: 296K IoT Botnet, 100+ Water Systems Targeted, SharePoint RCE Chain + 27 New Stories",
+      "url": "https://thehackernews.com/2026/08/threatsday-296k-iot-botnet-100-water.html",
+      "published": "Thu, 27 Aug 2026 20:42:16 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Dark Caracal Deploys New Go Malware With Ethereum-Based C2 Fallback",
+      "url": "https://securityaffairs.com/197948/apt/dark-caracal-deploys-new-go-malware-with-ethereum-based-c2-fallback.html",
+      "published": "Thu, 27 Aug 2026 20:31:01 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations",
-      "url": "https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html",
-      "published": "Wed, 26 Aug 2026 22:12:03 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Nimbus Manticore Expands Toolset With TWOSTROKE-Like Backdoor and SSH Tunneler",
-      "url": "https://thehackernews.com/2026/08/nimbus-manticore-expands-toolset-with.html",
-      "published": "Wed, 26 Aug 2026 21:05:05 +0530",
-      "source": "The Hacker News"
     }
   ]
 }
