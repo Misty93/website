@@ -81,6 +81,254 @@ code {
 <div class="container">
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
+
+    <div class="article-date">27.08.2026.</div>
+
+<h2>Threat Hunt Starter Pack: od hipoteze do konkretnog nalaza</h2>
+
+<p>Proaktivno traženje prijetnji, odnosno <em>threat hunting</em>, često se pogrešno prikazuje kao pretraživanje SIEM sustava prema poznatim pokazateljima kompromitacije ili procesima kao što su PowerShell, rundll32.exe i certutil.exe. Takva pretraga može biti korisna, ali sama po sebi ne predstavlja cjelovit postupak traženja prijetnji.</p>
+
+<p>Proaktivno traženje prijetnji strukturirano je istraživanje aktivnosti koje možda nisu pokrenule sigurnosno upozorenje, ali mogu predstavljati odstupanje od očekivanog ponašanja korisnika, uređaja, računa ili servisa. Cilj nije dokazati da je svaka pronađena anomalija zlonamjerna. Cilj je prikupiti dovoljno tehničkog i poslovnog konteksta da se početna hipoteza može potvrditi ili odbaciti.</p>
+
+<p>Organizacije koriste različite SIEM, EDR, NDR, mrežne i identitetske sigurnosne proizvode. Netko koristi Microsoft Sentinel i Microsoft Defender, netko Splunk i CrowdStrike, a netko Stellar Cyber, Cybereason, Elastic, QRadar, Fortinet, Palo Alto Networks ili kombinaciju nekoliko rješenja. Nazivi tablica, polja i korisničkih sučelja razlikuju se, ali analitička logika ostaje ista.</p>
+
+<p>U SIEM sustavu tražimo korelaciju i širi opseg aktivnosti. U EDR sustavu analiziramo procese, datoteke, mrežne veze i vremensku crtu uređaja. U sustavu za upravljanje identitetima provjeravamo prijave, sesije, privilegije i administrativne promjene. U DNS, proxy, vatrozidnoj i NDR telemetriji analiziramo komunikaciju. Sigurnosni proizvod može se razlikovati, ali pitanja koja analitičar postavlja trebala bi ostati jednaka.</p>
+
+<h3>Što je proaktivno traženje prijetnji</h3>
+
+<p>Analiza sigurnosnog upozorenja započinje upozorenjem koje je proizvela postojeća detekcija. Proaktivno traženje prijetnji započinje hipotezom o aktivnosti koja možda nije pokrivena postojećim detekcijama ili se može sakriti unutar legitimnog ponašanja.</p>
+
+<p>Odgovor na incident započinje kada postoji dovoljno razloga za sumnju na kompromitaciju ili kada je incident već potvrđen. Proaktivno traženje prijetnji može otkriti incident, ali svaki provedeni postupak ne mora završiti potvrđenim incidentom.</p>
+
+<p>Obavještajni podaci o prijetnjama, odnosno <em>threat intelligence</em>, pružaju informacije o prijetnjama, taktikama, tehnikama, infrastrukturi i pokazateljima kompromitacije. Te se informacije mogu koristiti za postavljanje hipoteza, ali istraživanje se ne smije ograničiti samo na poznate IP adrese, domene i sažetke datoteka.</p>
+
+<p>Proaktivno traženje prijetnji nije ni nasumično pregledavanje zapisa. Kvalitetno istraživanje ima definiranu hipotezu, izvore podataka, vremensko razdoblje, opseg, analitički postupak, kriterije za donošenje odluke i dokumentiran rezultat.</p>
+
+<h3>Mogući rezultati istraživanja</h3>
+
+<p>Uspješno istraživanje ne mora završiti pronalaskom napadača. Rezultat može pokazati da je promatrano ponašanje očekivano, da postojeća detekcija zahtijeva prilagodbu, da organizaciji nedostaje važan izvor podataka ili da je potrebno izraditi novu korelacijsku detekciju.</p>
+
+<p>Rezultat može biti i potvrđena kompromitacija koja zahtijeva pokretanje postupka odgovora na incident. Jednako je važno dokumentirati situaciju u kojoj hipotezu nije moguće potvrditi ni odbaciti zbog nedostatka telemetrije. Nedostatak dokaza nije dokaz da se aktivnost nije dogodila.</p>
+
+<h3>Prije prvog upita napravi mapu vidljivosti</h3>
+
+<p>Prije pokretanja istraživanja potrebno je razumjeti koje podatke organizacija stvarno prikuplja. Ne treba pretpostaviti da određena telemetrija postoji samo zato što organizacija posjeduje SIEM ili EDR sustav.</p>
+
+<p>Prvo utvrdi gdje se nalaze događaji o pokretanju procesa i sadrže li cjelovite argumente naredbenog retka. Provjeri je li moguće vidjeti nadređeni proces, korisnika koji je pokrenuo proces, putanju datoteke, digitalni potpis, sažetak datoteke i mrežne veze povezane s procesom.</p>
+
+<p>Zatim utvrdi gdje se nalaze Windows autentikacijski događaji, zapisi kontrolera domene, prijave u Microsoft Entra okruženju, revizijski zapisi sustava Microsoft 365, VPN autentikacije, DNS upiti, proxy promet, vatrozidne veze i telemetrija elektroničke pošte.</p>
+
+<p>Provjeri razdoblje čuvanja podataka. Istraživanje kojim se pokušava utvrditi je li neki proces prvi put viđen tijekom posljednjih trideset dana nema smisla ako je dostupno samo sedam dana podataka.</p>
+
+<p>Provjeri jesu li zapisi ispravno raščlanjeni. Izvorni događaj može postojati u SIEM sustavu, ali vrijednosti poput korisničkog imena, izvorišne IP adrese, odredišnog uređaja ili naredbenog retka možda nisu izdvojene u zasebna polja koja se mogu pretraživati.</p>
+
+<p>Provjeri pokrivenost uređaja. Ako EDR sustav nadzire radne stanice, ali ne i sve poslužitelje, odsutnost događaja s poslužitelja ne smije se interpretirati kao dokaz da se na njemu ništa nije dogodilo.</p>
+
+<p>Na kraju zapiši sva poznata ograničenja. Ako nisu dostupni PowerShell Script Block Logging, DNS zapisi, identitetski događaji ili podaci o mrežnim vezama pojedinačnih procesa, to mora biti navedeno u zaključku.</p>
+
+<h3>Kako napisati kvalitetnu hipotezu</h3>
+
+<p>Hipoteza mora biti konkretna, provjerljiva i povezana s ponašanjem napadača. Rečenica poput „tražimo PowerShell napade“ nije dovoljno precizna jer ne određuje koju aktivnost tražimo ni koji bi rezultat bio značajan.</p>
+
+<p>Bolja hipoteza glasi: „Napadač može koristiti PowerShell koji je pokrenula aplikacija iz paketa Microsoft Office kako bi preuzeo ili izvršio sadržaj s vanjskog odredišta.“</p>
+
+<p>Ova hipoteza odmah određuje potrebne elemente. Potrebni su podaci o procesima, odnosima nadređenih i podređenih procesa, argumentima naredbenog retka, korisniku, uređaju i mrežnim vezama. PowerShell sam po sebi nije dovoljan. Važna je kombinacija nadređenog procesa, načina izvršavanja i aktivnosti koje su uslijedile.</p>
+
+<p>Drugi primjer hipoteze može glasiti: „Kompromitirani administratorski račun može pristupati administrativnim dijeljenim resursima na više uređaja i nakon toga stvarati udaljene servise radi bočnog kretanja kroz infrastrukturu.“</p>
+
+<p>U tom su slučaju potrebni autentikacijski događaji, SMB telemetrija, pristup dijeljenim resursima, događaji stvaranja servisa, procesi na izvorišnom i odredišnom uređaju te kontekst o korištenom administratorskom računu.</p>
+
+<h3>Prevedi hipotezu u očekivanu telemetriju</h3>
+
+<p>Nakon definiranja hipoteze potrebno je opisati tragove koje bi promatrana aktivnost mogla ostaviti u telemetriji. Namjera napadača nije izravno vidljiva u zapisima. Vidljivi su događaji koji su nastali tijekom izvođenja aktivnosti.</p>
+
+<p>Ako se istražuje moguća zloupotreba PowerShella, trag može uključivati powershell.exe ili pwsh.exe, neuobičajen nadređeni proces, kodiranu naredbu, skriveni prozor, naredbu za preuzimanje sadržaja, vezu prema novoj domeni, stvaranje datoteke i pokretanje dodatnog procesa.</p>
+
+<p>Ako se istražuje tehnika Pass the Hash, jedan događaj obično nije dovoljan za potvrdu. Potrebno je tražiti kombinaciju mrežnih prijava, NTLM autentikacije, neuobičajenog izvorišnog uređaja, korištenja privilegiranog računa, pristupa administrativnim resursima i naknadnog udaljenog izvršavanja.</p>
+
+<p>Ovaj korak sprječava traženje jednog „magičnog“ identifikatora događaja koji bi trebao dokazati cijeli napad. Većina napada postaje vidljiva kroz lanac povezanih ponašanja, a ne kroz jedan izolirani događaj.</p>
+
+<h3>Počni širokom pretragom, a zatim sužavaj rezultate</h3>
+
+<p>Početni upit služi otkrivanju relevantnih događaja. Ako se odmah dodaju preuski uvjeti, relevantna aktivnost može biti isključena prije nego što je analitičar pregleda.</p>
+
+<p>Za istraživanje aplikacija iz paketa Microsoft Office koje pokreću interpretere početna logika može izgledati ovako:</p>
+
+<pre><code>nadređeni_proces IN (
+  winword.exe,
+  excel.exe,
+  powerpnt.exe,
+  outlook.exe
+)
+
+AND
+
+podređeni_proces IN (
+  powershell.exe,
+  pwsh.exe,
+  cmd.exe,
+  wscript.exe,
+  cscript.exe,
+  mshta.exe,
+  rundll32.exe,
+  regsvr32.exe
+)</code></pre>
+
+<p>Ovo nije konačna detekcija i svaki rezultat nije incident. Upit samo izdvaja događaje koji zahtijevaju dodatni kontekst.</p>
+
+<p>Rezultate zatim grupiraj prema uređaju, korisniku, nadređenom procesu, podređenom procesu, naredbenom retku, sažetku datoteke i vremenu. Utvrdi koliko se često pojedina kombinacija pojavljuje i na koliko je uređaja prisutna.</p>
+
+<p>Posebno izdvoji kombinacije koje su prvi put viđene, pojavljuju se na malom broju uređaja, koriste neuobičajene putanje ili su povezane s novim mrežnim odredištima.</p>
+
+<h3>Proširivanje istrage stvarni je početak analize</h3>
+
+<p>Upit pronalazi skup događaja. Proaktivno traženje prijetnji počinje kada analitičar iz početnih rezultata prijeđe na povezane entitete i izgradi širu sliku.</p>
+
+<p>Ako pronađeš sumnjiv proces, prijeđi na uređaj i pregledaj njegovu vremensku crtu. Zatim istraži korisnika, nadređeni proces, sažetak datoteke, putanju, mrežno odredište i sve podređene procese.</p>
+
+<p>Ako pronađeš sumnjivu autentikaciju, istraži isti korisnički račun, izvorišnu IP adresu, uređaj, aplikaciju, odredišne sustave i druge prijave u istom vremenskom razdoblju.</p>
+
+<p>Ako pronađeš rijetku domenu, provjeri koji su je uređaji kontaktirali, koji je proces stvorio promet, kada je prvi put viđena, koliko je česta u organizaciji i je li neposredno prije veze preuzeta ili otvorena neka datoteka.</p>
+
+<p>Svaki korak proširivanja istrage treba odgovoriti na konkretno pitanje. Podatke ne treba otvarati bez jasnog cilja. Ako pregledavaš stablo procesa, pitanje može glasiti: „Je li ovaj proces pokrenula očekivana aplikacija ili je nastao iz dokumenta, preglednika, skriptnog interpretera ili drugog neuobičajenog izvora?“</p>
+
+<h3>Izgradi vremensku crtu</h3>
+
+<p>Sigurnosno upozorenje ili rezultat upita gotovo nikada nije cijela priča. Za odabrani događaj potrebno je pregledati aktivnosti koje su mu prethodile i one koje su uslijedile.</p>
+
+<p>Započni nekoliko minuta prije početnog događaja i proširi vremensko razdoblje ako pronađeš dodatne tragove. Traži prijavu korisnika, otvaranje dokumenta, preuzimanje datoteke, DNS upit, mrežnu vezu, stvaranje procesa, promjenu registra, zakazani zadatak, servis, stvaranje računa ili pokušaj onemogućavanja sigurnosnog proizvoda.</p>
+
+<p>Kvalitetna vremenska crta treba pokazati redoslijed aktivnosti. Primjerice, korisnik je otvorio dokument, winword.exe je pokrenuo PowerShell, PowerShell je kontaktirao novu domenu, stvorena je datoteka u korisničkom privremenom direktoriju, datoteka je pokrenuta i nakon toga je uspostavljena periodična vanjska komunikacija.</p>
+
+<p>Svaki pojedinačni događaj može imati legitimno objašnjenje. Njihova povezanost i redoslijed mogu pokazati potpuno drugačiju sliku.</p>
+
+<h3>Upoznaj normalno ponašanje kako bi prepoznao abnormalno</h3>
+
+<p>Proaktivno traženje prijetnji ne temelji se samo na poznatim pokazateljima kompromitacije. Velik dio njegove vrijednosti proizlazi iz razumijevanja normalnog ponašanja unutar organizacije.</p>
+
+<p>Provjeri je li proces uobičajen za promatrani uređaj i njegovu poslovnu ulogu. Proces koji je očekivan na administracijskom poslužitelju može biti neuobičajen na radnoj stanici zaposlenika u financijama.</p>
+
+<p>Provjeri je li korisnik ranije izvodio slične aktivnosti. Administrator može legitimno koristiti alate za udaljenu administraciju, dok isti obrazac pod standardnim korisničkim računom može zahtijevati dodatnu istragu.</p>
+
+<p>Provjeri zastupljenost datoteke, njezina sažetka, domene i kombinacije nadređenog i podređenog procesa. Rijetkost povećava važnost nalaza, ali sama po sebi ne dokazuje kompromitaciju.</p>
+
+<p>Provjeri vrijeme aktivnosti. Radnja izvan uobičajenog radnog vremena može biti sumnjiva, ali dežurstva, održavanje i automatizirani poslovi mogu predstavljati potpuno legitimno objašnjenje.</p>
+
+<p>Osnovni obrazac ponašanja ne bi trebao biti samo globalan. Korisnije ga je odrediti prema ulozi korisnika, vrsti uređaja, mrežnom segmentu, aplikaciji i poslovnom procesu.</p>
+
+<h3>Kako razlikovati zlonamjernu aktivnost od legitimnog ponašanja</h3>
+
+<p>Naziv procesa nije dovoljan za donošenje odluke. PowerShell, rundll32.exe, certutil.exe, PsExec, AnyDesk i slični alati mogu imati legitimnu administrativnu svrhu.</p>
+
+<p>Za svaki rezultat provjeri tko je pokrenuo aktivnost, na kojem uređaju, s kojim privilegijama, iz koje putanje i tijekom kojeg poslovnog procesa.</p>
+
+<p>Analiziraj cijeli naredbeni redak. Legitimni i zlonamjerni proces mogu imati isti naziv, ali potpuno različite argumente. Obrati pažnju na kodirani ili zamaskirani sadržaj, skrivene prozore, naredbe za preuzimanje, neuobičajene DLL datoteke, direktorije u koje korisnik može zapisivati i vanjska mrežna odredišta.</p>
+
+<p>Provjeri nadređene i podređene procese. Word koji pokreće PowerShell predstavlja upozoravajući signal, ali nije sam po sebi dokaz kompromitacije. Potrebno je utvrditi koji je dokument otvoren, odakle je došao, što je PowerShell izvršio i koje su aktivnosti uslijedile.</p>
+
+<p>Provjeri digitalni potpis i sažetak datoteke, ali ih nemoj koristiti kao jedine kriterije. Potpisana datoteka može biti zloupotrijebljena ili korištena za posredno izvršavanje zlonamjernog sadržaja. Datoteka bez poznate reputacije također nije automatski zlonamjerna.</p>
+
+<p>Provjeri mrežne veze i reputaciju odredišta. Nova domena nije nužno zlonamjerna, a poznata platforma u oblaku nije nužno sigurna. Napadači mogu koristiti legitimne servise za smještaj sadržaja, komunikaciju s kompromitiranim uređajima ili izvlačenje podataka.</p>
+
+<p>Na kraju provjeri poslovni kontekst. Postoji li odobrena promjena, instalacija, administratorski zadatak ili zahtjev evidentiran u sustavu za upravljanje promjenama? Odgovara li aktivnost osobi, uređaju, vremenu i svrsi navedenoj u poslovnom opravdanju?</p>
+
+<h3>Kontekstualni popis dopuštenih aktivnosti</h3>
+
+<p>Popis dopuštenih aktivnosti ne bi se trebao temeljiti samo na nazivu procesa ili aplikacije. Ako je powershell.exe globalno izuzet iz detekcija zato što ga koriste administratori, napadač može iskoristiti upravo tu iznimku.</p>
+
+<p>Kvalitetna iznimka uključuje kombinaciju odobrenog alata, očekivanog korisnika, odgovarajućeg uređaja, poznate putanje, digitalnog potpisnika, dopuštenih argumenata naredbenog retka, mrežnog odredišta i vremenskog konteksta.</p>
+
+<p>Primjerice, alat za udaljeni pristup može biti dopušten na računalima IT podrške kada se izvršava iz službene instalacijske putanje i povezuje s poznatom infrastrukturom proizvođača. Isti alat pokrenut iz korisničkog privremenog direktorija na računalu na kojem nikada prije nije viđen ne bi trebao biti automatski izuzet.</p>
+
+<h3>Praktični primjer: aplikacija iz paketa Microsoft Office pokreće PowerShell</h3>
+
+<p>Hipoteza glasi: „Napadač može dostaviti zlonamjerni dokument koji će pokrenuti PowerShell radi preuzimanja, dekodiranja ili izvršavanja dodatnog sadržaja.“</p>
+
+<p>Za ovo istraživanje potrebni su događaji o procesima na krajnjim uređajima, odnosi nadređenih i podređenih procesa, cijeli naredbeni redak, korisnik, putanja, sažetak datoteke, mrežni događaji i, ako je dostupno, telemetrija elektroničke pošte ili mrežnog prometa koja može pokazati podrijetlo dokumenta.</p>
+
+<p>Prvo u SIEM ili EDR sustavu pronađi događaje u kojima je winword.exe, excel.exe, powerpnt.exe ili outlook.exe pokrenuo powershell.exe ili pwsh.exe.</p>
+
+<p>Zatim zabilježi vrijeme, korisnika, uređaj, naredbeni redak nadređenog procesa, PowerShell naredbeni redak, putanju dokumenta i sve dostupne sažetke datoteka.</p>
+
+<p>Provjeri sadrži li naredba izraze EncodedCommand, FromBase64String, Invoke Expression, DownloadString ili Invoke WebRequest, parametre za skrivanje prozora i zaobilaženje kontrola, vanjsku adresu ili putanju prema direktorijima Temp, Downloads, AppData ili Public.</p>
+
+<p>Ako je sadržaj kodiran, dekodiraj ga u sigurnom analitičkom okruženju. Nemoj ga izvršavati. Cilj je utvrditi stvarnu naredbu, mrežno odredište, putanju datoteke i namjeru skripte.</p>
+
+<p>Otvori stablo procesa i provjeri što je prethodilo procesu aplikacije Microsoft Office. Utvrdi naziv dokumenta, njegovu lokaciju i vrijeme otvaranja. Ako postoji telemetrija elektroničke pošte, provjeri pošiljatelja, predmet poruke, privitak, poveznice i druge primatelje iste poruke.</p>
+
+<p>Zatim pregledaj sve podređene procese koje je PowerShell pokrenuo. Traži dodatne interpretere, legitimne sistemske alate koji se mogu zloupotrijebiti, programe za arhiviranje, alate za pristup vjerodajnicama, promjene sigurnosnih postavki ili izvršavanje novostvorene datoteke.</p>
+
+<p>Provjeri mrežne događaje. Utvrdi je li PowerShell ili njegov podređeni proces kontaktirao vanjsku IP adresu ili domenu. Provjeri je li odredište ranije viđeno, koliko mu uređaja pristupa, kakva je njegova reputacija i je li nakon uspostavljanja veze nastala nova datoteka.</p>
+
+<p>Proširi istragu na isti sažetak, domenu, URL adresu i naziv datoteke kroz cijelo okruženje. Tako se može utvrditi radi li se o izoliranom događaju ili široj kampanji krađe vjerodajnica i isporuke zlonamjernog sadržaja.</p>
+
+<p>Legitimno objašnjenje može biti poslovni dokument s odobrenom makronaredbom ili dodatkom. Međutim, potvrda mora uključivati poznati dokument, očekivanog korisnika, dokumentirani poslovni proces, poznatu skriptu, odgovarajući potpis i ponašanje koje nije povezano sa sumnjivim preuzimanjem ili izvršavanjem.</p>
+
+<p>Ako aplikacija iz paketa Microsoft Office pokrene PowerShell s kodiranom naredbom, preuzme datoteku s nove domene i nakon toga izvrši nepotpisani sadržaj iz privremenog direktorija, postoji dovoljno međusobno povezanih pokazatelja za eskalaciju incidenta.</p>
+
+<h3>Klasifikacija rezultata</h3>
+
+<p>Očekivano ponašanje znači da je aktivnost potvrđena kao standardni dio odobrenog poslovnog ili tehničkog procesa i da ne predstavlja kršenje sigurnosnih pravila.</p>
+
+<p>Benigni stvarno pozitivni rezultat, odnosno <em>Benign True Positive</em>, znači da je detekcija ispravno prepoznala ponašanje za koje je izrađena, ali je aktivnost imala legitimno i potvrđeno objašnjenje. Primjer može biti administrator koji je tijekom odobrenog održavanja koristio naredbu kojom se koriste i napadači.</p>
+
+<p>Zlonamjerni stvarno pozitivni rezultat, odnosno <em>Malicious True Positive</em>, znači da postoje dokazi zlonamjerne ili neovlaštene aktivnosti. U tom trenutku proaktivno istraživanje prelazi u postupak odgovora na incident te je potrebno utvrditi puni opseg kompromitacije.</p>
+
+<p>Lažno pozitivni rezultat, odnosno <em>False Positive</em>, znači da je logika upita ili detekcije pogrešno protumačila događaj, polje ili kombinaciju podataka. Takav rezultat obično zahtijeva ispravak upita, načina raščlanjivanja podataka ili detekcijske logike.</p>
+
+<p>Neodređen rezultat, odnosno <em>Inconclusive</em>, znači da nema dovoljno podataka ili poslovnog konteksta za pouzdanu odluku. Potrebno je jasno navesti koji podaci nedostaju i kako se vidljivost može poboljšati.</p>
+
+<h3>Kada istraživanje postaje incident</h3>
+
+<p>Jedan sumnjiv signal rijetko je dovoljan za potvrdu kompromitacije. Odluka se treba temeljiti na korelaciji više povezanih ponašanja.</p>
+
+<p>Prioritet treba povećati ako se istodobno pojavljuju neočekivan korisnik, prvi put viđen proces, izvršavanje iz direktorija u koji korisnik može zapisivati, kodirana naredba, sumnjiv nadređeni proces, novo vanjsko odredište, pristup vjerodajnicama, bočno kretanje, mehanizam trajnog pristupa, povećanje privilegija, onemogućavanje sigurnosnih kontrola ili brisanje tragova.</p>
+
+<p>Ako postoji aktivna kompromitacija, potrebno je prijeći na postupak odgovora na incident. Ovisno o situaciji, to može uključivati izolaciju uređaja, blokiranje pokazatelja, opoziv sesija, onemogućavanje računa, ponovno postavljanje vjerodajnica, prikupljanje forenzičkih podataka i proširenje istrage na povezane sustave.</p>
+
+<p>Analitičar ne bi trebao čekati savršen dokaz ako postoji stvaran rizik od nastavka napada. Istodobno, reakcija mora biti razmjerna dostupnim dokazima i mogućem poslovnom utjecaju.</p>
+
+<h3>Pretvaranje rezultata u novu detekciju</h3>
+
+<p>Ako istraživanje pronađe koristan i ponovljiv obrazac, potrebno je procijeniti može li se pretvoriti u detekciju.</p>
+
+<p>Početni upit ne treba jednostavno kopirati i pretvoriti u pravilo koje stvara upozorenje za svaki rezultat. Početni je upit namjerno širok i vjerojatno bi proizveo prevelik broj upozorenja.</p>
+
+<p>Potrebno je odrediti koji su elementi razlikovali rizičnu aktivnost od legitimne. To mogu biti neuobičajen nadređeni proces, određeni argumenti naredbenog retka, korisnička putanja, niska zastupljenost, novo mrežno odredište ili kombinacija više događaja unutar određenog vremenskog razdoblja.</p>
+
+<p>Zatim definiraj potrebne izvore podataka, korelacijsko razdoblje, prag, kontekst uređaja i precizne iznimke. Detekciju testiraj na povijesnim podacima prije uvođenja u produkcijsko okruženje.</p>
+
+<p>Nakon uvođenja prati broj upozorenja, kvalitetu dostupnog konteksta, legitimne rezultate i aktivnosti koje logika ne prepoznaje. Kvalitetna detekcija nije dovršen proizvod. Ona se mora prilagođavati promjenama u infrastrukturi i ponašanju organizacije.</p>
+
+<h3>Kako dokumentirati proaktivno traženje prijetnji</h3>
+
+<p>Za svako istraživanje zabilježi naziv, datum, analitičara, hipotezu, MITRE ATT&amp;CK mapiranje, vremensko razdoblje, opseg, korištene izvore podataka i inačice upita.</p>
+
+<p>Dokumentiraj pronađene korisnike, uređaje, IP adrese, procese, sažetke datoteka, domene i druge relevantne entitete. Dodaj vremensku crtu i objasni kako su događaji međusobno povezani.</p>
+
+<p>Zapiši koje su mogućnosti legitimnog ponašanja provjerene, koji podaci nedostaju, kako je rezultat klasificiran i zašto je donesena takva odluka.</p>
+
+<p>Na kraju definiraj daljnje aktivnosti, odgovornu osobu i rok. Ako je potrebna nova detekcija, prilagodba postojeće detekcije, dodatni izvor zapisa ili promjena sigurnosne kontrole, i to mora biti dio rezultata.</p>
+
+<h3>Preporučeni ritam proaktivnog traženja prijetnji</h3>
+
+<p>SOC tim može svaki tjedan provesti jedno usko definirano istraživanje povezano s aktualnim rizicima, promjenama u infrastrukturi ili novim obavještajnim podacima o prijetnjama.</p>
+
+<p>Jednom mjesečno korisno je pregledati rezultate prethodnih istraživanja, ponavljajuće anomalije, nedostatke u telemetriji i upite koji se mogu pretvoriti u detekcije.</p>
+
+<p>Nakon potvrđenog incidenta potrebno je provesti retrospektivno istraživanje kroz cijelo dostupno razdoblje i sve relevantne izvore podataka. Cilj je pronaći početnu aktivnost, dodatne pogođene sustave i ranije događaje koje postojeće detekcije nisu označile.</p>
+
+<p>Nakon uključivanja novog klijenta, sustava ili izvora podataka potrebno je utvrditi osnovne obrasce autentikacija, administrativnih aktivnosti, alata za udaljeni pristup, privilegiranih računa, procesa, domena i mrežne komunikacije.</p>
+
+<h3>Zaključak</h3>
+
+<p>Proaktivno traženje prijetnji nije potraga za sigurnosnim upozorenjima. Upozorenje primjenjuje unaprijed definiranu detekcijsku logiku kako bi prepoznalo poznati obrazac. Proaktivno traženje prijetnji počinje pitanjem o aktivnosti koja možda još nema odgovarajuću detekciju.</p>
+
+<p>Najvažnija vještina nije poznavanje sintakse jednog SIEM ili EDR proizvoda. Najvažnije je znati pretvoriti hipotezu u očekivanu telemetriju, pronaći relevantne događaje, povezati entitete, izgraditi vremensku crtu i razumjeti poslovni kontekst.</p>
+
+<p>Upit nije cijeli postupak proaktivnog traženja prijetnji. Upit pronalazi događaje. Stvarna analiza počinje kada analitičar poveže ponašanje, korisnike, uređaje, procese, mrežna odredišta i vrijeme te na temelju dokaza odluči što se zapravo dogodilo.</p>
+
+<p>Upoznaj normalno ponašanje kako bi mogao prepoznati abnormalno. Sumnjivo ponašanje nije automatski dokaz kompromitacije, ali ni poznati alat, potpisana datoteka ili administratorski račun nisu automatski dokaz legitimnosti. Kontekst i korelacija događaja pretvaraju sigurnosne podatke u kvalitetan analitički zaključak.</p>
     
 <div class="article-date">23.06.2026.</div>
 
