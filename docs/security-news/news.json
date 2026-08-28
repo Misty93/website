@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Next.js Patches Critical AVIF and Windows Flaws Enabling Unauthenticated RCE",
-      "url": "https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html",
-      "published": "Thu, 27 Aug 2026 20:43:00 +0530",
+      "title": "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network",
+      "url": "https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html",
+      "published": "Sat, 29 Aug 2026 03:00:52 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Dark Caracal Deploys New Go Malware With Ethereum-Based C2 Fallback",
-      "url": "https://securityaffairs.com/197948/apt/dark-caracal-deploys-new-go-malware-with-ethereum-based-c2-fallback.html",
-      "published": "Thu, 27 Aug 2026 20:31:01 +0000",
-      "source": "Security Affairs"
+      "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
+      "url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
+      "published": "Sat, 29 Aug 2026 02:08:47 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Nearly 700 rogue AI agents coordinated in the Hugging Face attack",
-      "url": "https://www.bleepingcomputer.com/news/security/nearly-700-rogue-ai-agents-coordinated-in-the-hugging-face-attack/",
-      "published": "Thu, 27 Aug 2026 17:38:53 -0400",
-      "source": "BleepingComputer"
+      "title": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
+      "url": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
+      "published": "Fri, 28 Aug 2026 22:42:15 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
