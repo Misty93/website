@@ -82,7 +82,391 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
-    <div class="article-date">27.08.2026.</div>
+<div class="article-date">30.08.2026.</div>
+
+<h2>Serijal „Upoznaj normalno kako bi prepoznao neobično“: Windows datotečni sustav</h2>
+
+<p>Kada istražujemo Windows krajnji uređaj, naziv datoteke samo je početak. Proces naziva svchost.exe može biti legitimna Windows komponenta, kopirana sistemska datoteka, preimenovani zlonamjerni program ili datoteka napravljena tako da izgleda poznato. Naziv nam daje trag, ali tek nam puna putanja daje potreban kontekst.</p>
+
+<p>Upravo je zato razumijevanje Windows datotečnog sustava važno u sigurnosnim operacijama. Analitičar ne mora napamet znati svaki direktorij niti mora biti stručnjak za digitalnu forenziku kako bi mogao istraživati aktivnosti na krajnjem uređaju. Međutim, mora razumjeti što se uobičajeno nalazi u najvažnijim Windows lokacijama, koje se aplikacije legitimno mogu pokretati iz korisničkih direktorija te koje kombinacije putanje, procesa i ponašanja zahtijevaju dodatnu provjeru.</p>
+
+<p>Osnovno je pravilo jednostavno:</p>
+
+<p>Normalno ne znači automatski sigurno. Neobično ne znači automatski zlonamjerno. Odstupanje od očekivanog ponašanja razlog je za istragu i korelaciju.</p>
+
+<p>Sumnjiva putanja nije dokaz kompromitacije. Pouzdana putanja nije dokaz legitimnosti. Najpouzdaniji zaključci nastaju povezivanjem lokacije datoteke s nazivom procesa, digitalnim potpisom, izdavateljem, sažetkom datoteke, argumentima naredbenog retka, nadređenim procesom, korisničkim kontekstom, mehanizmima trajnog pristupa i mrežnom komunikacijom.</p>
+
+<h3>Kako se ova tema uklapa u proaktivno traženje prijetnji</h3>
+
+<p>Poznavanje Windows datotečnog sustava korisno je tijekom analize sigurnosnih upozorenja, proaktivnog traženja prijetnji, odgovora na incidente i digitalne forenzike, ali se u svakom od tih postupaka koristi na nešto drugačiji način.</p>
+
+<p>Tijekom početne analize upozorenja analitičar može dobiti obavijest o procesu pokrenutom iz neuobičajene lokacije. Putanja tada pomaže procijeniti zahtijeva li događaj dublju istragu.</p>
+
+<p>Tijekom proaktivnog traženja prijetnji, odnosno <em>threat huntinga</em> (eng.), analitičar može pretraživati poznate nazive Windows procesa koji se izvršavaju iz neočekivanih direktorija, nepoznate izvršne datoteke pokrenute iz privremenih lokacija ili mehanizme trajnog pristupa koji upućuju na lokacije u koje korisnik može zapisivati.</p>
+
+<p>Tijekom odgovora na incident isto znanje pomaže utvrditi opseg kompromitacije, pronaći povezane zlonamjerne datoteke i razumjeti na koji je način napadač pokušao zadržati pristup sustavu.</p>
+
+<p>Digitalna forenzika ulazi dublje u artefakte kao što su Prefetch, Amcache, obrisane datoteke, registracijske košnice i vremenske oznake datotečnog sustava. Ti artefakti mogu pomoći i tijekom proaktivnog traženja prijetnji, ali se najčešće koriste kada je potrebno dodatno potvrditi izvršavanje ili rekonstruirati povijesnu aktivnost.</p>
+
+<p>Granica između ovih aktivnosti nije uvijek stroga. Proaktivno istraživanje može otkriti sumnjivo izvršavanje, nastaviti se detaljnom analizom krajnjeg uređaja i na kraju prijeći u puni postupak odgovora na incident.</p>
+
+<h3>Počni s punom putanjom</h3>
+
+<p>Naziv procesa bez njegove pune putanje predstavlja nepotpun podatak.</p>
+
+<p>Promotrimo sljedeći proces:</p>
+
+<pre><code>svchost.exe</code></pre>
+
+<p>Naziv je povezan s legitimnom Windows komponentom. Međutim, sljedeće dvije putanje nemaju isto analitičko značenje:</p>
+
+<pre><code>C:\Windows\System32\svchost.exe
+
+C:\Users\Public\svchost.exe</code></pre>
+
+<p>Prva je putanja očekivana za legitimni proces Windows Service Host. Druga se koristi poznatim nazivom Windows procesa, ali se datoteka nalazi u direktoriju u koji korisnici mogu zapisivati. To predstavlja snažan signal mogućeg prikrivanja identiteta i zahtijeva istragu.</p>
+
+<p>To još uvijek ne znači da je druga datoteka automatski zlonamjerna. Znači da naziv procesa ne odgovara očekivanoj lokaciji i da su potrebni dodatni dokazi.</p>
+
+<p>Analitičar bi trebao odmah provjeriti digitalni potpis, izdavatelja, SHA 256 sažetak, nadređeni proces, argumente naredbenog retka, korisnika, vrijeme stvaranja datoteke i mrežnu aktivnost. Sljedeće pitanje nije samo izgleda li putanja pogrešno. Sljedeće je pitanje što je datoteka napravila.</p>
+
+<h3>System32 je važan, ali nije granica povjerenja</h3>
+
+<p>Na 64 bitnom Windows sustavu direktorij C:\Windows\System32 sadrži glavne 64 bitne Windows izvršne datoteke i biblioteke. Procesi kao što su lsass.exe, services.exe, winlogon.exe, csrss.exe i svchost.exe uobičajeno su povezani s tom lokacijom.</p>
+
+<p>Kada se jedan od tih naziva pojavi u drugoj lokaciji, putanja postaje vrlo vrijedan signal za istragu.</p>
+
+<pre><code>Očekivano:
+
+C:\Windows\System32\lsass.exe
+
+Zahtijeva istragu:
+
+C:\Users\&lt;korisnik&gt;\AppData\Roaming\lsass.exe</code></pre>
+
+<p>Druga datoteka možda pokušava oponašati Local Security Authority Subsystem Service. Korisnik koji u popisu procesa vidi samo naziv lsass.exe mogao bi pretpostaviti da je proces legitiman. Istu pogrešku može napraviti i detekcija koja provjerava samo naziv procesa.</p>
+
+<p>Istodobno, datoteci se ne smije automatski vjerovati samo zato što se nalazi u direktoriju System32. Napadači mogu zloupotrijebiti legitimne potpisane datoteke, učitati zlonamjernu DLL biblioteku kroz pouzdani proces ili pokušati smjestiti zlonamjerni sadržaj u lokaciju koja izgleda pouzdano.</p>
+
+<p>Moguće je i da su promijenjene dozvole direktorija, da je instaliran ranjiv upravljački program ili da je legitimna aplikacija iskorištena za izvršavanje drugog sadržaja.</p>
+
+<p>Lokacija može povećati ili smanjiti razinu sumnje, ali konačnu procjenu određuje ponašanje.</p>
+
+<h3>Zašto SysWOW64 često zbunjuje analitičare</h3>
+
+<p>Naziv direktorija C:\Windows\SysWOW64 može biti zbunjujući jer se u njemu nalaze 32 bitne Windows komponente na 64 bitnom operacijskom sustavu. Direktorij System32 pritom sadrži 64 bitne komponente.</p>
+
+<p>Prisutnost procesa u direktoriju SysWOW64 nije automatski sumnjiva. Legitimna 32 bitna aplikacija može koristiti komponente iz te lokacije.</p>
+
+<p>Važno je utvrditi pripada li proces toj lokaciji, ima li valjan i očekivan digitalni potpis, koji su argumenti korišteni, koji ga je proces pokrenuo i što se dogodilo nakon izvršavanja.</p>
+
+<p>Nepoznata komponenta, neočekivani podređeni procesi, sumnjivi argumenti ili neuobičajena vanjska komunikacija mogu opravdati dodatnu istragu. Sam naziv direktorija ne može.</p>
+
+<h3>Program Files pruža kontekst o aplikaciji</h3>
+
+<p>Direktorij C:\Program Files standardna je lokacija za instalirane 64 bitne aplikacije. C:\Program Files (x86) uobičajeno se koristi za 32 bitne aplikacije na 64 bitnom sustavu.</p>
+
+<p>Ove lokacije uglavnom pružaju snažniji kontekst o aplikaciji od privremenih ili korisničkih direktorija. Instalirana poslovna aplikacija trebala bi imati prepoznatljivu strukturu direktorija, poznatog izdavatelja i datoteke koje pripadaju istom proizvodu.</p>
+
+<p>Tijekom istrage provjeri odgovara li naziv direktorija aplikaciji, je li izvršna datoteka potpisana od očekivanog izdavatelja i pojavljuje li se ista datoteka na drugim krajnjim uređajima na kojima je aplikacija instalirana.</p>
+
+<p>Direktorij unutar Program Files lokacije zahtijeva dodatnu pozornost ako ima nasumično generiran naziv, sadrži nepoznatu izvršnu datoteku, oponaša poznati proizvod ili komunicira s odredištem koje nije povezano sa svrhom aplikacije.</p>
+
+<p>Napadač također može smjestiti zlonamjernu DLL biblioteku uz legitimnu izvršnu datoteku i iskoristiti redoslijed kojim aplikacija traži biblioteke. Takva se tehnika naziva <em>DLL side loading</em> (eng.). U tom slučaju glavna izvršna datoteka može biti potpisana i spremljena u Program Files direktoriju, dok je učitana DLL biblioteka stvarna zlonamjerna komponenta.</p>
+
+<h3>Korisnički profili nisu automatski sumnjivi</h3>
+
+<p>Direktorij C:\Users\&lt;korisnik&gt;\ sadrži korisnički profil, dokumente, preuzete datoteke i aplikacijske podatke povezane s računom. Mnoge legitimne aplikacije spremaju podatke ili izvršavaju komponente iz korisničkog profila jer se instaliraju bez administratorskih prava ili održavaju odvojene postavke za svakog korisnika.</p>
+
+<p>Zbog toga izvršavanje iz korisničkog profila nije automatski zlonamjerno.</p>
+
+<p>Važno je odgovoriti na pitanje odgovaraju li proces i njegova lokacija jedno drugome.</p>
+
+<p>Aplikacija za poslovnu komunikaciju koja se pokreće iz očekivanog AppData direktorija može biti potpuno legitimna. Proces services.exe pokrenut iz istog korisničkog profila ne predstavlja očekivano Windows ponašanje.</p>
+
+<p>Korisnički profil također pruža kontekst o mogućem podrijetlu datoteke. Datoteka u direktoriju Downloads možda je preuzeta kroz internetski preglednik. Datoteka u privremenoj Outlook lokaciji možda je stigla kao privitak elektroničke pošte. Datoteku u AppData direktoriju mogla je stvoriti legitimna aplikacija, instalacijski proces ili druga izvršna datoteka.</p>
+
+<p>Nemoj zaustaviti istragu na direktoriju. Pokušaj utvrditi odakle je datoteka došla i koji ju je proces stvorio.</p>
+
+<h3>AppData može biti potpuno legitimna lokacija</h3>
+
+<p>Direktoriji AppData\Local i AppData\Roaming često se bez dovoljno konteksta označavaju kao sumnjivi. Takav pristup stvara nepotrebna upozorenja jer ih koristi velik broj legitimnih aplikacija.</p>
+
+<p>Internetski preglednici, komunikacijske aplikacije, komponente za ažuriranje i programi instalirani samo za jednog korisnika mogu se legitimno izvršavati iz AppData direktorija. Sama prisutnost izvršne datoteke u toj lokaciji nije dovoljna za zaključak da je riječ o zlonamjernoj aktivnosti.</p>
+
+<p>Analitičar treba pregledati strukturu direktorija, izdavatelja, digitalni potpis, zastupljenost datoteke u okruženju i procesni lanac.</p>
+
+<p>Sljedeća putanja može biti očekivana:</p>
+
+<pre><code>C:\Users\&lt;korisnik&gt;\AppData\Local\NazivProizvođača\NazivAplikacije\application.exe</code></pre>
+
+<p>Sljedeća putanja zahtijeva više pozornosti:</p>
+
+<pre><code>C:\Users\&lt;korisnik&gt;\AppData\Roaming\kqzpt\services.exe</code></pre>
+
+<p>Drugi primjer povezuje nasumično imenovan direktorij s datotekom koja oponaša Windows sistemski proces. Razina sumnje dodatno raste ako je datoteka nepotpisana, rijetko viđena, pokrenuta nakon otvaranja privitka ili povezana s novom domenom.</p>
+
+<p>AppData se često koristi i za uspostavljanje mehanizama trajnog pristupa, odnosno <em>persistencea</em> (eng.), jer standardni korisnik može zapisivati u tu lokaciju. Datoteka iz AppData direktorija koju poziva Run ključ, Startup direktorij, zakazani zadatak ili drugi mehanizam automatskog pokretanja zahtijeva kontekstualnu istragu.</p>
+
+<h3>Downloads, Desktop i Public zahtijevaju korisnički kontekst</h3>
+
+<p>Direktoriji Downloads i Desktop uobičajeno sadrže datoteke koje su korisnici preuzeli ili spremili. Dokumenti, slike, arhive i instalacijske datoteke mogu se tamo pojaviti tijekom potpuno legitimnog rada.</p>
+
+<p>Rizik se povećava kada se izvršni ili skriptni sadržaj pokreće izravno iz tih lokacija, osobito ako je datoteka stigla elektroničkom poštom, preuzeta kroz internetski preglednik, otvorena putem dijeljene poveznice ili unesena s prijenosnog medija.</p>
+
+<p>Posebno su važne ekstenzije .exe, .msi, .js, .vbs, .hta, .lnk, .iso i .img. Te vrste datoteka nisu automatski zlonamjerne, ali treba razumjeti njihovo podrijetlo i procesni lanac.</p>
+
+<p>Dvostruke ekstenzije također zahtijevaju pažnju:</p>
+
+<pre><code>C:\Users\&lt;korisnik&gt;\Downloads\Invoice.pdf.exe</code></pre>
+
+<p>Datoteka se možda pokušava prikazati kao PDF dokument, iako je njezina stvarna ekstenzija izvršna. Hoće li korisnik vidjeti punu ekstenziju ovisi o Windows postavkama i načinu na koji mu je datoteka prikazana.</p>
+
+<p>Direktorij C:\Users\Public koristi se za sadržaj dostupan većem broju korisnika, a mogu ga koristiti i legitimne poslovne aplikacije. Istodobno je privlačan napadačima jer datoteke pohranjene u njemu mogu biti dostupne različitim korisničkim računima.</p>
+
+<p>Alat za udaljeni pristup, nepoznata izvršna datoteka, arhiva s prikupljenim podacima ili datoteka sa sistemskim nazivom unutar Public direktorija trebaju se povezati s korisnikom, nadređenim procesom, izvorom nastanka i aktivnostima koje su uslijedile.</p>
+
+<h3>ProgramData je zajednička i često pogrešno protumačena lokacija</h3>
+
+<p>Direktorij C:\ProgramData sadrži aplikacijske podatke i konfiguracije zajedničke svim korisnicima. Sigurnosni agenti, sustavi za sigurnosno kopiranje, alati za upravljanje i druge poslovne aplikacije redovito ga koriste.</p>
+
+<p>ProgramData nije sumnjiv sam po sebi. Međutim, može se koristiti za skrivanje zlonamjernih datoteka ili komponenti trajnog pristupa jer je njegov sadržaj manje vidljiv korisnicima i razlikuje se između uređaja.</p>
+
+<p>Potrebno je istražiti nepoznate izvršne datoteke, skrivene datoteke, nasumično imenovane direktorije i sadržaj koji ne pripada instaliranom proizvodu.</p>
+
+<p>Putanja mora imati smisla u odnosu na popis instaliranih aplikacija. Ako direktorij tvrdi da pripada Microsoftu, komponenti za ažuriranje ili sigurnosnom proizvodu, provjeri podržavaju li izdavatelj, digitalni potpis i metapodaci datoteke tu tvrdnju.</p>
+
+<h3>Ispravno pravilo za Temp direktorije</h3>
+
+<p>Datoteke u privremenim direktorijima normalan su dio rada sustava. Windows i aplikacije redovito koriste privremene lokacije za zapisnike, raspakirane instalacijske datoteke, podatke za ažuriranje, sadržaj preglednika i datoteke potrebne samo tijekom kratkog vremenskog razdoblja.</p>
+
+<p>Sama prisutnost datoteke u Temp direktoriju nije automatski sumnjiva.</p>
+
+<p>Korisnije je provjeriti je li se iz privremenog direktorija izvršavao program ili skripta te što se događalo prije i nakon tog izvršavanja.</p>
+
+<p>Legitimna komponenta za ažuriranje može privremeno raspakirati i pokrenuti potpisanu datoteku iz jedne od sljedećih lokacija:</p>
+
+<pre><code>C:\Windows\Temp\
+
+C:\Users\&lt;korisnik&gt;\AppData\Local\Temp\</code></pre>
+
+<p>Takvo ponašanje može biti očekivano ako je nadređeni proces poznata komponenta za ažuriranje, datoteka je potpisana od odgovarajućeg izdavatelja, naredbeni redak odgovara instalacijskoj aktivnosti i nakon izvršavanja ne nastaju neuobičajeni mehanizmi trajnog pristupa ili mrežne veze.</p>
+
+<p>Nepoznata izvršna datoteka pokrenuta iz Temp direktorija zahtijeva više pažnje. Prioritet raste ako je datoteka nepotpisana, postoji samo kratko vrijeme, ima nasumičan naziv, pokrenula ju je Office aplikacija ili preglednik, povezuje se s vanjskim odredištem, uspostavlja trajni pristup ili se briše nakon izvršavanja.</p>
+
+<p>Ista se logika primjenjuje na skripte i druge izvršne komponente kao što su .dll, .ps1, .bat, .cmd, .vbs, .js i .hta datoteke.</p>
+
+<p>Sljedeći procesni lanac predstavlja vrlo vrijedan kandidat za istragu:</p>
+
+<pre><code>OUTLOOK.EXE
+  → WINWORD.EXE
+    → powershell.exe
+      → C:\Users\&lt;korisnik&gt;\AppData\Local\Temp\update.exe
+        → Vanjska mrežna veza</code></pre>
+
+<p>Nijedan pojedinačni element u ovom lancu ne dokazuje zlonamjernu namjeru. Međutim, svi elementi zajedno opisuju slijed koji je teško objasniti kao uobičajenu aktivnost nad dokumentom.</p>
+
+<h3>Prikrivanje identiteta nije samo lažni naziv datoteke</h3>
+
+<p>MITRE ATT&amp;CK tehnika T1036 odnosi se na prikrivanje identiteta, odnosno <em>Masquerading</em> (eng.). Podtehnika T1036.005, <em>Match Legitimate Resource Name or Location</em> (eng.), opisuje situacije u kojima napadač koristi nazive ili lokacije koji nalikuju legitimnim resursima.</p>
+
+<p>Čest primjer je korištenje naziva sistemskog procesa izvan njegove očekivane lokacije:</p>
+
+<pre><code>Očekivano:
+
+C:\Windows\System32\services.exe
+
+Sumnjivo:
+
+C:\ProgramData\MicrosoftUpdate\services.exe</code></pre>
+
+<p>Naziv direktorija MicrosoftUpdate također je možda odabran zato da djeluje pouzdano. Napadač ne oponaša samo naziv datoteke. Stvara cijelu putanju koja je osmišljena tako da preživi površnu provjeru.</p>
+
+<p>Složeniji slučajevi mogu uključivati zlonamjernu datoteku smještenu u pouzdanu lokaciju, kopiranu legitimnu izvršnu datoteku, učitavanje zlonamjerne DLL biblioteke ili zloupotrebu valjano potpisane aplikacije.</p>
+
+<p>Zato pretraga prema putanjama treba stvarati kandidate za istragu, a ne automatske zaključke.</p>
+
+<h3>Nadređeni i podređeni procesi objašnjavaju izvršavanje</h3>
+
+<p>Putanja pokazuje odakle se datoteka izvršila. Stablo procesa pomaže objasniti kako je do izvršavanja došlo.</p>
+
+<p>Određeni odnosi procesa zahtijevaju prioritetnu provjeru jer se često povezuju sa zloupotrebom dokumenata, izvršavanjem skripti, web ljuskama, kompromitacijom baza podataka i zloupotrebom legitimnih sistemskih alata.</p>
+
+<pre><code>WINWORD.EXE ili EXCEL.EXE
+  → powershell.exe, cmd.exe ili wscript.exe
+
+OUTLOOK.EXE
+  → wscript.exe, powershell.exe ili mshta.exe
+
+chrome.exe ili msedge.exe
+  → mshta.exe, powershell.exe ili cmd.exe
+
+acrord32.exe
+  → rundll32.exe ili powershell.exe
+
+w3wp.exe
+  → cmd.exe ili powershell.exe
+
+sqlservr.exe
+  → cmd.exe ili powershell.exe
+
+powershell.exe ili cmd.exe
+  → schtasks.exe, sc.exe ili reg.exe</code></pre>
+
+<p>Ti odnosi nisu automatski zlonamjerni. Poslovna aplikacija može pokrenuti skriptu, administrator može legitimno koristiti PowerShell, a administrator baze podataka može namjerno omogućiti izvršavanje naredbi operacijskog sustava.</p>
+
+<p>Analitičar mora pregledati cijeli naredbeni redak, korisnika, razinu integriteta procesa, podrijetlo datoteke, vrijeme aktivnosti i naknadno ponašanje.</p>
+
+<p>Primjerice, Word koji pokreće PowerShell predstavlja upozoravajući signal. Word koji pokreće PowerShell s kodiranom naredbom, preuzima datoteku u Temp direktorij i stvara zakazani zadatak predstavlja znatno snažniji slijed događaja.</p>
+
+<h3>Mehanizmi trajnog pristupa daju datoteci dužu priču</h3>
+
+<p>Sumnjiva datoteka postaje značajnija kada drugi mehanizam osigurava da će se ponovno pokrenuti.</p>
+
+<p>Registracijski ključevi Run i RunOnce pod HKCU i HKLM granama uobičajene su lokacije za automatsko pokretanje. Koriste ih i legitimne aplikacije. Najvažniji su datoteka na koju ključ upućuje i kontekst izmjene registra.</p>
+
+<p>Novi Run ključ koji upućuje na poznatu aplikaciju u očekivanoj lokaciji može biti legitiman. Novi Run ključ koji upućuje na nepoznatu izvršnu datoteku u direktoriju Temp, Downloads, Public ili nasumično imenovanom AppData direktoriju zahtijeva istragu.</p>
+
+<p>Zakazane zadatke koriste Windows i legitimne aplikacije za održavanje, ažuriranja i sigurnosno kopiranje. Sumnja raste kada zadatak koristi naziv koji pokušava izgledati kao Microsoftova komponenta, izvršava se svakih nekoliko minuta ili pokreće PowerShell, legitimni sistemski alat ili nepoznatu datoteku iz lokacije u koju korisnik može zapisivati.</p>
+
+<p>Windows servisi predstavljaju još jedan važan mehanizam trajnog pristupa i izvršavanja. Novostvoreni servis čiji ImagePath upućuje na Temp, korisnički profil, mrežni dijeljeni resurs ili nepoznatu izvršnu datoteku treba povezati s računom i procesom koji su ga stvorili.</p>
+
+<p>WMI pretplate na događaje, izmjene Winlogon vrijednosti, Startup direktoriji i upravljački programi također se mogu koristiti za trajni pristup. Analitičar ne mora provjeravati svaki mogući mehanizam za svaku bezazlenu datoteku. Dubina istrage treba odgovarati riziku promatranog ponašanja.</p>
+
+<h3>Korisni artefakti za dublju potvrdu</h3>
+
+<p>Neki Windows artefakti češće se povezuju s digitalnom forenzikom, ali mogu pomoći potvrditi nalaz proaktivnog istraživanja kada je telemetrija krajnjeg uređaja nepotpuna.</p>
+
+<p>Prefetch može pomoći potvrditi da se program izvršavao i pružiti podatke povezane s prethodnim pokretanjima. Nije uključen u svakom okruženju i ne smije se tretirati kao potpun zapis svih izvršavanja.</p>
+
+<p>Amcache može sadržavati informacije o aplikacijama koje su bile prisutne na sustavu i pomoći pri analizi izvršavanja. Njegovo tumačenje zahtijeva oprez jer prisutnost zapisa ne dokazuje uvijek izvršavanje na način koji analitičar možda prvo pretpostavi.</p>
+
+<p>Direktorij C:\$Recycle.Bin može sadržavati obrisane alate, zlonamjerne datoteke ili arhive. Obrisana datoteka i dalje može pružiti korisne metapodatke ili sadržaj koji je moguće oporaviti.</p>
+
+<p>Direktorij C:\Windows\System32\winevt\Logs sadrži datoteke Windows zapisnika događaja. Brisanje zapisnika, prekidi bilježenja ili manipulacija tim datotekama mogu predstavljati važne znakove izbjegavanja obrambenih kontrola.</p>
+
+<p>Direktorij C:\Windows\System32\config sadrži kritične registracijske košnice kao što su SAM, SYSTEM, SECURITY i SOFTWARE. Pokušaji kopiranja ili pristupa tim datotekama mogu biti povezani s krađom vjerodajnica, sigurnosnim kopiranjem ili legitimnim administratorskim aktivnostima. Rizik se procjenjuje prema procesu i korisniku koji su pokrenuli aktivnost.</p>
+
+<p>Na kontroleru domene datoteka C:\Windows\NTDS\NTDS.dit sadrži bazu podataka servisa Active Directory. Pristup toj datoteci, njezino kopiranje ili stvaranje sjenovite kopije zahtijevaju hitnu provjeru jer mogu izložiti podatke povezane s domenskim vjerodajnicama.</p>
+
+<h3>Praktičan redoslijed istrage</h3>
+
+<p>Kada je pronađena sumnjiva datoteka ili proces, prvo zabilježi naziv uređaja, korisnika, vrijeme događaja, identifikator procesa i punu putanju datoteke. Sačuvaj izvorne vrijednosti prije nastavka istrage.</p>
+
+<p>Pregledaj naziv datoteke, ekstenziju, veličinu, vrijeme stvaranja, vrijeme posljednje izmjene i SHA 256 sažetak. Vremenske oznake mogu pružiti koristan kontekst, ali ih je moguće izmijeniti i ne smiju se tretirati kao samostalan dokaz.</p>
+
+<p>Provjeri digitalni potpis, certifikat i izdavatelja. Potvrdi odgovara li potpisnik proizvodu koji datoteka i putanja predstavljaju. Valjan potpis podržava mogućnost legitimnosti, ali ne poništava sumnjivo ponašanje.</p>
+
+<p>Pregledaj nadređeni proces i proces iznad njega. Utvrdi koji je proces stvorio ili pokrenuo datoteku i predstavlja li taj odnos očekivano ponašanje aplikacije.</p>
+
+<p>Analiziraj cijeli naredbeni redak i razinu integriteta procesa. Traži kodirani ili prikriveni sadržaj, skriveno izvršavanje, neuobičajene DLL reference, vanjske adrese, privremene putanje i pokušaje onemogućavanja sigurnosnih kontrola.</p>
+
+<p>Utvrdi kako je datoteka stigla na uređaj. Je li je preuzeo internetski preglednik, je li raspakirana iz arhive, stigla elektroničkom poštom, kopirana s mrežnog dijeljenog resursa, unesena prijenosnim medijem ili ju je stvorio drugi proces?</p>
+
+<p>Provjeri zastupljenost datoteke u cijelom okruženju. Datoteka prisutna na stotinama uređaja kao dio odobrene aplikacije ima drugačiji kontekst od datoteke koja je prvi put pronađena na jednom računalu.</p>
+
+<p>Pregledaj DNS upite, mrežne veze, odredišne domene, IP adrese, portove i količinu prenesenih podataka. Kada telemetrija to omogućuje, utvrdi koji je proces odgovoran za komunikaciju.</p>
+
+<p>Potraži mehanizme trajnog pristupa povezane s datotekom. Ovisno o razini rizika, pregledaj Run ključeve, Startup direktorije, zakazane zadatke, servise, WMI aktivnosti, Winlogon vrijednosti i upravljačke programe.</p>
+
+<p>Na kraju izgradi vremensku crtu oko izvršavanja. Utvrdi što se dogodilo prije pojave datoteke, što ju je pokrenulo, što je stvorila i koje su aktivnosti uslijedile.</p>
+
+<h3>Nemoj preskočiti poslovni kontekst</h3>
+
+<p>Tehnički pokazatelji zahtijevaju operativni kontekst.</p>
+
+<p>Potpisana komponenta za ažuriranje pokrenuta iz Temp direktorija može izgledati neuobičajeno, ali odgovarati odobrenom ažuriranju softvera. Alat za udaljenu administraciju može biti očekivan na radnoj stanici IT podrške. Zakazani zadatak može pripadati sustavu za sigurnosno kopiranje.</p>
+
+<p>Prije eskalacije usporedi aktivnost sa zapisima o distribuciji softvera, vremenskim razdobljima održavanja, zahtjevima za promjene, administratorskim aktivnostima i normalnom ulogom krajnjeg uređaja.</p>
+
+<p>To nije razlog za zatvaranje sumnjive aktivnosti samo zato što je uključen administrator. Administratorski računi vrijedne su mete, a legitimni alati često se zloupotrebljavaju. Poslovno objašnjenje mora odgovarati tehničkim dokazima.</p>
+
+<p>Ako zahtjev za promjenu navodi ažuriranje aplikacije, ali promatrani proces pokreće kodiranu PowerShell naredbu i kontaktira domenu nepovezanu s izdavateljem proizvoda, zahtjev ne objašnjava cijelu aktivnost.</p>
+
+<h3>Kada povećati prioritet</h3>
+
+<p>Osnovni Windows proces koji se izvršava iz lokacije u koju korisnik može zapisivati treba dobiti visok prioritet.</p>
+
+<p>Nepoznata izvršna datoteka pokrenuta iz Temp direktorija postaje značajnija kada je nepotpisana, pokrenula ju je Office aplikacija ili preglednik, povezuje se s vanjskim odredištem ili nakon izvršavanja uspostavlja trajni pristup.</p>
+
+<p>Novi servis ili zakazani zadatak postaje značajniji kada pokreće datoteku iz direktorija AppData, Public, Downloads, Temp ili s mrežnog dijeljenog resursa.</p>
+
+<p>Pokušaji pristupa datotekama SAM, SECURITY, SYSTEM ili NTDS.dit zahtijevaju neposrednu kontekstualnu provjeru jer mogu biti povezani s krađom vjerodajnica.</p>
+
+<p>Novoinstalirani ili ranjivi upravljački program dobiva visok prioritet ako nakon njegove instalacije slijede pokušaji onemogućavanja EDR sustava, antivirusnog proizvoda ili druge sigurnosne kontrole.</p>
+
+<p>Datoteka koja se izvrši, uspostavi trajni pristup, komunicira s vanjskim odredištem i zatim se obriše predstavlja znatno snažniji slučaj od datoteke koja je samo rijetka ili nepotpisana.</p>
+
+<h3>Upotreba putanja za proaktivno traženje prijetnji</h3>
+
+<p>Praktično istraživanje prema putanjama može tražiti poznate nazive osnovnih Windows procesa koji se izvršavaju izvan očekivanih direktorija.</p>
+
+<p>Sljedeći primjer predstavlja opću logiku pretrage. Nazive polja potrebno je prilagoditi stvarnom SIEM ili EDR sustavu i načinu na koji su podaci normalizirani:</p>
+
+<pre><code>naziv_procesa IN (
+  "svchost.exe",
+  "lsass.exe",
+  "services.exe",
+  "winlogon.exe",
+  "csrss.exe",
+  "smss.exe"
+)
+
+AND putanja_procesa NOT STARTS WITH "C:\Windows\System32\"</code></pre>
+
+<p>Upit stvara popis kandidata za istragu. Ne potvrđuje kompromitaciju.</p>
+
+<p>Analitičar mora uzeti u obzir arhitekturu operacijskog sustava, preusmjeravanje putanja, verziju Windowsa, posebnosti pojedinih procesa i kvalitetu podataka. Neke legitimne komponente mogu postojati u drugim Windows direktorijima, a nepotpuna normalizacija putanja može stvoriti pogrešne rezultate.</p>
+
+<p>Drugo istraživanje može se usmjeriti na izvršne i skriptne datoteke pokrenute iz privremenih lokacija i direktorija u koje korisnik može zapisivati:</p>
+
+<pre><code>putanja_procesa CONTAINS ANY (
+  "\AppData\Local\Temp\",
+  "\Windows\Temp\",
+  "\Downloads\",
+  "\Users\Public\"
+)
+
+AND ekstenzija_datoteke IN (
+  ".exe",
+  ".dll",
+  ".ps1",
+  ".bat",
+  ".cmd",
+  ".vbs",
+  ".js",
+  ".hta"
+)</code></pre>
+
+<p>Rezultate treba obogatiti nadređenim procesom, izdavateljem, statusom digitalnog potpisa, zastupljenošću datoteke i mrežnom aktivnošću. Bez tog konteksta legitimni instalacijski procesi i komponente za ažuriranje mogu proizvesti velik broj rezultata.</p>
+
+<h3>Pretvaranje istraživanja u detekciju</h3>
+
+<p>Široki upit za proaktivno traženje prijetnji ne treba automatski pretvoriti u produkcijsko upozorenje.</p>
+
+<p>Prvo treba utvrditi koje su kombinacije proizvele stvarno vrijedne nalaze. Izvršavanje datoteke iz AppData direktorija može biti uobičajeno. Datoteka sa sistemskim nazivom pokrenuta iz nasumično imenovanog AppData direktorija, koju je pokrenuo Word i koja se povezuje s novom domenom, znatno je specifičnija.</p>
+
+<p>Kvalitetna detekcija može povezati više uvjeta umjesto da stvara upozorenje samo na temelju putanje. Uvjeti mogu uključivati lokaciju u koju korisnik može zapisivati, sumnjiv nadređeni proces, nepotpisanu ili rijetko viđenu datoteku, naziv sistemskog procesa, vanjsku komunikaciju i stvaranje mehanizma trajnog pristupa unutar određenog vremenskog razdoblja.</p>
+
+<p>Logiku treba testirati na povijesnim podacima. Zatim je potrebno pregledati legitimne aplikacije koje se pojavljuju u rezultatima i izraditi uske, kontekstualne iznimke prema očekivanom izdavatelju, putanji, aplikaciji, skupini uređaja i procesnom odnosu.</p>
+
+<p>Ne treba globalno izuzimati cijeli AppData direktorij ili sve procese potpisane od poznatog izdavatelja. Preširoke iznimke uklanjaju kontekst zbog kojeg je detekcija korisna.</p>
+
+<h3>Završno analitičko pravilo</h3>
+
+<p>Windows datotečni sustav daje analitičaru kartu, ali karta ne donosi odluku.</p>
+
+<p>System32 je očekivana lokacija za mnoge osnovne Windows procese, ali datoteka nije sigurna samo zato što se ondje nalazi. AppData i Temp lokacije su u koje korisnici mogu zapisivati i često ih koriste napadači, ali svakodnevno ih koriste i legitimne aplikacije.</p>
+
+<p>Najvrjedniji nalazi nastaju kada se pojavi proturječnost.</p>
+
+<p>Naziv sistemskog procesa pojavljuje se u korisničkom direktoriju. Dokument pokreće naredbeni interpreter. Komponenta za ažuriranje povezuje se s odredištem koje nije povezano s njezinim izdavateljem. Potpisana aplikacija učitava nepoznatu DLL biblioteku. Privremena izvršna datoteka stvara trajni mehanizam pokretanja.</p>
+
+<p>Upravo na tim proturječnostima istraga postaje vrijedna.</p>
+
+<p>Upoznaj normalno kako bi prepoznao neobično. Zatim neobično ponašanje poveži s dovoljno tehničkog i poslovnog konteksta da bi mogao razumjeti što se zapravo dogodilo.</p>
+
+<div class="article-date">27.08.2026.</div>
 
 <h2>Threat Hunt Starter Pack: od hipoteze do konkretnog nalaza</h2>
 
