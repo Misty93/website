@@ -82,6 +82,388 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
+<div class="article-date">30.08.2026.</div>
+
+<h2>Learn Normal to Detect Abnormal Series: The Windows File System</h2>
+
+<p>When investigating a Windows endpoint, the file name is only the beginning. A process called svchost.exe may be a normal Windows component, a copied binary, a renamed payload or a malicious file created to resemble something familiar. The name gives us a clue. The complete path gives us context.</p>
+
+<p>This is why understanding the Windows file system matters in security operations. An analyst does not need to memorize every directory or become a digital forensics specialist before investigating endpoint activity. However, the analyst should understand what normally belongs in the most important Windows locations, what may legitimately execute from user directories and which combinations of path, process and behavior deserve further investigation.</p>
+
+<p>The basic principle is simple:</p>
+
+<p>Normal does not automatically mean safe. Abnormal does not automatically mean malicious. An abnormal path or process relationship is a reason to investigate and correlate.</p>
+
+<p>A suspicious path is not proof of compromise. A trusted path is not proof of legitimacy. The most reliable conclusions come from combining the file location with the process name, digital signature, publisher, hash, command line, parent process, user context, persistence activity and network communication.</p>
+
+<h3>Where This Fits Into Threat Hunting</h3>
+
+<p>Windows file system knowledge is useful during alert triage, threat hunting, incident response and digital forensics, but each activity uses it differently.</p>
+
+<p>During alert triage, the analyst may receive an alert for a process executing from an unusual location and use the path to determine whether the event requires further investigation.</p>
+
+<p>During threat hunting, the analyst can proactively search for known Windows process names executing from unexpected directories, unknown executables running from temporary locations or persistence mechanisms referencing user writable paths.</p>
+
+<p>During incident response, the same knowledge helps establish scope, identify related payloads and understand how the attacker maintained access.</p>
+
+<p>Digital forensics goes deeper into artifacts such as Prefetch, Amcache, deleted files, registry hives and file system timestamps. Those artifacts can support a threat hunt, but they are usually used when additional validation or historical reconstruction is required.</p>
+
+<p>The boundary between these activities is not always strict. A threat hunt may uncover suspicious execution, continue into endpoint analysis and eventually become a full incident investigation.</p>
+
+<h3>Start With the Complete Path</h3>
+
+<p>A process name without its path is incomplete evidence.</p>
+
+<p>Consider the following process:</p>
+
+<pre><code>svchost.exe</code></pre>
+
+<p>That name is associated with a legitimate Windows component. However, these two paths do not have the same analytical meaning:</p>
+
+<pre><code>C:\Windows\System32\svchost.exe
+
+C:\Users\Public\svchost.exe</code></pre>
+
+<p>The first path is expected for the legitimate Windows Service Host process. The second path uses a legitimate Windows process name in a user writable directory. That is a strong masquerading signal and should be investigated.</p>
+
+<p>This still does not mean that the second file is automatically malicious. It means that the process name does not match the expected location and that additional evidence is required.</p>
+
+<p>The analyst should immediately inspect the digital signature, publisher, hash, parent process, command line, user, file creation time and network activity. The next question is not simply whether the path looks wrong. The next question is what the file did.</p>
+
+<h3>System32 Is Important, but It Is Not a Trust Boundary</h3>
+
+<p>On a 64 bit Windows system, C:\Windows\System32 contains core 64 bit Windows binaries and libraries. Processes such as lsass.exe, services.exe, winlogon.exe, csrss.exe and svchost.exe are normally associated with this directory.</p>
+
+<p>When one of these names appears in a different location, the path becomes a high value investigative signal.</p>
+
+<pre><code>Expected:
+
+C:\Windows\System32\lsass.exe
+
+Requires investigation:
+
+C:\Users\&lt;username&gt;\AppData\Roaming\lsass.exe</code></pre>
+
+<p>The second file may be attempting to imitate the Local Security Authority Subsystem Service. A user who sees the process name in a task list may assume that it is legitimate. A detection based only on the process name may make the same mistake.</p>
+
+<p>At the same time, a file located in System32 should not be trusted automatically. Attackers may abuse legitimate signed binaries, load a malicious DLL through a trusted process or place malicious content in a location that appears reliable. Permissions may have been modified, a vulnerable driver may be present or a legitimate application may have been manipulated.</p>
+
+<p>The directory reduces or increases suspicion, but behavior determines the final assessment.</p>
+
+<h3>Why SysWOW64 Confuses Analysts</h3>
+
+<p>The name C:\Windows\SysWOW64 causes confusion because it contains 32 bit Windows components on a 64 bit operating system. Meanwhile, System32 contains the 64 bit components.</p>
+
+<p>The presence of a process in SysWOW64 is not automatically suspicious. A legitimate 32 bit application may use components from this directory.</p>
+
+<p>What matters is whether the process belongs there, whether it has a valid and expected signature, which arguments were used, which process launched it and what it did afterward.</p>
+
+<p>An unknown component, an unexpected child process or unusual external communication may justify further investigation. The directory name alone does not.</p>
+
+<h3>Program Files Provides Application Context</h3>
+
+<p>C:\Program Files is normally used for 64 bit installed applications. C:\Program Files (x86) is normally used for 32 bit applications on a 64 bit system.</p>
+
+<p>These locations usually provide stronger application context than a temporary or user controlled directory. An installed business application should normally have a recognizable directory structure, a known publisher and files that belong to the same product.</p>
+
+<p>During an investigation, check whether the directory name matches the application, whether the executable is signed by the expected publisher and whether the same file exists on other endpoints where the application is installed.</p>
+
+<p>A directory under Program Files should receive additional attention when it has a randomly generated name, contains an unknown executable, imitates a known product or communicates with a destination unrelated to the application’s purpose.</p>
+
+<p>An attacker may also place a malicious DLL next to a legitimate executable and rely on the application’s DLL search order to load it. In that situation, the main executable may be signed and stored in Program Files while the loaded DLL is the actual malicious component.</p>
+
+<h3>User Profiles Are Not Automatically Suspicious</h3>
+
+<p>C:\Users\&lt;username&gt;\ contains the user profile, documents, downloads and application data associated with an account. Many legitimate applications store data or execute components from the user profile because they are installed without administrative privileges or maintain settings separately for each user.</p>
+
+<p>This means that execution from a user profile is not automatically malicious.</p>
+
+<p>The important question is whether the process and its location make sense together.</p>
+
+<p>A collaboration application running from an expected AppData directory may be normal. A process called services.exe running from the same user profile is not expected Windows behavior.</p>
+
+<p>The user profile also gives the analyst useful context about how a file may have arrived. A file located in Downloads may have been downloaded through a browser. A file in a temporary Outlook location may have originated from an email attachment. A file in AppData may have been created by an application, an installer or another process.</p>
+
+<p>Do not stop at the directory. Trace the origin of the file.</p>
+
+<h3>AppData Can Be Completely Legitimate</h3>
+
+<p>AppData\Local and AppData\Roaming are frequently treated as suspicious in low quality detection rules. That creates unnecessary alerts because many legitimate applications use these directories.</p>
+
+<p>Browsers, communication applications, software updaters and products installed for only one user may legitimately execute from AppData. The presence of an executable in AppData is therefore not enough to classify it as malicious.</p>
+
+<p>The analyst should inspect the directory structure, publisher, signature, prevalence and process chain.</p>
+
+<p>This path may be expected:</p>
+
+<pre><code>C:\Users\&lt;username&gt;\AppData\Local\VendorName\ApplicationName\application.exe</code></pre>
+
+<p>This path requires more attention:</p>
+
+<pre><code>C:\Users\&lt;username&gt;\AppData\Roaming\kqzpt\services.exe</code></pre>
+
+<p>The second example combines a randomly named directory with a file that imitates a Windows system process. Suspicion increases further if the file is unsigned, rarely seen, launched after an attachment was opened or connected to a newly observed domain.</p>
+
+<p>AppData is also frequently used for persistence because a standard user can write to it. A file in AppData referenced by a Run key, Startup folder, scheduled task or another autostart mechanism deserves contextual investigation.</p>
+
+<h3>Downloads, Desktop and Public Need User Context</h3>
+
+<p>Downloads and Desktop commonly contain files saved by users. Documents, images, archives and installers may all appear there during normal work.</p>
+
+<p>The risk increases when executable or script content is launched directly from these locations, especially when the file arrived through email, a browser download, a shared link or removable media.</p>
+
+<p>Relevant extensions include .exe, .msi, .js, .vbs, .hta, .lnk, .iso and .img. These file types are not automatically malicious, but their origin and execution chain should be understood.</p>
+
+<p>Double extensions also deserve attention:</p>
+
+<pre><code>C:\Users\&lt;username&gt;\Downloads\Invoice.pdf.exe</code></pre>
+
+<p>The file may be attempting to appear as a PDF document while its actual extension is executable. Whether the full extension is visible to the user depends on the Windows configuration and how the file was presented.</p>
+
+<p>C:\Users\Public is used for content shared between users and may be required by legitimate applications. It is also attractive for attackers because files stored there may be accessible to multiple accounts.</p>
+
+<p>A remote access utility, payload, archive containing collected data or system process name inside the Public directory should be correlated with the user, parent process, creation source and subsequent activity.</p>
+
+<h3>ProgramData Is Shared and Often Misunderstood</h3>
+
+<p>C:\ProgramData stores application data and configuration shared across users. Security agents, backup products, management tools and other business applications commonly use it.</p>
+
+<p>ProgramData is not suspicious by default. However, it can also be used to hide payloads or persistence components because it is less visible to many users and its contents vary between endpoints.</p>
+
+<p>Investigate unknown executables, hidden files, randomly named directories and content that does not belong to an installed product.</p>
+
+<p>The path should make sense in relation to the software inventory. If a directory claims to belong to Microsoft, an updater or a security product, verify that the publisher, signature and file metadata support that claim.</p>
+
+<h3>The Correct Rule for Temp</h3>
+
+<p>Files in temporary directories are normal. Windows and applications regularly use temporary locations for logs, extracted installation resources, update data, browser content and files that are needed only for a short period.</p>
+
+<p>The presence of a file in Temp is therefore not automatically suspicious.</p>
+
+<p>The more useful question is whether executable content ran from Temp and what happened around that execution.</p>
+
+<p>A legitimate updater may temporarily extract and launch a signed component from one of these locations:</p>
+
+<pre><code>C:\Windows\Temp\
+
+C:\Users\&lt;username&gt;\AppData\Local\Temp\</code></pre>
+
+<p>That behavior may be expected when the parent process is a known updater, the file is signed by the correct publisher, the command line matches the installation activity and no unusual persistence or network behavior follows.</p>
+
+<p>An unknown executable launched from Temp requires more attention. Priority increases when the file is unsigned, exists only briefly, uses a random name, is launched by an Office application or browser, connects to an external destination, creates persistence or deletes itself after execution.</p>
+
+<p>The same logic applies to scripts and other executable components such as .dll, .ps1, .bat, .cmd, .vbs, .js and .hta files.</p>
+
+<p>This process chain would be a high value candidate for investigation:</p>
+
+<pre><code>OUTLOOK.EXE
+  → WINWORD.EXE
+    → powershell.exe
+      → C:\Users\&lt;username&gt;\AppData\Local\Temp\update.exe
+        → External network connection</code></pre>
+
+<p>No single element in this chain proves malicious intent. Together, they describe a sequence that is difficult to explain as ordinary document activity.</p>
+
+<h3>Masquerading Is More Than a Fake File Name</h3>
+
+<p>MITRE ATT&amp;CK technique T1036 covers masquerading. Subtechnique T1036.005, Match Legitimate Resource Name or Location, describes adversaries using names or locations that resemble legitimate resources.</p>
+
+<p>A common example is a system process name used outside its expected directory:</p>
+
+<pre><code>Expected:
+
+C:\Windows\System32\services.exe
+
+Suspicious:
+
+C:\ProgramData\MicrosoftUpdate\services.exe</code></pre>
+
+<p>The directory name MicrosoftUpdate may also have been chosen to look trustworthy. The attacker is not only imitating a file name. The attacker is creating an entire path designed to survive a quick review.</p>
+
+<p>More advanced cases may involve a malicious file placed in a trusted location, a copied legitimate binary, DLL side loading or the abuse of a valid signed application. This is why path based hunting should generate candidates for investigation rather than automatic conclusions.</p>
+
+<h3>Parent and Child Processes Explain the Execution</h3>
+
+<p>A path tells us where a file executed. The process tree helps explain how it executed.</p>
+
+<p>Some process relationships deserve priority because they are frequently associated with document abuse, script execution, web shells, database server abuse and living off the land techniques.</p>
+
+<pre><code>WINWORD.EXE or EXCEL.EXE
+  → powershell.exe, cmd.exe or wscript.exe
+
+OUTLOOK.EXE
+  → wscript.exe, powershell.exe or mshta.exe
+
+chrome.exe or msedge.exe
+  → mshta.exe, powershell.exe or cmd.exe
+
+acrord32.exe
+  → rundll32.exe or powershell.exe
+
+w3wp.exe
+  → cmd.exe or powershell.exe
+
+sqlservr.exe
+  → cmd.exe or powershell.exe
+
+powershell.exe or cmd.exe
+  → schtasks.exe, sc.exe or reg.exe</code></pre>
+
+<p>These relationships are not automatically malicious. A business application may launch a script, an administrator may use PowerShell and a database administrator may intentionally enable operating system command execution.</p>
+
+<p>The analyst must inspect the complete command line, user, integrity level, file origin, timing and subsequent behavior.</p>
+
+<p>For example, Word launching PowerShell is a warning sign. Word launching PowerShell with an encoded command that downloads a file into Temp and creates a scheduled task is a much stronger sequence.</p>
+
+<h3>Persistence Gives the File a Longer Story</h3>
+
+<p>A suspicious file becomes more significant when another mechanism ensures that it will execute again.</p>
+
+<p>Run and RunOnce registry keys under HKCU and HKLM are common autostart locations. They are also used by legitimate software. The important part is the referenced file and the context of the registry modification.</p>
+
+<p>A new Run key pointing to a known application in an expected directory may be normal. A new Run key pointing to an unknown executable in Temp, Downloads, Public or a randomly named AppData directory requires investigation.</p>
+
+<p>Scheduled tasks are used by Windows and legitimate applications for maintenance, updates and backups. Suspicion increases when the task uses a misleading Microsoft style name, runs every few minutes or launches PowerShell, a living off the land binary or a payload from a user writable location.</p>
+
+<p>Windows services provide another important persistence and execution mechanism. A newly created service whose ImagePath points to Temp, a user profile, a network share or an unknown executable should be correlated with the account and process that created it.</p>
+
+<p>WMI event subscriptions, Winlogon modifications, Startup folders and drivers can also provide persistence. The analyst does not need to check every possible mechanism for every harmless file. The depth of the investigation should follow the risk of the observed behavior.</p>
+
+<h3>Useful Artifacts for Deeper Validation</h3>
+
+<p>Some Windows artifacts are more closely associated with digital forensics, but they can help validate a threat hunting finding when endpoint telemetry is incomplete.</p>
+
+<p>Prefetch may help establish that a program executed and may provide information related to previous executions. It is not enabled in every environment and should not be treated as a complete record of all execution.</p>
+
+<p>Amcache can contain information about applications that were present on the system and may support execution analysis. Its interpretation requires care because presence in an artifact does not always prove execution in the exact way an analyst may initially assume.</p>
+
+<p>C:\$Recycle.Bin may contain deleted tools, payloads or archives. A deleted file may still provide useful metadata or recoverable content.</p>
+
+<p>C:\Windows\System32\winevt\Logs contains Windows Event Log files. Log clearing, logging interruptions or manipulation of these files can be important defense evasion signals.</p>
+
+<p>C:\Windows\System32\config contains critical registry hives such as SAM, SYSTEM, SECURITY and SOFTWARE. Attempts to copy or access these files may be associated with credential access, backup activity or legitimate administrative work. The initiating process and user context determine the risk.</p>
+
+<p>On a Domain Controller, C:\Windows\NTDS\NTDS.dit contains the Active Directory database. Access, copying or shadow copy activity involving NTDS.dit should receive immediate attention because it may expose domain credential material.</p>
+
+<h3>A Practical Investigation Sequence</h3>
+
+<p>When a suspicious file or process is identified, begin by recording the hostname, username, timestamp, process identifier and complete file path. Preserve the original values before moving deeper into the investigation.</p>
+
+<p>Inspect the file name, extension, size, creation time, modification time and SHA 256 hash. Timestamps can provide useful context, but they may be modified and should not be treated as independent proof.</p>
+
+<p>Check the digital signature, certificate and publisher. Confirm that the signer matches the product represented by the path and file name. A valid signature supports legitimacy, but it does not override suspicious behavior.</p>
+
+<p>Review the parent and grandparent processes. Determine which process created or launched the file and whether that relationship is normal for the application.</p>
+
+<p>Inspect the complete command line and integrity level. Look for encoded content, hidden execution, unusual DLL references, external addresses, temporary paths and attempts to disable security controls.</p>
+
+<p>Determine how the file arrived. Was it downloaded by a browser, extracted from an archive, delivered by email, copied from a network share, introduced through removable media or created by another process?</p>
+
+<p>Check prevalence across the environment. A file present on hundreds of systems as part of an approved application has a different context from a file observed for the first time on one endpoint.</p>
+
+<p>Review DNS queries, network connections, destination domains, IP addresses, ports and transferred data. Identify the process responsible for the communication whenever the available telemetry allows it.</p>
+
+<p>Search for persistence involving the file. Review registry Run keys, Startup folders, scheduled tasks, services, WMI activity, Winlogon values and drivers according to the risk of the finding.</p>
+
+<p>Finally, build a timeline around the execution. Determine what happened before the file appeared, what launched it, what it created and what followed.</p>
+
+<h3>Do Not Skip the Business Context</h3>
+
+<p>Technical indicators need operational context.</p>
+
+<p>A signed update component executing from Temp may look unusual but correspond to an approved software update. A remote administration tool may be expected on an IT support workstation. A scheduled task may belong to a backup product.</p>
+
+<p>Before escalation, compare the activity with software deployment records, maintenance windows, change requests, administrator activity and the normal role of the endpoint.</p>
+
+<p>This is not an excuse to close suspicious activity simply because an administrator was involved. Administrator accounts are valuable targets, and legitimate tools are frequently abused. The business explanation must match the technical evidence.</p>
+
+<p>If the change request mentions a software update, but the observed process launches an encoded PowerShell command and contacts an unrelated external domain, the ticket does not explain the complete activity.</p>
+
+<h3>When to Increase the Priority</h3>
+
+<p>A core Windows process executing from a user writable directory should receive high priority.</p>
+
+<p>An unknown executable running from Temp becomes more significant when it is unsigned, launched by Office or a browser, connected to an external destination or followed by persistence.</p>
+
+<p>A new service or scheduled task becomes more significant when it launches a payload from AppData, Public, Downloads, Temp or a network share.</p>
+
+<p>Attempts to access SAM, SECURITY, SYSTEM or NTDS.dit require immediate contextual investigation because they may be associated with credential theft.</p>
+
+<p>A newly installed or vulnerable driver becomes high priority when it is followed by attempts to disable an EDR, antivirus product or another security control.</p>
+
+<p>A file that executes, creates persistence, communicates externally and deletes itself presents a much stronger case than a file that is merely rare or unsigned.</p>
+
+<h3>Using Paths for Threat Hunting</h3>
+
+<p>A practical path based hunt can search for core Windows process names running outside their expected directories.</p>
+
+<p>The following is generic search logic and must be adapted to the field names and normalization used by the actual SIEM or EDR platform:</p>
+
+<pre><code>process_name IN (
+  "svchost.exe",
+  "lsass.exe",
+  "services.exe",
+  "winlogon.exe",
+  "csrss.exe",
+  "smss.exe"
+)
+
+AND process_path NOT STARTS WITH "C:\Windows\System32\"</code></pre>
+
+<p>The query produces candidates for investigation. It does not confirm compromise.</p>
+
+<p>The analyst must also consider operating system architecture, path redirection, Windows version, process implementation details and data quality. Some legitimate components may exist in additional Windows directories, and incomplete path normalization can produce misleading results.</p>
+
+<p>A second hunt can focus on executable or script content launched from temporary and user writable directories:</p>
+
+<pre><code>process_path CONTAINS ANY (
+  "\AppData\Local\Temp\",
+  "\Windows\Temp\",
+  "\Downloads\",
+  "\Users\Public\"
+)
+
+AND file_extension IN (
+  ".exe",
+  ".dll",
+  ".ps1",
+  ".bat",
+  ".cmd",
+  ".vbs",
+  ".js",
+  ".hta"
+)</code></pre>
+
+<p>This query should be enriched with the parent process, publisher, signature status, prevalence and network activity. Without that context, legitimate installers and update components may generate a large number of results.</p>
+
+<h3>Turning a Hunt Into a Detection</h3>
+
+<p>A broad hunting query should not automatically become a production alert.</p>
+
+<p>First, identify which combinations created meaningful findings. A file executing from AppData may be common. A file with a Windows system name executing from a random AppData directory, launched by Word and connecting to a new domain is far more specific.</p>
+
+<p>A useful detection can combine several conditions instead of alerting on the path alone. These may include a user writable location, a suspicious parent process, an unsigned or low prevalence file, a system process name, external communication and persistence within a defined time period.</p>
+
+<p>Test the logic against historical data. Review which legitimate applications appear and build narrow, contextual exceptions based on the expected publisher, path, application, endpoint group and process relationship.</p>
+
+<p>Do not globally exclude an entire directory such as AppData or every process signed by a known publisher. Broad exceptions remove the context that makes the detection useful.</p>
+
+<h3>The Final Analytical Rule</h3>
+
+<p>The Windows file system gives an analyst a map, but the map does not make the decision.</p>
+
+<p>System32 is expected for many core Windows processes, but a file is not safe only because it is stored there. AppData and Temp are writable locations frequently used by attackers, but legitimate applications also use them every day.</p>
+
+<p>The strongest findings come from contradictions.</p>
+
+<p>A system process name appears in a user directory. A document launches a command interpreter. An updater contacts a destination unrelated to its publisher. A signed application loads an unknown DLL. A temporary executable creates permanent persistence.</p>
+
+<p>Those contradictions are where the investigation becomes valuable.</p>
+
+<p>Learn normal to detect abnormal. Then correlate the abnormal with enough technical and business context to understand what actually happened.</p>
+
+
+
 <div class="article-date">27.08.2026.</div>
 
 <h2>Threat Hunt Starter Pack: From Hypothesis to Actionable Findings</h2>
