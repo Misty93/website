@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Five Critical WordPress Plugin and Theme Flaws Enable Site Takeover or RCE",
+      "url": "https://thehackernews.com/2026/08/five-critical-wordpress-plugin-and.html",
+      "published": "Sat, 29 Aug 2026 21:55:03 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Anthropic is cutting Claude Code's current weekly limits by 17%",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/",
+      "published": "Sat, 29 Aug 2026 19:11:51 -0400",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Hack One Robot, Reach the Next: Unitree G1 Security Flaws",
       "url": "https://securityaffairs.com/198085/hacking/hack-one-robot-reach-the-next-unitree-g1-security-flaws.html",
       "published": "Sat, 29 Aug 2026 11:55:44 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "Rhysida Ransomware Group Targets Berlin Government Ahead of Vote",
-      "url": "https://securityaffairs.com/198064/cyber-crime/rhysida-ransomware-group-targets-berlin-government-ahead-of-vote.html",
-      "published": "Sat, 29 Aug 2026 10:55:47 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Brave browser adds email aliases to help users evade tracking",
-      "url": "https://www.bleepingcomputer.com/news/security/brave-browser-adds-email-aliases-to-help-users-evade-tracking/",
-      "published": "Sat, 29 Aug 2026 10:19:23 -0400",
-      "source": "BleepingComputer"
     }
   ]
 }
