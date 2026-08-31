@@ -4,13 +4,13 @@
       "title": "Serijal „Upoznaj normalno kako bi prepoznao neobično“: Windows datotečni sustav",
       "file": "article-hr.html#serijal-upoznaj-normalno-kako-bi-prepoznao-neobično-windows-datotečni-sustav",
       "description": "Kada istražujemo Windows krajnji uređaj, naziv datoteke samo je početak. Proces naziva svchost.exe može biti legitimna Windows komponenta, kopirana sistemska datoteka, preimenovani zlonamjerni program ili datoteka napravljena tako da izgleda poznato. Naziv nam daje trag, ali tek nam puna putanja daje potreban kontekst.",
-      "date": "30.08.2026."
+      "date": "31.08.2026."
     },
     {
       "title": "Learn Normal to Detect Abnormal Series: The Windows File System",
       "file": "article-en.html#learn-normal-to-detect-abnormal-series-the-windows-file-system",
       "description": "When investigating a Windows endpoint, the file name is only the beginning. A process called svchost.exe may be a normal Windows component, a copied binary, a renamed payload or a malicious file created to resemble something familiar. The name gives us a clue. The complete path gives us context.",
-      "date": "30.08.2026."
+      "date": "31.08.2026."
     },
     {
       "title": "Threat Hunt Starter Pack: od hipoteze do konkretnog nalaza",
