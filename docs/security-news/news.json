@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "Extortion Group FulcrumSec Claims 86GB Manchester Airports Group Data Theft",
+      "url": "https://securityaffairs.com/198143/cyber-crime/extortion-group-fulcrumsec-claims-86gb-manchester-airports-group-data-theft.html",
+      "published": "Sun, 30 Aug 2026 17:21:51 +0000",
+      "source": "Security Affairs"
+    },
+    {
       "title": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor",
       "url": "https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html",
       "published": "Sun, 30 Aug 2026 13:06:33 +0530",
@@ -10,12 +16,6 @@
       "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 112",
       "url": "https://securityaffairs.com/198133/malware/security-affairs-malware-newsletter-round-112.html",
       "published": "Sun, 30 Aug 2026 12:31:00 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Hackers Are Probing PaperCut Servers, and 47% Still Have No Patch",
-      "url": "https://securityaffairs.com/198107/uncategorized/hackers-are-probing-papercut-servers-and-47-still-have-no-patch.html",
-      "published": "Sun, 30 Aug 2026 11:26:29 +0000",
       "source": "Security Affairs"
     }
   ]
