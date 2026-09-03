@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Google, Anthropic, and OpenAI Unveil Cyber AI Models, Safeguards, and Access Programs",
-      "url": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html",
-      "published": "Wed, 02 Sep 2026 23:57:49 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Fake Software Installers Disable Windows Update and Weaken Microsoft Defender",
-      "url": "https://thehackernews.com/2026/09/fake-software-installers-disable.html",
-      "published": "Wed, 02 Sep 2026 22:11:06 +0530",
-      "source": "The Hacker News"
-    },
-    {
       "title": "OpenAI Astra Brings Autonomous Zero-Day Exploitation to AI",
       "url": "https://securityaffairs.com/198317/ai/openai-astra-brings-autonomous-zero-day-exploitation-to-ai.html",
       "published": "Wed, 02 Sep 2026 21:31:29 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "SonicWall Patches Two New Actively Exploited Zero-Days in SMA 1000 VPNs",
+      "url": "https://securityaffairs.com/198303/security/sonicwall-patches-two-new-actively-exploited-zero-days-in-sma-1000-vpns.html",
+      "published": "Wed, 02 Sep 2026 14:22:40 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
+      "url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
+      "published": "Thu, 03 Sep 2026 17:28:00 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
