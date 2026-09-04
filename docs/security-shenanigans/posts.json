@@ -1,22 +1,22 @@
 {
   "items": [
     {
+      "title": "Serijal „Upoznaj normalno kako bi prepoznao neobično“: Linux datotečni sustav",
+      "file": "article-hr.html#serijal-upoznaj-normalno-kako-bi-prepoznao-neobično-linux-datotečni-sustav",
+      "description": "Kada istražujemo Linux sustav, naziv procesa nije dovoljan. Analitičar također mora razumjeti odakle dolazi izvršna datoteka, koji ju je korisnik pokrenuo, koje je dozvole imala, kojim je datotekama pristupala te je li uspostavila trajni pristup ili mrežnu komunikaciju.",
+      "date": "04.09.2026."
+    },
+    {
+      "title": "Learn Normal to Detect Abnormal Series: The Linux File System",
+      "file": "article-en.html#learn-normal-to-detect-abnormal-series-the-linux-file-system",
+      "description": "When investigating a Linux system, knowing the process name is not enough. The analyst also needs to understand where the executable came from, which user launched it, what permissions it had, which files it accessed and whether it established persistence or network communication.",
+      "date": "04.09.2026."
+    },
+    {
       "title": "Serijal „Upoznaj normalno kako bi prepoznao neobično“: Windows datotečni sustav",
       "file": "article-hr.html#serijal-upoznaj-normalno-kako-bi-prepoznao-neobično-windows-datotečni-sustav",
       "description": "Kada istražujemo Windows krajnji uređaj, naziv datoteke samo je početak. Proces naziva svchost.exe može biti legitimna Windows komponenta, kopirana sistemska datoteka, preimenovani zlonamjerni program ili datoteka napravljena tako da izgleda poznato. Naziv nam daje trag, ali tek nam puna putanja daje potreban kontekst.",
       "date": "31.08.2026."
-    },
-    {
-      "title": "Learn Normal to Detect Abnormal Series: The Windows File System",
-      "file": "article-en.html#learn-normal-to-detect-abnormal-series-the-windows-file-system",
-      "description": "When investigating a Windows endpoint, the file name is only the beginning. A process called svchost.exe may be a normal Windows component, a copied binary, a renamed payload or a malicious file created to resemble something familiar. The name gives us a clue. The complete path gives us context.",
-      "date": "31.08.2026."
-    },
-    {
-      "title": "Threat Hunt Starter Pack: od hipoteze do konkretnog nalaza",
-      "file": "article-hr.html#threat-hunt-starter-pack-od-hipoteze-do-konkretnog-nalaza",
-      "description": "Proaktivno traženje prijetnji, odnosno threat hunting , često se pogrešno prikazuje kao pretraživanje SIEM sustava prema poznatim pokazateljima kompromitacije ili procesima kao što su PowerShell, rundll32.exe i certutil.exe. Takva pretraga može biti korisna, ali sama po sebi ne predstavlja cjelovit postupak traženja prijetnji.",
-      "date": "27.08.2026."
     }
   ]
 }
