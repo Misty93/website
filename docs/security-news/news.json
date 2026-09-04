@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
-      "url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
-      "published": "Thu, 03 Sep 2026 23:32:47 +0530",
+      "title": "Pegasus and NoviSpy Used Against Serbian Protesters",
+      "url": "https://securityaffairs.com/198377/intelligence/pegasus-and-novispy-used-against-serbian-protesters.html",
+      "published": "Thu, 03 Sep 2026 20:17:00 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
+      "url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+      "published": "Fri, 04 Sep 2026 21:27:15 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
-      "url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
-      "published": "Thu, 03 Sep 2026 21:22:07 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
-      "url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
-      "published": "Thu, 03 Sep 2026 20:56:47 +0530",
+      "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
+      "url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
+      "published": "Fri, 04 Sep 2026 20:50:19 +0530",
       "source": "The Hacker News"
     }
   ]
