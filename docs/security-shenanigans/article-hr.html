@@ -82,6 +82,498 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
+<div class="article-date">04.09.2026.</div>
+
+<h2>Serijal „Upoznaj normalno kako bi prepoznao neobično“: Linux datotečni sustav</h2>
+
+<p>Kada istražujemo Linux sustav, naziv procesa nije dovoljan. Analitičar također mora razumjeti odakle dolazi izvršna datoteka, koji ju je korisnik pokrenuo, koje je dozvole imala, kojim je datotekama pristupala te je li uspostavila trajni pristup ili mrežnu komunikaciju.</p>
+
+<p>Proces pokrenut iz direktorija /tmp ima drugačiji kontekst od procesa instaliranog pomoću službenog upravitelja paketa. Novi unos u datoteci /etc/sudoers ima drugačiji sigurnosni utjecaj od privremene aplikacijske datoteke. Proces čija je izvršna datoteka već obrisana zahtijeva drugačiju istragu od poznatog servisa pokrenutog iz očekivane lokacije.</p>
+
+<p>Nijedno od tih zapažanja samo po sebi ne dokazuje da je sustav kompromitiran. Ono analitičaru daje smjer za daljnju istragu.</p>
+
+<p>To je temelj serijala „Upoznaj normalno kako bi prepoznao neobično“. Prije nego što analitičar može prepoznati značajno odstupanje, mora razumjeti kako se operacijski sustav ponaša u normalnim uvjetima.</p>
+
+<h3>Zašto je Linux važan SOC analitičarima</h3>
+
+<p>Linux je prisutan gotovo svugdje. Koristi se na web poslužiteljima, računalnim resursima u oblaku, spremnicima, poslužiteljima baza podataka, CI/CD infrastrukturi, mrežnim uređajima, sigurnosnim proizvodima i IoT uređajima.</p>
+
+<p>Analitičar koji se dobro snalazi samo u Windows okruženju može imati ozbiljan nedostatak vidljivosti kada se sigurnosno upozorenje odnosi na Linux poslužitelj, sustav za upravljanje spremnicima ili radno opterećenje u oblaku.</p>
+
+<p>Cilj nije postati Linux administrator prije pokretanja prve istrage. Cilj je razumjeti dijelove operacijskog sustava koji pružaju važan sigurnosni kontekst.</p>
+
+<p>Gdje su definirani korisnički računi? Gdje se nalaze autentikacijski događaji? U koje direktorije obični korisnici mogu zapisivati? Kako se konfigurira zakazano izvršavanje naredbi? Gdje možemo pregledati proces čija je izvršna datoteka već obrisana?</p>
+
+<p>Kada odgovori na ta pitanja postanu poznati, Linux istrage prestaju djelovati toliko nepoznato.</p>
+
+<h3>Linux počinje u korijenskom direktoriju</h3>
+
+<p>Windows odvaja prostore za pohranu pomoću oznaka kao što su C: i D:. Linux koristi jedno objedinjeno stablo direktorija koje počinje korijenskim direktorijem:</p>
+
+<pre><code>/</code></pre>
+
+<p>Iz te se lokacije granaju svi važni direktoriji. Njihova je organizacija definirana standardom <em>Filesystem Hierarchy Standard</em> (eng.), poznatim kao FHS. Stvarna struktura ipak se može razlikovati između distribucija, verzija sustava i instaliranih aplikacija.</p>
+
+<p>Linux veliku količinu informacija o stanju sustava izlaže kroz stvarne ili virtualne datoteke. Procesi, uređaji, podaci jezgre i brojne mrežne informacije predstavljeni su kroz datotečne putanje.</p>
+
+<p>To je korisno tijekom istrage jer analitičar često može prikupiti vrijedne podatke bez grafičkog sigurnosnog alata. Ako zna gdje treba gledati, datotečni sustav postaje karta operacijskog sustava.</p>
+
+<h3>Putanja je signal, ali nije dokaz</h3>
+
+<p>Putanja može povećati ili smanjiti razinu sumnje, ali sama ne može dokazati legitimnost ili kompromitaciju.</p>
+
+<p>Nepoznata izvršna datoteka u direktoriju /tmp može biti sumnjiva. Međutim, može pripadati i legitimnom instalacijskom procesu. Datoteka u direktoriju /usr/bin može biti očekivana, ali pouzdana lokacija ne jamči da datoteka nije zamijenjena ili zloupotrijebljena.</p>
+
+<p>Putanju treba povezati s vlasnikom, grupom, dozvolama, vremenskim oznakama, vrstom datoteke, SHA 256 sažetkom, nadređenim procesom, argumentima naredbenog retka, korisničkim kontekstom, mehanizmima trajnog pristupa i mrežnom aktivnošću.</p>
+
+<p>Najvrjedniji nalazi uglavnom sadržavaju neku proturječnost. Servisni račun iznenada dobiva interaktivnu ljusku. Privremena izvršna datoteka stvara trajni mehanizam pokretanja. Sistemski servis pokreće datoteku iz direktorija u koji obični korisnici mogu zapisivati. Proces nastavlja raditi nakon što je njegova izvršna datoteka obrisana i pritom održava vanjsku mrežnu vezu.</p>
+
+<p>Upravo na takvim proturječnostima istraga postaje vrijedna.</p>
+
+<h3>Direktorij /etc sadrži kritičnu konfiguraciju</h3>
+
+<p>Direktorij /etc sadrži konfiguraciju operacijskog sustava i instaliranih servisa. Promjene u toj lokaciji mogu utjecati na korisničke račune, autentikaciju, privilegije, mrežne postavke, servise i zakazano izvršavanje naredbi.</p>
+
+<p>Datoteke u direktoriju /etc mijenjaju se tijekom legitimne administracije, instalacije softvera, ažuriranja paketa i automatiziranog upravljanja konfiguracijom. Nedavna izmjena zato nije automatski zlonamjerna.</p>
+
+<p>Analitičar treba utvrditi koja je datoteka promijenjena, koji je proces napravio promjenu, koji je korisnik bio odgovoran i odgovara li aktivnost odobrenom administratorskom zadatku.</p>
+
+<h3>Što nam otkriva /etc/passwd</h3>
+
+<p>Datoteka /etc/passwd sadrži podatke o lokalnim korisničkim i servisnim računima. Svaki unos uobičajeno uključuje korisničko ime, korisnički identifikator, grupni identifikator, opis računa, početni direktorij i zadanu naredbenu ljusku.</p>
+
+<p>Datoteka se može pregledati naredbom:</p>
+
+<pre><code>cat /etc/passwd</code></pre>
+
+<p>Tijekom istrage traži novostvorene račune, neočekivane interaktivne ljuske, neuobičajene početne direktorije i račune s korisničkim identifikatorom 0.</p>
+
+<p>Račun root uobičajeno ima UID vrijednost 0. Drugi račun s istom vrijednošću u praksi dobiva isti identitet i razinu ovlasti te zahtijeva hitnu istragu, osim ako postoji dokumentiran i vrlo specifičan razlog za njegovo postojanje.</p>
+
+<p>Servisni računi često koriste ljuske kao što su:</p>
+
+<pre><code>/usr/sbin/nologin
+/bin/false</code></pre>
+
+<p>Takva konfiguracija onemogućuje uobičajenu interaktivnu prijavu. Servisni račun koji je neočekivano promijenjen na /bin/bash ili drugu interaktivnu ljusku može predstavljati legitimnu administrativnu promjenu, ali i pokušaj održavanja pristupa.</p>
+
+<p>Račun ne treba procjenjivati samo prema nazivu. Napadač može stvoriti korisnika koji imenom nalikuje legitimnom servisu ili sistemskom računu. Potrebno je pregledati UID vrijednost, ljusku, početni direktorij, kontekst nastanka i naknadne autentikacijske aktivnosti.</p>
+
+<h3>Što nam otkriva /etc/shadow</h3>
+
+<p>Suvremeni Linux sustavi zaštićene podatke povezane s lozinkama uglavnom pohranjuju u datoteci /etc/shadow, a ne u /etc/passwd. Datoteka sadrži sažetke lozinki te informacije o njihovoj starosti i isteku.</p>
+
+<p>Pristup je ograničen jer bi napadač nakon krađe sažetaka mogao pokušati izvanmrežno probijanje lozinki.</p>
+
+<p>Neočekivani proces koji pristupa datoteci /etc/shadow važan je signal mogućeg pristupa vjerodajnicama, ali nije automatski zlonamjeran. Legitimne autentikacijske komponente, alati za upravljanje lozinkama, identitetski sustavi i procesi sigurnosnog kopiranja mogu joj pristupati s povećanim privilegijama.</p>
+
+<p>Potrebno je utvrditi koji je proces pristupio datoteci, koji ga je korisnik pokrenuo, koje je privilegije imao, je li pristup očekivan za tu aplikaciju te što se događalo prije i nakon pristupa.</p>
+
+<p>Neprivilegirani proces u pravilu ne bi trebao moći čitati /etc/shadow. Uspješan pristup iz takvog konteksta može upućivati na pogrešne dozvole, iskorištenu ranjivost ili privilegije stečene u ranijoj fazi napada.</p>
+
+<h3>Što nam otkriva /etc/sudoers</h3>
+
+<p>Datoteka /etc/sudoers i dodatne datoteke u direktoriju /etc/sudoers.d određuju koji korisnici i grupe mogu izvršavati naredbe s povećanim privilegijama pomoću alata sudo.</p>
+
+<p>Neovlaštena izmjena može omogućiti trajan privilegirani pristup bez potrebe za procesom koji stalno radi i privlači pozornost.</p>
+
+<p>Metapodaci se mogu pregledati naredbom:</p>
+
+<pre><code>ls -la /etc/sudoers /etc/sudoers.d</code></pre>
+
+<p>Ako analitičar ima odgovarajuće ovlasti, sadržaj se može pregledati pomoću:</p>
+
+<pre><code>sudo cat /etc/sudoers
+sudo ls -la /etc/sudoers.d</code></pre>
+
+<p>Prioritetno provjeri nova pravila koja koriste opciju NOPASSWD, naredbe koje omogućuju pokretanje ljuske, neočekivane korisnike s proširenim pravima i pravila koja korisniku praktično daju neograničen root pristup.</p>
+
+<p>Nedavna izmjena tijekom sumnjivog vremenskog razdoblja kritičan je nalaz, ali istraga mora uzeti u obzir automatizirano upravljanje konfiguracijom, uvođenje novih korisnika, održavanje i druge odobrene promjene.</p>
+
+<h3>Cron može osigurati trajni pristup</h3>
+
+<p>Linux koristi cron za zakazano izvršavanje naredbi i skripti. Relevantne lokacije mogu uključivati:</p>
+
+<pre><code>/etc/crontab
+/etc/cron.d/
+/etc/cron.hourly/
+/etc/cron.daily/
+/var/spool/cron/
+/var/spool/cron/crontabs/</code></pre>
+
+<p>Točne lokacije ovise o distribuciji.</p>
+
+<p>Cron se legitimno koristi za održavanje, sigurnosno kopiranje, nadzor, rotaciju zapisnika i aplikacijske zadatke. Napadač ga može koristiti za redovito pokretanje zlonamjerne datoteke, preuzimanje sadržaja ili ponovno uspostavljanje pristupa nakon zaustavljanja procesa.</p>
+
+<p>Cron unos postaje zanimljiviji ako se izvršava svakih nekoliko minuta, pokreće naredbenu ljusku, koristi curl ili wget, izvršava kodirani sadržaj ili pokreće datoteku iz direktorija /tmp, /var/tmp, /dev/shm ili korisničkog direktorija.</p>
+
+<p>Cron naredbu ne treba analizirati izolirano. Potrebno je identificirati vlasnika, raspored izvršavanja, datoteku ili skriptu koju poziva, njezine dozvole i mrežna odredišta.</p>
+
+<h3>Direktorij /var i Linux zapisnici</h3>
+
+<p>Direktorij /var sadrži promjenjive podatke koji nastaju tijekom rada sustava. To uključuje zapisnike, aplikacijsku predmemoriju, redove elektroničke pošte, podatke servisa i druge radne podatke.</p>
+
+<p>Za analitičara je /var/log jedna od najvažnijih lokacija. Dostupne datoteke ovise o Linux distribuciji, konfiguraciji bilježenja i instaliranim servisima.</p>
+
+<p>Suvremeni sustavi mogu važne događaje pohranjivati i u systemd dnevniku, što znači da se dokazi ne moraju nalaziti samo u tradicionalnim tekstualnim datotekama unutar /var/log.</p>
+
+<h3>Autentikacijski zapisi</h3>
+
+<p>Na sustavima temeljenima na distribucijama Debian i Ubuntu autentikacijske aktivnosti često se nalaze u:</p>
+
+<pre><code>/var/log/auth.log</code></pre>
+
+<p>Na distribucijama temeljenima na RHEL sustavu, uključujući Rocky Linux i AlmaLinux, često se koristi:</p>
+
+<pre><code>/var/log/secure</code></pre>
+
+<p>Ti zapisi mogu sadržavati neuspjele i uspješne SSH prijave, korištenje alata sudo, PAM aktivnosti i podatke o korisničkim sesijama.</p>
+
+<p>Ne treba ih opisivati kao izravnu zamjenu za Windows telemetriju o stvaranju procesa. Autentikacijski zapisi primarno objašnjavaju aktivnosti povezane s identitetima i privilegijama. Detaljnija vidljivost procesa i sistemskih poziva može zahtijevati auditd, EDR ili drugi izvor telemetrije.</p>
+
+<p>Korisni obrasci za proaktivno traženje prijetnji uključuju ponavljane neuspjele SSH prijave, pokušaje prema velikom broju računa, uspješnu prijavu nakon niza neuspjeha, pristup s neuobičajene IP adrese i sudo aktivnosti korisnika koji inače ne administrira sustav.</p>
+
+<p>Prije donošenja zaključka potrebno je uzeti u obzir automatizaciju, skenere ranjivosti, sustave za upravljanje i zajedničku administratorsku infrastrukturu.</p>
+
+<h3>Upotreba naredbe journalctl</h3>
+
+<p>Na sustavima koji koriste systemd, naredba journalctl omogućuje pregled sistemskog dnevnika.</p>
+
+<p>Opći pregled može započeti naredbom:</p>
+
+<pre><code>journalctl</code></pre>
+
+<p>Moguće je odabrati i određeno vremensko razdoblje:</p>
+
+<pre><code>journalctl --since "2026-08-30 10:00:00"
+journalctl --until "2026-08-30 12:00:00"</code></pre>
+
+<p>SSH događaji mogu se nalaziti pod nazivom ssh ili sshd, ovisno o distribuciji:</p>
+
+<pre><code>journalctl -u ssh
+journalctl -u sshd</code></pre>
+
+<p>Aktivnosti povezane s alatom sudo mogu se pretraživati naredbom:</p>
+
+<pre><code>journalctl _COMM=sudo</code></pre>
+
+<p>Dostupni podaci i razdoblje čuvanja ovise o konfiguraciji. Prazan rezultat ne dokazuje da se događaj nije dogodio. Servis se možda koristi drugim nazivom, događaj može biti pohranjen na drugoj lokaciji ili su podaci možda već izbrisani zbog pravila čuvanja.</p>
+
+<h3>Auditd pruža detaljniju vidljivost</h3>
+
+<p>Linux revizijski sustav može bilježiti pristup datotekama, sistemske pozive, pokretanje procesa, aktivnosti povezane s privilegijama i promjene osjetljive konfiguracije.</p>
+
+<p>Kada je auditd instaliran i pravilno konfiguriran, događaji se često pohranjuju u:</p>
+
+<pre><code>/var/log/audit/audit.log</code></pre>
+
+<p>Status servisa može se provjeriti naredbom:</p>
+
+<pre><code>systemctl status auditd</code></pre>
+
+<p>Aktivna revizijska pravila mogu se pregledati naredbom:</p>
+
+<pre><code>auditctl -l</code></pre>
+
+<p>Primjeri pretrage uključuju:</p>
+
+<pre><code>ausearch -f /etc/shadow
+ausearch -f /etc/sudoers
+ausearch -m USER_LOGIN
+ausearch -m USER_CMD</code></pre>
+
+<p>Prisutnost auditd servisa ne znači da se bilježi svaka sigurnosno važna radnja. Vrijednost podataka ovisi o pravilima koja su bila aktivna kada se promatrana aktivnost dogodila.</p>
+
+<p>Ako nijedno pravilo nije nadziralo pristup datoteci /etc/shadow, odsutnost revizijskog događaja ne dokazuje da datoteci nitko nije pristupio.</p>
+
+<h3>Ispravno pravilo za /tmp</h3>
+
+<p>Direktorij /tmp koristi se za privremene datoteke i uobičajeno omogućuje zapisivanje lokalnim korisnicima. Operacijski sustav, aplikacije, instalacijski procesi i korisničke sesije svakodnevno ga koriste.</p>
+
+<p>Datoteka u direktoriju /tmp nije automatski sumnjiva.</p>
+
+<p>Izvršavanje iz direktorija /tmp zahtijeva kontekst.</p>
+
+<p>Legitimni instalacijski proces može raspakirati i pokrenuti privremenu komponentu iz direktorija /tmp. Takvo ponašanje može biti očekivano ako nadređeni proces pripada poznatom upravitelju paketa ili instalacijskom programu, datoteka odgovara odobrenom paketu i nakon izvršavanja ne nastaju sumnjivi mehanizmi trajnog pristupa ili mrežne veze.</p>
+
+<p>Nepoznata izvršna datoteka u direktoriju /tmp postaje značajnija kada ima nasumičan naziv, izvršava se s povećanim privilegijama, preuzeta je pomoću alata curl ili wget, uspostavlja trajni pristup, povezuje se s vanjskim odredištem ili se briše ubrzo nakon izvršavanja.</p>
+
+<p>Početni pregled može uključivati:</p>
+
+<pre><code>ls -la /tmp
+find /tmp -type f -ls</code></pre>
+
+<p>Naredbe kao što je find na opterećenim sustavima mogu proizvesti velik broj rezultata. Prije širokog pretraživanja produkcijskog sustava potrebno je procijeniti mogući operativni utjecaj.</p>
+
+<h3>Zašto /dev/shm zahtijeva pažnju</h3>
+
+<p>Lokacija /dev/shm najčešće predstavlja datotečni sustav tmpfs koji se koristi za zajedničku memoriju i privremeni sadržaj.</p>
+
+<p>Napadači ga mogu koristiti za spremanje i izvršavanje kratkotrajnih datoteka jer je često dostupan za zapisivanje i prima manje pozornosti od standardnih aplikacijskih direktorija.</p>
+
+<p>Ponekad se opisuje kao lokacija koja jamči potpuno izvršavanje bez dodira s diskom. Takav opis nije uvijek tehnički precizan. Tmpfs je primarno smješten u memoriji, ali ovisno o konfiguraciji može koristiti zamjenski prostor. Datoteka je također dostupna kroz uobičajenu putanju dok postoji.</p>
+
+<p>Važnija sigurnosna činjenica jest da kratkotrajni sadržaj u direktoriju /dev/shm može imati slabiju vidljivost alatima usmjerenima na skeniranje trajne pohrane.</p>
+
+<p>Početni pregled može uključivati:</p>
+
+<pre><code>ls -la /dev/shm
+find /dev/shm -type f -ls</code></pre>
+
+<p>Prioritetno provjeri nepoznati izvršni sadržaj, skripte s nasumičnim nazivima, datoteke koje nestaju ubrzo nakon izvršavanja i procese koji uspostavljaju vanjsku mrežnu komunikaciju.</p>
+
+<p>Uobičajene datoteke zajedničke memorije ne treba označiti zlonamjernima samo zato što se nalaze u direktoriju /dev/shm.</p>
+
+<h3>Direktorij /proc prikazuje aktivne procese</h3>
+
+<p>Direktorij /proc virtualni je datotečni sustav koji prikazuje informacije o jezgri i aktivnim procesima.</p>
+
+<p>Svaki aktivni proces ima direktorij nazvan prema svom identifikatoru:</p>
+
+<pre><code>/proc/&lt;PID&gt;/</code></pre>
+
+<p>Naredbeni redak procesa može se pregledati pomoću:</p>
+
+<pre><code>cat /proc/&lt;PID&gt;/cmdline</code></pre>
+
+<p>Budući da su argumenti odvojeni nul znakovima, čitljiviji rezultat često daje:</p>
+
+<pre><code>tr '\0' ' ' &lt; /proc/&lt;PID&gt;/cmdline</code></pre>
+
+<p>Izvršna datoteka povezana s procesom može se provjeriti pomoću:</p>
+
+<pre><code>ls -la /proc/&lt;PID&gt;/exe</code></pre>
+
+<p>Trenutačni radni direktorij dostupan je kroz:</p>
+
+<pre><code>ls -la /proc/&lt;PID&gt;/cwd</code></pre>
+
+<p>Otvoreni opisnici datoteka mogu se pregledati kroz:</p>
+
+<pre><code>ls -la /proc/&lt;PID&gt;/fd</code></pre>
+
+<p>Memorijska preslikavanja mogu biti dostupna kroz:</p>
+
+<pre><code>cat /proc/&lt;PID&gt;/maps</code></pre>
+
+<p>Pristup tim podacima ovisi o dozvolama, sigurnosnim kontrolama i konfiguraciji sustava. Analitičar ne bi trebao očekivati da će s neprivilegiranog računa moći pregledati sve informacije o svakom procesu.</p>
+
+<h3>Proces može nastaviti raditi nakon brisanja izvršne datoteke</h3>
+
+<p>Na Linux sustavu proces može nastaviti raditi nakon što je njegova izvršna datoteka uklonjena iz direktorija. Proces već ima otvorenu referencu na datoteku, pa brisanje njezina direktorijskog unosa ne mora zaustaviti izvršavanje.</p>
+
+<p>Poveznica unutar /proc tada može prikazivati:</p>
+
+<pre><code>/proc/1842/exe -&gt; /tmp/.update (deleted)</code></pre>
+
+<p>To predstavlja vrijedan signal za istragu, osobito ako je proces pokrenut iz direktorija /tmp ili /dev/shm i održava nepoznatu vanjsku mrežnu vezu.</p>
+
+<p>Nalaz nije automatski dokaz zlonamjernog programa. Legitimno ažuriranje paketa može zamijeniti ili ukloniti izvršnu datoteku dok stari proces nastavlja raditi.</p>
+
+<p>Analitičar treba provjeriti je li se provodilo ažuriranje paketa, koji je korisnik pokrenuo proces, što proces trenutačno radi te odgovaraju li njegove mrežne aktivnosti i mehanizmi trajnog pristupa očekivanoj aplikaciji.</p>
+
+<p>Identifikatori aktivnih procesa mogu se izlistati pomoću:</p>
+
+<pre><code>ls /proc | grep -E '^[0-9]+$'</code></pre>
+
+<p>Za početni pregled često su praktičnije naredbe:</p>
+
+<pre><code>ps aux
+ps -ef</code></pre>
+
+<h3>Poveži procese s mrežnom aktivnošću</h3>
+
+<p>Sumnjivi proces potrebno je povezati s njegovim mrežnim vezama.</p>
+
+<p>Korisne naredbe mogu uključivati:</p>
+
+<pre><code>ss -plant
+ss -panu
+lsof -i</code></pre>
+
+<p>Neki podaci o procesima zahtijevaju povećane privilegije.</p>
+
+<p>Provjeri lokalnu i udaljenu adresu, port, stanje veze, identifikator procesa i naziv programa. Nepoznati proces iz direktorija /tmp ili /dev/shm koji održava vanjsku vezu značajniji je od privremene datoteke koja nikada nije izvršena.</p>
+
+<p>U obzir treba uzeti i ulogu sustava. Vanjska komunikacija može biti očekivana za proxy poslužitelj ili sustav za ažuriranje, ali neuobičajena za izolirani poslužitelj baze podataka.</p>
+
+<p>Javna IP adresa nije automatski zlonamjerna, a veza prema poznatom pružatelju usluga u oblaku nije automatski sigurna. Napadači redovito koriste legitimne pružatelje smještaja i infrastrukturu u oblaku.</p>
+
+<h3>SSH ključevi mogu održavati pristup</h3>
+
+<p>Napadač ne mora stvoriti novi korisnički račun kako bi zadržao pristup. Može dodati vlastiti javni ključ u datoteku authorized_keys postojećeg korisnika.</p>
+
+<p>Važne lokacije uključuju:</p>
+
+<pre><code>/home/&lt;korisnik&gt;/.ssh/authorized_keys
+/root/.ssh/authorized_keys</code></pre>
+
+<p>Metapodaci direktorija mogu se pregledati pomoću:</p>
+
+<pre><code>ls -la /home/&lt;korisnik&gt;/.ssh
+ls -la /root/.ssh</code></pre>
+
+<p>Provjeri vlasnika, dozvole, vrijeme izmjene i sadržaj. Utvrdi pripada li ključ organizaciji i je li promjena bila očekivana.</p>
+
+<p>Ključ dodan tijekom sumnjivog vremenskog razdoblja važan je nalaz. Njegova važnost raste ako je promjeni prethodila neuobičajena prijava, sudo aktivnost ili izmjena korisničkih privilegija.</p>
+
+<h3>Konfiguracija ljuske može pokretati naredbe</h3>
+
+<p>Datoteke kao što su .bashrc, .bash_profile i .profile mogu pokretati naredbe pri prijavi korisnika ili otvaranju naredbene ljuske.</p>
+
+<p>Važne lokacije uključuju:</p>
+
+<pre><code>/home/&lt;korisnik&gt;/.bashrc
+/home/&lt;korisnik&gt;/.bash_profile
+/home/&lt;korisnik&gt;/.profile
+/root/.bashrc
+/root/.profile</code></pre>
+
+<p>Te se datoteke legitimno mijenjaju tijekom administracije, instalacije razvojnih alata i prilagodbe korisničkog okruženja.</p>
+
+<p>Sumnju povećavaju naredbe koje preuzimaju sadržaj, pokreću skrivene procese, izvršavaju datoteke iz direktorija /tmp ili /dev/shm, povezuju se s vanjskim odredištima ili sadržavaju kodirane i namjerno teško čitljive naredbe.</p>
+
+<h3>Systemd servisi mogu osigurati trajni pristup</h3>
+
+<p>Velik broj suvremenih Linux distribucija koristi systemd za upravljanje servisima. Napadač može stvoriti ili izmijeniti servis kako bi se zlonamjerni proces pokrenuo tijekom podizanja sustava ili ponovno pokrenuo nakon zaustavljanja.</p>
+
+<p>Važne lokacije mogu uključivati:</p>
+
+<pre><code>/etc/systemd/system/
+/usr/lib/systemd/system/
+/lib/systemd/system/</code></pre>
+
+<p>Lokalno stvorene i prilagođene definicije servisa često se nalaze u direktoriju /etc/systemd/system.</p>
+
+<p>Korisne naredbe uključuju:</p>
+
+<pre><code>find /etc/systemd/system -type f -ls
+systemctl list-unit-files --type=service
+systemctl list-units --type=service</code></pre>
+
+<p>Istraži novostvorene servise čiji nazivi oponašaju legitimne sistemske komponente, ExecStart vrijednosti koje upućuju na /tmp, /dev/shm ili korisničke direktorije, pokretanje naredbene ljuske i komunikaciju prema nepoznatom vanjskom odredištu.</p>
+
+<p>Legitimna instalacija softvera također može stvoriti servis. Promjenu treba povezati s aktivnostima upravitelja paketa, odobrenim promjenama, vlasništvom datoteke i očekivanom ulogom sustava.</p>
+
+<h3>Povijest naredbi korisna je, ali nepotpuna</h3>
+
+<p>Povijest naredbene ljuske može pružiti koristan kontekst tijekom istrage.</p>
+
+<p>Uobičajene lokacije uključuju:</p>
+
+<pre><code>/home/&lt;korisnik&gt;/.bash_history
+/root/.bash_history
+/home/&lt;korisnik&gt;/.zsh_history</code></pre>
+
+<p>Povijest naredbi nije potpun ni pouzdan sigurnosni zapis. Korisnik ili napadač može onemogućiti bilježenje, izmijeniti datoteku, izbrisati pojedine unose ili koristiti ljusku koja ne zapisuje naredbe u očekivanu lokaciju.</p>
+
+<p>Pronađene naredbe mogu podržati zaključak istrage. Odsutnost sumnjivih naredbi ne dokazuje da se aktivnost nije dogodila.</p>
+
+<h3>Praktičan redoslijed Linux istrage</h3>
+
+<p>Započni bilježenjem naziva sustava, korisnika, vremena događaja, identifikatora procesa i pune putanje izvršne datoteke. Sačuvaj izvorne vrijednosti prije nastavka istrage.</p>
+
+<p>Pregledaj cijeli naredbeni redak, nadređeni proces, trenutačni radni direktorij i otvorene opisnike datoteka.</p>
+
+<p>Provjeri vlasnika datoteke, grupu, dozvole i vremenske oznake. Izračunaj SHA 256 sažetak i utvrdi pripada li datoteka instaliranom paketu.</p>
+
+<p>Provjeri je li izvršna datoteka obrisana dok je proces nastavio raditi. Pregledaj odgovarajući /proc unos i utvrdi što proces trenutačno radi.</p>
+
+<p>Pregledaj mrežne veze, udaljene adrese, domene i portove. Utvrdi osluškuje li proces dolazne veze ili komunicira s vanjskim odredištem.</p>
+
+<p>Potraži mehanizme trajnog pristupa kroz cron, systemd servise, SSH ključeve i konfiguracijske datoteke ljuske.</p>
+
+<p>Pregledaj promjene datoteka /etc/passwd, /etc/shadow, /etc/sudoers i sadržaja direktorija /etc/sudoers.d.</p>
+
+<p>Analiziraj autentikacijske zapise, systemd dnevnik i auditd događaje kada su dostupni.</p>
+
+<p>Na kraju usporedi aktivnost s ažuriranjima paketa, automatizacijom, upravljanjem konfiguracijom, održavanjem i administratorskim zadacima.</p>
+
+<p>Prije slanja nepoznate datoteke vanjskom servisu za analizu provjeri pravila organizacije i klasifikaciju podataka. Provjera samo SHA 256 sažetka u pravilu je sigurniji početni korak od slanja cijele datoteke.</p>
+
+<h3>Kada povećati prioritet</h3>
+
+<p>Nepoznati proces iz direktorija /tmp ili /dev/shm koji uspostavlja vanjsku vezu treba dobiti povećani prioritet.</p>
+
+<p>Proces s obrisanom izvršnom datotekom postaje značajniji ako ostaje aktivan, komunicira s vanjskim odredištem ili se izvršava s povećanim privilegijama.</p>
+
+<p>Neovlaštene izmjene sudoers konfiguracije, novi račun s UID vrijednošću 0 i neočekivani SSH ključ dodan privilegiranom računu zahtijevaju neposrednu istragu.</p>
+
+<p>Novi cron zadatak ili systemd servis postaje značajniji ako pokreće nepoznatu datoteku, redovito preuzima sadržaj ili se izvršava iz lokacije u koju obični korisnik može zapisivati.</p>
+
+<p>Pokušaj čitanja /etc/shadow iz neočekivanog procesa može upućivati na pristup vjerodajnicama. Brisanje sigurnosnih zapisa ili nagla promjena revizijskog servisa može upućivati na pokušaj uklanjanja dokaza.</p>
+
+<p>Servisni račun koji iznenada dobiva interaktivnu ljusku ili nove privilegije treba povezati s autentikacijskim i administratorskim aktivnostima.</p>
+
+<p>Sama rijetkost nije dovoljna. Nepoznati proces postaje značajniji kada se više sumnjivih ponašanja pojavljuje zajedno.</p>
+
+<h3>Upotreba Linux putanja za proaktivno traženje prijetnji</h3>
+
+<p>Praktično istraživanje može tražiti izvršavanje procesa iz privremenih lokacija u koje korisnici često mogu zapisivati.</p>
+
+<p>Sljedeći primjer predstavlja opću logiku pretrage. Nazive polja potrebno je prilagoditi konkretnom SIEM ili EDR sustavu i načinu normalizacije podataka:</p>
+
+<pre><code>process_path STARTS WITH ANY (
+  "/tmp/",
+  "/dev/shm/",
+  "/var/tmp/"
+)
+
+AND process_action = "execution"</code></pre>
+
+<p>Rezultate treba obogatiti korisnikom, nadređenim procesom, argumentima naredbenog retka, SHA 256 sažetkom, zastupljenošću datoteke i mrežnim vezama.</p>
+
+<p>Drugo istraživanje može tražiti promjene osjetljivih datoteka i direktorija:</p>
+
+<pre><code>file_path IN (
+  "/etc/passwd",
+  "/etc/shadow",
+  "/etc/sudoers"
+)
+
+OR file_path STARTS WITH ANY (
+  "/etc/sudoers.d/",
+  "/etc/cron.d/",
+  "/etc/systemd/system/"
+)
+
+AND file_action IN (
+  "create",
+  "modify",
+  "delete",
+  "permission_change"
+)</code></pre>
+
+<p>Ova logika stvara kandidate za istragu. Ne dokazuje kompromitaciju.</p>
+
+<p>Sustavi za upravljanje konfiguracijom, instalacije paketa i administratori mogu legitimno mijenjati iste lokacije. Analitičar treba identificirati proces, račun, izvorišni sustav, vrijeme i odobrenu promjenu povezanu s aktivnošću.</p>
+
+<h3>Pretvaranje istraživanja u detekciju</h3>
+
+<p>Široki upit za proaktivno traženje prijetnji ne treba automatski pretvoriti u produkcijsko upozorenje.</p>
+
+<p>Izvršavanje iz direktorija /tmp može proizvesti velik broj legitimnih rezultata. Korisnija detekcija može povezati izvršavanje iz /tmp s nepoznatim ili rijetkim SHA 256 sažetkom, povećanim privilegijama, neuobičajenim nadređenim procesom, vanjskom komunikacijom i brzim brisanjem datoteke.</p>
+
+<p>Izmjena datoteke /etc/sudoers može biti očekivana kada ju provodi odobreni sustav za upravljanje konfiguracijom. Ista izmjena koju napravi naredbena ljuska pokrenuta iz procesa web poslužitelja treba dobiti znatno viši prioritet.</p>
+
+<p>Rezultati istraživanja trebaju pokazati koje kombinacije razlikuju legitimnu administraciju od rizičnog ponašanja. Nakon toga treba definirati potrebne izvore podataka, vremensko razdoblje korelacije, kontekst sustava i precizne iznimke.</p>
+
+<p>Detekciju treba testirati na povijesnim podacima prije uključivanja produkcijskih upozorenja. Ne treba globalno izuzeti cijeli direktorij, skupinu korisnika ili administratorski alat samo zato što se često pojavljuje u rezultatima.</p>
+
+<h3>Završno analitičko pravilo</h3>
+
+<p>Linux datotečni sustav analitičaru pruža kartu, ali karta ne donosi odluku.</p>
+
+<p>Direktorij /etc sadrži kritičnu konfiguraciju, ali promjene u njemu mogu biti legitimne. Direktorije /tmp i /dev/shm napadači mogu koristiti za izvršavanje sadržaja, ali svakodnevno ih koristi i legitimni softver. Obrisana izvršna datoteka može upućivati na pokušaj uklanjanja dokaza, ali može nastati i tijekom ažuriranja paketa.</p>
+
+<p>Najpouzdaniji zaključci nastaju korelacijom.</p>
+
+<p>Novi SSH ključ pojavljuje se nakon neuobičajene prijave. Servisni račun dobiva interaktivnu ljusku i nakon toga koristi sudo. Proces se pokreće iz /dev/shm, povezuje se s vanjskim odredištem i stvara systemd servis. Web poslužitelj pokreće naredbenu ljusku koja mijenja /etc/sudoers.</p>
+
+<p>Svaki događaj prikazuje samo dio priče. Njihov redoslijed i međusobna povezanost daju kontekst potreban za razumijevanje onoga što se dogodilo.</p>
+
+<p>Upoznaj normalno kako bi prepoznao neobično. Zatim neobično ponašanje poveži s dovoljno tehničkog i poslovnog konteksta da bi mogao utvrditi radi li se o legitimnoj administraciji, pogrešnoj konfiguraciji ili kompromitaciji.</p>    
+    
 <div class="article-date">31.08.2026.</div>
 
 <h2>Serijal „Upoznaj normalno kako bi prepoznao neobično“: Windows datotečni sustav</h2>
