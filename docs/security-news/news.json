@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "OpenAI Astra Brings Autonomous Zero-Day Exploitation to AI",
-      "url": "https://securityaffairs.com/198317/ai/openai-astra-brings-autonomous-zero-day-exploitation-to-ai.html",
-      "published": "Wed, 02 Sep 2026 21:31:29 +0000",
-      "source": "Security Affairs"
+      "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
+      "url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
+      "published": "Thu, 03 Sep 2026 23:32:47 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "SonicWall Patches Two New Actively Exploited Zero-Days in SMA 1000 VPNs",
-      "url": "https://securityaffairs.com/198303/security/sonicwall-patches-two-new-actively-exploited-zero-days-in-sma-1000-vpns.html",
-      "published": "Wed, 02 Sep 2026 14:22:40 +0000",
-      "source": "Security Affairs"
+      "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
+      "url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
+      "published": "Thu, 03 Sep 2026 21:22:07 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
-      "url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
-      "published": "Thu, 03 Sep 2026 17:28:00 +0530",
+      "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
+      "url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
+      "published": "Thu, 03 Sep 2026 20:56:47 +0530",
       "source": "The Hacker News"
     }
   ]
