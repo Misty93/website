@@ -82,6 +82,500 @@ code {
 
 <a class="back-link" href="/security-shenanigans/">← Back to Shenanigans</a>
 
+<div class="article-date">04.09.2026.</div>
+
+<h2>Learn Normal to Detect Abnormal Series: The Linux File System</h2>
+
+<p>When investigating a Linux system, knowing the process name is not enough. The analyst also needs to understand where the executable came from, which user launched it, what permissions it had, which files it accessed and whether it established persistence or network communication.</p>
+
+<p>A process running from /tmp has a different context from a process installed through the system package manager. A new entry in /etc/sudoers has a different impact from a temporary application file. A process whose executable has already been deleted deserves a different investigation from a known service running from its expected location.</p>
+
+<p>None of these observations proves that a system has been compromised. They provide direction.</p>
+
+<p>This is the foundation of the Learn Normal to Detect Abnormal series. Before identifying meaningful deviations, analysts need to understand how the operating system behaves under normal conditions.</p>
+
+<h3>Why Linux Matters to SOC Analysts</h3>
+
+<p>Linux is everywhere. It powers web servers, cloud workloads, containers, database servers, CI/CD infrastructure, network appliances, security products and IoT devices.</p>
+
+<p>An analyst who is comfortable only with Windows may have a significant visibility gap when an alert involves a Linux server, a container host or a cloud workload.</p>
+
+<p>The objective is not to become a Linux administrator before beginning an investigation. The objective is to understand the parts of the operating system that provide security context.</p>
+
+<p>Where are user accounts defined? Where are authentication events stored? Which directories are writable by ordinary users? How are scheduled commands configured? Where can we inspect a running process after its executable has been deleted?</p>
+
+<p>Once those questions become familiar, Linux investigations become much less intimidating.</p>
+
+<h3>Linux Begins at the Root Directory</h3>
+
+<p>Windows separates storage using drive letters such as C: and D:. Linux uses one unified directory tree beginning at the root directory:</p>
+
+<pre><code>/</code></pre>
+
+<p>Important directories branch from this location. Their organization is influenced by the Filesystem Hierarchy Standard, commonly known as FHS. The exact structure may still vary between distributions, versions and installed applications.</p>
+
+<p>Linux also exposes a large amount of system state through files and virtual file systems. Processes, devices, kernel information and network related data can all be represented through paths.</p>
+
+<p>This is useful during an investigation because valuable information can often be collected without a graphical security interface. If an analyst knows where to look, the file system becomes a map of the operating system.</p>
+
+<h3>A Path Is a Signal, Not Proof</h3>
+
+<p>A path can increase or reduce suspicion, but it cannot independently prove legitimacy or compromise.</p>
+
+<p>An unknown executable under /tmp may be suspicious. It may also belong to a legitimate installer. A file under /usr/bin may be expected, but a trusted location does not guarantee that the file has not been replaced or abused.</p>
+
+<p>The path must be correlated with the owner, group, permissions, timestamps, file type, SHA 256 hash, parent process, command line, user context, persistence and network activity.</p>
+
+<p>The strongest findings usually contain contradictions. A service account suddenly receives an interactive shell. A temporary executable establishes permanent persistence. A system service launches a file from a user writable directory. A process continues running after its executable has been deleted and maintains an external connection.</p>
+
+<p>Those contradictions are where the investigation becomes valuable.</p>
+
+<h3>The /etc Directory Contains Critical Configuration</h3>
+
+<p>The /etc directory contains system wide configuration for the operating system and installed services. Changes in this location may affect accounts, authentication, privileges, networking, services and scheduled execution.</p>
+
+<p>Files under /etc change during legitimate administration, software installation, package updates and automated configuration management. A recent modification is therefore not automatically malicious.</p>
+
+<p>The analyst should determine which file changed, which process made the change, which user was responsible and whether the activity matches an approved administrative task.</p>
+
+<h3>Understanding /etc/passwd</h3>
+
+<p>The /etc/passwd file contains information about local user and service accounts. Each entry normally includes the username, user identifier, group identifier, account description, home directory and login shell.</p>
+
+<p>The file can be reviewed with:</p>
+
+<pre><code>cat /etc/passwd</code></pre>
+
+<p>During an investigation, look for newly created accounts, unexpected interactive shells, unusual home directories and accounts with user identifier 0.</p>
+
+<p>The root account normally uses UID 0. Another account with the same identifier effectively has root level identity and should be investigated immediately unless there is a documented and exceptional reason for its existence.</p>
+
+<p>Service accounts frequently use shells such as:</p>
+
+<pre><code>/usr/sbin/nologin
+/bin/false</code></pre>
+
+<p>This prevents ordinary interactive login. A service account unexpectedly changed to /bin/bash or another interactive shell may indicate administrative reconfiguration or an attempt to obtain persistent access.</p>
+
+<p>Do not judge the account only by its name. An attacker may create an account that resembles a legitimate service or system user. Review the UID, shell, home directory, creation context and subsequent authentication activity.</p>
+
+<h3>Understanding /etc/shadow</h3>
+
+<p>Modern Linux systems generally store protected password related information in /etc/shadow rather than /etc/passwd. The file contains password hashes and information related to password aging and expiration.</p>
+
+<p>Access is restricted because obtaining the hashes may allow an attacker to perform offline password cracking.</p>
+
+<p>An unexpected process reading /etc/shadow is an important credential access signal, but it is not automatically malicious. Legitimate authentication components, password management tools, identity products and backup processes may access the file with elevated privileges.</p>
+
+<p>The relevant questions are:</p>
+
+<p>Which process accessed the file? Which user launched it? What privileges did it have? Was the access expected for that application? What happened before and after the access?</p>
+
+<p>A nonprivileged process should not normally be able to read /etc/shadow. Successful access from such a context may indicate a permissions problem, a vulnerability or privileges that were obtained earlier in the attack.</p>
+
+<h3>Understanding /etc/sudoers</h3>
+
+<p>The /etc/sudoers file and additional files under /etc/sudoers.d define which users and groups may execute commands with elevated privileges through sudo.</p>
+
+<p>An unauthorized modification may provide persistent privileged access without creating an obviously suspicious process that runs continuously.</p>
+
+<p>Review the metadata of these locations with:</p>
+
+<pre><code>ls -la /etc/sudoers /etc/sudoers.d</code></pre>
+
+<p>When authorized to inspect the content, review it carefully:</p>
+
+<pre><code>sudo cat /etc/sudoers
+sudo ls -la /etc/sudoers.d</code></pre>
+
+<p>Prioritize new NOPASSWD rules, commands that allow shell execution, unexpected users receiving broad permissions and rules that effectively provide unrestricted root access.</p>
+
+<p>A recent modification during the suspected compromise window is a critical finding, but the investigation must still consider configuration management, onboarding, maintenance and other approved changes.</p>
+
+<h3>Cron Can Provide Persistence</h3>
+
+<p>Linux uses cron to execute commands and scripts according to a schedule. Relevant locations may include:</p>
+
+<pre><code>/etc/crontab
+/etc/cron.d/
+/etc/cron.hourly/
+/etc/cron.daily/
+/var/spool/cron/
+/var/spool/cron/crontabs/</code></pre>
+
+<p>The exact locations depend on the distribution.</p>
+
+<p>Cron is used legitimately for maintenance, backups, monitoring, log rotation and application tasks. It can also be used to repeatedly execute a malicious file, download content or restore access after a process has been terminated.</p>
+
+<p>A cron entry becomes more interesting when it runs every few minutes, invokes a shell, uses curl or wget, executes encoded content or launches a file from /tmp, /var/tmp, /dev/shm or a user directory.</p>
+
+<p>Do not evaluate the cron command in isolation. Identify the owner, execution schedule, referenced script, file permissions and network destinations.</p>
+
+<h3>The /var Directory and Linux Logs</h3>
+
+<p>The /var directory contains variable data that changes during system operation. This includes logs, application caches, mail queues, service data and other runtime content.</p>
+
+<p>For analysts, /var/log is one of the most important locations. The available files depend on the Linux distribution, logging configuration and installed services.</p>
+
+<p>Modern systems may also store important events in the systemd journal, meaning that the evidence may not exist only as traditional text files under /var/log.</p>
+
+<h3>Authentication Logs</h3>
+
+<p>On Debian and Ubuntu based systems, authentication activity is commonly stored in:</p>
+
+<pre><code>/var/log/auth.log</code></pre>
+
+<p>On RHEL based distributions, including systems such as Rocky Linux and AlmaLinux, the relevant file is commonly:</p>
+
+<pre><code>/var/log/secure</code></pre>
+
+<p>These logs may contain failed and successful SSH logins, sudo usage, PAM activity and session information.</p>
+
+<p>They should not be described as a direct equivalent of Windows process creation telemetry. Authentication logs primarily explain identity and privilege activity. Detailed process creation and system call visibility may require auditd, an EDR platform or another telemetry source.</p>
+
+<p>Useful hunting patterns include repeated failed SSH logins, attempts against many accounts, a successful login after repeated failures, authentication from an unusual address and sudo activity performed by a user who does not normally administer the system.</p>
+
+<p>Always consider automation, vulnerability scanners, management platforms and shared administrative infrastructure before classifying the activity.</p>
+
+<h3>Using journalctl</h3>
+
+<p>On systems using systemd, journalctl provides access to the system journal.</p>
+
+<p>A general review can begin with:</p>
+
+<pre><code>journalctl</code></pre>
+
+<p>A specific time range can be selected:</p>
+
+<pre><code>journalctl --since "2026-08-30 10:00:00"
+journalctl --until "2026-08-30 12:00:00"</code></pre>
+
+<p>SSH events may be available under ssh or sshd, depending on the distribution:</p>
+
+<pre><code>journalctl -u ssh
+journalctl -u sshd</code></pre>
+
+<p>Sudo related activity may be queried with:</p>
+
+<pre><code>journalctl _COMM=sudo</code></pre>
+
+<p>The available data and retention depend on configuration. An empty result does not prove that the event did not occur. The service name may differ, the event may have been stored elsewhere or the relevant data may already have expired.</p>
+
+<h3>auditd Provides Deeper Visibility</h3>
+
+<p>The Linux Audit Framework can record file access, system calls, process execution, privilege related activity and changes to sensitive configuration.</p>
+
+<p>When auditd is installed and properly configured, its events are commonly stored in:</p>
+
+<pre><code>/var/log/audit/audit.log</code></pre>
+
+<p>Check whether the service is running:</p>
+
+<pre><code>systemctl status auditd</code></pre>
+
+<p>Review active audit rules:</p>
+
+<pre><code>auditctl -l</code></pre>
+
+<p>Searches may include:</p>
+
+<pre><code>ausearch -f /etc/shadow
+ausearch -f /etc/sudoers
+ausearch -m USER_LOGIN
+ausearch -m USER_CMD</code></pre>
+
+<p>The presence of auditd does not mean that every important action is being recorded. Its value depends on the rules that were active when the activity occurred.</p>
+
+<p>If no rule monitored access to /etc/shadow, the absence of an audit event does not prove that the file was never accessed.</p>
+
+<h3>The Correct Rule for /tmp</h3>
+
+<p>The /tmp directory is used for temporary files and is commonly writable by local users. The operating system, applications, installers and user sessions all use it during normal operation.</p>
+
+<p>A file in /tmp is not automatically suspicious.</p>
+
+<p>Execution from /tmp requires context.</p>
+
+<p>A legitimate installation process may extract and execute a temporary component from /tmp. The behavior may be expected when the parent process belongs to a known package manager or installer, the file matches an approved package and no suspicious persistence or network activity follows.</p>
+
+<p>An unknown executable in /tmp becomes more significant when it has a random name, runs with elevated privileges, was downloaded with curl or wget, creates persistence, establishes an external connection or deletes itself shortly after execution.</p>
+
+<p>Initial inspection may include:</p>
+
+<pre><code>ls -la /tmp
+find /tmp -type f -ls</code></pre>
+
+<p>Commands such as find can produce a large amount of output on busy systems. Consider the performance and operational impact before running broad searches in production.</p>
+
+<h3>Why /dev/shm Deserves Attention</h3>
+
+<p>The /dev/shm location commonly represents a tmpfs file system used for shared memory and temporary content.</p>
+
+<p>Attackers may use it to stage or execute short lived files because it is often writable and receives less attention than traditional application directories.</p>
+
+<p>It is sometimes described as a location that guarantees completely diskless execution. That description is not always technically precise. Tmpfs is primarily memory backed, but it may interact with swap depending on the system configuration. The file is also accessible through a normal path while it exists.</p>
+
+<p>The more useful security point is that short lived content under /dev/shm may receive less visibility from tools focused on scanning persistent storage.</p>
+
+<p>Initial inspection may include:</p>
+
+<pre><code>ls -la /dev/shm
+find /dev/shm -type f -ls</code></pre>
+
+<p>Prioritize unknown executable content, scripts with random names, files that disappear shortly after execution and processes that establish external network communication.</p>
+
+<p>Do not classify ordinary shared memory files as malicious simply because they are located under /dev/shm.</p>
+
+<h3>The /proc Directory Exposes Live Process Information</h3>
+
+<p>The /proc directory is a virtual file system that exposes information about the kernel and running processes.</p>
+
+<p>Every active process has a directory named after its process identifier:</p>
+
+<pre><code>/proc/&lt;PID&gt;/</code></pre>
+
+<p>The process command line can be reviewed with:</p>
+
+<pre><code>cat /proc/&lt;PID&gt;/cmdline</code></pre>
+
+<p>Because the arguments are separated by null characters, the following command often produces a more readable result:</p>
+
+<pre><code>tr '\0' ' ' &lt; /proc/&lt;PID&gt;/cmdline</code></pre>
+
+<p>The executable associated with the process can be inspected through:</p>
+
+<pre><code>ls -la /proc/&lt;PID&gt;/exe</code></pre>
+
+<p>The current working directory is available through:</p>
+
+<pre><code>ls -la /proc/&lt;PID&gt;/cwd</code></pre>
+
+<p>Open file descriptors can be reviewed through:</p>
+
+<pre><code>ls -la /proc/&lt;PID&gt;/fd</code></pre>
+
+<p>Memory mappings may be available through:</p>
+
+<pre><code>cat /proc/&lt;PID&gt;/maps</code></pre>
+
+<p>Access depends on permissions, security controls and system configuration. An analyst should not assume that every process can be fully inspected from an unprivileged account.</p>
+
+<h3>A Process Can Continue After Its Executable Is Deleted</h3>
+
+<p>On Linux, a running process may continue after its executable has been removed from the directory. The process already holds a reference to the file, so deleting its directory entry does not necessarily terminate the process.</p>
+
+<p>The /proc link may then show:</p>
+
+<pre><code>/proc/1842/exe -&gt; /tmp/.update (deleted)</code></pre>
+
+<p>This is a valuable investigative signal, especially when the process originated from /tmp or /dev/shm and maintains an unknown external connection.</p>
+
+<p>It is not automatic proof of malware. A legitimate package update may replace or remove a binary while an older process remains active.</p>
+
+<p>The analyst should determine whether a package update occurred, which user launched the process, what the process is doing and whether its network and persistence behavior matches the expected application.</p>
+
+<p>Running process identifiers can be listed with:</p>
+
+<pre><code>ls /proc | grep -E '^[0-9]+$'</code></pre>
+
+<p>Commands such as ps are usually more convenient for an initial overview:</p>
+
+<pre><code>ps aux
+ps -ef</code></pre>
+
+<h3>Connect Processes With Network Activity</h3>
+
+<p>A suspicious process should be correlated with its network connections.</p>
+
+<p>Useful commands may include:</p>
+
+<pre><code>ss -plant
+ss -panu
+lsof -i</code></pre>
+
+<p>Some process details require elevated privileges.</p>
+
+<p>Review the local and remote address, port, connection state, process identifier and program name. An unknown process from /tmp or /dev/shm that maintains an external connection is more significant than a temporary file that was never executed.</p>
+
+<p>Also consider the role of the system. An outbound connection may be normal for a web proxy or update server but unusual for an isolated database server.</p>
+
+<p>A public IP address is not automatically malicious, and a connection to a known cloud provider is not automatically safe. Attackers regularly use legitimate hosting and cloud platforms.</p>
+
+<h3>SSH Keys Can Provide Persistent Access</h3>
+
+<p>An attacker does not need to create a new user account to maintain access. A public key can be added to the authorized_keys file of an existing user.</p>
+
+<p>Relevant locations include:</p>
+
+<pre><code>/home/&lt;username&gt;/.ssh/authorized_keys
+/root/.ssh/authorized_keys</code></pre>
+
+<p>Review the directory metadata with:</p>
+
+<pre><code>ls -la /home/&lt;username&gt;/.ssh
+ls -la /root/.ssh</code></pre>
+
+<p>Check the owner, permissions, modification time and content. Determine whether the key belongs to the organization and whether the change was expected.</p>
+
+<p>A newly added key during the suspected compromise period is an important finding. Its significance increases when it follows an unusual login, sudo activity or modification of account privileges.</p>
+
+<h3>Shell Profiles Can Execute Commands</h3>
+
+<p>Files such as .bashrc, .bash_profile and .profile can execute commands when a user logs in or starts a shell.</p>
+
+<p>Relevant examples include:</p>
+
+<pre><code>/home/&lt;username&gt;/.bashrc
+/home/&lt;username&gt;/.bash_profile
+/home/&lt;username&gt;/.profile
+/root/.bashrc
+/root/.profile</code></pre>
+
+<p>These files are legitimately modified during administration, development tool installation and customization of the user environment.</p>
+
+<p>Suspicion increases when they contain commands that download content, launch hidden processes, execute files from /tmp or /dev/shm, connect to external destinations or contain encoded and intentionally difficult to read instructions.</p>
+
+<h3>systemd Services Can Provide Persistence</h3>
+
+<p>Many modern Linux distributions use systemd to manage services. An attacker may create or modify a service so that a malicious process starts during boot or restarts after termination.</p>
+
+<p>Relevant locations may include:</p>
+
+<pre><code>/etc/systemd/system/
+/usr/lib/systemd/system/
+/lib/systemd/system/</code></pre>
+
+<p>Locally created and customized service definitions are commonly stored under /etc/systemd/system.</p>
+
+<p>Useful commands include:</p>
+
+<pre><code>find /etc/systemd/system -type f -ls
+systemctl list-unit-files --type=service
+systemctl list-units --type=service</code></pre>
+
+<p>Investigate newly created services with names that imitate legitimate system components, ExecStart values pointing to /tmp, /dev/shm or user directories, shell execution and unknown external communication.</p>
+
+<p>Legitimate software installation can also create services. Correlate the service with package activity, approved changes, file ownership and the expected role of the system.</p>
+
+<h3>Command History Is Helpful but Incomplete</h3>
+
+<p>Shell history may provide useful context during an investigation.</p>
+
+<p>Common locations include:</p>
+
+<pre><code>/home/&lt;username&gt;/.bash_history
+/root/.bash_history
+/home/&lt;username&gt;/.zsh_history</code></pre>
+
+<p>Command history is not a complete or reliable security record. A user or attacker can disable history, modify the file, delete entries or use a shell that does not record commands in the expected location.</p>
+
+<p>Commands found in history can support an investigation. The absence of suspicious commands does not prove that the activity never occurred.</p>
+
+<h3>A Practical Linux Investigation Sequence</h3>
+
+<p>Begin by recording the hostname, username, timestamp, process identifier and complete executable path. Preserve the original values before moving deeper into the investigation.</p>
+
+<p>Inspect the complete command line, parent process, working directory and open file descriptors.</p>
+
+<p>Check the file owner, group, permissions and timestamps. Calculate the SHA 256 hash and determine whether the file belongs to an installed package.</p>
+
+<p>Check whether the executable was deleted while the process remained active. Review the /proc entry and determine what the process is currently doing.</p>
+
+<p>Inspect network connections, remote addresses, domains and ports. Identify whether the process is listening for connections or communicating externally.</p>
+
+<p>Search for persistence through cron, systemd services, SSH keys and shell configuration files.</p>
+
+<p>Review changes to /etc/passwd, /etc/shadow, /etc/sudoers and /etc/sudoers.d.</p>
+
+<p>Examine authentication logs, the systemd journal and auditd events when available.</p>
+
+<p>Finally, compare the activity with package updates, automation, configuration management, maintenance and administrator actions.</p>
+
+<p>Before uploading an unknown file to an external analysis service, check the organization’s policy and data classification. Verifying only the SHA 256 hash is usually a safer initial step than uploading the file itself.</p>
+
+<h3>When to Increase the Priority</h3>
+
+<p>An unknown process from /tmp or /dev/shm that establishes an external connection should receive increased priority.</p>
+
+<p>A process with a deleted executable becomes more significant when it remains active, communicates externally or runs with elevated privileges.</p>
+
+<p>Unauthorized modifications to sudoers configuration, a new account with UID 0 and an unexpected SSH key added to a privileged account require immediate investigation.</p>
+
+<p>A new cron job or systemd service becomes more significant when it launches an unknown file, repeatedly downloads content or executes from a user writable location.</p>
+
+<p>An attempt to read /etc/shadow from an unexpected process may indicate credential access. Security log deletion or sudden audit service modification may indicate an attempt to remove evidence.</p>
+
+<p>A service account that suddenly receives an interactive shell or new privileges should be correlated with authentication and administrative activity.</p>
+
+<p>Rarity alone is not enough. An unknown process becomes more meaningful when several suspicious behaviors occur together.</p>
+
+<h3>Using Linux Paths for Threat Hunting</h3>
+
+<p>A practical hunt can search for process execution from temporary and commonly writable locations.</p>
+
+<p>The following is generic search logic. Field names must be adapted to the SIEM or EDR platform and the organization’s data normalization:</p>
+
+<pre><code>process_path STARTS WITH ANY (
+  "/tmp/",
+  "/dev/shm/",
+  "/var/tmp/"
+)
+
+AND process_action = "execution"</code></pre>
+
+<p>The results should be enriched with the user, parent process, command line, SHA 256 hash, file prevalence and network connections.</p>
+
+<p>Another hunt can search for changes to sensitive files and directories:</p>
+
+<pre><code>file_path IN (
+  "/etc/passwd",
+  "/etc/shadow",
+  "/etc/sudoers"
+)
+
+OR file_path STARTS WITH ANY (
+  "/etc/sudoers.d/",
+  "/etc/cron.d/",
+  "/etc/systemd/system/"
+)
+
+AND file_action IN (
+  "create",
+  "modify",
+  "delete",
+  "permission_change"
+)</code></pre>
+
+<p>This logic produces investigation candidates. It does not prove compromise.</p>
+
+<p>Configuration management systems, package installations and administrators may legitimately modify the same locations. The analyst must identify the process, account, source host, timing and approved change associated with the modification.</p>
+
+<h3>Turning a Hunt Into a Detection</h3>
+
+<p>A broad hunting query should not automatically become a production alert.</p>
+
+<p>Execution from /tmp alone may produce many legitimate results. A more useful detection may combine execution from /tmp with an unknown or low prevalence hash, elevated privileges, an unusual parent process, external communication and rapid file deletion.</p>
+
+<p>A modification to /etc/sudoers may be expected when performed by an approved configuration management process. The same modification performed through a shell launched by a web service should receive a much higher priority.</p>
+
+<p>Use the hunt to identify which combinations separate legitimate administration from risky behavior. Then define the required data sources, time window, asset context and narrow exceptions.</p>
+
+<p>Test the detection against historical data before enabling production alerts. Do not globally exclude an entire directory, user group or administrative tool simply because it appears frequently.</p>
+
+<h3>The Final Analytical Rule</h3>
+
+<p>The Linux file system gives the analyst a map, but the map does not make the decision.</p>
+
+<p>The /etc directory contains critical configuration, but changes there may be legitimate. The /tmp and /dev/shm directories are attractive to attackers, but legitimate software uses them every day. A deleted executable may indicate an attempt to remove evidence, but it may also result from a package update.</p>
+
+<p>The strongest findings come from correlation.</p>
+
+<p>A new SSH key appears after an unusual login. A service account receives an interactive shell and then uses sudo. A process runs from /dev/shm, connects externally and creates a systemd service. A web server launches a shell that modifies /etc/sudoers.</p>
+
+<p>Each event provides part of the story. The sequence provides the context needed to understand what happened.</p>
+
+<p>Learn normal to detect abnormal. Then connect the abnormal behavior with enough technical and operational context to determine whether it represents administration, misconfiguration or compromise.</p>
+    
 <div class="article-date">31.08.2026.</div>
 
 <h2>Learn Normal to Detect Abnormal Series: The Windows File System</h2>
