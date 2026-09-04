@@ -1,21 +1,21 @@
 {
   "items": [
     {
-      "title": "Learn Normal to Detect Abnormal Series: The Windows File System",
-      "file": "article-en.html#learn-normal-to-detect-abnormal-series-the-windows-file-system",
-      "description": "When investigating a Windows endpoint, the file name is only the beginning. A process called svchost.exe may be a normal Windows component, a copied binary, a renamed payload or a malicious file created to resemble something familiar. The name gives us a clue. The complete path gives us context.",
-      "date": "31.08.2026."
-    },
-    {
       "title": "Serijal „Upoznaj normalno kako bi prepoznao neobično“: Windows datotečni sustav",
       "file": "article-hr.html#serijal-upoznaj-normalno-kako-bi-prepoznao-neobično-windows-datotečni-sustav",
       "description": "Kada istražujemo Windows krajnji uređaj, naziv datoteke samo je početak. Proces naziva svchost.exe može biti legitimna Windows komponenta, kopirana sistemska datoteka, preimenovani zlonamjerni program ili datoteka napravljena tako da izgleda poznato. Naziv nam daje trag, ali tek nam puna putanja daje potreban kontekst.",
       "date": "31.08.2026."
     },
     {
-      "title": "Threat Hunt Starter Pack: From Hypothesis to Actionable Findings",
-      "file": "article-en.html#threat-hunt-starter-pack-from-hypothesis-to-actionable-findings",
-      "description": "Threat hunting is often incorrectly presented as searching a SIEM for known indicators of compromise or processes such as PowerShell, rundll32.exe and certutil.exe. This type of search can be useful, but it does not represent a complete threat hunt.",
+      "title": "Learn Normal to Detect Abnormal Series: The Windows File System",
+      "file": "article-en.html#learn-normal-to-detect-abnormal-series-the-windows-file-system",
+      "description": "When investigating a Windows endpoint, the file name is only the beginning. A process called svchost.exe may be a normal Windows component, a copied binary, a renamed payload or a malicious file created to resemble something familiar. The name gives us a clue. The complete path gives us context.",
+      "date": "31.08.2026."
+    },
+    {
+      "title": "Threat Hunt Starter Pack: od hipoteze do konkretnog nalaza",
+      "file": "article-hr.html#threat-hunt-starter-pack-od-hipoteze-do-konkretnog-nalaza",
+      "description": "Proaktivno traženje prijetnji, odnosno threat hunting , često se pogrešno prikazuje kao pretraživanje SIEM sustava prema poznatim pokazateljima kompromitacije ili procesima kao što su PowerShell, rundll32.exe i certutil.exe. Takva pretraga može biti korisna, ali sama po sebi ne predstavlja cjelovit postupak traženja prijetnji.",
       "date": "27.08.2026."
     }
   ]
