@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "U.S. CISA adds Google Chromium V8 flaw to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/198455/security/u-s-cisa-adds-google-chromium-v8-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html",
-      "published": "Fri, 04 Sep 2026 22:50:15 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
-      "url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
-      "published": "Fri, 04 Sep 2026 21:27:15 +0530",
+      "title": "Thousands of OpenAI Agents Quietly Turned an Abandoned Wiki Into Their Coordination Channel",
+      "url": "https://thehackernews.com/2026/09/thousands-of-openai-agents-quietly.html",
+      "published": "Sat, 05 Sep 2026 13:25:10 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
-      "url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
-      "published": "Fri, 04 Sep 2026 20:50:19 +0530",
+      "title": "Attackers Exploit PaperCut Flaws to Steal Credentials From Schools and Universities",
+      "url": "https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html",
+      "published": "Sat, 05 Sep 2026 13:01:53 +0530",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain",
+      "url": "https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/",
+      "published": "Sat, 05 Sep 2026 10:29:13 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
