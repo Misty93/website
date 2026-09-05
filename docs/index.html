@@ -174,48 +174,6 @@
       }
     }
 
-    .ask-box {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #1e1e1e;
-      border-left: 2px solid #ff4500;
-      padding: 1rem;
-      max-width: 300px;
-      color: #ffffff;
-      z-index: 999;
-    }
-
-    .ask-box h3 {
-      margin-top: 0;
-      color: #ff4500;
-    }
-
-    .ask-box input,
-    .ask-box textarea {
-      width: 100%;
-      background: #121212;
-      border: 1px solid #444444;
-      color: #ffffff;
-      padding: 0.5rem;
-      margin-bottom: 0.5rem;
-      box-sizing: border-box;
-    }
-
-    .ask-box button {
-      background-color: #ff4500;
-      border: none;
-      padding: 0.5rem;
-      width: 100%;
-      color: #121212;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .ask-box button:hover {
-      background-color: #ff5e1f;
-    }
-
     .list-item {
       margin: 0.5rem 0;
     }
@@ -273,14 +231,6 @@
 
       p {
         font-size: 1rem;
-      }
-
-      .ask-box {
-        right: 10px;
-        left: auto;
-        width: 90vw;
-        max-width: 90vw;
-        box-sizing: border-box;
       }
     }
   </style>
@@ -381,83 +331,11 @@
     </section>
   </main>
 
-  <div class="ask-box">
-    <h3>Got a security concern?</h3>
-
-    <form
-      id="ask-form"
-      action="https://formspree.io/f/mzzgblqz"
-      method="POST"
-    >
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email"
-        required
-      />
-
-      <textarea
-        name="message"
-        rows="4"
-        placeholder="Ask an expert..."
-        required
-      ></textarea>
-
-      <button type="submit">
-        Send
-      </button>
-
-      <p
-        id="form-status"
-        style="margin-top: 0.5rem; font-size: 0.9rem;"
-      ></p>
-    </form>
-  </div>
-
   <div class="flame flame-center">
     🔥
   </div>
 
   <script>
-    const form = document.getElementById("ask-form");
-    const status = document.getElementById("form-status");
-
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
-
-      const data = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: "application/json"
-          }
-        });
-
-        if (response.ok) {
-          status.textContent = "✅ Thanks, we got your message!";
-          status.style.color = "#00ff99";
-          form.reset();
-          return;
-        }
-
-        const responseData = await response.json();
-
-        status.textContent = responseData.errors
-          ? responseData.errors[0].message
-          : "❌ Something went wrong.";
-
-        status.style.color = "#ff6666";
-      } catch (error) {
-        console.error("Form submission error:", error);
-
-        status.textContent = "❌ Error sending the message.";
-        status.style.color = "#ff6666";
-      }
-    });
-
     async function fetchJson(path) {
       const response = await fetch(path, {
         cache: "no-store"
