@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
-      "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
-      "published": "Sun, 06 Sep 2026 01:44:47 +0530",
+      "title": "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication",
+      "url": "https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html",
+      "published": "Sun, 06 Sep 2026 15:02:38 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
-      "url": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
-      "published": "Sat, 05 Sep 2026 22:22:33 +0530",
+      "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+      "url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+      "published": "Sun, 06 Sep 2026 14:04:20 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
-      "url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
-      "published": "Sat, 05 Sep 2026 21:35:08 +0530",
-      "source": "The Hacker News"
+      "title": "Your MikroTik Router May Already Be Compromised: Look for SSH User \u201c-2\u201d",
+      "url": "https://securityaffairs.com/198538/security/your-mikrotik-router-may-already-be-compromised-look-for-ssh-user-2.html",
+      "published": "Sun, 06 Sep 2026 13:46:02 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
