@@ -1,6 +1,12 @@
 {
   "items": [
     {
+      "title": "ChatGPT Astra is now rolling out to $20 Plus subscription",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/chatgpt-astra-is-now-rolling-out-to-20-plus-subscription/",
+      "published": "Sun, 06 Sep 2026 21:15:43 -0400",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication",
       "url": "https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html",
       "published": "Sun, 06 Sep 2026 15:02:38 +0530",
@@ -11,12 +17,6 @@
       "url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
       "published": "Sun, 06 Sep 2026 14:04:20 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Your MikroTik Router May Already Be Compromised: Look for SSH User \u201c-2\u201d",
-      "url": "https://securityaffairs.com/198538/security/your-mikrotik-router-may-already-be-compromised-look-for-ssh-user-2.html",
-      "published": "Sun, 06 Sep 2026 13:46:02 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
