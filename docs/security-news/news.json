@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-09T11:10:42.079672",
+  "generated_at": "2026-09-09T16:25:11.918901",
   "items": [
     {
-      "title": "Over 36,000 exposed Plex servers vulnerable to recent flaws",
-      "url": "https://www.bleepingcomputer.com/news/security/over-36-000-plex-servers-unpatched-against-recently-disclosed-flaws/",
-      "published": "Wed, 09 Sep 2026 06:11:29 -0400",
+      "title": "Veradigm warns of patient data breach after ransomware gang claims attack",
+      "url": "https://www.bleepingcomputer.com/news/security/veradigm-discloses-patient-data-breach-after-gentlemen-gang-claims-attack/",
+      "published": "Wed, 09 Sep 2026 11:31:23 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
-      "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
-      "published": "Wed, 09 Sep 2026 14:41:03 +0530",
-      "source": "The Hacker News"
+      "title": "2026-011: Critical Vulnerabilities in SAP Kernel and NetWeaver Message Server",
+      "url": "https://cert.europa.eu/publications/security-advisories/2026-011/",
+      "published": "Wed, 09 Sep 2026 15:07:59 CEST",
+      "source": "CERT EU"
     },
     {
-      "title": "PoisonedRefresh: A Fileless Linux Rootkit That Injects PHP Web Shells Into F5 BIG-IP APM Server Memory",
-      "url": "https://securityaffairs.com/198746/malware/poisonedrefresh-a-fileless-linux-rootkit-that-injects-php-web-shells-into-f5-big-ip-apm-server-memory.html",
-      "published": "Wed, 09 Sep 2026 08:50:44 +0000",
-      "source": "Security Affairs"
+      "title": "Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA",
+      "url": "https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html",
+      "published": "Wed, 09 Sep 2026 19:53:55 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
