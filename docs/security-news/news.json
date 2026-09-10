@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-09T16:25:11.918901",
+  "generated_at": "2026-09-10T04:16:16.099362",
   "items": [
     {
-      "title": "Veradigm warns of patient data breach after ransomware gang claims attack",
-      "url": "https://www.bleepingcomputer.com/news/security/veradigm-discloses-patient-data-breach-after-gentlemen-gang-claims-attack/",
-      "published": "Wed, 09 Sep 2026 11:31:23 -0400",
+      "title": "Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/",
+      "published": "Wed, 09 Sep 2026 17:40:44 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "2026-011: Critical Vulnerabilities in SAP Kernel and NetWeaver Message Server",
-      "url": "https://cert.europa.eu/publications/security-advisories/2026-011/",
-      "published": "Wed, 09 Sep 2026 15:07:59 CEST",
-      "source": "CERT EU"
+      "title": "AdaptHealth confirms 4.1 million people exposed in July cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/",
+      "published": "Wed, 09 Sep 2026 17:30:36 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA",
-      "url": "https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html",
-      "published": "Wed, 09 Sep 2026 19:53:55 +0530",
-      "source": "The Hacker News"
+      "title": "Skullcandy Dime 3 earbuds expose users to Bluetooth hijacking",
+      "url": "https://www.bleepingcomputer.com/news/security/skullcandy-dime-3-earbuds-expose-users-to-bluetooth-hijacking/",
+      "published": "Wed, 09 Sep 2026 17:02:14 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
