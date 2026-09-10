@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-10T04:16:16.099362",
+  "generated_at": "2026-09-10T16:14:25.816426",
   "items": [
     {
-      "title": "Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/",
-      "published": "Wed, 09 Sep 2026 17:40:44 -0400",
+      "title": "AI-powered attack exploited PaperCut flaws to hack 395 organizations",
+      "url": "https://www.bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations/",
+      "published": "Thu, 10 Sep 2026 11:55:56 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "AdaptHealth confirms 4.1 million people exposed in July cyberattack",
-      "url": "https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/",
-      "published": "Wed, 09 Sep 2026 17:30:36 -0400",
+      "title": "Cisco FMC flaws exploited by ransomware gang, state-sponsored hackers",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-fmc-flaws-exploited-by-ransomware-gang-state-sponsored-hackers/",
+      "published": "Thu, 10 Sep 2026 11:43:58 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Skullcandy Dime 3 earbuds expose users to Bluetooth hijacking",
-      "url": "https://www.bleepingcomputer.com/news/security/skullcandy-dime-3-earbuds-expose-users-to-bluetooth-hijacking/",
-      "published": "Wed, 09 Sep 2026 17:02:14 -0400",
-      "source": "BleepingComputer"
+      "title": "More Capable AI, Not Enough Guardrails",
+      "url": "https://securityaffairs.com/198833/ai/more-capable-ai-not-enough-guardrails.html",
+      "published": "Thu, 10 Sep 2026 15:19:09 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
