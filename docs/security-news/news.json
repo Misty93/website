@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-11T04:15:52.292580",
+  "generated_at": "2026-09-11T16:18:32.560780",
   "items": [
     {
-      "title": "New Android malware encrypts files, steals data, and harasses victims",
-      "url": "https://www.bleepingcomputer.com/news/security/new-android-malware-encrypts-files-steals-data-and-harasses-victims/",
-      "published": "Thu, 10 Sep 2026 17:40:43 -0400",
-      "source": "BleepingComputer"
+      "title": "Claude Used to Automate Exploitation and Data Theft Across Multiple Victims",
+      "url": "https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html",
+      "published": "Fri, 11 Sep 2026 19:59:47 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "September Windows Server updates break Remote Desktop Services",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/",
-      "published": "Thu, 10 Sep 2026 16:34:37 -0400",
-      "source": "BleepingComputer"
+      "title": "Russian State-Sponsored Hackers Use Claude to Rebuild Malware After Detection",
+      "url": "https://thehackernews.com/2026/09/russian-state-sponsored-hackers-use.html",
+      "published": "Fri, 11 Sep 2026 19:40:20 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Surfshark VPN says hackers breached internal testing, proxy servers",
-      "url": "https://www.bleepingcomputer.com/news/security/surfshark-vpn-says-hackers-breached-internal-testing-proxy-servers/",
-      "published": "Thu, 10 Sep 2026 15:15:07 -0400",
+      "title": "How Threat Actors Are Turning Trusted AI Platforms Into an Attack Surface",
+      "url": "https://www.bleepingcomputer.com/news/security/how-threat-actors-are-turning-trusted-ai-platforms-into-an-attack-surface/",
+      "published": "Fri, 11 Sep 2026 10:01:11 -0400",
       "source": "BleepingComputer"
     }
   ]
