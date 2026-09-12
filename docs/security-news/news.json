@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-12T04:14:42.265023",
+  "generated_at": "2026-09-12T15:24:22.642703",
   "items": [
     {
-      "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
-      "published": "Fri, 11 Sep 2026 16:19:09 -0400",
+      "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
+      "url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+      "published": "Sat, 12 Sep 2026 10:14:32 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Florida confirms DMV database breached via stolen police account",
-      "url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
-      "published": "Fri, 11 Sep 2026 15:00:29 -0400",
-      "source": "BleepingComputer"
+      "title": "When the Whole Company Adopts AI: What It Does to Your SOC",
+      "url": "https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html",
+      "published": "Sat, 12 Sep 2026 15:54:44 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "The AI Supply Chain Has a Security Problem, and Much of It Is Sitting on the Open Internet",
-      "url": "https://securityaffairs.com/198898/ai/the-ai-supply-chain-has-a-security-problem-and-much-of-it-is-sitting-on-the-open-internet.html",
-      "published": "Fri, 11 Sep 2026 17:27:25 +0000",
-      "source": "Security Affairs"
+      "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
+      "url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
+      "published": "Sat, 12 Sep 2026 14:37:56 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
