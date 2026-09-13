@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-12T15:24:22.642703",
+  "generated_at": "2026-09-13T04:29:10.319656",
   "items": [
     {
-      "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
-      "url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
-      "published": "Sat, 12 Sep 2026 10:14:32 -0400",
-      "source": "BleepingComputer"
+      "title": "Revolut Exposed KYC Data After Fraudulent Government Email Passed Security Checks",
+      "url": "https://securityaffairs.com/198922/data-breach/revolut-exposed-kyc-data-after-fraudulent-government-email-passed-security-checks.html",
+      "published": "Sat, 12 Sep 2026 21:05:41 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "When the Whole Company Adopts AI: What It Does to Your SOC",
-      "url": "https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html",
-      "published": "Sat, 12 Sep 2026 15:54:44 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-90560",
+      "url": "https://www.tenable.com/cve/CVE-2026-90560",
+      "published": "Sat, 12 Sep 2026 18:16:44 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
-      "url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
-      "published": "Sat, 12 Sep 2026 14:37:56 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-90559",
+      "url": "https://www.tenable.com/cve/CVE-2026-90559",
+      "published": "Sat, 12 Sep 2026 18:16:44 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
