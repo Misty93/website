@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-13T04:29:10.319656",
+  "generated_at": "2026-09-13T16:02:51.908314",
   "items": [
     {
-      "title": "Revolut Exposed KYC Data After Fraudulent Government Email Passed Security Checks",
-      "url": "https://securityaffairs.com/198922/data-breach/revolut-exposed-kyc-data-after-fraudulent-government-email-passed-security-checks.html",
-      "published": "Sat, 12 Sep 2026 21:05:41 +0000",
+      "title": "Hackers exploit Tencent app flaw to deploy GrayRabbit malware",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/",
+      "published": "Sun, 13 Sep 2026 10:26:32 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Security Affairs newsletter Round 594 by Pierluigi Paganini – INTERNATIONAL EDITION",
+      "url": "https://securityaffairs.com/198957/security/security-affairs-newsletter-round-594-by-pierluigi-paganini-international-edition.html",
+      "published": "Sun, 13 Sep 2026 14:23:47 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-90560",
-      "url": "https://www.tenable.com/cve/CVE-2026-90560",
-      "published": "Sat, 12 Sep 2026 18:16:44 GMT",
-      "source": "Tenable CVE"
-    },
-    {
-      "title": "CVE-2026-90559",
-      "url": "https://www.tenable.com/cve/CVE-2026-90559",
-      "published": "Sat, 12 Sep 2026 18:16:44 GMT",
-      "source": "Tenable CVE"
+      "title": "GitLab CVE-2026-85706: One HTTP Request, No Authentication, Full File Read – Exploited Within 24 Hours",
+      "url": "https://securityaffairs.com/198945/hacking/gitlab-cve-2026-85706-one-http-request-no-authentication-full-file-read-exploited-within-24-hours.html",
+      "published": "Sun, 13 Sep 2026 12:26:54 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
