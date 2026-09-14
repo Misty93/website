@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-14T04:33:47.534592",
+  "generated_at": "2026-09-14T17:59:57.164669",
   "items": [
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 114",
-      "url": "https://securityaffairs.com/198980/breaking-news/security-affairs-malware-newsletter-round-114.html",
-      "published": "Sun, 13 Sep 2026 17:27:51 +0000",
-      "source": "Security Affairs"
+      "title": "New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing",
+      "url": "https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html",
+      "published": "Mon, 14 Sep 2026 22:28:42 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-90571",
-      "url": "https://www.tenable.com/cve/CVE-2026-90571",
-      "published": "Sun, 13 Sep 2026 17:16:58 GMT",
-      "source": "Tenable CVE"
+      "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
+      "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
+      "published": "Mon, 14 Sep 2026 22:26:30 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-90570",
-      "url": "https://www.tenable.com/cve/CVE-2026-90570",
-      "published": "Sun, 13 Sep 2026 17:16:57 GMT",
-      "source": "Tenable CVE"
+      "title": "Hackers target exposed Vite dev servers to steal AWS, Azure secrets",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/",
+      "published": "Mon, 14 Sep 2026 12:15:58 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
