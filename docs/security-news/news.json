@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-14T17:59:57.164669",
+  "generated_at": "2026-09-15T04:33:49.892508",
   "items": [
     {
-      "title": "New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing",
-      "url": "https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html",
-      "published": "Mon, 14 Sep 2026 22:28:42 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
-      "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
-      "published": "Mon, 14 Sep 2026 22:26:30 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Hackers target exposed Vite dev servers to steal AWS, Azure secrets",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/",
-      "published": "Mon, 14 Sep 2026 12:15:58 -0400",
+      "title": "Microsoft releases emergency Windows updates to fix RDS failures",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/",
+      "published": "Mon, 14 Sep 2026 16:52:18 -0400",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Japan's Digital Agency says VPN flaw exposed 246,000 personnel records",
+      "url": "https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/",
+      "published": "Mon, 14 Sep 2026 16:36:02 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "ENISA: Frontier AI Is Changing the Speed of Cyberattacks. Europe Needs to Catch Up",
+      "url": "https://securityaffairs.com/199063/ai/enisa-frontier-ai-is-changing-the-speed-of-cyberattacks-europe-needs-to-catch-up.html",
+      "published": "Mon, 14 Sep 2026 20:35:42 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
