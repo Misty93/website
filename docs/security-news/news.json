@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-15T04:33:49.892508",
+  "generated_at": "2026-09-15T16:45:53.739660",
   "items": [
     {
-      "title": "Microsoft releases emergency Windows updates to fix RDS failures",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/",
-      "published": "Mon, 14 Sep 2026 16:52:18 -0400",
+      "title": "CenterPoint Energy confirms customer data stolen in cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/",
+      "published": "Tue, 15 Sep 2026 12:40:14 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Japan's Digital Agency says VPN flaw exposed 246,000 personnel records",
-      "url": "https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/",
-      "published": "Mon, 14 Sep 2026 16:36:02 -0400",
-      "source": "BleepingComputer"
+      "title": "BambooToken Malware Uses MQTT to Control Windows and Linux Systems",
+      "url": "https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html",
+      "published": "Tue, 15 Sep 2026 20:53:19 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "ENISA: Frontier AI Is Changing the Speed of Cyberattacks. Europe Needs to Catch Up",
-      "url": "https://securityaffairs.com/199063/ai/enisa-frontier-ai-is-changing-the-speed-of-cyberattacks-europe-needs-to-catch-up.html",
-      "published": "Mon, 14 Sep 2026 20:35:42 +0000",
-      "source": "Security Affairs"
+      "title": "BambooToken malware controls Windows and Linux systems via MQTT",
+      "url": "https://www.bleepingcomputer.com/news/security/bambootoken-malware-controls-windows-and-linux-systems-via-mqtt/",
+      "published": "Tue, 15 Sep 2026 11:00:00 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
