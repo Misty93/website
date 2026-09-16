@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-15T16:45:53.739660",
+  "generated_at": "2026-09-16T04:29:39.250663",
   "items": [
     {
-      "title": "CenterPoint Energy confirms customer data stolen in cyberattack",
-      "url": "https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/",
-      "published": "Tue, 15 Sep 2026 12:40:14 -0400",
+      "title": "Acronis warns of actively exploited flaw in its cPanel backup plugin",
+      "url": "https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/",
+      "published": "Tue, 15 Sep 2026 17:37:35 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "BambooToken Malware Uses MQTT to Control Windows and Linux Systems",
-      "url": "https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html",
-      "published": "Tue, 15 Sep 2026 20:53:19 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. CISA adds Cisco Secure Email Gateway flaw to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/199156/security/u-s-cisa-adds-cisco-secure-email-gateway-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Tue, 15 Sep 2026 20:46:41 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "BambooToken malware controls Windows and Linux systems via MQTT",
-      "url": "https://www.bleepingcomputer.com/news/security/bambootoken-malware-controls-windows-and-linux-systems-via-mqtt/",
-      "published": "Tue, 15 Sep 2026 11:00:00 -0400",
+      "title": "Malcious Admin Menu Editor Pro plugin backdoors 1,500 WordPress sites",
+      "url": "https://www.bleepingcomputer.com/news/security/malcious-admin-menu-editor-pro-plugin-backdoors-1-500-wordpress-sites/",
+      "published": "Tue, 15 Sep 2026 16:34:15 -0400",
       "source": "BleepingComputer"
     }
   ]
