@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-16T04:29:39.250663",
+  "generated_at": "2026-09-16T16:38:50.720367",
   "items": [
     {
-      "title": "Acronis warns of actively exploited flaw in its cPanel backup plugin",
-      "url": "https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/",
-      "published": "Tue, 15 Sep 2026 17:37:35 -0400",
-      "source": "BleepingComputer"
+      "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
+      "url": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html",
+      "published": "Wed, 16 Sep 2026 21:20:59 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "U.S. CISA adds Cisco Secure Email Gateway flaw to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/199156/security/u-s-cisa-adds-cisco-secure-email-gateway-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Tue, 15 Sep 2026 20:46:41 +0000",
-      "source": "Security Affairs"
+      "title": "Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers",
+      "url": "https://thehackernews.com/2026/09/three-threat-groups-target-russian.html",
+      "published": "Wed, 16 Sep 2026 20:57:49 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Malcious Admin Menu Editor Pro plugin backdoors 1,500 WordPress sites",
-      "url": "https://www.bleepingcomputer.com/news/security/malcious-admin-menu-editor-pro-plugin-backdoors-1-500-wordpress-sites/",
-      "published": "Tue, 15 Sep 2026 16:34:15 -0400",
-      "source": "BleepingComputer"
+      "title": "One Extension Could Hijack AI Assistants Across Chrome, Comet, Edge, Opera Neon and Claude",
+      "url": "https://thehackernews.com/2026/09/one-extension-could-hijack-ai.html",
+      "published": "Wed, 16 Sep 2026 20:06:44 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
