@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-18T04:20:39.175945",
+  "generated_at": "2026-09-18T16:14:26.469615",
   "items": [
     {
-      "title": "OpenAI admits its models lie to cover their own mistakes",
-      "url": "https://securityaffairs.com/199302/ai/openai-admits-its-models-lie-to-cover-their-own-mistakes.html",
-      "published": "Thu, 17 Sep 2026 23:07:21 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "New RatHat Android malware uses AI to automate device control",
-      "url": "https://www.bleepingcomputer.com/news/security/new-rathat-android-malware-uses-ai-to-automate-device-control/",
-      "published": "Thu, 17 Sep 2026 17:50:26 -0400",
+      "title": "Gyazo server flaw exploited to steal 23.6 million user records",
+      "url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
+      "published": "Fri, 18 Sep 2026 12:00:38 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-93337",
-      "url": "https://www.tenable.com/cve/CVE-2026-93337",
-      "published": "Thu, 17 Sep 2026 20:19:00 GMT",
-      "source": "Tenable CVE"
+      "title": "Transparent Tribe Deploys New Rust Backdoor Using Private GitHub Repositories for C2",
+      "url": "https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html",
+      "published": "Fri, 18 Sep 2026 20:54:16 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Fake LastPass Authenticator GitHub repos push new Rapuncel infostealer",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-lastpass-authenticator-github-repos-push-new-rapuncel-infostealer/",
+      "published": "Fri, 18 Sep 2026 11:19:06 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
