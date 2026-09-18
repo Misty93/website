@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-17T16:45:46.907477",
+  "generated_at": "2026-09-18T04:20:39.175945",
   "items": [
     {
-      "title": "SilkParasite Infrastructure Links SpiceRAT to Central Asian Targets",
-      "url": "https://securityaffairs.com/199267/apt/silkparasite-infrastructure-links-spicerat-to-central-asian-targets.html",
-      "published": "Thu, 17 Sep 2026 14:16:18 +0000",
+      "title": "OpenAI admits its models lie to cover their own mistakes",
+      "url": "https://securityaffairs.com/199302/ai/openai-admits-its-models-lie-to-cover-their-own-mistakes.html",
+      "published": "Thu, 17 Sep 2026 23:07:21 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "What Recent AI-Powered Attacks Mean for Your Identity Security",
-      "url": "https://www.bleepingcomputer.com/news/security/what-recent-ai-powered-attacks-mean-for-your-identity-security/",
-      "published": "Thu, 17 Sep 2026 10:01:11 -0400",
+      "title": "New RatHat Android malware uses AI to automate device control",
+      "url": "https://www.bleepingcomputer.com/news/security/new-rathat-android-malware-uses-ai-to-automate-device-control/",
+      "published": "Thu, 17 Sep 2026 17:50:26 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Windows 11 24H2 Home and Pro reach end of support in October",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-october/",
-      "published": "Thu, 17 Sep 2026 09:09:09 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-93337",
+      "url": "https://www.tenable.com/cve/CVE-2026-93337",
+      "published": "Thu, 17 Sep 2026 20:19:00 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
