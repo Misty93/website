@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-19T04:17:04.500144",
+  "generated_at": "2026-09-19T15:45:48.924999",
   "items": [
     {
-      "title": "CVE-2026-93740",
-      "url": "https://www.tenable.com/cve/CVE-2026-93740",
-      "published": "Fri, 18 Sep 2026 22:17:10 GMT",
-      "source": "Tenable CVE"
+      "title": "BragJack attacks hijack AI browser agents through malicious extensions",
+      "url": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
+      "published": "Sat, 19 Sep 2026 10:56:31 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-93739",
-      "url": "https://www.tenable.com/cve/CVE-2026-93739",
-      "published": "Fri, 18 Sep 2026 22:17:10 GMT",
-      "source": "Tenable CVE"
+      "title": "Google Gemini also Broke Out of Its Test Environment",
+      "url": "https://securityaffairs.com/199392/ai/google-gemini-also-broke-out-of-its-test-environment.html",
+      "published": "Sat, 19 Sep 2026 14:09:34 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-75885",
-      "url": "https://www.tenable.com/cve/CVE-2026-75885",
-      "published": "Fri, 18 Sep 2026 22:17:10 GMT",
-      "source": "Tenable CVE"
+      "title": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
+      "url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/",
+      "published": "Sat, 19 Sep 2026 10:05:15 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
