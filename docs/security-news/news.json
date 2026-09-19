@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-18T16:14:26.469615",
+  "generated_at": "2026-09-19T04:17:04.500144",
   "items": [
     {
-      "title": "Gyazo server flaw exploited to steal 23.6 million user records",
-      "url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
-      "published": "Fri, 18 Sep 2026 12:00:38 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-93740",
+      "url": "https://www.tenable.com/cve/CVE-2026-93740",
+      "published": "Fri, 18 Sep 2026 22:17:10 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Transparent Tribe Deploys New Rust Backdoor Using Private GitHub Repositories for C2",
-      "url": "https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html",
-      "published": "Fri, 18 Sep 2026 20:54:16 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-93739",
+      "url": "https://www.tenable.com/cve/CVE-2026-93739",
+      "published": "Fri, 18 Sep 2026 22:17:10 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Fake LastPass Authenticator GitHub repos push new Rapuncel infostealer",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-lastpass-authenticator-github-repos-push-new-rapuncel-infostealer/",
-      "published": "Fri, 18 Sep 2026 11:19:06 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-75885",
+      "url": "https://www.tenable.com/cve/CVE-2026-75885",
+      "published": "Fri, 18 Sep 2026 22:17:10 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
