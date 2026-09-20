@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-20T04:36:06.417305",
+  "generated_at": "2026-09-20T15:53:36.672423",
   "items": [
     {
-      "title": "Security Affairs newsletter Round 595 by Pierluigi Paganini – INTERNATIONAL EDITION",
-      "url": "https://securityaffairs.com/199400/security/security-affairs-newsletter-round-595-by-pierluigi-paganini-international-edition.html",
-      "published": "Sun, 20 Sep 2026 00:08:59 +0000",
+      "title": "Malicious npm packages evade install-script defenses at runtime",
+      "url": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
+      "published": "Sun, 20 Sep 2026 10:11:21 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "AI Hallucinations Nearly Triggered a US-China Military Confrontation",
+      "url": "https://securityaffairs.com/199415/ai/ai-hallucination-nearly-triggered-a-us-china-military-confrontation.html",
+      "published": "Sun, 20 Sep 2026 13:44:39 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-93954",
-      "url": "https://www.tenable.com/cve/CVE-2026-93954",
-      "published": "Sat, 19 Sep 2026 22:16:28 GMT",
-      "source": "Tenable CVE"
-    },
-    {
-      "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
-      "url": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
-      "published": "Sun, 20 Sep 2026 00:06:53 +0530",
-      "source": "The Hacker News"
+      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 115",
+      "url": "https://securityaffairs.com/199409/malware/security-affairs-malware-newsletter-round-115.html",
+      "published": "Sun, 20 Sep 2026 12:22:06 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
