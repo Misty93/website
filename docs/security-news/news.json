@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-20T15:53:36.672423",
+  "generated_at": "2026-09-21T04:33:59.606155",
   "items": [
     {
-      "title": "Malicious npm packages evade install-script defenses at runtime",
-      "url": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
-      "published": "Sun, 20 Sep 2026 10:11:21 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-94090",
+      "url": "https://www.tenable.com/cve/CVE-2026-94090",
+      "published": "Sun, 20 Sep 2026 22:16:30 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "AI Hallucinations Nearly Triggered a US-China Military Confrontation",
-      "url": "https://securityaffairs.com/199415/ai/ai-hallucination-nearly-triggered-a-us-china-military-confrontation.html",
-      "published": "Sun, 20 Sep 2026 13:44:39 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-94089",
+      "url": "https://www.tenable.com/cve/CVE-2026-94089",
+      "published": "Sun, 20 Sep 2026 21:16:55 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 115",
-      "url": "https://securityaffairs.com/199409/malware/security-affairs-malware-newsletter-round-115.html",
-      "published": "Sun, 20 Sep 2026 12:22:06 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-94051",
+      "url": "https://www.tenable.com/cve/CVE-2026-94051",
+      "published": "Sun, 20 Sep 2026 21:16:55 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
