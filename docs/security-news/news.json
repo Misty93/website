@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-21T18:08:16.584506",
+  "generated_at": "2026-09-22T04:29:50.106430",
   "items": [
     {
-      "title": "Microsoft to retire Microsoft 365 Companion apps in December",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-to-retire-microsoft-365-companion-apps-in-december/",
-      "published": "Mon, 21 Sep 2026 13:54:49 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-94627",
+      "url": "https://www.tenable.com/cve/CVE-2026-94627",
+      "published": "Mon, 21 Sep 2026 22:17:01 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Fake LastPass Authenticator Installer Abuses Microsoft-Signed Driver to Kill Antivirus and EDR",
-      "url": "https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html",
-      "published": "Mon, 21 Sep 2026 23:01:01 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-94626",
+      "url": "https://www.tenable.com/cve/CVE-2026-94626",
+      "published": "Mon, 21 Sep 2026 22:17:01 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Contagious Interview Campaign Compromises 30,000 Devices, Steals $10.71M in Crypto",
-      "url": "https://thehackernews.com/2026/09/contagious-interview-campaign.html",
-      "published": "Mon, 21 Sep 2026 22:49:00 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-94625",
+      "url": "https://www.tenable.com/cve/CVE-2026-94625",
+      "published": "Mon, 21 Sep 2026 22:17:01 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
