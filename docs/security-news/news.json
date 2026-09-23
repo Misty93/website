@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-23T13:14:27.755614",
+  "generated_at": "2026-09-23T16:40:36.334143",
   "items": [
     {
-      "title": "Arista patches actively exploited VeloCloud Orchestrator zero-day",
-      "url": "https://www.bleepingcomputer.com/news/security/arista-patches-actively-exploited-velocloud-orchestrator-zero-day/",
-      "published": "Wed, 23 Sep 2026 08:29:53 -0400",
+      "title": "Malicious AI agents steal 600K credit cards, infect 100+ sites with skimmers",
+      "url": "https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/",
+      "published": "Wed, 23 Sep 2026 12:20:54 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "New cPanel Flaw Lets a Hosting Account Run Code as Root, Take Full Server Control",
-      "url": "https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account_0272795595.html",
-      "published": "Wed, 23 Sep 2026 17:46:00 +0530",
+      "title": "MikroTrick Chain Let Attackers Take Over MikroTik Routers Without a Password or SSH Key",
+      "url": "https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html",
+      "published": "Wed, 23 Sep 2026 21:36:41 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "545 Hackers Tested It First. Now XRanges for AI Scores Your Security Agent",
-      "url": "https://thehackernews.com/2026/09/545-hackers-tested-it-first-now-xranges.html",
-      "published": "Wed, 23 Sep 2026 17:17:19 +0530",
-      "source": "The Hacker News"
+      "title": "InfraTrust report warns network management systems under attack",
+      "url": "https://www.bleepingcomputer.com/news/security/infratrust-report-warns-network-management-systems-under-attack/",
+      "published": "Wed, 23 Sep 2026 10:35:26 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
