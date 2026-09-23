@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-23T04:26:34.802410",
+  "generated_at": "2026-09-23T13:14:27.755614",
   "items": [
     {
-      "title": "CVE-2026-95819",
-      "url": "https://www.tenable.com/cve/CVE-2026-95819",
-      "published": "Tue, 22 Sep 2026 22:17:12 GMT",
-      "source": "Tenable CVE"
+      "title": "Arista patches actively exploited VeloCloud Orchestrator zero-day",
+      "url": "https://www.bleepingcomputer.com/news/security/arista-patches-actively-exploited-velocloud-orchestrator-zero-day/",
+      "published": "Wed, 23 Sep 2026 08:29:53 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-19202",
-      "url": "https://www.tenable.com/cve/CVE-2026-19202",
-      "published": "Tue, 22 Sep 2026 22:17:11 GMT",
-      "source": "Tenable CVE"
+      "title": "New cPanel Flaw Lets a Hosting Account Run Code as Root, Take Full Server Control",
+      "url": "https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account_0272795595.html",
+      "published": "Wed, 23 Sep 2026 17:46:00 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-18161",
-      "url": "https://www.tenable.com/cve/CVE-2026-18161",
-      "published": "Tue, 22 Sep 2026 22:17:11 GMT",
-      "source": "Tenable CVE"
+      "title": "545 Hackers Tested It First. Now XRanges for AI Scores Your Security Agent",
+      "url": "https://thehackernews.com/2026/09/545-hackers-tested-it-first-now-xranges.html",
+      "published": "Wed, 23 Sep 2026 17:17:19 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
