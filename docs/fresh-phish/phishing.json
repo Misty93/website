@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23 20:18:49 UTC",
+  "generated_at": "2026-09-23 23:39:32 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -1016,7 +1016,6 @@
     "http://0efbd9f.wcomhost.com/de/banking-postbank/login/privatkunden/de/ae3c9fc4ded29ac62979/clients"
   ],
   "ips": [
-    "94.154.35.225",
     "100.25.1.9",
     "100.42.65.208",
     "100.42.65.230",
@@ -1515,12 +1514,13 @@
     "1.120.1.203",
     "1.120.5.247",
     "112.120.68.236",
-    "112.121.164.154"
+    "112.121.164.154",
+    "112.135.217.244"
   ],
   "stats": {
     "domains": {
       "displayed": 500,
-      "collected_before_limit": 391978,
+      "collected_before_limit": 391977,
       "limit": 500
     },
     "urls": {
