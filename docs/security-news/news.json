@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-23T16:40:36.334143",
+  "generated_at": "2026-09-24T04:23:45.196856",
   "items": [
     {
-      "title": "Malicious AI agents steal 600K credit cards, infect 100+ sites with skimmers",
-      "url": "https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/",
-      "published": "Wed, 23 Sep 2026 12:20:54 -0400",
+      "title": "Placeholder domain used in dev docs now serves ClickFix attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/",
+      "published": "Wed, 23 Sep 2026 18:46:01 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "MikroTrick Chain Let Attackers Take Over MikroTik Routers Without a Password or SSH Key",
-      "url": "https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html",
-      "published": "Wed, 23 Sep 2026 21:36:41 +0530",
-      "source": "The Hacker News"
+      "title": "New RemControl Android banking malware targets users in Europe and Canada",
+      "url": "https://www.bleepingcomputer.com/news/security/new-remcontrol-android-banking-malware-targets-users-in-europe-and-canada/",
+      "published": "Wed, 23 Sep 2026 17:25:13 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "InfraTrust report warns network management systems under attack",
-      "url": "https://www.bleepingcomputer.com/news/security/infratrust-report-warns-network-management-systems-under-attack/",
-      "published": "Wed, 23 Sep 2026 10:35:26 -0400",
-      "source": "BleepingComputer"
+      "title": "U.S. CISA adds Check Point, Arista VeloCloud Orchestrator, and F5 BIG-IP APM flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/199631/hacking/u-s-cisa-adds-check-point-arista-velocloud-orchestrator-and-f5-big-ip-apm-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Wed, 23 Sep 2026 20:37:18 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
