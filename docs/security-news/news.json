@@ -1,6 +1,12 @@
 {
-  "generated_at": "2026-09-24T04:23:45.196856",
+  "generated_at": "2026-09-24T06:46:37.032042",
   "items": [
+    {
+      "title": "CLOSEDQUORUM, the malware that asks four AI models what to do next",
+      "url": "https://securityaffairs.com/199640/malware/closedquorum-the-malware-that-asks-four-ai-models-what-to-do-next.html",
+      "published": "Thu, 24 Sep 2026 05:44:13 +0000",
+      "source": "Security Affairs"
+    },
     {
       "title": "Placeholder domain used in dev docs now serves ClickFix attacks",
       "url": "https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/",
@@ -12,12 +18,6 @@
       "url": "https://www.bleepingcomputer.com/news/security/new-remcontrol-android-banking-malware-targets-users-in-europe-and-canada/",
       "published": "Wed, 23 Sep 2026 17:25:13 -0400",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "U.S. CISA adds Check Point, Arista VeloCloud Orchestrator, and F5 BIG-IP APM flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/199631/hacking/u-s-cisa-adds-check-point-arista-velocloud-orchestrator-and-f5-big-ip-apm-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Wed, 23 Sep 2026 20:37:18 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
