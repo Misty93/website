@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-24T16:58:19.302191",
+  "generated_at": "2026-09-25T04:34:45.655905",
   "items": [
     {
-      "title": "Placeholder third-party[.]com Referenced Across 1,700+ Repositories Now Serves Malicious Content",
-      "url": "https://thehackernews.com/2026/09/placeholder-third-partycom-referenced.html",
-      "published": "Thu, 24 Sep 2026 20:57:32 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer",
-      "url": "https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html",
-      "published": "Thu, 24 Sep 2026 19:59:06 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "FedRAMP VDR & VER: Daily Scans Are Only the Beginning",
-      "url": "https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/",
-      "published": "Thu, 24 Sep 2026 10:02:12 -0400",
+      "title": "MacSync malware uses public iCloud calendars to deliver new payloads",
+      "url": "https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/",
+      "published": "Thu, 24 Sep 2026 16:53:35 -0400",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Ryuk Member Karen Vardanyan Sentenced to Two Years in U.S. Prison",
+      "url": "https://securityaffairs.com/199692/cyber-crime/ryuk-member-karen-vardanyan-sentenced-to-two-years-in-u-s-prison.html",
+      "published": "Thu, 24 Sep 2026 20:50:17 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "CVE-2026-97365",
+      "url": "https://www.tenable.com/cve/CVE-2026-97365",
+      "published": "Thu, 24 Sep 2026 20:17:36 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
