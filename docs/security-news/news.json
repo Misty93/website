@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-26T16:13:24.908671",
+  "generated_at": "2026-09-27T04:58:47.873179",
   "items": [
     {
-      "title": "Microsoft pauses KB5002907 update after Office license deactivations",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-365-kb5002907-update-paused-after-office-license-deactivations/",
-      "published": "Sat, 26 Sep 2026 11:50:38 -0400",
+      "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
+      "published": "Sat, 26 Sep 2026 15:03:34 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "OpenAI Agents Accessed US Government Websites Without Authorization",
-      "url": "https://securityaffairs.com/199815/ai/openai-agents-accessed-us-government-websites-without-authorization.html",
-      "published": "Sat, 26 Sep 2026 15:41:32 +0000",
-      "source": "Security Affairs"
+      "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
+      "url": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
+      "published": "Sat, 26 Sep 2026 23:52:52 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Exploit.in Database Reveals the Roots of Today’s Ransomware Ecosystem",
-      "url": "https://securityaffairs.com/199800/cyber-crime/exploit-in-database-reveals-the-roots-of-todays-ransomware-ecosystem.html",
-      "published": "Sat, 26 Sep 2026 14:34:26 +0000",
-      "source": "Security Affairs"
+      "title": "Claude Opus 5.5 uses 95% fewer em dashes, but its answers are getting longer",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/claude-opus-55-uses-95-percent-fewer-em-dashes-but-its-answers-are-getting-longer/",
+      "published": "Sat, 26 Sep 2026 12:26:58 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
