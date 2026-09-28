@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-27T16:48:50.558436",
+  "generated_at": "2026-09-28T05:00:18.274090",
   "items": [
     {
-      "title": "Citrix admins warned to shut down NetScalers over 2 exploited zero-days",
-      "url": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
-      "published": "Sun, 27 Sep 2026 12:02:37 -0400",
+      "title": "OpenAI is preparing “o,” an always-on ChatGPT assistant that could handle email",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-o-an-always-on-chatgpt-assistant-that-could-handle-email/",
+      "published": "Sun, 27 Sep 2026 19:40:39 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "SECURITY AFFAIRS AI-CYBERSECURITY NEWSLETTER ROUND 1",
-      "url": "https://securityaffairs.com/199862/ai/security-affairs-ai-cybersecurity-newsletter-round-1.html",
-      "published": "Sun, 27 Sep 2026 15:26:18 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-96279",
+      "url": "https://www.tenable.com/cve/CVE-2026-96279",
+      "published": "Sun, 27 Sep 2026 20:16:53 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 116",
-      "url": "https://securityaffairs.com/199850/malware/security-affairs-malware-newsletter-round-116.html",
-      "published": "Sun, 27 Sep 2026 15:05:39 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-100876",
+      "url": "https://www.tenable.com/cve/CVE-2026-100876",
+      "published": "Sun, 27 Sep 2026 20:16:48 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
