@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-28T05:00:18.274090",
+  "generated_at": "2026-09-28T19:32:49.382160",
   "items": [
     {
-      "title": "OpenAI is preparing “o,” an always-on ChatGPT assistant that could handle email",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-o-an-always-on-chatgpt-assistant-that-could-handle-email/",
-      "published": "Sun, 27 Sep 2026 19:40:39 -0400",
+      "title": "Misconfigured Supabase apps expose data in over 16,000 databases",
+      "url": "https://www.bleepingcomputer.com/news/security/misconfigured-supabase-apps-expose-data-in-over-16-000-databases/",
+      "published": "Mon, 28 Sep 2026 14:50:59 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-96279",
-      "url": "https://www.tenable.com/cve/CVE-2026-96279",
-      "published": "Sun, 27 Sep 2026 20:16:53 GMT",
-      "source": "Tenable CVE"
+      "title": "IAM for AI agents: A Practical Enterprise Framework",
+      "url": "https://thehackernews.com/2026/09/iam-for-ai-agent.html",
+      "published": "Mon, 28 Sep 2026 23:50:38 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-100876",
-      "url": "https://www.tenable.com/cve/CVE-2026-100876",
-      "published": "Sun, 27 Sep 2026 20:16:48 GMT",
-      "source": "Tenable CVE"
+      "title": "Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M",
+      "url": "https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html",
+      "published": "Mon, 28 Sep 2026 23:12:18 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
