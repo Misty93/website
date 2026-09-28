@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28 06:49:47 UTC",
+  "generated_at": "2026-09-28 15:23:39 UTC",
   "source": {
     "name": "Phishing.Database",
     "url": "https://github.com/Phishing-Database/Phishing.Database",
@@ -12,6 +12,10 @@
     ]
   },
   "domains": [
+    "innoverseprime.com",
+    "redirection-claim.innoverseprime.com",
+    "tron-foundation.com",
+    "tron.redirection-claim.innoverseprime.com",
     "boutique-dofus.fr",
     "grcontestzackretsport.000webhostapp.com",
     "societegeneral-securedaccount.fr",
@@ -507,11 +511,7 @@
     "020k365.com",
     "020life.com",
     "020saibo.com",
-    "021034662015959.kitlanchesisa.com.br",
-    "0211ze21ze212ez1ezze-d19e64.ingress-earth.ewp.live",
-    "0215412pageaccountserve23-confirm.start.page",
-    "021bag.com",
-    "021c.awzh.workers.dev"
+    "021034662015959.kitlanchesisa.com.br"
   ],
   "urls": [
     "https://www.boutique-dofus.fr",
@@ -1520,7 +1520,7 @@
   "stats": {
     "domains": {
       "displayed": 500,
-      "collected_before_limit": 392097,
+      "collected_before_limit": 392101,
       "limit": 500
     },
     "urls": {
