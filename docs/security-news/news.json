@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-29T17:59:22.283656",
+  "generated_at": "2026-09-30T05:12:58.246036",
   "items": [
     {
-      "title": "Windows 11 2026 Update released, here's everything you need to know",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-2026-update-released-heres-everything-you-need-to-know/",
-      "published": "Tue, 29 Sep 2026 13:37:40 -0400",
+      "title": "Microsoft is rolling out Linux container support to WSL",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-is-rolling-out-linux-container-support-to-wsl/",
+      "published": "Tue, 29 Sep 2026 20:40:57 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "New Spectre v2 attack variant leaks Linux root password hash in minutes",
-      "url": "https://www.bleepingcomputer.com/news/security/new-spectre-v2-attack-variant-leaks-linux-root-password-hash-in-minutes/",
-      "published": "Tue, 29 Sep 2026 13:10:11 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-71973",
+      "url": "https://www.tenable.com/cve/CVE-2026-71973",
+      "published": "Tue, 29 Sep 2026 22:18:22 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
-      "url": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
-      "published": "Tue, 29 Sep 2026 22:30:00 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-102621",
+      "url": "https://www.tenable.com/cve/CVE-2026-102621",
+      "published": "Tue, 29 Sep 2026 22:17:07 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
