@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-30T05:12:58.246036",
+  "generated_at": "2026-09-30T17:54:45.814410",
   "items": [
     {
-      "title": "Microsoft is rolling out Linux container support to WSL",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-is-rolling-out-linux-container-support-to-wsl/",
-      "published": "Tue, 29 Sep 2026 20:40:57 -0400",
+      "title": "Attackers Exploit Zimbra Flaw to Deploy Web Shells and Harvest Authentication Secrets",
+      "url": "https://thehackernews.com/2026/09/attackers-exploit-zimbra-flaw-to-deploy.html",
+      "published": "Wed, 30 Sep 2026 22:16:29 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Attackers Abuse MSP360 to Deploy ScreenConnect in Dual-RMM Phishing Attacks",
+      "url": "https://thehackernews.com/2026/09/attackers-abuse-msp360-to-deploy.html",
+      "published": "Wed, 30 Sep 2026 22:02:59 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "CISA warns of critical pre-auth RCE flaw in MikroTik RouterOS",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-pre-auth-rce-flaw-in-mikrotik-routeros/",
+      "published": "Wed, 30 Sep 2026 11:49:29 -0400",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "CVE-2026-71973",
-      "url": "https://www.tenable.com/cve/CVE-2026-71973",
-      "published": "Tue, 29 Sep 2026 22:18:22 GMT",
-      "source": "Tenable CVE"
-    },
-    {
-      "title": "CVE-2026-102621",
-      "url": "https://www.tenable.com/cve/CVE-2026-102621",
-      "published": "Tue, 29 Sep 2026 22:17:07 GMT",
-      "source": "Tenable CVE"
     }
   ]
 }
