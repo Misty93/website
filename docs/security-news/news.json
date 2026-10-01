@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-01T05:27:57.020885",
+  "generated_at": "2026-10-01T18:20:13.296394",
   "items": [
     {
-      "title": "Citrix NetScaler Post-Exploitation Payload Creates Superuser, Maps Web Shell to CSS-Like URLs",
-      "url": "https://thehackernews.com/2026/10/citrix-netscaler-post-exploitation.html",
-      "published": "Thu, 01 Oct 2026 10:05:34 +0530",
+      "title": "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers",
+      "url": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html",
+      "published": "Thu, 01 Oct 2026 22:25:57 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-47096",
-      "url": "https://www.tenable.com/cve/CVE-2026-47096",
-      "published": "Wed, 30 Sep 2026 22:16:33 GMT",
-      "source": "Tenable CVE"
+      "title": "ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories",
+      "url": "https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html",
+      "published": "Thu, 01 Oct 2026 22:15:38 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-103001",
-      "url": "https://www.tenable.com/cve/CVE-2026-103001",
-      "published": "Wed, 30 Sep 2026 22:16:33 GMT",
-      "source": "Tenable CVE"
+      "title": "WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory",
+      "url": "https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html",
+      "published": "Thu, 01 Oct 2026 20:07:35 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
