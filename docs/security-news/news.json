@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-01T18:20:13.296394",
+  "generated_at": "2026-10-02T05:15:58.754808",
   "items": [
     {
-      "title": "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers",
-      "url": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html",
-      "published": "Thu, 01 Oct 2026 22:25:57 +0530",
-      "source": "The Hacker News"
+      "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
+      "published": "Thu, 01 Oct 2026 18:42:49 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories",
-      "url": "https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html",
-      "published": "Thu, 01 Oct 2026 22:15:38 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-71454",
+      "url": "https://www.tenable.com/cve/CVE-2026-71454",
+      "published": "Thu, 01 Oct 2026 22:17:05 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory",
-      "url": "https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html",
-      "published": "Thu, 01 Oct 2026 20:07:35 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-71453",
+      "url": "https://www.tenable.com/cve/CVE-2026-71453",
+      "published": "Thu, 01 Oct 2026 22:17:05 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
