@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-03T04:58:42.154359",
+  "generated_at": "2026-10-03T16:05:12.501936",
   "items": [
     {
-      "title": "U.S. CISA adds Zammad GmbH Zammad flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/200248/security/u-s-cisa-adds-zammad-gmbh-zammad-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Fri, 02 Oct 2026 22:46:18 +0000",
+      "title": "Fake Zoom installer hides macOS backdoor CloudSyncD",
+      "url": "https://securityaffairs.com/200293/malware/fake-zoom-installer-hides-macos-backdoor-cloudsyncd.html",
+      "published": "Sat, 03 Oct 2026 15:11:16 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-82045",
-      "url": "https://www.tenable.com/cve/CVE-2026-82045",
-      "published": "Fri, 02 Oct 2026 21:16:57 GMT",
-      "source": "Tenable CVE"
+      "title": "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics",
+      "url": "https://thehackernews.com/2026/10/mi5-says-chinas-mss-funded-research.html",
+      "published": "Sat, 03 Oct 2026 20:08:46 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-82044",
-      "url": "https://www.tenable.com/cve/CVE-2026-82044",
-      "published": "Fri, 02 Oct 2026 21:16:56 GMT",
-      "source": "Tenable CVE"
+      "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
+      "url": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
+      "published": "Sat, 03 Oct 2026 20:06:33 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
