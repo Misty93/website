@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-02T17:45:48.726667",
+  "generated_at": "2026-10-03T04:58:42.154359",
   "items": [
     {
-      "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
-      "url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
-      "published": "Fri, 02 Oct 2026 23:03:31 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. CISA adds Zammad GmbH Zammad flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/200248/security/u-s-cisa-adds-zammad-gmbh-zammad-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Fri, 02 Oct 2026 22:46:18 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign",
-      "url": "https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html",
-      "published": "Fri, 02 Oct 2026 23:03:16 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-82045",
+      "url": "https://www.tenable.com/cve/CVE-2026-82045",
+      "published": "Fri, 02 Oct 2026 21:16:57 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
-      "url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
-      "published": "Fri, 02 Oct 2026 22:32:12 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-82044",
+      "url": "https://www.tenable.com/cve/CVE-2026-82044",
+      "published": "Fri, 02 Oct 2026 21:16:56 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
