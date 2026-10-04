@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-03T16:05:12.501936",
+  "generated_at": "2026-10-04T05:31:16.707973",
   "items": [
     {
-      "title": "Fake Zoom installer hides macOS backdoor CloudSyncD",
-      "url": "https://securityaffairs.com/200293/malware/fake-zoom-installer-hides-macos-backdoor-cloudsyncd.html",
-      "published": "Sat, 03 Oct 2026 15:11:16 +0000",
-      "source": "Security Affairs"
+      "title": "Google Gemini could soon get full access to your Mac’s files, apps and the web",
+      "url": "https://www.bleepingcomputer.com/news/google/google-gemini-could-soon-get-full-access-to-your-macs-files-apps-and-the-web/",
+      "published": "Sat, 03 Oct 2026 19:12:34 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics",
-      "url": "https://thehackernews.com/2026/10/mi5-says-chinas-mss-funded-research.html",
-      "published": "Sat, 03 Oct 2026 20:08:46 +0530",
-      "source": "The Hacker News"
+      "title": "ShinyHunters hacker reportedly detained in Jordan, aiding FBI",
+      "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacker-reportedly-detained-in-jordan-aiding-fbi/",
+      "published": "Sat, 03 Oct 2026 15:09:38 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
-      "url": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
-      "published": "Sat, 03 Oct 2026 20:06:33 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-96451",
+      "url": "https://www.tenable.com/cve/CVE-2026-96451",
+      "published": "Sat, 03 Oct 2026 16:16:46 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
