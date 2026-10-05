@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-05T05:14:34.658731",
+  "generated_at": "2026-10-05T20:29:41.542682",
   "items": [
     {
-      "title": "CVE-2026-105222",
-      "url": "https://www.tenable.com/cve/CVE-2026-105222",
-      "published": "Sun, 04 Oct 2026 23:16:59 GMT",
-      "source": "Tenable CVE"
+      "title": "Rejetto HFS servers now actively scanned for critical RCE flaw",
+      "url": "https://www.bleepingcomputer.com/news/security/rejetto-hfs-servers-now-actively-scanned-for-critical-rce-flaw/",
+      "published": "Mon, 05 Oct 2026 16:20:05 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-105221",
-      "url": "https://www.tenable.com/cve/CVE-2026-105221",
-      "published": "Sun, 04 Oct 2026 23:16:59 GMT",
-      "source": "Tenable CVE"
+      "title": "Anthropic Mythos Found A Bug in Rejetto HFS. Attackers Are Now Exploiting It.",
+      "url": "https://securityaffairs.com/200444/ai/anthropic-mythos-found-a-bug-in-rejetto-hfs-attackers-are-now-exploiting-it.html",
+      "published": "Mon, 05 Oct 2026 18:15:12 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-105220",
-      "url": "https://www.tenable.com/cve/CVE-2026-105220",
-      "published": "Sun, 04 Oct 2026 23:16:59 GMT",
-      "source": "Tenable CVE"
+      "title": "IQVIA fined $7.8 million for failing to properly anonymize health data",
+      "url": "https://www.bleepingcomputer.com/news/security/iqvia-fined-78-million-for-failing-to-properly-anonymize-health-data/",
+      "published": "Mon, 05 Oct 2026 13:19:53 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
