@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-07T05:34:01.084608",
+  "generated_at": "2026-10-07T18:47:04.363212",
   "items": [
     {
-      "title": "CVE-2026-97626",
-      "url": "https://www.tenable.com/cve/CVE-2026-97626",
-      "published": "Tue, 06 Oct 2026 22:17:08 GMT",
-      "source": "Tenable CVE"
+      "title": "SonicWall Fixes Max Severity Pre-Auth Flaw in SMA1000 Appliances",
+      "url": "https://securityaffairs.com/200569/security/sonicwall-fixes-max-severity-pre-auth-flaw-in-sma1000-appliances.html",
+      "published": "Wed, 07 Oct 2026 18:17:14 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-97208",
-      "url": "https://www.tenable.com/cve/CVE-2026-97208",
-      "published": "Tue, 06 Oct 2026 22:17:07 GMT",
-      "source": "Tenable CVE"
+      "title": "Eight Malicious npm Packages Downloaded 40,767 Times Deliver Overlord RAT and Stealer",
+      "url": "https://thehackernews.com/2026/10/eight-malicious-npm-packages-downloaded.html",
+      "published": "Wed, 07 Oct 2026 23:13:20 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-96594",
-      "url": "https://www.tenable.com/cve/CVE-2026-96594",
-      "published": "Tue, 06 Oct 2026 22:17:07 GMT",
-      "source": "Tenable CVE"
+      "title": "SonicWall Patches CVSS 10.0 Pre-Authentication SSRF Flaw in SMA1000 Appliances",
+      "url": "https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html",
+      "published": "Wed, 07 Oct 2026 21:47:44 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
