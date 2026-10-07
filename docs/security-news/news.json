@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-06T18:14:06.413247",
+  "generated_at": "2026-10-07T05:34:01.084608",
   "items": [
     {
-      "title": "Atlassian warns of critical file-access flaw in Jira, Confluence",
-      "url": "https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/",
-      "published": "Tue, 06 Oct 2026 13:34:59 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-97626",
+      "url": "https://www.tenable.com/cve/CVE-2026-97626",
+      "published": "Tue, 06 Oct 2026 22:17:08 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "ASOS confirms data breach after “HACKED” in-app notifications",
-      "url": "https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/",
-      "published": "Tue, 06 Oct 2026 12:33:54 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-97208",
+      "url": "https://www.tenable.com/cve/CVE-2026-97208",
+      "published": "Tue, 06 Oct 2026 22:17:07 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Fake ChatGPT, Gemini Sites steal advertising accounts, MFA codes",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-chatgpt-gemini-sites-steal-advertising-accounts-mfa-codes/",
-      "published": "Tue, 06 Oct 2026 11:16:44 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-96594",
+      "url": "https://www.tenable.com/cve/CVE-2026-96594",
+      "published": "Tue, 06 Oct 2026 22:17:07 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
