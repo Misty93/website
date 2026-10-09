@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-09T05:46:33.622641",
+  "generated_at": "2026-10-09T18:15:39.652204",
   "items": [
     {
-      "title": "Hackers get $1,262,000 for 98 zero-days at Pwn2Own Ireland",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-earn-1262000-for-98-zero-days-at-pwn2own-ireland/",
-      "published": "Fri, 09 Oct 2026 01:41:04 -0400",
+      "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
+      "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
+      "published": "Fri, 09 Oct 2026 13:17:23 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "FBI disrupts Chinese hacking tools used to breach critical infrastructure",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-chinese-hacking-tools-used-to-breach-critical-infrastructure/",
-      "published": "Thu, 08 Oct 2026 17:42:51 -0400",
+      "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-arrests-another-suspected-shinyhunters-hacker-after-agency-breach/",
+      "published": "Fri, 09 Oct 2026 13:02:29 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-95116",
-      "url": "https://www.tenable.com/cve/CVE-2026-95116",
-      "published": "Thu, 08 Oct 2026 21:18:03 GMT",
-      "source": "Tenable CVE"
+      "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
+      "url": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
+      "published": "Fri, 09 Oct 2026 21:59:55 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
