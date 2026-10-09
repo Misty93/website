@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-08T18:45:08.548997",
+  "generated_at": "2026-10-09T05:46:33.622641",
   "items": [
     {
-      "title": "FakeGit malware campaign returns with 17,610 malicious GitHub repos",
-      "url": "https://www.bleepingcomputer.com/news/security/fakegit-malware-campaign-returns-with-17-610-malicious-github-repos/",
-      "published": "Thu, 08 Oct 2026 13:10:55 -0400",
+      "title": "Hackers get $1,262,000 for 98 zero-days at Pwn2Own Ireland",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-earn-1262000-for-98-zero-days-at-pwn2own-ireland/",
+      "published": "Fri, 09 Oct 2026 01:41:04 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Japan Sees Sharp Rise in Web Data Leaks Amid Mobile API Abuse and Metabase Attacks",
-      "url": "https://thehackernews.com/2026/10/japan-sees-sharp-rise-in-web-data-leaks.html",
-      "published": "Thu, 08 Oct 2026 21:15:56 +0530",
-      "source": "The Hacker News"
+      "title": "FBI disrupts Chinese hacking tools used to breach critical infrastructure",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-chinese-hacking-tools-used-to-breach-critical-infrastructure/",
+      "published": "Thu, 08 Oct 2026 17:42:51 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "UAC-0099 Targets Ukrainian Government Personnel With ASHVEIN RAT Hiding Commands in HTML",
-      "url": "https://thehackernews.com/2026/10/uac-0099-targets-ukrainian-government.html",
-      "published": "Thu, 08 Oct 2026 20:56:56 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-95116",
+      "url": "https://www.tenable.com/cve/CVE-2026-95116",
+      "published": "Thu, 08 Oct 2026 21:18:03 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
