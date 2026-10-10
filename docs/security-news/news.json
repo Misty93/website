@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-09T18:15:39.652204",
+  "generated_at": "2026-10-10T05:29:29.685092",
   "items": [
     {
-      "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
-      "url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
-      "published": "Fri, 09 Oct 2026 13:17:23 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-108474",
+      "url": "https://www.tenable.com/cve/CVE-2026-108474",
+      "published": "Sat, 10 Oct 2026 00:17:03 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-arrests-another-suspected-shinyhunters-hacker-after-agency-breach/",
-      "published": "Fri, 09 Oct 2026 13:02:29 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-22061",
+      "url": "https://www.tenable.com/cve/CVE-2026-22061",
+      "published": "Fri, 09 Oct 2026 23:16:54 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
-      "url": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
-      "published": "Fri, 09 Oct 2026 21:59:55 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-18524",
+      "url": "https://www.tenable.com/cve/CVE-2026-18524",
+      "published": "Fri, 09 Oct 2026 23:16:54 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
