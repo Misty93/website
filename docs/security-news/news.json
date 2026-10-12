@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-11T17:37:00.319449",
+  "generated_at": "2026-10-12T05:35:35.364728",
   "items": [
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 118",
-      "url": "https://securityaffairs.com/200775/breaking-news/security-affairs-malware-newsletter-round-118.html",
-      "published": "Sun, 11 Oct 2026 15:23:21 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-108781",
+      "url": "https://www.tenable.com/cve/CVE-2026-108781",
+      "published": "Mon, 12 Oct 2026 01:16:29 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Bitdefender finds preinstalled Android malware you can’t uninstall, seen in 150 countries",
-      "url": "https://securityaffairs.com/200759/malware/bitdefender-finds-preinstalled-android-malware-you-cant-uninstall-seen-in-150-countries.html",
-      "published": "Sun, 11 Oct 2026 14:41:18 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-108779",
+      "url": "https://www.tenable.com/cve/CVE-2026-108779",
+      "published": "Mon, 12 Oct 2026 01:16:29 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Nippon Columbia malware incident exposes 8.6 million karaoke fan records",
-      "url": "https://www.bleepingcomputer.com/news/security/nippon-columbia-malware-incident-exposes-86-million-karaoke-fan-records/",
-      "published": "Sun, 11 Oct 2026 10:23:46 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-108785",
+      "url": "https://www.tenable.com/cve/CVE-2026-108785",
+      "published": "Mon, 12 Oct 2026 01:15:20 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
