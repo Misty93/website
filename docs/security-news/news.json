@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-12T05:35:35.364728",
+  "generated_at": "2026-10-12T21:10:40.834586",
   "items": [
     {
-      "title": "CVE-2026-108781",
-      "url": "https://www.tenable.com/cve/CVE-2026-108781",
-      "published": "Mon, 12 Oct 2026 01:16:29 GMT",
-      "source": "Tenable CVE"
+      "title": "Norway fines Microsoft ad firm $9.6 million over Grindr data sharing",
+      "url": "https://www.bleepingcomputer.com/news/security/norway-fines-microsoft-ad-firm-96-million-over-grindr-data-sharing/",
+      "published": "Mon, 12 Oct 2026 16:13:52 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-108779",
-      "url": "https://www.tenable.com/cve/CVE-2026-108779",
-      "published": "Mon, 12 Oct 2026 01:16:29 GMT",
-      "source": "Tenable CVE"
+      "title": "Canonical Hit by Second DDoS Attack in 2026, Public Websites Disrupted",
+      "url": "https://securityaffairs.com/200832/security/canonical-hit-by-second-ddos-attack-in-2026.html",
+      "published": "Mon, 12 Oct 2026 20:02:20 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-108785",
-      "url": "https://www.tenable.com/cve/CVE-2026-108785",
-      "published": "Mon, 12 Oct 2026 01:15:20 GMT",
-      "source": "Tenable CVE"
+      "title": "Yandex confirms service outage as users lose access to cloud files",
+      "url": "https://www.bleepingcomputer.com/news/security/yandex-confirms-service-outage-as-users-lose-access-to-cloud-files/",
+      "published": "Mon, 12 Oct 2026 15:23:01 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
