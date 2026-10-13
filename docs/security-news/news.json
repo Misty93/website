@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-13T06:32:00.940677",
+  "generated_at": "2026-10-13T19:09:31.532584",
   "items": [
     {
-      "title": "CVE-2026-93892",
-      "url": "https://www.tenable.com/cve/CVE-2026-93892",
-      "published": "Mon, 12 Oct 2026 23:17:45 GMT",
-      "source": "Tenable CVE"
+      "title": "Microsoft: Windows 11 24H2 Home and Pro reached end of support",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-24h2-home-and-pro-reached-end-of-support/",
+      "published": "Tue, 13 Oct 2026 15:04:38 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-93891",
-      "url": "https://www.tenable.com/cve/CVE-2026-93891",
-      "published": "Mon, 12 Oct 2026 23:17:45 GMT",
-      "source": "Tenable CVE"
+      "title": "Anthropic Warns Small AI Models Could Soon Form Self-Propagating IoT Botnets",
+      "url": "https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html",
+      "published": "Tue, 13 Oct 2026 23:50:57 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-92832",
-      "url": "https://www.tenable.com/cve/CVE-2026-92832",
-      "published": "Mon, 12 Oct 2026 23:17:45 GMT",
-      "source": "Tenable CVE"
+      "title": "UK Housing Ombudsman Service investigates 'security incident'",
+      "url": "https://www.bleepingcomputer.com/news/security/uk-housing-ombudsman-service-investigates-security-incident/",
+      "published": "Tue, 13 Oct 2026 14:19:44 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
