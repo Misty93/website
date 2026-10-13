@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-12T21:10:40.834586",
+  "generated_at": "2026-10-13T06:32:00.940677",
   "items": [
     {
-      "title": "Norway fines Microsoft ad firm $9.6 million over Grindr data sharing",
-      "url": "https://www.bleepingcomputer.com/news/security/norway-fines-microsoft-ad-firm-96-million-over-grindr-data-sharing/",
-      "published": "Mon, 12 Oct 2026 16:13:52 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-93892",
+      "url": "https://www.tenable.com/cve/CVE-2026-93892",
+      "published": "Mon, 12 Oct 2026 23:17:45 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Canonical Hit by Second DDoS Attack in 2026, Public Websites Disrupted",
-      "url": "https://securityaffairs.com/200832/security/canonical-hit-by-second-ddos-attack-in-2026.html",
-      "published": "Mon, 12 Oct 2026 20:02:20 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-93891",
+      "url": "https://www.tenable.com/cve/CVE-2026-93891",
+      "published": "Mon, 12 Oct 2026 23:17:45 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Yandex confirms service outage as users lose access to cloud files",
-      "url": "https://www.bleepingcomputer.com/news/security/yandex-confirms-service-outage-as-users-lose-access-to-cloud-files/",
-      "published": "Mon, 12 Oct 2026 15:23:01 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-92832",
+      "url": "https://www.tenable.com/cve/CVE-2026-92832",
+      "published": "Mon, 12 Oct 2026 23:17:45 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
