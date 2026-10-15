@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-14T16:58:57.090613",
+  "generated_at": "2026-10-15T04:15:30.593027",
   "items": [
     {
-      "title": "U.S. Shuts Down Over 40 Laptop Farms, Charges 14 in North Korean IT Worker Fraud",
-      "url": "https://thehackernews.com/2026/10/us-shuts-down-over-40-laptop-farms.html",
-      "published": "Wed, 14 Oct 2026 22:04:31 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft fixes VPN issues caused by September Windows updates",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-vpn-issues-caused-by-september-windows-updates/",
-      "published": "Wed, 14 Oct 2026 10:27:01 -0400",
+      "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
+      "published": "Wed, 14 Oct 2026 18:56:47 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft Patch Tuesday Sets New Record with 1,415 CVEs in October 2026 Updates",
-      "url": "https://securityaffairs.com/200953/security/microsoft-patch-tuesday-sets-new-record-with-1415-cves-in-october-2026-updates.html",
-      "published": "Wed, 14 Oct 2026 14:01:45 +0000",
+      "title": "U.S. CISA adds Microsoft Windows Shell flaw to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/200965/hacking/u-s-cisa-adds-microsoft-windows-shell-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Wed, 14 Oct 2026 21:15:34 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "FBI raids DPRK IT worker laptop farms in Texas, US nationals arrested",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/",
+      "published": "Wed, 14 Oct 2026 15:41:43 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
