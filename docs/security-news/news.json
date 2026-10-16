@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-16T04:11:20.318425",
+  "generated_at": "2026-10-16T16:28:29.116471",
   "items": [
     {
-      "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
-      "published": "Thu, 15 Oct 2026 16:25:04 -0400",
-      "source": "BleepingComputer"
+      "title": "Burger King Japan Data Breach Impacted 11 Million Customers",
+      "url": "https://securityaffairs.com/201119/security/burger-king-japan-data-breach-impacted-11-million-customers.html",
+      "published": "Fri, 16 Oct 2026 14:04:38 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
-      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
-      "published": "Fri, 16 Oct 2026 01:54:36 +0530",
+      "title": "OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract",
+      "url": "https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html",
+      "published": "Fri, 16 Oct 2026 19:33:04 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Android gets AI defenses against messaging scams, fake calls",
-      "url": "https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/",
-      "published": "Thu, 15 Oct 2026 15:48:43 -0400",
+      "title": "Employees using personal ChatGPT at work? Here's what IT admins need to do",
+      "url": "https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/",
+      "published": "Fri, 16 Oct 2026 09:50:59 -0400",
       "source": "BleepingComputer"
     }
   ]
