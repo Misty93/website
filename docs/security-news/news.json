@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-15T16:45:59.870485",
+  "generated_at": "2026-10-16T04:11:20.318425",
   "items": [
     {
-      "title": "Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads",
-      "url": "https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html",
-      "published": "Thu, 15 Oct 2026 21:31:57 +0530",
+      "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
+      "published": "Thu, 15 Oct 2026 16:25:04 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+      "url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
+      "published": "Fri, 16 Oct 2026 01:54:36 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
-      "url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
-      "published": "Thu, 15 Oct 2026 21:30:26 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "AdFection: Beyond the Click: Citizen Lab Exposes Ad-Delivered Spyware Networks",
-      "url": "https://securityaffairs.com/201015/hacking/adfection-beyond-the-click-citizen-lab-exposes-ad-delivered-spyware-networks.html",
-      "published": "Thu, 15 Oct 2026 14:21:49 +0000",
-      "source": "Security Affairs"
+      "title": "Android gets AI defenses against messaging scams, fake calls",
+      "url": "https://www.bleepingcomputer.com/news/security/android-gets-ai-defenses-against-messaging-scams-fake-calls/",
+      "published": "Thu, 15 Oct 2026 15:48:43 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
