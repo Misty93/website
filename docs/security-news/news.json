@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-16T16:28:29.116471",
+  "generated_at": "2026-10-17T04:01:26.830138",
   "items": [
     {
-      "title": "Burger King Japan Data Breach Impacted 11 Million Customers",
-      "url": "https://securityaffairs.com/201119/security/burger-king-japan-data-breach-impacted-11-million-customers.html",
-      "published": "Fri, 16 Oct 2026 14:04:38 +0000",
-      "source": "Security Affairs"
+      "title": "Critical BlockStrap flaw lets hackers run code on Magento servers",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/",
+      "published": "Fri, 16 Oct 2026 16:00:59 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract",
-      "url": "https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html",
-      "published": "Fri, 16 Oct 2026 19:33:04 +0530",
+      "title": "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory Bug",
+      "url": "https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html",
+      "published": "Fri, 16 Oct 2026 23:18:45 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Employees using personal ChatGPT at work? Here's what IT admins need to do",
-      "url": "https://www.bleepingcomputer.com/news/security/employees-using-personal-chatgpt-at-work-heres-what-it-admins-need-to-do/",
-      "published": "Fri, 16 Oct 2026 09:50:59 -0400",
+      "title": "Targeted ads installed Candiru spyware in zero-click attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/",
+      "published": "Fri, 16 Oct 2026 13:20:03 -0400",
       "source": "BleepingComputer"
     }
   ]
