@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-17T04:01:26.830138",
+  "generated_at": "2026-10-17T15:23:04.654029",
   "items": [
     {
-      "title": "Critical BlockStrap flaw lets hackers run code on Magento servers",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/",
-      "published": "Fri, 16 Oct 2026 16:00:59 -0400",
+      "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+      "published": "Sat, 17 Oct 2026 11:18:51 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory Bug",
-      "url": "https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html",
-      "published": "Fri, 16 Oct 2026 23:18:45 +0530",
+      "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
+      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
+      "published": "Sat, 17 Oct 2026 10:32:48 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
+      "url": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
+      "published": "Sat, 17 Oct 2026 16:41:56 +0530",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Targeted ads installed Candiru spyware in zero-click attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/",
-      "published": "Fri, 16 Oct 2026 13:20:03 -0400",
-      "source": "BleepingComputer"
     }
   ]
 }
