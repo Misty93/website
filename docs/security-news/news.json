@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-17T15:23:04.654029",
+  "generated_at": "2026-10-18T04:08:37.790325",
   "items": [
     {
-      "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
-      "published": "Sat, 17 Oct 2026 11:18:51 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-111934",
+      "url": "https://www.tenable.com/cve/CVE-2026-111934",
+      "published": "Sat, 17 Oct 2026 19:16:36 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Drupal patches critical RCE flaws, warns exploits may emerge soon",
-      "url": "https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/",
-      "published": "Sat, 17 Oct 2026 10:32:48 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-111933",
+      "url": "https://www.tenable.com/cve/CVE-2026-111933",
+      "published": "Sat, 17 Oct 2026 19:16:36 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
-      "url": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
-      "published": "Sat, 17 Oct 2026 16:41:56 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-111932",
+      "url": "https://www.tenable.com/cve/CVE-2026-111932",
+      "published": "Sat, 17 Oct 2026 19:16:36 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
