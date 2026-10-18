@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-18T04:08:37.790325",
+  "generated_at": "2026-10-18T15:44:05.891934",
   "items": [
     {
-      "title": "CVE-2026-111934",
-      "url": "https://www.tenable.com/cve/CVE-2026-111934",
-      "published": "Sat, 17 Oct 2026 19:16:36 GMT",
-      "source": "Tenable CVE"
+      "title": "Hackers exploit SiteGuard WAF flaw to run commands as SYSTEM, root",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
+      "published": "Sun, 18 Oct 2026 10:23:16 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-111933",
-      "url": "https://www.tenable.com/cve/CVE-2026-111933",
-      "published": "Sat, 17 Oct 2026 19:16:36 GMT",
-      "source": "Tenable CVE"
+      "title": "SECURITY AFFAIRS AI-CYBERSECURITY NEWSLETTER ROUND 4",
+      "url": "https://securityaffairs.com/201251/ai/security-affairs-ai-cybersecurity-newsletter-round-4.html",
+      "published": "Sun, 18 Oct 2026 13:46:39 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "CVE-2026-111932",
-      "url": "https://www.tenable.com/cve/CVE-2026-111932",
-      "published": "Sat, 17 Oct 2026 19:16:36 GMT",
-      "source": "Tenable CVE"
+      "title": "Rust-Based CikaBika Bot Turns Discord into a Command Center",
+      "url": "https://securityaffairs.com/201210/security/rust-based-cikabika-bot-turns-discord-into-a-command-center.html",
+      "published": "Sun, 18 Oct 2026 11:33:52 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
