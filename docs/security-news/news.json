@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-18T15:44:05.891934",
+  "generated_at": "2026-10-19T04:17:48.600839",
   "items": [
     {
-      "title": "Hackers exploit SiteGuard WAF flaw to run commands as SYSTEM, root",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
-      "published": "Sun, 18 Oct 2026 10:23:16 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "SECURITY AFFAIRS AI-CYBERSECURITY NEWSLETTER ROUND 4",
-      "url": "https://securityaffairs.com/201251/ai/security-affairs-ai-cybersecurity-newsletter-round-4.html",
-      "published": "Sun, 18 Oct 2026 13:46:39 +0000",
+      "title": "16-Year-Old Broadcom Wi-Fi Bug Lets Attackers Take Over Routers Without a Password",
+      "url": "https://securityaffairs.com/201268/iot/16-year-old-broadcom-wi-fi-bug-lets-attackers-take-over-routers-without-a-password.html",
+      "published": "Mon, 19 Oct 2026 00:36:33 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Rust-Based CikaBika Bot Turns Discord into a Command Center",
-      "url": "https://securityaffairs.com/201210/security/rust-based-cikabika-bot-turns-discord-into-a-command-center.html",
-      "published": "Sun, 18 Oct 2026 11:33:52 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-97859",
+      "url": "https://www.tenable.com/cve/CVE-2026-97859",
+      "published": "Sun, 18 Oct 2026 19:16:33 GMT",
+      "source": "Tenable CVE"
+    },
+    {
+      "title": "CVE-2026-97204",
+      "url": "https://www.tenable.com/cve/CVE-2026-97204",
+      "published": "Sun, 18 Oct 2026 19:16:33 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
