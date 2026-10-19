@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-19T04:17:48.600839",
+  "generated_at": "2026-10-19T18:38:53.149814",
   "items": [
     {
-      "title": "16-Year-Old Broadcom Wi-Fi Bug Lets Attackers Take Over Routers Without a Password",
-      "url": "https://securityaffairs.com/201268/iot/16-year-old-broadcom-wi-fi-bug-lets-attackers-take-over-routers-without-a-password.html",
-      "published": "Mon, 19 Oct 2026 00:36:33 +0000",
-      "source": "Security Affairs"
+      "title": "OpenCode hack exposes API keys amid AI distillation attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+      "published": "Mon, 19 Oct 2026 13:27:15 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-97859",
-      "url": "https://www.tenable.com/cve/CVE-2026-97859",
-      "published": "Sun, 18 Oct 2026 19:16:33 GMT",
-      "source": "Tenable CVE"
+      "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
+      "url": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
+      "published": "Mon, 19 Oct 2026 21:58:47 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-97204",
-      "url": "https://www.tenable.com/cve/CVE-2026-97204",
-      "published": "Sun, 18 Oct 2026 19:16:33 GMT",
-      "source": "Tenable CVE"
+      "title": "Microsoft fixes game, app crashes caused by recent Windows update",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-game-app-crashes-caused-by-windows-kb5124010-preview-update/",
+      "published": "Mon, 19 Oct 2026 10:55:23 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
