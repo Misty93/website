@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-19T18:38:53.149814",
+  "generated_at": "2026-10-20T04:29:00.308826",
   "items": [
     {
-      "title": "OpenCode hack exposes API keys amid AI distillation attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
-      "published": "Mon, 19 Oct 2026 13:27:15 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
-      "url": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
-      "published": "Mon, 19 Oct 2026 21:58:47 +0530",
+      "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
+      "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html",
+      "published": "Tue, 20 Oct 2026 09:35:58 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Microsoft fixes game, app crashes caused by recent Windows update",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-game-app-crashes-caused-by-windows-kb5124010-preview-update/",
-      "published": "Mon, 19 Oct 2026 10:55:23 -0400",
+      "title": "Nikkei discloses third data breach in a month, 1.8M records exposed",
+      "url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/",
+      "published": "Mon, 19 Oct 2026 17:49:48 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "WordPress SEO plugin Rank Math compromised to backdoor websites",
+      "url": "https://www.bleepingcomputer.com/news/security/wordpress-seo-plugin-rank-math-compromised-to-backdoor-websites/",
+      "published": "Mon, 19 Oct 2026 17:24:51 -0400",
       "source": "BleepingComputer"
     }
   ]
