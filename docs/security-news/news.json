@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-20T04:29:00.308826",
+  "generated_at": "2026-10-20T16:44:03.726755",
   "items": [
     {
-      "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
-      "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html",
-      "published": "Tue, 20 Oct 2026 09:35:58 +0530",
+      "title": "Google Cloud Outage in London Disrupts Revolut Banking Services",
+      "url": "https://securityaffairs.com/201358/breaking-news/google-cloud-outage-in-london-disrupts-revolut-banking-services.html",
+      "published": "Tue, 20 Oct 2026 15:45:42 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
+      "url": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+      "published": "Tue, 20 Oct 2026 21:08:52 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Nikkei discloses third data breach in a month, 1.8M records exposed",
-      "url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/",
-      "published": "Mon, 19 Oct 2026 17:49:48 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "WordPress SEO plugin Rank Math compromised to backdoor websites",
-      "url": "https://www.bleepingcomputer.com/news/security/wordpress-seo-plugin-rank-math-compromised-to-backdoor-websites/",
-      "published": "Mon, 19 Oct 2026 17:24:51 -0400",
-      "source": "BleepingComputer"
+      "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
+      "url": "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html",
+      "published": "Tue, 20 Oct 2026 21:02:27 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
