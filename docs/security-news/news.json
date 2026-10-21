@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-21T04:20:52.988185",
+  "generated_at": "2026-10-21T17:01:13.095460",
   "items": [
-    {
-      "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
-      "url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
-      "published": "Tue, 20 Oct 2026 21:01:50 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
-      "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
-      "published": "Tue, 20 Oct 2026 20:46:42 -0400",
-      "source": "BleepingComputer"
-    },
     {
       "title": "2026-018: Critical Vulnerabilities in PHP",
       "url": "https://cert.europa.eu/publications/security-advisories/2026-018/",
-      "published": "Tue, 20 Oct 2026 22:33:27 CEST",
+      "published": "Wed, 21 Oct 2026 17:20:18 CEST",
       "source": "CERT EU"
+    },
+    {
+      "title": "OpenAI agents disabled safety monitoring, one lied about it",
+      "url": "https://www.bleepingcomputer.com/news/security/openai-agents-disabled-safety-monitoring-one-lied-about-it/",
+      "published": "Wed, 21 Oct 2026 12:26:53 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "PHP ships emergency patches for critical PHP2Shell flaws",
+      "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+      "published": "Wed, 21 Oct 2026 10:07:05 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
