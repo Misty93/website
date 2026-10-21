@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-20T16:44:03.726755",
+  "generated_at": "2026-10-21T04:20:52.988185",
   "items": [
     {
-      "title": "Google Cloud Outage in London Disrupts Revolut Banking Services",
-      "url": "https://securityaffairs.com/201358/breaking-news/google-cloud-outage-in-london-disrupts-revolut-banking-services.html",
-      "published": "Tue, 20 Oct 2026 15:45:42 +0000",
-      "source": "Security Affairs"
+      "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
+      "url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
+      "published": "Tue, 20 Oct 2026 21:01:50 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
-      "url": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
-      "published": "Tue, 20 Oct 2026 21:08:52 +0530",
-      "source": "The Hacker News"
+      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+      "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+      "published": "Tue, 20 Oct 2026 20:46:42 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
-      "url": "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html",
-      "published": "Tue, 20 Oct 2026 21:02:27 +0530",
-      "source": "The Hacker News"
+      "title": "2026-018: Critical Vulnerabilities in PHP",
+      "url": "https://cert.europa.eu/publications/security-advisories/2026-018/",
+      "published": "Tue, 20 Oct 2026 22:33:27 CEST",
+      "source": "CERT EU"
     }
   ]
 }
