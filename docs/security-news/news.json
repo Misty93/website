@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-22T04:20:20.030221",
+  "generated_at": "2026-10-22T17:00:15.307067",
   "items": [
     {
-      "title": "Google Chrome adds Gemini-powered scam detection, warns users of ClickFix attacks",
-      "url": "https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/",
-      "published": "Wed, 21 Oct 2026 18:16:26 -0400",
+      "title": "Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations",
+      "url": "https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html",
+      "published": "Thu, 22 Oct 2026 21:42:31 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Microsoft shares how to fix broken Exchange Online EWS apps",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-how-to-fix-broken-exchange-online-ews-apps/",
+      "published": "Thu, 22 Oct 2026 11:49:32 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
-      "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
-      "published": "Wed, 21 Oct 2026 17:43:27 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Russian Satellite Makes a Close Approach To A Commercial Radar Satellite Used by Ukraine",
-      "url": "https://securityaffairs.com/201446/breaking-news/russian-satellite-makes-a-close-approach-to-a-commercial-radar-satellite-used-by-ukraine.html",
-      "published": "Wed, 21 Oct 2026 21:29:04 +0000",
+      "title": "PHP2Shell Attacks Started Four Days Before Public Disclosure, AWS Reports",
+      "url": "https://securityaffairs.com/201479/hacking/php2shell-attacks-started-four-days-before-public-disclosure-aws-reports.html",
+      "published": "Thu, 22 Oct 2026 14:55:01 +0000",
       "source": "Security Affairs"
     }
   ]
