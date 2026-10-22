@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-21T17:01:13.095460",
+  "generated_at": "2026-10-22T04:20:20.030221",
   "items": [
     {
-      "title": "2026-018: Critical Vulnerabilities in PHP",
-      "url": "https://cert.europa.eu/publications/security-advisories/2026-018/",
-      "published": "Wed, 21 Oct 2026 17:20:18 CEST",
-      "source": "CERT EU"
-    },
-    {
-      "title": "OpenAI agents disabled safety monitoring, one lied about it",
-      "url": "https://www.bleepingcomputer.com/news/security/openai-agents-disabled-safety-monitoring-one-lied-about-it/",
-      "published": "Wed, 21 Oct 2026 12:26:53 -0400",
+      "title": "Google Chrome adds Gemini-powered scam detection, warns users of ClickFix attacks",
+      "url": "https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/",
+      "published": "Wed, 21 Oct 2026 18:16:26 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "PHP ships emergency patches for critical PHP2Shell flaws",
-      "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
-      "published": "Wed, 21 Oct 2026 10:07:05 -0400",
+      "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
+      "url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
+      "published": "Wed, 21 Oct 2026 17:43:27 -0400",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Russian Satellite Makes a Close Approach To A Commercial Radar Satellite Used by Ukraine",
+      "url": "https://securityaffairs.com/201446/breaking-news/russian-satellite-makes-a-close-approach-to-a-commercial-radar-satellite-used-by-ukraine.html",
+      "published": "Wed, 21 Oct 2026 21:29:04 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
