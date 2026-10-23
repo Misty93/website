@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-22T17:00:15.307067",
+  "generated_at": "2026-10-23T04:24:39.609223",
   "items": [
     {
-      "title": "Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations",
-      "url": "https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html",
-      "published": "Thu, 22 Oct 2026 21:42:31 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-92450",
+      "url": "https://www.tenable.com/cve/CVE-2026-92450",
+      "published": "Thu, 22 Oct 2026 23:20:33 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Microsoft shares how to fix broken Exchange Online EWS apps",
-      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-how-to-fix-broken-exchange-online-ews-apps/",
-      "published": "Thu, 22 Oct 2026 11:49:32 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-110825",
+      "url": "https://www.tenable.com/cve/CVE-2026-110825",
+      "published": "Thu, 22 Oct 2026 23:18:22 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "PHP2Shell Attacks Started Four Days Before Public Disclosure, AWS Reports",
-      "url": "https://securityaffairs.com/201479/hacking/php2shell-attacks-started-four-days-before-public-disclosure-aws-reports.html",
-      "published": "Thu, 22 Oct 2026 14:55:01 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-110491",
+      "url": "https://www.tenable.com/cve/CVE-2026-110491",
+      "published": "Thu, 22 Oct 2026 23:18:22 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
