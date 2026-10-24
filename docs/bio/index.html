@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bio</title>
+  <title>The Hunt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     * {
@@ -15,207 +15,81 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
 
-    .left {
-      flex: 1 1 40%;
-      padding: 3rem 2rem;
-      background-color: #1a1a1a;
-      border-right: 1px solid #2a2a2a;
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      text-align: center;
     }
 
-    .right {
-      flex: 1 1 60%;
-      padding: 3rem 2rem;
-    }
-
-    h1, h2 {
+    h1 {
       color: #ff4500;
-      margin-bottom: 1rem;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      margin: 0;
     }
 
-    p {
-      line-height: 1.6;
-      text-align: justify;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-      text-align: justify;
-    }
-
-    .certificates li::before,
-    .skills li::before {
-      content: "✔️ ";
+    h2 {
       color: #ff4500;
+      margin: 0 0 1rem;
     }
 
     a {
       color: #ff4500;
       text-decoration: none;
-      word-break: break-word;
+      overflow-wrap: anywhere;
     }
 
-    a:hover {
+    a:hover,
+    a:focus-visible {
       text-decoration: underline;
     }
 
-    .section {
-      margin-bottom: 2.5rem;
+    footer {
+      background-color: #1a1a1a;
+      border-top: 1px solid #2a2a2a;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
     }
 
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem 1.5rem;
+      line-height: 1.6;
+    }
 
-      .left, .right {
-        flex: 1 1 100%;
-        padding: 2rem 1rem;
-        border-right: none;
-        border-bottom: 1px solid #2a2a2a;
-      }
-
-      .right {
-        border-bottom: none;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      p, li {
-        font-size: 1rem;
-        text-align: justify;
-      }
-
-      .section {
-        margin-bottom: 2rem;
-      }
+    .back {
+      margin: 2rem 0 0;
     }
   </style>
 </head>
 <body>
+  <main>
+    <h1>Coming soon</h1>
+  </main>
 
-  <div class="left">
-    <p><a href="/">← Back to homepage</a></p>
-    <h1>Behind She Hunts Threats</h1>
-
-
-    <p><strong>bacc.ing.techn.inf.</strong></p>
-    
-    <p><strong>Cybersecurity Professional</strong></p>
-    
-    <p>I have just enrolled in a master's program in Information Security and Digital Forensics at Zagreb University of Applied Sciences. Apparently, working in cybersecurity and running a home lab still wasn't enough homework. 🎓</p>
-    
-    <p>She Hunts Threats is created and maintained by an experienced cybersecurity professional working in Blue Team operations, incident response, threat hunting, security architecture, detection engineering, and SOC development.</p>
-    
-    <p>Behind the content is a real person with years of practical experience investigating incidents, analyzing suspicious activity, building detections, mentoring analysts, and helping organizations understand what is happening inside their environments and how to respond effectively.</p>
-    
-    <p>What began as curiosity gradually became a hobby, then an obsession, and eventually a professional career in cybersecurity. Today, that journey includes leading a Blue Team while continuing to research, experiment, automate, write, and share practical knowledge with others.</p>
-    
-    <p>My experience includes Microsoft Defender, Trend Vision One, Cybereason, QRadar, Wazuh, Stellar Cyber, Cisco ESA, Check Point Email Security, FortiMail, Trellix Email Security, FortiDeceptor, T-Pot, and various SIEM, EDR, SOAR, NDR, and email security platforms.</p>
-    
-    <p>The technology changes, but the challenge remains the same: understand what happened, determine why it happened, and stop it from happening again.</p>
-    
-    <p>I combine methodical analysis with creativity and curiosity, especially when it comes to strange logs, unusual attack patterns, automation, and the occasional gardening metaphor. 🌿</p>
-    
-    <p>Before cybersecurity, I worked behind a camera. 📸🎬 Today, I spend my time hunting through logs, investigating incidents, building detections, and explaining why clicking that attachment was, in fact, a bad idea. 🧩</p>
-    
-    <p>When I am not working, you will probably find me running, cycling, watching films, taking photos, building something in my home lab, breaking something in my home lab, or pretending that maintaining firewalls, SIEM platforms, honeypots, and servers is a perfectly normal hobby. 🧚🏻</p>
-    
-    <p>I genuinely enjoy regex, which is usually the point where people stop asking questions. Being a Slytherin, I also felt contractually obligated to learn Python. 🐍</p>
-    
-    <p>I bring curiosity, initiative, and a practical mindset to everything I do. Whether I am investigating an incident, building a detection, or figuring out why something broke in my lab, I take ownership and follow through. Simply put, I get things done, and I make it happen.</p>
-
-    
-    <p>
-      Creator of
-      <a href="https://shehuntsthreats.com/" target="_blank" rel="noopener noreferrer">shehuntsthreats.com</a>,
-      <a href="https://cybercroatia.org/" target="_blank" rel="noopener noreferrer">cybercroatia.org</a>,
-      and
-      <a href="https://cyber-europe.org/" target="_blank" rel="noopener noreferrer">cyber-europe.org</a>. ⚡
-    </p>
-    
-    <p>Collector of certifications, suspicious IP addresses, and stories that begin with: “It was only supposed to be a small change.” 🌋</p>
-    
-    <p>Because the best part of cybersecurity is not the technology itself. It is the moment when a pile of seemingly unrelated logs suddenly starts telling a story. 🖖🏻</p>
-    <p><a href="/">← Back to homepage</a></p>
-  </div>
-
-  <div class="right">
-    <div class="section">
-      <h2>Skills & Tools</h2>
-      <ul class="skills">
-        <p>Owner of <a href="https://cybercroatia.org/" target="_blank" rel="noopener noreferrer">CyberCroatia.org</a></p>
-        <li>Linux, Windows, macOS</li>
-        <li>PowerShell, Bash, Regex</li>
-        <li>SIEM (QRadar), SOAR, SOC</li>
-        <li>EDR: CrowdStrike, Defender, Trend Micro</li>
-        <li>Email Security: Cisco ESA, Fortimail, Trend Micro</li>
-        <li>Virtualization & Hardening</li>
-        <li>T-Pot honeypots & basic reverse engineering (studying for fun)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul class="certificates">
-        <li>CompTIA Cysa +</li>
-        <li>CompTIA Security +</li>
-        <li>Microsoft Security Operations Analyst Associate</li>
-        <li>Microsoft Azure Administrator Associate</li>
-        <li>Microsoft 365 Fundamentals</li>
-        <li>Dynamics 365 Fundamentals (CRM & ERP)</li>
-        <li>Azure Security, Compliance & Identity Fundamentals</li>
-        <li>Power Platform, AI, Data & Azure Fundamentals</li>
-        <li>Fortinet Certified Network Security Associate</li>
-        <li>Fortinet Certified Associate in Cybersecurity</li>
-        <li>Fortinet Certified Fundamentals in Cybersecurity</li>
-        <li>Google IT Support Specialist</li>
-        <li>Stellar Cyber SOC Analyst Associate Certification</li>
-        <li>Stellar Cyber Essentials Associate Certification</li>
-        <li>Stellar Cyber Administrator Associate Certification</li>
-        <li>Stellar Cyber Administrator Sales Associate Certification</li>
-        <li>Stellar Managed Open XDR Sales Associate Certification</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Projects & Interests</h2>
-      <p>
-        Deploying honeypot systems, experimenting with virtualization, and studying reverse engineering.  
-        Outside of cybersecurity, I enjoy photography, cycling, reading, and yes — gardening.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>Let’s Connect</h2>
-      <p>
-        <a href="https://linktr.ee/cybercroatia" target="_blank"> Linktr.ee</a> |
-        <a href="mailto:leonoramilisa@gmail.com">Email</a> |
-        <a href="https://cybercroatia.org/" target="_blank">CyberCroatia.org</a> |
-        <a href="https://whydonate.com/fundraising/cybercroatia" target="_blank"> My fundraising campaign</a> |
-        <a href="https://www.youtube.com/@cybercroatia" target="_blank"> YouTube channel</a> |
-        <a href="https://www.linkedin.com/in/leonoramilisa" target="_blank">LinkedIn</a> | 
-        <a href="https://x.com/dotpoint93" target="_blank">X</a> |
-        
-      </p>
-      <p><a href="/">← Back to homepage</a></p>
-    </div>
-  </div>
-
+  <footer>
+    <h2>Let’s Connect</h2>
+    <nav class="links" aria-label="Connect">
+      <a href="https://linktr.ee/cybercroatia" target="_blank" rel="noopener noreferrer">Linktr.ee</a>
+      <a href="mailto:leonoramilisa@gmail.com">Email</a>
+      <a href="https://cybercroatia.org/" target="_blank" rel="noopener noreferrer">CyberCroatia.org</a>
+      <a href="https://whydonate.com/fundraising/cybercroatia" target="_blank" rel="noopener noreferrer">My fundraising campaign</a>
+      <a href="https://www.youtube.com/@cybercroatia" target="_blank" rel="noopener noreferrer">YouTube channel</a>
+      <a href="https://www.linkedin.com/in/leonoramilisa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://x.com/dotpoint93" target="_blank" rel="noopener noreferrer">X</a>
+    </nav>
+    <p class="back"><a href="/">← Back to homepage</a></p>
+  </footer>
+</body>
+</html>
 </body>
 </html>
