@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-24T15:45:29.035310",
+  "generated_at": "2026-10-25T04:18:22.120874",
   "items": [
     {
-      "title": "Usage Intelligence: The Monetization Signal Most AI Companies Are Ignoring",
-      "url": "https://securityaffairs.com/201643/ai/usage-intelligence-the-monetization-signal-most-ai-companies-are-ignoring.html",
-      "published": "Sat, 24 Oct 2026 14:33:09 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-115997",
+      "url": "https://www.tenable.com/cve/CVE-2026-115997",
+      "published": "Sun, 25 Oct 2026 00:16:45 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
-      "url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
-      "published": "Sat, 24 Oct 2026 10:17:32 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-89284",
+      "url": "https://www.tenable.com/cve/CVE-2026-89284",
+      "published": "Sat, 24 Oct 2026 23:16:59 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software",
-      "url": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
-      "published": "Sat, 24 Oct 2026 16:39:29 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-115996",
+      "url": "https://www.tenable.com/cve/CVE-2026-115996",
+      "published": "Sat, 24 Oct 2026 23:16:58 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
