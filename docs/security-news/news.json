@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-26T04:21:59.713652",
+  "generated_at": "2026-10-26T18:35:23.999024",
   "items": [
     {
-      "title": "CVE-2026-116099",
-      "url": "https://www.tenable.com/cve/CVE-2026-116099",
-      "published": "Mon, 26 Oct 2026 00:17:14 GMT",
-      "source": "Tenable CVE"
+      "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
+      "url": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
+      "published": "Mon, 26 Oct 2026 23:15:57 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "CVE-2026-116098",
-      "url": "https://www.tenable.com/cve/CVE-2026-116098",
-      "published": "Mon, 26 Oct 2026 00:17:14 GMT",
-      "source": "Tenable CVE"
+      "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
+      "published": "Mon, 26 Oct 2026 12:27:57 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-116097",
-      "url": "https://www.tenable.com/cve/CVE-2026-116097",
-      "published": "Mon, 26 Oct 2026 00:17:14 GMT",
-      "source": "Tenable CVE"
+      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
+      "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+      "published": "Mon, 26 Oct 2026 21:22:40 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
