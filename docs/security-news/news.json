@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-25T15:56:43.841120",
+  "generated_at": "2026-10-26T04:21:59.713652",
   "items": [
     {
-      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
-      "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
-      "published": "Sun, 25 Oct 2026 11:49:38 -0400",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-116099",
+      "url": "https://www.tenable.com/cve/CVE-2026-116099",
+      "published": "Mon, 26 Oct 2026 00:17:14 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 120",
-      "url": "https://securityaffairs.com/201709/security/security-affairs-malware-newsletter-round-120.html",
-      "published": "Sun, 25 Oct 2026 13:27:05 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-116098",
+      "url": "https://www.tenable.com/cve/CVE-2026-116098",
+      "published": "Mon, 26 Oct 2026 00:17:14 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Security Affairs newsletter Round 601 by Pierluigi Paganini – INTERNATIONAL EDITION",
-      "url": "https://securityaffairs.com/201698/breaking-news/security-affairs-newsletter-round-601-by-pierluigi-paganini-international-edition.html",
-      "published": "Sun, 25 Oct 2026 12:28:47 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-116097",
+      "url": "https://www.tenable.com/cve/CVE-2026-116097",
+      "published": "Mon, 26 Oct 2026 00:17:14 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
