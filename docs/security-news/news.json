@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-27T04:41:04.866765",
+  "generated_at": "2026-10-27T17:51:15.003837",
   "items": [
     {
-      "title": "University of Copenhagen data breach exposes data of 525,000 people",
-      "url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
-      "published": "Mon, 26 Oct 2026 18:20:36 -0400",
+      "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
+      "url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
+      "published": "Tue, 27 Oct 2026 12:15:39 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
-      "url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
-      "published": "Mon, 26 Oct 2026 17:08:28 -0400",
+      "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
+      "url": "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/",
+      "published": "Tue, 27 Oct 2026 10:09:46 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "OpenAI launches GPT-6.1 Terra with 3x faster AI agents, 50% lower pricing",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing/",
-      "published": "Mon, 26 Oct 2026 16:46:49 -0400",
+      "title": "The Huntress Tragic Quadrant: Ranking Threats Hitting Businesses Hardest",
+      "url": "https://www.bleepingcomputer.com/news/security/the-huntress-tragic-quadrant-ranking-threats-hitting-businesses-hardest/",
+      "published": "Tue, 27 Oct 2026 10:01:11 -0400",
       "source": "BleepingComputer"
     }
   ]
