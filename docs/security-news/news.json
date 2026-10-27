@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-26T18:35:23.999024",
+  "generated_at": "2026-10-27T04:41:04.866765",
   "items": [
     {
-      "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
-      "url": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
-      "published": "Mon, 26 Oct 2026 23:15:57 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
-      "published": "Mon, 26 Oct 2026 12:27:57 -0400",
+      "title": "University of Copenhagen data breach exposes data of 525,000 people",
+      "url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
+      "published": "Mon, 26 Oct 2026 18:20:36 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
-      "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-      "published": "Mon, 26 Oct 2026 21:22:40 +0530",
-      "source": "The Hacker News"
+      "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
+      "url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+      "published": "Mon, 26 Oct 2026 17:08:28 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "OpenAI launches GPT-6.1 Terra with 3x faster AI agents, 50% lower pricing",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing/",
+      "published": "Mon, 26 Oct 2026 16:46:49 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
