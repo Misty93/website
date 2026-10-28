@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-28T05:14:48.094089",
+  "generated_at": "2026-10-28T18:15:14.075646",
   "items": [
     {
-      "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
-      "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
-      "published": "Tue, 27 Oct 2026 19:35:51 -0400",
+      "title": "Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.",
+      "url": "https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html",
+      "published": "Wed, 28 Oct 2026 22:38:09 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
+      "url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+      "published": "Wed, 28 Oct 2026 12:45:47 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "OpenAI's GPT-6.1 Terra is safer overall, but shows more destructive-action flags in tests",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-gpt-61-terra-is-safer-overall-but-shows-more-destructive-action-flags-in-tests/",
-      "published": "Tue, 27 Oct 2026 18:43:27 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "UNM Health ransomware attack disrupts patient care, surgeries",
-      "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
-      "published": "Tue, 27 Oct 2026 18:07:34 -0400",
-      "source": "BleepingComputer"
+      "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
+      "url": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
+      "published": "Wed, 28 Oct 2026 21:53:34 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
