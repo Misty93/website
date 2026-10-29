@@ -25,6 +25,8 @@ jobs:
           pip install -r requirements.txt || true
 
       - name: Run news fetcher
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python3 fetch_news.py
 
       - name: Commit and push changes
@@ -32,7 +34,6 @@ jobs:
           git config user.name "leonorabot"
           git config user.email "actions@github.com"
 
-          # 🔥 Ovo rješava tvoj problem
           git pull --rebase --autostash origin main
 
           git add docs/security-news/
