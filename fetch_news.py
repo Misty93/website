@@ -85,7 +85,7 @@ def fetch_news_items():
                 print(f"No RSS entries returned for {source}")
                 continue
 
-            for entry in feed.entries[:5]:
+            for entry in feed.entries[:10]:
                 title = entry.get("title", "Untitled article")
                 link = entry.get("link", "")
 
@@ -408,7 +408,7 @@ def publish_discord_news():
         # Starije trenutačne stavke označi kao preskočene.
         seen_links = {
             article["link"].strip()
-            for article in unique_articles[3:]
+            for article in unique_articles[10:]
         }
         save_discord_state(seen_links)
 
@@ -419,7 +419,7 @@ def publish_discord_news():
     ]
 
     # Obradi do deset stavki, od starijih prema novijima.
-    batch = list(reversed(pending))[:10]
+    batch = list(reversed(pending))[:20]
     sent_count = 0
 
     for article in batch:
