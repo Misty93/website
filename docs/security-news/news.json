@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-29T10:42:07.140235",
+  "generated_at": "2026-10-29T11:22:44.077136",
   "items": [
     {
-      "title": "Election Website Security: 42% of US County Sites Still Lack .gov Domains",
-      "url": "https://securityaffairs.com/201967/security/election-website-security-42-of-us-county-sites-still-lack-gov-domains.html",
-      "published": "Thu, 29 Oct 2026 09:21:41 +0000",
-      "source": "Security Affairs"
+      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+      "published": "Thu, 29 Oct 2026 07:10:13 -0400",
+      "source": "BleepingComputer"
     },
     {
-      "title": "ENGIE Data Breach Exposes Customer Details and Energy Contracts",
-      "url": "https://securityaffairs.com/201985/data-breach/engie-data-breach-exposes-customer-details-and-energy-contracts.html",
-      "published": "Thu, 29 Oct 2026 08:53:37 +0000",
-      "source": "Security Affairs"
+      "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+      "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+      "published": "Thu, 29 Oct 2026 16:14:46 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Virtualine Domain Seized, but Allegedly Abusive Website Remains Online",
-      "url": "https://securityaffairs.com/202002/cyber-crime/virtualine-domain-seized-but-allegedly-abusive-website-remains-online.html",
-      "published": "Thu, 29 Oct 2026 08:45:21 +0000",
+      "title": "Volt Typhoon Used Silent Train to Hide Zero-Day Attacks",
+      "url": "https://securityaffairs.com/202023/intelligence/volt-typhoon-used-silent-train-to-hide-zero-day-attacks.html",
+      "published": "Thu, 29 Oct 2026 10:34:54 +0000",
       "source": "Security Affairs"
     }
   ]
