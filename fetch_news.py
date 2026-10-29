@@ -2,6 +2,10 @@ import os
 import json
 import calendar
 import feedparser
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
 
 from datetime import datetime
 from html import escape
@@ -241,3 +245,208 @@ with open(json_file, "w", encoding="utf-8") as output_json:
 
 print(f"Generated {output_file} with {len(articles)} articles.")
 print(f"Generated {json_file} with {len(latest_items)} latest articles.")
+
+
+# === Discord: odvojeno od generiranja vijesti za web ===
+
+discord_state_file = os.path.join(folder, "discord_sent.json")
+
+
+def save_discord_state(seen_links):
+    temporary_file = discord_state_file + ".tmp"
+
+    with open(temporary_file, "w", encoding="utf-8") as state_file:
+        json.dump(
+            sorted(seen_links),
+            state_file,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    os.replace(temporary_file, discord_state_file)
+
+
+def discord_text(value, limit):
+    text = " ".join(str(value).split())
+
+    # Spriječi da naslov iz RSS-a poremeti Discord formatiranje.
+    for character in ("\\", "*", "_", "`", "~", "|", "<", ">"):
+        text = text.replace(character, "\\" + character)
+
+    return text[:limit]
+
+
+def send_discord_article(webhook_url, article):
+    title = discord_text(article["title"], 500)
+    source = discord_text(article["source"], 150)
+    published = discord_text(article["published"], 200)
+    link = str(article["link"]).strip()
+
+    parsed_link = urllib.parse.urlsplit(link)
+
+    if parsed_link.scheme not in ("https", "http") or not parsed_link.netloc:
+        raise ValueError("Invalid article URL")
+
+    if any(character in link for character in ("\r", "\n", "<", ">")):
+        raise ValueError("Invalid characters in article URL")
+
+    content = (
+        f"**{title}**\n"
+        f"Source: {source}\n"
+        f"Published: {published}\n"
+        f"<{link}>"
+    )
+
+    if len(content) > 2000:
+        raise ValueError("Discord message is too long")
+
+    payload = json.dumps({
+        "content": content,
+        "allowed_mentions": {"parse": []}
+    }).encode("utf-8")
+
+    for attempt in range(3):
+        request = urllib.request.Request(
+            webhook_url,
+            data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "User-Agent": "CyberCroatiaSecurityNews/1.0"
+            },
+            method="POST"
+        )
+
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                result = json.loads(response.read().decode("utf-8"))
+
+            if not result.get("id"):
+                raise ValueError("Discord did not confirm the message")
+
+            return
+
+        except urllib.error.HTTPError as error:
+            if error.code == 429 and attempt < 2:
+                retry_after = float(
+                    json.loads(error.read().decode("utf-8"))["retry_after"]
+                )
+
+                if not 0 <= retry_after <= 60:
+                    raise ValueError("Discord retry delay exceeds limit")
+
+                time.sleep(retry_after + 0.5)
+                continue
+
+            # Ne ispisuj webhook URL koji sadrži tajni token.
+            raise RuntimeError(
+                f"Discord returned HTTP {error.code}"
+            ) from None
+
+    raise RuntimeError("Discord sending attempts exhausted")
+
+
+def publish_discord_news():
+    webhook = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+
+    if not webhook:
+        print("Discord skipped: webhook secret is not configured.")
+        return
+
+    parts = urllib.parse.urlsplit(webhook)
+
+    if (
+        parts.scheme != "https"
+        or parts.hostname != "discord.com"
+        or not parts.path.startswith("/api/webhooks/")
+    ):
+        print("::warning::Discord skipped: unexpected webhook URL format.")
+        return
+
+    query = [
+        (key, value)
+        for key, value in urllib.parse.parse_qsl(parts.query)
+        if key != "wait"
+    ]
+    query.append(("wait", "true"))
+
+    webhook_url = urllib.parse.urlunsplit((
+        parts.scheme,
+        parts.netloc,
+        parts.path,
+        urllib.parse.urlencode(query),
+        ""
+    ))
+
+    unique_articles = []
+    current_links = set()
+
+    for article in articles:
+        link = article["link"].strip()
+
+        if link and link not in current_links:
+            current_links.add(link)
+            unique_articles.append(article)
+
+    if not unique_articles:
+        print("Discord: no articles available.")
+        return
+
+    if os.path.exists(discord_state_file):
+        with open(discord_state_file, encoding="utf-8") as state_file:
+            saved_links = json.load(state_file)
+
+        if (
+            not isinstance(saved_links, list)
+            or not all(isinstance(link, str) for link in saved_links)
+        ):
+            raise ValueError("Invalid Discord state file")
+
+        seen_links = set(saved_links)
+
+    else:
+        # Prvi put pošalji samo tri najnovije vijesti.
+        # Starije trenutačne stavke označi kao preskočene.
+        seen_links = {
+            article["link"].strip()
+            for article in unique_articles[3:]
+        }
+        save_discord_state(seen_links)
+
+    pending = [
+        article
+        for article in unique_articles
+        if article["link"].strip() not in seen_links
+    ]
+
+    # Obradi do deset stavki, od starijih prema novijima.
+    batch = list(reversed(pending))[:10]
+    sent_count = 0
+
+    for article in batch:
+        try:
+            send_discord_article(webhook_url, article)
+            seen_links.add(article["link"].strip())
+            save_discord_state(seen_links)
+            sent_count += 1
+
+        except Exception:
+            print(
+                "::warning::Discord posting stopped after an error. "
+                "Website files have already been generated. "
+                "Check webhook access and saved state before retrying."
+            )
+            break
+
+        time.sleep(1)
+
+    print(f"Discord: sent {sent_count} new articles.")
+
+
+try:
+    publish_discord_news()
+except Exception:
+    # Discord greška ne prekida spremanje web vijesti u workflowu.
+    print(
+        "::warning::Discord notifications failed. "
+        "Website files have already been generated."
+    )
