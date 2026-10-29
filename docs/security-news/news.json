@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-29T05:25:39.715312",
+  "generated_at": "2026-10-29T10:42:07.140235",
   "items": [
     {
-      "title": "Police seize Virtualine bulletproof service tied to ransowmare, cybercrime",
-      "url": "https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/",
-      "published": "Wed, 28 Oct 2026 16:47:22 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Hive and Nefilim Ransomware Affiliate Gets 70 Months In Jail",
-      "url": "https://securityaffairs.com/201960/cyber-crime/hive-and-nefilim-ransomware-affiliate-gets-70-months-in-jail.html",
-      "published": "Wed, 28 Oct 2026 20:19:06 +0000",
+      "title": "Election Website Security: 42% of US County Sites Still Lack .gov Domains",
+      "url": "https://securityaffairs.com/201967/security/election-website-security-42-of-us-county-sites-still-lack-gov-domains.html",
+      "published": "Thu, 29 Oct 2026 09:21:41 +0000",
       "source": "Security Affairs"
     },
     {
-      "title": "Discord to let search engines index public server messages",
-      "url": "https://www.bleepingcomputer.com/news/security/discord-to-let-search-engines-index-public-server-messages/",
-      "published": "Wed, 28 Oct 2026 14:44:16 -0400",
-      "source": "BleepingComputer"
+      "title": "ENGIE Data Breach Exposes Customer Details and Energy Contracts",
+      "url": "https://securityaffairs.com/201985/data-breach/engie-data-breach-exposes-customer-details-and-energy-contracts.html",
+      "published": "Thu, 29 Oct 2026 08:53:37 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Virtualine Domain Seized, but Allegedly Abusive Website Remains Online",
+      "url": "https://securityaffairs.com/202002/cyber-crime/virtualine-domain-seized-but-allegedly-abusive-website-remains-online.html",
+      "published": "Thu, 29 Oct 2026 08:45:21 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
