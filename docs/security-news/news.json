@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-29T11:22:44.077136",
+  "generated_at": "2026-10-29T18:20:51.347894",
   "items": [
     {
-      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
-      "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
-      "published": "Thu, 29 Oct 2026 07:10:13 -0400",
+      "title": "Chrome extensions with 13.4 million installs caught hijacking searches",
+      "url": "https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/",
+      "published": "Thu, 29 Oct 2026 12:10:31 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
-      "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
-      "published": "Thu, 29 Oct 2026 16:14:46 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. CISA adds Linux Kernel and Broadcom VMWare ESX  flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/202050/hacking/u-s-cisa-adds-linux-kernel-and-broadcom-vmware-esx-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Thu, 29 Oct 2026 16:05:56 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Volt Typhoon Used Silent Train to Hide Zero-Day Attacks",
-      "url": "https://securityaffairs.com/202023/intelligence/volt-typhoon-used-silent-train-to-hide-zero-day-attacks.html",
-      "published": "Thu, 29 Oct 2026 10:34:54 +0000",
-      "source": "Security Affairs"
+      "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
+      "url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
+      "published": "Thu, 29 Oct 2026 21:27:05 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
