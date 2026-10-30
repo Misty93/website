@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-29T18:20:51.347894",
+  "generated_at": "2026-10-30T05:25:45.536328",
   "items": [
     {
-      "title": "Chrome extensions with 13.4 million installs caught hijacking searches",
-      "url": "https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/",
-      "published": "Thu, 29 Oct 2026 12:10:31 -0400",
+      "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
+      "url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+      "published": "Fri, 30 Oct 2026 09:44:59 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/",
+      "published": "Thu, 29 Oct 2026 19:35:52 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "U.S. CISA adds Linux Kernel and Broadcom VMWare ESX  flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/202050/hacking/u-s-cisa-adds-linux-kernel-and-broadcom-vmware-esx-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Thu, 29 Oct 2026 16:05:56 +0000",
+      "title": "Binance Investigates Suspicious Crypto Transfers Worth Up to $5.8 Billion",
+      "url": "https://securityaffairs.com/202089/hacking/binance-investigates-suspicious-crypto-transfers-worth-up-to-5-8-billion.html",
+      "published": "Thu, 29 Oct 2026 22:53:27 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
-      "url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
-      "published": "Thu, 29 Oct 2026 21:27:05 +0530",
-      "source": "The Hacker News"
     }
   ]
 }
