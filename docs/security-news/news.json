@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-30T05:25:45.536328",
+  "generated_at": "2026-10-30T17:55:31.702534",
   "items": [
     {
-      "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
-      "url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
-      "published": "Fri, 30 Oct 2026 09:44:59 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
-      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/",
-      "published": "Thu, 29 Oct 2026 19:35:52 -0400",
+      "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+      "url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+      "published": "Fri, 30 Oct 2026 11:58:20 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "Binance Investigates Suspicious Crypto Transfers Worth Up to $5.8 Billion",
-      "url": "https://securityaffairs.com/202089/hacking/binance-investigates-suspicious-crypto-transfers-worth-up-to-5-8-billion.html",
-      "published": "Thu, 29 Oct 2026 22:53:27 +0000",
-      "source": "Security Affairs"
+      "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
+      "url": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
+      "published": "Fri, 30 Oct 2026 20:47:28 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
+      "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
+      "published": "Fri, 30 Oct 2026 10:36:54 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
