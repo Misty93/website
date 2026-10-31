@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-30T17:55:31.702534",
+  "generated_at": "2026-10-31T05:09:53.753961",
   "items": [
     {
-      "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
-      "url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
-      "published": "Fri, 30 Oct 2026 11:58:20 -0400",
+      "title": "Yoba Malware Hides a Crypto Miner Behind Legitimate OpenAI and Anthropic Binaries",
+      "url": "https://securityaffairs.com/202149/malware/yoba-malware-hides-a-crypto-miner-behind-legitimate-openai-and-anthropic-binaries.html",
+      "published": "Fri, 30 Oct 2026 21:22:59 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+      "published": "Fri, 30 Oct 2026 17:09:46 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
-      "url": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
-      "published": "Fri, 30 Oct 2026 20:47:28 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
-      "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-      "published": "Fri, 30 Oct 2026 10:36:54 -0400",
-      "source": "BleepingComputer"
+      "title": "U.S. CISA adds GitLab and Cisco flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/202133/security/u-s-cisa-adds-gitlab-and-cisco-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Fri, 30 Oct 2026 20:25:14 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
