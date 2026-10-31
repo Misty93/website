@@ -69,11 +69,117 @@
     .back {
       margin: 2rem 0 0;
     }
+
+    /* Tool introduction (replaces "Coming soon") */
+    .intro {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .intro h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 1rem 0 0;
+      padding: 0.25rem 0.9rem;
+      border: 1px solid #ff4500;
+      border-radius: 999px;
+      color: #ff4500;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      margin: 1.5rem auto 0;
+      max-width: 720px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #d8d8d8;
+    }
+
+    .features {
+      list-style: none;
+      margin: 2rem auto 0;
+      padding: 0;
+      max-width: 720px;
+      text-align: left;
+      line-height: 1.7;
+      color: #d8d8d8;
+    }
+
+    .features li {
+      padding: 0.35rem 0 0.35rem 1.5rem;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: #ff4500;
+      font-weight: bold;
+    }
+
+    .shot {
+      margin: 2.5rem 0 0;
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+    }
+
+    .shot figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #9a9a9a;
+    }
+
+    .next {
+      margin: 2rem auto 0;
+      max-width: 720px;
+      color: #9a9a9a;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Coming soon</h1>
+    <section class="intro">
+      <h1>Auto Threat Hunt Platform</h1>
+      <span class="badge">Demo version</span>
+
+      <p class="lead">
+        Automated threat hunting built on top of Wazuh. The platform connects to a live SIEM
+        and turns raw events into repeatable, trackable hunts, with an experimental AI agent
+        that helps with investigation and reporting.
+      </p>
+
+      <ul class="features">
+        <li>Hunts against real Wazuh events</li>
+        <li>Manual hunts with a custom UTC time window</li>
+        <li>Scheduled hunts with configurable interval and lookback</li>
+        <li>Sigma rules imported, with hunts enabled one by one after testing</li>
+        <li>Experimental AI-assisted analysis and reports</li>
+      </ul>
+
+      <figure class="shot">
+        <img src="hunt-demo.png" alt="Auto Threat Hunt Platform demo: manual and scheduled hunt settings" />
+        <figcaption>Current demo: manual and scheduled hunt settings.</figcaption>
+      </figure>
+
+      <p class="next">
+        More hunt rules and anonymized results from real hunts will be added here soon.
+      </p>
+    </section>
   </main>
 
   <footer>
@@ -89,7 +195,5 @@
     </nav>
     <p class="back"><a href="/">← Back to homepage</a></p>
   </footer>
-</body>
-</html>
 </body>
 </html>
