@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-31T05:09:53.753961",
+  "generated_at": "2026-10-31T17:08:24.781136",
   "items": [
     {
-      "title": "Yoba Malware Hides a Crypto Miner Behind Legitimate OpenAI and Anthropic Binaries",
-      "url": "https://securityaffairs.com/202149/malware/yoba-malware-hides-a-crypto-miner-behind-legitimate-openai-and-anthropic-binaries.html",
-      "published": "Fri, 30 Oct 2026 21:22:59 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
-      "published": "Fri, 30 Oct 2026 17:09:46 -0400",
+      "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+      "url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+      "published": "Sat, 31 Oct 2026 11:35:11 -0400",
       "source": "BleepingComputer"
     },
     {
-      "title": "U.S. CISA adds GitLab and Cisco flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/202133/security/u-s-cisa-adds-gitlab-and-cisco-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Fri, 30 Oct 2026 20:25:14 +0000",
-      "source": "Security Affairs"
+      "title": "Reddit to lock content behind logins to fight scrapers",
+      "url": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
+      "published": "Sat, 31 Oct 2026 10:05:15 -0400",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
+      "url": "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/",
+      "published": "Sat, 31 Oct 2026 09:10:19 -0400",
+      "source": "BleepingComputer"
     }
   ]
 }
