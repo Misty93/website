@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-31T17:08:24.781136",
+  "generated_at": "2026-11-01T05:40:12.595603",
   "items": [
+    {
+      "title": "U.S. CISA adds Ivanti Connect Secure flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/202175/security/u-s-cisa-adds-ivanti-connect-secure-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Sat, 31 Oct 2026 19:33:36 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Northflank security breach leads to abuse of customers' AI API keys",
+      "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+      "published": "Sat, 31 Oct 2026 14:01:12 -0400",
+      "source": "BleepingComputer"
+    },
     {
       "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
       "url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
       "published": "Sat, 31 Oct 2026 11:35:11 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Reddit to lock content behind logins to fight scrapers",
-      "url": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
-      "published": "Sat, 31 Oct 2026 10:05:15 -0400",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
-      "url": "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/",
-      "published": "Sat, 31 Oct 2026 09:10:19 -0400",
       "source": "BleepingComputer"
     }
   ]
