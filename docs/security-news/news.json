@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-03T06:18:30.234213",
+  "generated_at": "2026-11-03T19:24:53.124177",
   "items": [
     {
-      "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
-      "url": "https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html",
-      "published": "Tue, 03 Nov 2026 11:04:41 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
-      "url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
-      "published": "Tue, 03 Nov 2026 11:04:37 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Chinese hackers use ARTEX AI in automated attacks against 200 orgs",
-      "url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
-      "published": "Mon, 02 Nov 2026 16:40:14 -0500",
+      "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
+      "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
+      "published": "Tue, 03 Nov 2026 13:51:04 -0500",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
+      "url": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
+      "published": "Wed, 04 Nov 2026 00:16:38 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+      "url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+      "published": "Tue, 03 Nov 2026 23:46:19 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
