@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-02T21:38:07.996558",
+  "generated_at": "2026-11-03T06:18:30.234213",
   "items": [
     {
-      "title": "Fintech platform Sageworks taken offline after suspected cyberattack",
-      "url": "https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/",
-      "published": "Mon, 02 Nov 2026 14:00:45 -0500",
-      "source": "BleepingComputer"
+      "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
+      "url": "https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html",
+      "published": "Tue, 03 Nov 2026 11:04:41 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "VOLTA, the infostealer that asks an AI which victims are worth the effort",
-      "url": "https://securityaffairs.com/202281/malware/volta-the-infostealer-that-asks-an-ai-which-victims-are-worth-the-effort.html",
-      "published": "Mon, 02 Nov 2026 18:34:13 +0000",
-      "source": "Security Affairs"
+      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
+      "url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
+      "published": "Tue, 03 Nov 2026 11:04:37 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Google disrupts million-device XCPE Android malware botnet, bans TV box maker",
-      "url": "https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/",
-      "published": "Mon, 02 Nov 2026 13:16:34 -0500",
+      "title": "Chinese hackers use ARTEX AI in automated attacks against 200 orgs",
+      "url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/",
+      "published": "Mon, 02 Nov 2026 16:40:14 -0500",
       "source": "BleepingComputer"
     }
   ]
