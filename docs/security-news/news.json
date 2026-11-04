@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-03T19:24:53.124177",
+  "generated_at": "2026-11-04T05:53:37.424481",
   "items": [
     {
-      "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
-      "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
-      "published": "Tue, 03 Nov 2026 13:51:04 -0500",
+      "title": "Hackers hijack cPGuard autoupdate to deploy backdoor, steal data",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/",
+      "published": "Tue, 03 Nov 2026 17:18:50 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
-      "url": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
-      "published": "Wed, 04 Nov 2026 00:16:38 +0530",
-      "source": "The Hacker News"
+      "title": "WorkOS says attacker used ARTEX AI to breach internal sales app",
+      "url": "https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/",
+      "published": "Tue, 03 Nov 2026 16:28:44 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
-      "url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
-      "published": "Tue, 03 Nov 2026 23:46:19 +0530",
-      "source": "The Hacker News"
+      "title": "Binance says fake job interview led to $6.3 billion crypto heist",
+      "url": "https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist/",
+      "published": "Tue, 03 Nov 2026 15:05:50 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
