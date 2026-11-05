@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-05T06:15:02.238835",
+  "generated_at": "2026-11-05T19:47:56.450244",
   "items": [
     {
-      "title": "Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says",
-      "url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
-      "published": "Thu, 05 Nov 2026 10:47:04 +0530",
-      "source": "The Hacker News"
+      "title": "OpenAI’s GPT-6 Astra silently obstructed safety research tasks",
+      "url": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
+      "published": "Thu, 05 Nov 2026 14:24:26 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
-      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
-      "published": "Thu, 05 Nov 2026 10:01:16 +0530",
-      "source": "The Hacker News"
+      "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
+      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
+      "published": "Thu, 05 Nov 2026 12:45:29 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Vercel rolls out new protection against stolen session cookie attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/",
-      "published": "Wed, 04 Nov 2026 16:31:18 -0500",
+      "title": "Hackers backdoor Linux servers using trojanized CWP web server",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/",
+      "published": "Thu, 05 Nov 2026 11:24:26 -0500",
       "source": "BleepingComputer"
     }
   ]
