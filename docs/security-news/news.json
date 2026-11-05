@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-04T19:38:31.175977",
+  "generated_at": "2026-11-05T06:15:02.238835",
   "items": [
     {
-      "title": "DreamHost confirms data breach exposed FTP logins and webmail sessions",
-      "url": "https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/",
-      "published": "Wed, 04 Nov 2026 14:05:19 -0500",
-      "source": "BleepingComputer"
+      "title": "Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
+      "published": "Thu, 05 Nov 2026 10:47:04 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Cyberattack Hits French Blood Banks as Hackers Target Refrigeration Systems Across Europe",
-      "url": "https://securityaffairs.com/202431/hacking/cyberattack-hits-french-blood-banks-as-hackers-target-refrigeration-systems-across-europe.html",
-      "published": "Wed, 04 Nov 2026 19:01:57 +0000",
-      "source": "Security Affairs"
+      "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+      "published": "Thu, 05 Nov 2026 10:01:16 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Cyberattack disrupts blood storage refrigeration systems in France",
-      "url": "https://www.bleepingcomputer.com/news/security/cyberattack-disrupts-blood-storage-refrigeration-systems-in-france/",
-      "published": "Wed, 04 Nov 2026 13:02:56 -0500",
+      "title": "Vercel rolls out new protection against stolen session cookie attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/vercel-rolls-out-new-protection-against-stolen-session-cookie-attacks/",
+      "published": "Wed, 04 Nov 2026 16:31:18 -0500",
       "source": "BleepingComputer"
     }
   ]
