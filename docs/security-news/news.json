@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-05T19:47:56.450244",
+  "generated_at": "2026-11-06T06:09:19.946743",
   "items": [
     {
-      "title": "OpenAI’s GPT-6 Astra silently obstructed safety research tasks",
-      "url": "https://www.bleepingcomputer.com/news/security/openais-gpt-6-astra-silently-obstructed-safety-research-tasks/",
-      "published": "Thu, 05 Nov 2026 14:24:26 -0500",
+      "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
+      "url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
+      "published": "Thu, 05 Nov 2026 19:56:44 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "OpenSSH flaw lets attackers log into password-disabled Linux accounts",
-      "url": "https://www.bleepingcomputer.com/news/security/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts/",
-      "published": "Thu, 05 Nov 2026 12:45:29 -0500",
+      "title": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
+      "published": "Thu, 05 Nov 2026 16:30:30 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers backdoor Linux servers using trojanized CWP web server",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/",
-      "published": "Thu, 05 Nov 2026 11:24:26 -0500",
+      "title": "Nearly 1.5 million exposed secrets targeted in new revocation program",
+      "url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
+      "published": "Thu, 05 Nov 2026 15:15:08 -0500",
       "source": "BleepingComputer"
     }
   ]
