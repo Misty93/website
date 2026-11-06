@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-06T06:09:19.946743",
+  "generated_at": "2026-11-06T19:12:46.514255",
   "items": [
     {
-      "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
-      "published": "Thu, 05 Nov 2026 19:56:44 -0500",
+      "title": "Fake security tools on GitHub push backdoors and infostealers",
+      "url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
+      "published": "Fri, 06 Nov 2026 13:46:52 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
-      "published": "Thu, 05 Nov 2026 16:30:30 -0500",
+      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+      "published": "Fri, 06 Nov 2026 12:04:23 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Nearly 1.5 million exposed secrets targeted in new revocation program",
-      "url": "https://www.bleepingcomputer.com/news/security/truffle-security-launches-program-to-revoke-14-million-live-secrets/",
-      "published": "Thu, 05 Nov 2026 15:15:08 -0500",
-      "source": "BleepingComputer"
+      "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
+      "url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
+      "published": "Fri, 06 Nov 2026 21:38:38 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
