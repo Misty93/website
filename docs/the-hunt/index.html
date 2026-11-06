@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>The Hunt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     * {
       box-sizing: border-box;
@@ -14,7 +15,6 @@
       color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -23,7 +23,6 @@
     main {
       flex: 1;
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 4rem 1.5rem;
       text-align: center;
@@ -31,7 +30,7 @@
 
     h1 {
       color: #ff4500;
-      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-size: clamp(2rem, 6vw, 3.5rem);
       margin: 0;
     }
 
@@ -51,33 +50,9 @@
       text-decoration: underline;
     }
 
-    footer {
-      background-color: #1a1a1a;
-      border-top: 1px solid #2a2a2a;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem 1.5rem;
-      line-height: 1.6;
-    }
-
-    .back {
-      margin: 2rem 0 0;
-    }
-
-    /* Tool introduction (replaces "Coming soon") */
     .intro {
       width: 100%;
       max-width: 960px;
-    }
-
-    .intro h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
     }
 
     .badge {
@@ -127,6 +102,11 @@
       margin: 2.5rem 0 0;
     }
 
+    .shot a {
+      display: inline-block;
+      max-width: 100%;
+    }
+
     .shot img {
       display: block;
       width: 100%;
@@ -140,7 +120,25 @@
     .shot figcaption {
       margin-top: 0.75rem;
       font-size: 0.9rem;
+      line-height: 1.5;
       color: #9a9a9a;
+    }
+
+    .demo-update {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    .demo-update .lead {
+      text-align: left;
+    }
+
+    .demo-update .shot img {
+      width: auto;
+      max-width: min(100%, 760px);
+      max-height: 760px;
+      object-fit: contain;
     }
 
     .next {
@@ -149,12 +147,32 @@
       color: #9a9a9a;
       line-height: 1.6;
     }
+
+    footer {
+      background-color: #1a1a1a;
+      border-top: 1px solid #2a2a2a;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem 1.5rem;
+      line-height: 1.6;
+    }
+
+    .back {
+      margin: 2rem 0 0;
+    }
   </style>
 </head>
+
 <body>
   <main>
-    <section class="intro">
-      <h1>Auto Threat Hunt Platform</h1>
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Auto Threat Hunt Platform</h1>
       <span class="badge">Demo version</span>
 
       <p class="lead">
@@ -172,12 +190,104 @@
       </ul>
 
       <figure class="shot">
-        <img src="hunt-demo.png" alt="Auto Threat Hunt Platform demo: manual and scheduled hunt settings" />
-        <figcaption>Current demo: manual and scheduled hunt settings.</figcaption>
+        <img
+          src="hunt-demo.png"
+          alt="Auto Threat Hunt Platform demo showing manual and scheduled hunt settings"
+        />
+        <figcaption>First demo: manual and scheduled hunt settings.</figcaption>
       </figure>
 
+      <section class="demo-update" aria-labelledby="alert-investigation">
+        <h2 id="alert-investigation">From a Wazuh alert to an investigation</h2>
+
+        <p class="lead">
+          I promised to document the process behind Auto Threat Hunt as it evolves.
+          The first demo showed how to run hunts manually or on a schedule.
+          For this update, I started with the questions I usually ask when a SIEM
+          alert comes in. What else ran on that host? What launched it?
+          Which network connections were recorded around the same time?
+        </p>
+
+        <p class="lead">
+          In the Alert Investigation demo, I select a Wazuh alert and run a predefined
+          set of queries on the device identified in that alert. ATH checks process
+          activity and network connections within 15 minutes before and after the alert.
+          When a process GUID is available, ATH highlights events linked to that process
+          so I can distinguish them from other activity on the same host.
+        </p>
+
+        <figure class="shot">
+          <a href="Firewall%20alert%20screenshot%20with%20black%20redactions-1.png">
+            <img
+              src="Firewall%20alert%20screenshot%20with%20black%20redactions-1.png"
+              alt="ATH demo with the Wazuh alert selector open and identifying details redacted"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Choosing a Wazuh alert as the starting point for an investigation.</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a href="Redacted%20firewall%20alert%20screenshot-2.png">
+            <img
+              src="Redacted%20firewall%20alert%20screenshot-2.png"
+              alt="ATH investigation results showing zero process and network records for the selected alert"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>
+            I used a firewall alert to test the workflow. The queries returned zero
+            process and network records within the investigation window.
+          </figcaption>
+        </figure>
+
+        <p class="lead">
+          I kept this version simple on purpose to show the workflow from alert selection
+          to evidence review. The results view still needs work. I want the fields that
+          matter for each check to be visible at a glance, with raw logs available on
+          demand. I also need to define which Wazuh rules are in scope, which queries
+          make sense for each alert type, and whether the investigation window should
+          vary by alert type.
+        </p>
+
+        <p class="lead">
+          The Hunt Library continues to grow alongside the investigation demo.
+          It includes Sigma rules, MITRE CAR analytics, and hunts for previously unseen
+          process and parent combinations and for failed logons followed by a success.
+        </p>
+
+        <figure class="shot">
+          <a href="Masked%20ATH%20hunt%20agent%20ID-3.png">
+            <img
+              src="Masked%20ATH%20hunt%20agent%20ID-3.png"
+              alt="Auto Threat Hunt interface with the agent identifier redacted"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>The Hunt Library alongside the Alert Investigation demo.</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <a href="Precise%20hostname%20and%20account%20masking-1.png">
+            <img
+              src="Precise%20hostname%20and%20account%20masking-1.png"
+              alt="Anonymized ATH finding with host and account details redacted"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>An example of a finding available for analyst review.</figcaption>
+        </figure>
+
+        <p class="lead">
+          Next, I want to hunt for the execution of tools that are unapproved in a given
+          environment and may fall outside existing SIEM rule coverage. Checks for
+          scheduled tasks and startup registry changes will follow as I validate the
+          telemetry.
+        </p>
+      </section>
+
       <p class="next">
-        More hunt rules and anonymized results from real hunts will be added here soon.
+        I’ll keep sharing new hunts and anonymized results here as the platform evolves.
       </p>
     </section>
   </main>
