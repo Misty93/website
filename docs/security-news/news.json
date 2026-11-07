@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-07T05:39:22.790169",
+  "generated_at": "2026-11-07T17:41:13.794746",
   "items": [
     {
-      "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
-      "published": "Fri, 06 Nov 2026 19:00:55 -0500",
+      "title": "Hackers pull off $133 million French bank heist via service provider",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+      "published": "Sat, 07 Nov 2026 10:25:35 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
-      "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
-      "published": "Fri, 06 Nov 2026 17:27:25 -0500",
+      "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands",
+      "url": "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/",
+      "published": "Sat, 07 Nov 2026 09:10:19 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "White House Network Appears in Global Residential Proxy Traffic",
-      "url": "https://securityaffairs.com/202563/security/white-house-network-appears-in-global-residential-proxy-traffic.html",
-      "published": "Fri, 06 Nov 2026 22:17:34 +0000",
-      "source": "Security Affairs"
+      "title": "CVE-2026-123776",
+      "url": "https://www.tenable.com/cve/CVE-2026-123776",
+      "published": "Sat, 07 Nov 2026 11:51:18 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
