@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-06T19:12:46.514255",
+  "generated_at": "2026-11-07T05:39:22.790169",
   "items": [
     {
-      "title": "Fake security tools on GitHub push backdoors and infostealers",
-      "url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
-      "published": "Fri, 06 Nov 2026 13:46:52 -0500",
+      "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+      "published": "Fri, 06 Nov 2026 19:00:55 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
-      "published": "Fri, 06 Nov 2026 12:04:23 -0500",
+      "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
+      "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+      "published": "Fri, 06 Nov 2026 17:27:25 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
-      "url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
-      "published": "Fri, 06 Nov 2026 21:38:38 +0530",
-      "source": "The Hacker News"
+      "title": "White House Network Appears in Global Residential Proxy Traffic",
+      "url": "https://securityaffairs.com/202563/security/white-house-network-appears-in-global-residential-proxy-traffic.html",
+      "published": "Fri, 06 Nov 2026 22:17:34 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
