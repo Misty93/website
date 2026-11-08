@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-07T17:41:13.794746",
+  "generated_at": "2026-11-08T05:41:40.272338",
   "items": [
+    {
+      "title": "Inside ARTEX: AI Hacking Tools, Exposed Servers and South Korean Bank Breaches",
+      "url": "https://securityaffairs.com/202607/ai/inside-artex-ai-hacking-tools-exposed-servers-and-south-korean-bank-breaches.html",
+      "published": "Sat, 07 Nov 2026 19:56:18 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "One Product Isn’t the Problem: Monetizing an AI Portfolio Without Confusing Your Customers",
+      "url": "https://securityaffairs.com/202603/ai/one-product-isnt-the-problem-monetizing-an-ai-portfolio-without-confusing-your-customers.html",
+      "published": "Sat, 07 Nov 2026 18:48:55 +0000",
+      "source": "Security Affairs"
+    },
     {
       "title": "Hackers pull off $133 million French bank heist via service provider",
       "url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
       "published": "Sat, 07 Nov 2026 10:25:35 -0500",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "CTM360 Exposes Fake Gift Card Scams Exploiting Trusted Brands",
-      "url": "https://www.bleepingcomputer.com/news/security/ctm360-exposes-fake-gift-card-scams-exploiting-trusted-brands/",
-      "published": "Sat, 07 Nov 2026 09:10:19 -0500",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "CVE-2026-123776",
-      "url": "https://www.tenable.com/cve/CVE-2026-123776",
-      "published": "Sat, 07 Nov 2026 11:51:18 GMT",
-      "source": "Tenable CVE"
     }
   ]
 }
