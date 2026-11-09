@@ -28,6 +28,7 @@ jobs:
           ABUSEIPDBKEY: ${{ secrets.ABUSEIPDBKEY }}
           URLSCANIO: ${{ secrets.URLSCANIO }}
           URLHAUS: ${{ secrets.URLHAUS }}
+          MALWAREBAZAAR_AUTH_KEY: ${{ secrets.MALWAREBAZAAR_AUTH_KEY }}
         run: python3 fetch_iocs.py
 
       - name: Commit and push changes
