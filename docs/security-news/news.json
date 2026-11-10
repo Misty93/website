@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-10T06:56:59.361544",
+  "generated_at": "2026-11-10T19:34:50.916297",
   "items": [
     {
-      "title": "CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws",
-      "url": "https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html",
-      "published": "Tue, 10 Nov 2026 12:01:42 +0530",
+      "title": "Hackers exploit trusted AWS access to breach multiple cloud environments",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
+      "published": "Tue, 10 Nov 2026 14:31:11 -0500",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones",
+      "url": "https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html",
+      "published": "Wed, 11 Nov 2026 00:53:10 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Iris Ohyama data breach may expose personal information of 7.7 million people",
-      "url": "https://securityaffairs.com/202740/data-breach/iris-ohyama-data-breach-may-expose-personal-information-of-7-7-million-people.html",
-      "published": "Tue, 10 Nov 2026 06:28:06 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "Vanderbilt University hit in BYOD ransomware attack, data theft claimed",
-      "url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
-      "published": "Mon, 09 Nov 2026 18:52:12 -0500",
-      "source": "BleepingComputer"
+      "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
+      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
+      "published": "Wed, 11 Nov 2026 00:49:39 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
