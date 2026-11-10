@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-09T22:12:24.193524",
+  "generated_at": "2026-11-10T06:56:59.361544",
   "items": [
     {
-      "title": "SEGA newsletter data breach exposes 2.2 million email addresses",
-      "url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
-      "published": "Mon, 09 Nov 2026 17:09:33 -0500",
-      "source": "BleepingComputer"
+      "title": "CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws",
+      "url": "https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html",
+      "published": "Tue, 10 Nov 2026 12:01:42 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "N-able takes cloud platform offline after 30+ \"zero-days\" published",
-      "url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
-      "published": "Mon, 09 Nov 2026 16:26:25 -0500",
-      "source": "BleepingComputer"
+      "title": "Iris Ohyama data breach may expose personal information of 7.7 million people",
+      "url": "https://securityaffairs.com/202740/data-breach/iris-ohyama-data-breach-may-expose-personal-information-of-7-7-million-people.html",
+      "published": "Tue, 10 Nov 2026 06:28:06 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "York University breach exposed personal information dating to 2007",
-      "url": "https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007/",
-      "published": "Mon, 09 Nov 2026 16:22:31 -0500",
+      "title": "Vanderbilt University hit in BYOD ransomware attack, data theft claimed",
+      "url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+      "published": "Mon, 09 Nov 2026 18:52:12 -0500",
       "source": "BleepingComputer"
     }
   ]
