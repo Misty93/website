@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-11T05:47:48.226372",
+  "generated_at": "2026-11-11T19:28:21.929111",
   "items": [
     {
-      "title": "Railway breach leads to $740,000 in fraudulent AI charges",
-      "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
-      "published": "Tue, 10 Nov 2026 17:20:19 -0500",
+      "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
+      "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+      "published": "Wed, 11 Nov 2026 11:24:18 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "U.S. CISA adds IBM, SignalWire FreeSwitch, OpenSSH, and GPUStack flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/202813/hacking/u-s-cisa-adds-ibm-signalwire-freeswitch-openssh-and-gpustack-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Tue, 10 Nov 2026 21:31:24 +0000",
-      "source": "Security Affairs"
+      "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
+      "url": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
+      "published": "Wed, 11 Nov 2026 21:42:46 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
-      "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
-      "published": "Tue, 10 Nov 2026 15:54:55 -0500",
-      "source": "BleepingComputer"
+      "title": "AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets",
+      "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
+      "published": "Wed, 11 Nov 2026 21:04:27 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
