@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-10T19:34:50.916297",
+  "generated_at": "2026-11-11T05:47:48.226372",
   "items": [
     {
-      "title": "Hackers exploit trusted AWS access to breach multiple cloud environments",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
-      "published": "Tue, 10 Nov 2026 14:31:11 -0500",
+      "title": "Railway breach leads to $740,000 in fraudulent AI charges",
+      "url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+      "published": "Tue, 10 Nov 2026 17:20:19 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones",
-      "url": "https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html",
-      "published": "Wed, 11 Nov 2026 00:53:10 +0530",
-      "source": "The Hacker News"
+      "title": "U.S. CISA adds IBM, SignalWire FreeSwitch, OpenSSH, and GPUStack flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/202813/hacking/u-s-cisa-adds-ibm-signalwire-freeswitch-openssh-and-gpustack-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Tue, 10 Nov 2026 21:31:24 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
-      "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
-      "published": "Wed, 11 Nov 2026 00:49:39 +0530",
-      "source": "The Hacker News"
+      "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
+      "url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
+      "published": "Tue, 10 Nov 2026 15:54:55 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
