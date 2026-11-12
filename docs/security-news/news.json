@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-11T19:28:21.929111",
+  "generated_at": "2026-11-12T06:53:16.201461",
   "items": [
     {
-      "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
-      "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-      "published": "Wed, 11 Nov 2026 11:24:18 -0500",
+      "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+      "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+      "published": "Thu, 12 Nov 2026 10:42:26 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ScreenConnect Attacks Target at Least 288 Endpoints Across 48 Organizations With Rogue Clients",
+      "url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html",
+      "published": "Thu, 12 Nov 2026 10:09:48 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Baker Tilly notifies clients of data breach at third-party provider",
+      "url": "https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/",
+      "published": "Wed, 11 Nov 2026 18:01:31 -0500",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
-      "url": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
-      "published": "Wed, 11 Nov 2026 21:42:46 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets",
-      "url": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
-      "published": "Wed, 11 Nov 2026 21:04:27 +0530",
-      "source": "The Hacker News"
     }
   ]
 }
