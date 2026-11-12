@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-12T06:53:16.201461",
+  "generated_at": "2026-11-12T19:46:45.916161",
   "items": [
     {
-      "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
-      "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
-      "published": "Thu, 12 Nov 2026 10:42:26 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "ScreenConnect Attacks Target at Least 288 Endpoints Across 48 Organizations With Rogue Clients",
-      "url": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html",
-      "published": "Thu, 12 Nov 2026 10:09:48 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Baker Tilly notifies clients of data breach at third-party provider",
-      "url": "https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/",
-      "published": "Wed, 11 Nov 2026 18:01:31 -0500",
+      "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
+      "url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
+      "published": "Thu, 12 Nov 2026 14:12:55 -0500",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "2026-020: Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway",
+      "url": "https://cert.europa.eu/publications/security-advisories/2026-020/",
+      "published": "Thu, 12 Nov 2026 18:20:53 CET",
+      "source": "CERT EU"
+    },
+    {
+      "title": "Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them",
+      "url": "https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html",
+      "published": "Thu, 12 Nov 2026 23:37:15 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
