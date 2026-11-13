@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-12T19:46:45.916161",
+  "generated_at": "2026-11-13T06:13:44.698781",
   "items": [
     {
-      "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
-      "url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
-      "published": "Thu, 12 Nov 2026 14:12:55 -0500",
+      "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+      "published": "Fri, 13 Nov 2026 11:13:28 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+      "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+      "published": "Thu, 12 Nov 2026 17:53:10 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "2026-020: Critical Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway",
-      "url": "https://cert.europa.eu/publications/security-advisories/2026-020/",
-      "published": "Thu, 12 Nov 2026 18:20:53 CET",
-      "source": "CERT EU"
-    },
-    {
-      "title": "Webinar: See How Identity Blind Spots Put Your SOC at Risk and How to Close Them",
-      "url": "https://thehackernews.com/2026/11/your-soc-sees-alert-but-does-it-know.html",
-      "published": "Thu, 12 Nov 2026 23:37:15 +0530",
-      "source": "The Hacker News"
+      "title": "The School Bomb Threats Came From Accounts Already in Stolen Data",
+      "url": "https://securityaffairs.com/202941/security/the-school-bomb-threats-came-from-accounts-already-in-stolen-data.html",
+      "published": "Thu, 12 Nov 2026 22:42:10 +0000",
+      "source": "Security Affairs"
     }
   ]
 }
