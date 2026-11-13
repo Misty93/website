@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-13T06:13:44.698781",
+  "generated_at": "2026-11-13T19:29:24.604333",
   "items": [
     {
-      "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
-      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
-      "published": "Fri, 13 Nov 2026 11:13:28 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
-      "url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
-      "published": "Thu, 12 Nov 2026 17:53:10 -0500",
+      "title": "German military drone operations disrupted by cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+      "published": "Fri, 13 Nov 2026 12:31:56 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "The School Bomb Threats Came From Accounts Already in Stolen Data",
-      "url": "https://securityaffairs.com/202941/security/the-school-bomb-threats-came-from-accounts-already-in-stolen-data.html",
-      "published": "Thu, 12 Nov 2026 22:42:10 +0000",
-      "source": "Security Affairs"
+      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+      "published": "Fri, 13 Nov 2026 22:23:08 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+      "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+      "published": "Fri, 13 Nov 2026 11:21:43 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
