@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-13T19:29:24.604333",
+  "generated_at": "2026-11-14T05:57:20.294203",
   "items": [
+    {
+      "title": "North Korea ‘s Crypto Theft Operations: DOJ Seizes $1.2 Billion and Disrupts Hacker Infrastructure",
+      "url": "https://securityaffairs.com/203012/cyber-crime/north-korea-crypto-theft-operations-doj-seizes-1-2-billion-and-disrupts-hacker-infrastructure.html",
+      "published": "Fri, 13 Nov 2026 21:19:30 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
+      "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+      "published": "Fri, 13 Nov 2026 14:38:36 -0500",
+      "source": "BleepingComputer"
+    },
     {
       "title": "German military drone operations disrupted by cyberattack",
       "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
       "published": "Fri, 13 Nov 2026 12:31:56 -0500",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-      "url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
-      "published": "Fri, 13 Nov 2026 22:23:08 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
-      "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
-      "published": "Fri, 13 Nov 2026 11:21:43 -0500",
       "source": "BleepingComputer"
     }
   ]
