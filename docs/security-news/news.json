@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T17:52:29.302729",
+  "generated_at": "2026-11-15T05:59:12.333233",
   "items": [
     {
       "title": "Cursor confirms security breach led to malicious Claude Code extension",
@@ -14,10 +14,10 @@
       "source": "Security Affairs"
     },
     {
-      "title": "US disrupts North Korean campaign behind $400 million crypto theft",
-      "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
-      "published": "Sat, 14 Nov 2026 10:15:49 -0500",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-129261",
+      "url": "https://www.tenable.com/cve/CVE-2026-129261",
+      "published": "Sat, 14 Nov 2026 16:17:04 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
