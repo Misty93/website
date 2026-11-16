@@ -1,6 +1,12 @@
 {
-  "generated_at": "2026-11-15T18:42:44.789721",
+  "generated_at": "2026-11-16T05:58:53.221471",
   "items": [
+    {
+      "title": "The Microsoft Outage Left 15 Hotel Guests Poisoned by Chlorine",
+      "url": "https://securityaffairs.com/203189/security/the-microsoft-outage-left-15-hotel-guests-poisoned-by-chlorine.html",
+      "published": "Sun, 15 Nov 2026 22:38:00 +0000",
+      "source": "Security Affairs"
+    },
     {
       "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
       "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
@@ -8,15 +14,9 @@
       "source": "BleepingComputer"
     },
     {
-      "title": "SECURITY AFFAIRS AI-CYBERSECURITY NEWSLETTER ROUND 8",
-      "url": "https://securityaffairs.com/203165/ai/security-affairs-ai-cybersecurity-newsletter-round-8.html",
-      "published": "Sun, 15 Nov 2026 16:06:11 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 123",
-      "url": "https://securityaffairs.com/203156/malware/security-affairs-malware-newsletter-round-123.html",
-      "published": "Sun, 15 Nov 2026 15:49:04 +0000",
+      "title": "Meta Fined €805 Million in Italy Over Facebook’s Default Photo Gallery Access",
+      "url": "https://securityaffairs.com/203174/laws-and-regulations/meta-fined-e805-million-in-italy-over-facebooks-default-photo-gallery-access.html",
+      "published": "Sun, 15 Nov 2026 18:11:56 +0000",
       "source": "Security Affairs"
     }
   ]
