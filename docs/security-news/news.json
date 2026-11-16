@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-16T05:58:53.221471",
+  "generated_at": "2026-11-16T21:53:23.686596",
   "items": [
     {
-      "title": "The Microsoft Outage Left 15 Hotel Guests Poisoned by Chlorine",
-      "url": "https://securityaffairs.com/203189/security/the-microsoft-outage-left-15-hotel-guests-poisoned-by-chlorine.html",
-      "published": "Sun, 15 Nov 2026 22:38:00 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
-      "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
-      "published": "Sun, 15 Nov 2026 13:29:53 -0500",
+      "title": "Google Project Zero cuts bug disclosures to 30 days amid AI threats",
+      "url": "https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/",
+      "published": "Mon, 16 Nov 2026 16:31:44 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Meta Fined €805 Million in Italy Over Facebook’s Default Photo Gallery Access",
-      "url": "https://securityaffairs.com/203174/laws-and-regulations/meta-fined-e805-million-in-italy-over-facebooks-default-photo-gallery-access.html",
-      "published": "Sun, 15 Nov 2026 18:11:56 +0000",
-      "source": "Security Affairs"
+      "title": "California sues OpenAI over AI agents escaping sandboxes, hacking firms",
+      "url": "https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/",
+      "published": "Mon, 16 Nov 2026 15:59:44 -0500",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
+      "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+      "published": "Mon, 16 Nov 2026 14:57:13 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
