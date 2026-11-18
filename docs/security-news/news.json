@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-18T06:59:06.533064",
+  "generated_at": "2026-11-18T20:19:03.188227",
   "items": [
     {
-      "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
-      "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
-      "published": "Wed, 18 Nov 2026 11:28:04 +0530",
-      "source": "The Hacker News"
+      "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
+      "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html",
+      "published": "Wed, 18 Nov 2026 20:11:35 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Java4Shell (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak on Java 17+ AVX-512 VBMI Servers",
-      "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
-      "published": "Wed, 18 Nov 2026 09:57:41 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
-      "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
-      "published": "Tue, 17 Nov 2026 18:04:21 -0500",
+      "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
+      "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
+      "published": "Wed, 18 Nov 2026 14:39:33 -0500",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
+      "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
+      "published": "Thu, 19 Nov 2026 00:01:17 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
