@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-17T20:43:43.830385",
+  "generated_at": "2026-11-18T06:59:06.533064",
   "items": [
     {
-      "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
-      "url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
-      "published": "Wed, 18 Nov 2026 01:04:20 +0530",
+      "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+      "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+      "published": "Wed, 18 Nov 2026 11:28:04 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Apple reports outages affecting iCloud Mail, AppleCare and more",
-      "url": "https://www.bleepingcomputer.com/news/apple/apple-reports-outages-affecting-icloud-mail-applecare-and-more/",
-      "published": "Tue, 17 Nov 2026 14:24:07 -0500",
-      "source": "BleepingComputer"
+      "title": "Java4Shell (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak on Java 17+ AVX-512 VBMI Servers",
+      "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
+      "published": "Wed, 18 Nov 2026 09:57:41 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
-      "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
-      "published": "Tue, 17 Nov 2026 19:11:20 +0000",
-      "source": "Security Affairs"
+      "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
+      "published": "Tue, 17 Nov 2026 18:04:21 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
