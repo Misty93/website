@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-18T20:19:03.188227",
+  "generated_at": "2026-11-19T06:59:42.722892",
   "items": [
     {
-      "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
-      "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html",
-      "published": "Wed, 18 Nov 2026 20:11:35 +0000",
-      "source": "Security Affairs"
+      "title": "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
+      "url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
+      "published": "Thu, 19 Nov 2026 10:03:46 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
-      "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
-      "published": "Wed, 18 Nov 2026 14:39:33 -0500",
+      "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+      "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
+      "published": "Wed, 18 Nov 2026 18:08:33 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
-      "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
-      "published": "Thu, 19 Nov 2026 00:01:17 +0530",
-      "source": "The Hacker News"
+      "title": "Coinbase blocks $4.7 million in transfers to Elon Musk deepfake scam",
+      "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
+      "published": "Wed, 18 Nov 2026 15:49:32 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
