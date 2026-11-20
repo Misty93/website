@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-20T06:52:10.360888",
+  "generated_at": "2026-11-20T19:54:19.070257",
   "items": [
     {
-      "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
-      "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
-      "published": "Fri, 20 Nov 2026 11:00:01 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "VMware patches vCenter zero-day exploited in attacks since September",
-      "url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
-      "published": "Thu, 19 Nov 2026 19:26:25 -0500",
+      "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
+      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+      "published": "Fri, 20 Nov 2026 13:51:43 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
-      "published": "Thu, 19 Nov 2026 17:25:42 -0500",
+      "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
+      "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
+      "published": "Fri, 20 Nov 2026 23:27:20 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
+      "published": "Fri, 20 Nov 2026 12:30:00 -0500",
       "source": "BleepingComputer"
     }
   ]
