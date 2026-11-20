@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-19T20:23:17.018996",
+  "generated_at": "2026-11-20T06:52:10.360888",
   "items": [
     {
-      "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
-      "url": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
-      "published": "Fri, 20 Nov 2026 00:17:58 +0530",
+      "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
+      "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+      "published": "Fri, 20 Nov 2026 11:00:01 +0530",
       "source": "The Hacker News"
     },
     {
-      "title": "Transport for London breach exposes 265,000 Oyster card users' data",
-      "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
-      "published": "Thu, 19 Nov 2026 13:20:01 -0500",
+      "title": "VMware patches vCenter zero-day exploited in attacks since September",
+      "url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+      "published": "Thu, 19 Nov 2026 19:26:25 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "U.S. CISA adds Apache Axis, Vanderbilt REDCap,BerriAI LiteLLM, and Synology DSM flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/203504/hacking/u-s-cisa-adds-apache-axis-vanderbilt-redcapberriai-litellm-and-synology-dsm-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Thu, 19 Nov 2026 17:14:39 +0000",
-      "source": "Security Affairs"
+      "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
+      "published": "Thu, 19 Nov 2026 17:25:42 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
