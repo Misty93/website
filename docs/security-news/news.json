@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-20T19:54:19.070257",
+  "generated_at": "2026-11-21T06:46:44.170934",
   "items": [
     {
-      "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
-      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
-      "published": "Fri, 20 Nov 2026 13:51:43 -0500",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-23871: WhatsApp Bug Helped Scammers Make Messages Look Legitimate",
+      "url": "https://securityaffairs.com/203622/security/cve-2026-23871-whatsapp-bug-helped-scammers-make-messages-look-legitimate.html",
+      "published": "Fri, 20 Nov 2026 22:21:12 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-      "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
-      "published": "Fri, 20 Nov 2026 23:27:20 +0530",
-      "source": "The Hacker News"
+      "title": "CVE-2026-54046",
+      "url": "https://www.tenable.com/cve/CVE-2026-54046",
+      "published": "Fri, 20 Nov 2026 20:17:43 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
-      "published": "Fri, 20 Nov 2026 12:30:00 -0500",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-54045",
+      "url": "https://www.tenable.com/cve/CVE-2026-54045",
+      "published": "Fri, 20 Nov 2026 20:17:42 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
