@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-21T18:59:44.505724",
+  "generated_at": "2026-11-22T06:17:50.787314",
   "items": [
     {
-      "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
-      "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
-      "published": "Sat, 21 Nov 2026 13:01:58 -0500",
+      "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+      "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+      "published": "Sun, 22 Nov 2026 10:36:55 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+      "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+      "published": "Sun, 22 Nov 2026 10:33:41 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+      "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+      "published": "Sat, 21 Nov 2026 17:59:58 -0500",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Cairn AI Framework Used in Autonomous Zero-Day Exploitation",
-      "url": "https://securityaffairs.com/203664/ai/cairn-ai-framework-used-in-autonomous-zero-day-exploitation.html",
-      "published": "Sat, 21 Nov 2026 16:50:49 +0000",
-      "source": "Security Affairs"
-    },
-    {
-      "title": "U.S. CISA adds Cisco Expressway, SAP NetWeaver, Broadcom VMware vCenter, and Apache Roller flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/203639/security/u-s-cisa-adds-cisco-expressway-sap-netweaver-broadcom-vmware-vcenter-and-apache-roller-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Sat, 21 Nov 2026 16:09:38 +0000",
-      "source": "Security Affairs"
     }
   ]
 }
