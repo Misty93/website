@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-22T06:17:50.787314",
+  "generated_at": "2026-11-22T19:23:49.481722",
   "items": [
     {
-      "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
-      "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-      "published": "Sun, 22 Nov 2026 10:36:55 +0530",
-      "source": "The Hacker News"
+      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+      "published": "Sun, 22 Nov 2026 13:45:37 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
-      "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
-      "published": "Sun, 22 Nov 2026 10:33:41 +0530",
-      "source": "The Hacker News"
+      "title": "Signal Is Blocking AI Agents From Reading Your Screen",
+      "url": "https://securityaffairs.com/203742/ai/signal-is-blocking-ai-agents-from-reading-your-screen.html",
+      "published": "Sun, 22 Nov 2026 18:01:22 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
-      "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
-      "published": "Sat, 21 Nov 2026 17:59:58 -0500",
+      "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+      "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+      "published": "Sun, 22 Nov 2026 10:43:04 -0500",
       "source": "BleepingComputer"
     }
   ]
