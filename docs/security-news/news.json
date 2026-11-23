@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-23T07:09:08.383807",
+  "generated_at": "2026-11-23T23:43:26.685888",
   "items": [
     {
-      "title": "CVE-2026-134624",
-      "url": "https://www.tenable.com/cve/CVE-2026-134624",
-      "published": "Sun, 22 Nov 2026 19:16:32 GMT",
-      "source": "Tenable CVE"
-    },
-    {
-      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
-      "published": "Sun, 22 Nov 2026 13:45:37 -0500",
+      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+      "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+      "published": "Mon, 23 Nov 2026 15:54:51 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Signal Is Blocking AI Agents From Reading Your Screen",
-      "url": "https://securityaffairs.com/203742/ai/signal-is-blocking-ai-agents-from-reading-your-screen.html",
-      "published": "Sun, 22 Nov 2026 18:01:22 +0000",
-      "source": "Security Affairs"
+      "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+      "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+      "published": "Mon, 23 Nov 2026 15:00:20 -0500",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "published": "Mon, 23 Nov 2026 14:42:20 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
