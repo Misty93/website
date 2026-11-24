@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-23T23:43:26.685888",
+  "generated_at": "2026-11-24T09:32:49.838271",
   "items": [
     {
-      "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-      "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-      "published": "Mon, 23 Nov 2026 15:54:51 -0500",
-      "source": "BleepingComputer"
+      "title": "Hackers May Have Breached FBI Database Used by Police Nationwide",
+      "url": "https://securityaffairs.com/203865/cyber-crime/hackers-may-have-breached-fbi-database-used-by-police-nationwide.html",
+      "published": "Tue, 24 Nov 2026 07:05:05 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "OpenRouter drops AI providers over leaked prompts and secrets",
-      "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
-      "published": "Mon, 23 Nov 2026 15:00:20 -0500",
-      "source": "BleepingComputer"
+      "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+      "published": "Tue, 24 Nov 2026 11:32:57 +0530",
+      "source": "The Hacker News"
     },
     {
-      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-      "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
-      "published": "Mon, 23 Nov 2026 14:42:20 -0500",
-      "source": "BleepingComputer"
+      "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+      "published": "Tue, 24 Nov 2026 11:32:45 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
