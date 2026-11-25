@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-25T08:03:30.626541",
+  "generated_at": "2026-11-25T21:30:41.598027",
   "items": [
     {
-      "title": "Hackers reportedly breached CIA intelligence analysis system",
-      "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
-      "published": "Wed, 25 Nov 2026 02:45:03 -0500",
+      "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
+      "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
+      "published": "Wed, 25 Nov 2026 21:06:55 +0000",
+      "source": "Security Affairs"
+    },
+    {
+      "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
+      "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+      "published": "Wed, 25 Nov 2026 14:39:31 -0500",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
-      "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
-      "published": "Wed, 25 Nov 2026 12:20:19 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-      "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
-      "published": "Wed, 25 Nov 2026 12:07:06 +0530",
-      "source": "The Hacker News"
+      "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
+      "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
+      "published": "Wed, 25 Nov 2026 11:13:40 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
