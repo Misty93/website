@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-26T07:54:38.422574",
+  "generated_at": "2026-11-26T21:18:31.043392",
   "items": [
     {
-      "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
-      "url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
-      "published": "Thu, 26 Nov 2026 12:32:34 +0530",
-      "source": "The Hacker News"
+      "title": "OpenAI warns GPT-6.2 Astra will hit usage limits 40% faster because it fixed a bug",
+      "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-warns-gpt-62-astra-will-hit-usage-limits-40-percent-faster-because-it-fixed-a-bug/",
+      "published": "Thu, 26 Nov 2026 16:06:22 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products",
-      "url": "https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html",
-      "published": "Thu, 26 Nov 2026 12:14:46 +0530",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "U.S. CISA adds HPE, Danfoss, Mitel MiCollab, and Vates Xen Orchestra flaws to its Known Exploited Vulnerabilities catalog",
-      "url": "https://securityaffairs.com/204014/hacking/u-s-cisa-adds-hpe-juniper-session-smart-conductor-and-session-smart-router-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
-      "published": "Thu, 26 Nov 2026 06:05:09 +0000",
+      "title": "Drupal Warns of New Critical Flaw Exploited in the Wild",
+      "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
+      "published": "Thu, 26 Nov 2026 19:45:57 +0000",
       "source": "Security Affairs"
+    },
+    {
+      "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
+      "url": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+      "published": "Fri, 27 Nov 2026 01:09:57 +0530",
+      "source": "The Hacker News"
     }
   ]
 }
