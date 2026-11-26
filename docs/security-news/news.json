@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-25T21:30:41.598027",
+  "generated_at": "2026-11-26T07:54:38.422574",
   "items": [
     {
-      "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
-      "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
-      "published": "Wed, 25 Nov 2026 21:06:55 +0000",
+      "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
+      "url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
+      "published": "Thu, 26 Nov 2026 12:32:34 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html",
+      "published": "Thu, 26 Nov 2026 12:14:46 +0530",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "U.S. CISA adds HPE, Danfoss, Mitel MiCollab, and Vates Xen Orchestra flaws to its Known Exploited Vulnerabilities catalog",
+      "url": "https://securityaffairs.com/204014/hacking/u-s-cisa-adds-hpe-juniper-session-smart-conductor-and-session-smart-router-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+      "published": "Thu, 26 Nov 2026 06:05:09 +0000",
       "source": "Security Affairs"
-    },
-    {
-      "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
-      "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
-      "published": "Wed, 25 Nov 2026 14:39:31 -0500",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
-      "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
-      "published": "Wed, 25 Nov 2026 11:13:40 -0500",
-      "source": "BleepingComputer"
     }
   ]
 }
