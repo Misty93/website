@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-27T07:55:41.135271",
+  "generated_at": "2026-11-27T20:59:47.104817",
   "items": [
     {
-      "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
-      "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
-      "published": "Fri, 27 Nov 2026 11:34:20 +0530",
-      "source": "The Hacker News"
+      "title": "pCloud confirms password manager hack after suspicious login alerts",
+      "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+      "published": "Fri, 27 Nov 2026 14:26:04 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
-      "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
-      "published": "Fri, 27 Nov 2026 11:18:20 +0530",
-      "source": "The Hacker News"
+      "title": "New Boston Scientific data breach exposes personal, medical info",
+      "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+      "published": "Fri, 27 Nov 2026 13:57:42 -0500",
+      "source": "BleepingComputer"
     },
     {
-      "title": "CVE-2026-137620",
-      "url": "https://www.tenable.com/cve/CVE-2026-137620",
-      "published": "Thu, 26 Nov 2026 21:31:19 GMT",
-      "source": "Tenable CVE"
+      "title": "Unpatched Cacti zero-day with public PoC gives remote code execution",
+      "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
+      "published": "Fri, 27 Nov 2026 12:06:13 -0500",
+      "source": "BleepingComputer"
     }
   ]
 }
