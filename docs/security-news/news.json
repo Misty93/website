@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-11-27T20:59:47.104817",
+  "generated_at": "2026-11-28T07:25:34.428385",
   "items": [
     {
-      "title": "pCloud confirms password manager hack after suspicious login alerts",
-      "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
-      "published": "Fri, 27 Nov 2026 14:26:04 -0500",
-      "source": "BleepingComputer"
+      "title": "Fake Government App Exposes Italy’s Expanding Spyware Surveillance Industry",
+      "url": "https://securityaffairs.com/204142/intelligence/fake-government-app-exposes-italys-expanding-spyware-surveillance-industry.html",
+      "published": "Sat, 28 Nov 2026 00:08:30 +0000",
+      "source": "Security Affairs"
     },
     {
-      "title": "New Boston Scientific data breach exposes personal, medical info",
-      "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
-      "published": "Fri, 27 Nov 2026 13:57:42 -0500",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-138003",
+      "url": "https://www.tenable.com/cve/CVE-2026-138003",
+      "published": "Fri, 27 Nov 2026 22:17:54 GMT",
+      "source": "Tenable CVE"
     },
     {
-      "title": "Unpatched Cacti zero-day with public PoC gives remote code execution",
-      "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/",
-      "published": "Fri, 27 Nov 2026 12:06:13 -0500",
-      "source": "BleepingComputer"
+      "title": "CVE-2026-137974",
+      "url": "https://www.tenable.com/cve/CVE-2026-137974",
+      "published": "Fri, 27 Nov 2026 21:17:14 GMT",
+      "source": "Tenable CVE"
     }
   ]
 }
